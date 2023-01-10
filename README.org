@@ -1,0 +1,33 @@
+* Dotfiles
+
+** Summary
+
+This repo is for my frequent dotfiles that I need on all my machines.
+
+** Prerequisites
+
+You must have ~stow~ installed on your system. This will take care of symlinking everything for you. Learn more about stow [[https://www.gnu.org/software/stow/][here]].
+
+** Installation
+
+~stow~ will make symlinks of everything in the project directory into the immediate parent directory. Therefore, the directory structure is mirrored from where you intend to place it. This repo was designed to be placed in =$HOME=. Clone this repo there.
+
+#+begin_src sh
+  cd $HOME
+  git clone <this_repo.git>
+#+end_src
+
+From the top-level directory, run ~stow~.
+
+#+begin_src sh :results verbatim
+  cd dotfiles
+  stow .
+#+end_src
+
+Any time you pull in new changes, you must refresh the symlinks for changes to take effect. To do so, use the ~-R~ flag.
+
+#+begin_src sh :results verbatim
+  stow -R .
+#+end_src
+
+All files should now be refreshed. This only needs to be done on pulled changes. Any local edits will take effect as expected.

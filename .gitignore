@@ -1,0 +1,84 @@
+# -*- mode: gitignore; -*-
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Org-mode
+.org-id-locations
+*_archive
+
+# flymake-mode
+*_flymake.*
+
+# eshell files
+/eshell/history
+/eshell/lastdir
+
+# elpa packages
+/elpa/
+
+# reftex files
+*.rel
+
+# AUCTeX auto folder
+/auto/
+
+# cask packages
+.cask/
+dist/
+
+# Flycheck
+flycheck_*.el
+
+# server auth directory
+/server/
+
+# projectiles files
+.projectile
+
+# directory configuration
+.dir-locals.el
+
+# network security
+/network-security.data
+
+# Emacs efs
+/.config/efsmacs/org-roam.db
+/.config/efsmacs/bookmarks
+/.config/efsmacs/eshell/
+/.config/efsmacs/transient/
+/.config/efsmacs/.cache/
+/.config/efsmacs/.lsp-session-v1
+/.local/share/.DS_Store
+/.config/efsmacs/.mc-lists.el
+/.config/efsmacs/.org-jira/
+/.config/efsmacs/request/
+/.local/share/fonts/.uuid
+/.config/zsh/.zsh_history
+/.config/zsh/.zsh_sessions/
+/.config/efsmacs/projects
+/.config/efsmacs/games/
+
+# Emacs cop
+/.config/copmacs/*/
+/.config/copmacs/*
+!/.config/copmacs/init.el
+
+# Emacs chrispmacs
+/.config/chrispmacs/*/
+/.config/chrispmacs/*
+!/.config/chrispmacs/init.el
+!/.config/chrispmacs/early-init.el
+!/.config/chrispmacs/modules
+!/.config/chrispmacs/bootstrap
+
+# Emacs bugmacs
+/.config/bugmacs/*/
+/.config/bugmacs/*
+!/.config/bugmacs/init.el
+

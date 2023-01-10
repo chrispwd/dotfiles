@@ -1,0 +1,6 @@
+(("efs"   . ((user-emacs-directory . "~/.config/efsmacs")))
+ ("doom" . ((user-emacs-directory . "~/.emacs.doom")))
+ (env . (("DOOMDIR" . "~/.config/doom")))
+ ("cop" . ((user-emacs-directory . "~/.config/copmacs")))
+ ("test" . ((user-emacs-directory . "~/.config/bugmacs")))
+ ("default" . ((user-emacs-directory . "~/.config/chrispmacs"))))

@@ -1,0 +1,15 @@
+\.git
+\.gitignore
+\.gitmodules
+\.local/share/.DS_Store
+\.emacs.efs/transient/history.el
+misc
+^/.*\.org
+^/.*\~
+\.git
+\.gitignore
+.+~
+\#.*\#
+^/README.*
+^/LICENSE.*
+^/COPYING
