@@ -20,6 +20,7 @@
 (require 'tree-sitter)
 (require 'tree-sitter-langs)
 (global-tree-sitter-mode)
+(add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode)
 
 ;;; Language modes
 (with-eval-after-load 'tree-sitter
