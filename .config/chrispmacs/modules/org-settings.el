@@ -117,6 +117,8 @@
 (let ((map global-map))
   (define-key map (kbd "C-c a") #'org-agenda))
 
+;; org-babel config
+(require 'ox-md)
 (org-babel-do-load-languages 'org-babel-load-languages
                              (append org-babel-load-languages
                               '((sql         . t)

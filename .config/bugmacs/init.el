@@ -92,3 +92,6 @@
                              (append org-babel-load-languages
                               '((sql         . t)
                                 (shell       . t))))
+
+(require 'ox-md)
+
