@@ -1,5 +1,8 @@
 ;;; Bugmacs: for bugtesting
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;            DEFAULTS                ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defun bm-package-initialize ()
   (package-initialize)
   (unless package-archive-contents
@@ -42,12 +45,18 @@
 (setq custom-file (locate-user-emacs-file "custom-vars.el"))
 (load custom-file 'noerror 'nomessage)
 
+;; Typed text replaces the selection if the selection is active,
+;; pressing delete or backspace deletes the selection.
+(delete-selection-mode)
+
+;; move auto-backups to one place
+(setq backup-directory-alist `(("." . "~/.saves/")))
+
 (bm-install-package-if-not-already 'consult)
 (bm-install-package-if-not-already 'vertico)
 (bm-install-package-if-not-already 'savehist)
 (bm-install-package-if-not-already 'marginalia)
 (bm-install-package-if-not-already 'orderless)
-;;(bm-install-package-if-not-already 'autothemer)
 
 (require 'vertico)
 (vertico-mode)
@@ -68,3 +77,18 @@
 (require 'orderless)
 (setq completion-styles '(orderless basic)
       completion-category-overrides '((file (styles basic partial-completion))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;            DEFAULTS                ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(bm-install-package-if-not-already 'nix-mode)
+
+(require 'nix-mode)
+(with-eval-after-load 'nix-mode 
+  (add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-mode)))
+
+(org-babel-do-load-languages 'org-babel-load-languages
+                             (append org-babel-load-languages
+                              '((sql         . t)
+                                (shell       . t))))
