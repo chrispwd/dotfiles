@@ -11,6 +11,7 @@
 (cop-install-package-if-not-already 'vue-mode)
 (cop-install-package-if-not-already 'typescript-mode)
 (cop-install-package-if-not-already 'eglot)
+(cop-install-package-if-not-already 'nix-mode)
 
 ;;; rainbow-delimiters - colors parens for visual aid
 (require 'rainbow-delimiters)
@@ -27,10 +28,12 @@
   (require 'rust-mode)
   (require 'vue-mode)
   (require 'typescript-mode)
+  (require 'nix-mode)
   (define-derived-mode typescriptreact-mode typescript-mode
     "TypeScript TSX")
   (add-to-list 'auto-mode-alist '("\\.tsx?\\'" . typescriptreact-mode))
-  (add-to-list 'tree-sitter-major-mode-language-alist '(typescriptreact-mode . tsx)))
+  (add-to-list 'tree-sitter-major-mode-language-alist '(typescriptreact-mode . tsx))
+  (add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-mode)))
 
 ;;; LSP
 (require 'eglot)

@@ -117,6 +117,11 @@
 (let ((map global-map))
   (define-key map (kbd "C-c a") #'org-agenda))
 
+(org-babel-do-load-languages 'org-babel-load-languages
+                             (append org-babel-load-languages
+                              '((sql         . t)
+                                (shell       . t))))
+
 ;; org-mode config
 (defun cop/org-mode-setup ()
   (org-indent-mode)
