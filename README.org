@@ -17,6 +17,12 @@ You must have ~stow~ installed on your system. This will take care of symlinking
   git clone <this_repo.git>
 #+end_src
 
+After cloning, recurse the submodules to pull in the latest changes.
+
+#+begin_src sh
+  git submodule update --init --recursive
+#+end_src
+
 From the top-level directory, run ~stow~.
 
 #+begin_src sh :results verbatim
