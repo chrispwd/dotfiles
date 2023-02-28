@@ -82,3 +82,7 @@ flycheck_*.el
 /.config/bugmacs/*
 !/.config/bugmacs/init.el
 
+# Neovim
+/.config/nvim/*/
+/.config/nvim/*
+!/.config/nvim/init.lua
