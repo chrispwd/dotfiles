@@ -33,6 +33,11 @@ unsetopt BEEP                   # Disable that HORRIBLE beep
 # Source aliases
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" ] && . "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc"
 
+# Source work stuff
+if [ $(hostname) = "wizmac.local" ]; then
+    . "$HOME/.secrets"
+fi
+
 # emacs mode
 bindkey -e
 export KEYTIMEOUT=1

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+profile=${1:-default}
+cluster=$2
+if [ -z $cluster ]; then
+  echo "No cluster defined"
+  return
+fi
+check=$(aws eks describe-cluster --name $cluster --profile $profile | jq -r '.cluster.status')
+if [ "$check" != "ACTIVE" ]; then
+  echo "That cluster is not active"
+  return
+fi
+aws eks update-kubeconfig --region us-east-1 --name $2 --profile $profile
