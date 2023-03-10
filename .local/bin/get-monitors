@@ -1,17 +1,25 @@
 #!/bin/sh
 
-# meep
-if xrandr | grep "LVDS1 connected" ; then
-   if xrandr | grep "HDMI2 connected" ; then
-       xrandr --output 'LVDS1' --off --output 'HDMI2' --mode 1920x1200
-   else
-       xrandr --output 'LVDS1' --auto
-   fi
-# stinky
+outputs=$(xrandr --query | grep " connected" | cut -d" " -f1)
+
+for outp in $outputs ; do
+    case $outp in
+        # meep
+        *LVDS*)
+            laptop_output=$outp
+            ;;
+        # stinky
+        *eDP*)
+            laptop_output=$outp
+            ;;
+        *HDMI*)
+            external_monitor=$outp
+            ;;
+    esac
+done
+
+if [ -n "$external_monitor" ]; then
+    xrandr --output $laptop_output --off --output $external_monitor --mode 1920x1200
 else
-    if xrandr | grep "eDP1 connected" ; then
-        xrandr --output 'eDP1' --off --output 'HDMI2' --mode 1920x1200
-    else
-        xrandr --output 'eDP1' --auto
-    fi
+    xrandr --output $laptop_output --auto
 fi
