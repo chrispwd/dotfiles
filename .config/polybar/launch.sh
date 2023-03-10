@@ -10,10 +10,9 @@ if [ "$(hostname)" == "meep" ]; then
     tray_output=LVDS1
     mount='/home'
 else
-    tray_output=eDP-1
+    tray_output=eDP1
     mount='/'
 fi
-
 
 for m in $outputs; do
     case $m in
@@ -30,4 +29,3 @@ for m in $outputs ; do
 	TRAY_POSITION=none MONITOR=$m MOUNTPOINT=$mount polybar --reload cwmbar 2>~/.cache/polybar/$m.log &
     fi
 done
-#polybar --reload example 2>~/.cache/polybar/$m.log &
