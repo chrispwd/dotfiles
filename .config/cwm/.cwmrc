@@ -78,7 +78,7 @@ bind-mouse 4-1 window-move
 bind-mouse 4S-1 window-lower
 
 # other
-borderwidth 1
+borderwidth 5
 ignore polybar
 ignore MEGAsync
 gap 5 35 5 5
@@ -116,3 +116,10 @@ color font             "#93a1a1"
 color selfont          "#002b36"
 color activeborder     "#93a1a1"
 color inactiveborder   "#002b36"
+# Solarized Light
+color menufg           "#657b83"
+color menubg           "#fdf6e3"
+color font             "#657b83"
+color selfont          "#fdf6e3"
+color activeborder     "#586e75"
+color inactiveborder   "#93a1a1"
