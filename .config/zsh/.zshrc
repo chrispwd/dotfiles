@@ -9,10 +9,12 @@ precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 
 # simple
-#PROMPT='%n@%m %1~ %#'
-PROMPT='%(?.%F{7}╭─╸%f.%F{7}╭─╸%f%F{1}%B✗ %?%b %f)%b%B%F{14}%n%f%b@%B%F{2}%m%f%b %B%F{5}%3~%f%b${vcs_info_msg_0_}%b
-%F{7}╰╸%f%# '
-zstyle ':vcs_info:git:*' formats ' %B%F{3}%b%f'
+PROMPT='%(?..[%F{1}%?%f] )${vcs_info_msg_0_}%1~ %# '
+zstyle ':vcs_info:git:*' formats '[%F{3}%b%f] '
+# two-line
+#PROMPT='%(?.%F{7}╭─╸%f.%F{7}╭─╸%f%F{1}%B✗ %?%b %f)%b%B%F{14}%n%f%b@%B%F{2}%m%f%b %B%F{5}%3~%f%b${vcs_info_msg_0_}%b
+#%F{7}╰╸%f%# '
+#zstyle ':vcs_info:git:*' formats ' %B%F{3}%b%f'
 #PROMPT='%(?..%F{1}%B✗ %?%b %f)%b%B%F{14}%n%f%b at %B%F{2}%m%f%b in %B%F{5}%3~%f%b ${vcs_info_msg_0_}%b
 #%F{4}%#%f '
 #zstyle ':vcs_info:git:*' formats 'on %B%F{3}%b%f'
