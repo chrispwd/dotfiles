@@ -15,7 +15,7 @@
   (denote
    (format-time-string "%A %B %e %Y") ; format like Tuesday June 14 2022
    '("journal")))
-(setq denote-directory (expand-file-name "~/Sync/Resources/denote"))
+(setq denote-directory (expand-file-name "~/Notes/denote"))
 (setq denote-known-keywords '("emacs" "testing" "project"))
 (setq denote-file-type nil)
 (setq denote-link-fontify-backlinks t)

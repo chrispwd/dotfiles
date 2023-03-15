@@ -342,7 +342,7 @@
   (setq org-log-done 'time)
   (setq org-log-into-drawer t)
   (setq org-agenda-files
-        '("~/Sync/roam/20220228153956-birthdays.org"))
+        '("~/Notes/roam/20220228153956-birthdays.org"))
   (setq org-scheduled-past-days 5)
   (setq org-todo-keywords
         '((sequence "TODO(t)" "NEXT(n)" "WAITING(w)" "BACKLOG(b)" "|" "DONE(d!)")))
@@ -501,7 +501,7 @@
   :init
   (setq org-roam-v2-ack t)
   :custom
-  (org-roam-directory "~/Sync/roam")
+  (org-roam-directory "~/Notes/roam")
   (org-roam-completion-everywhere t)
   (org-roam-capture-templates
    '(("d" "default" plain
@@ -511,22 +511,22 @@
       :immediate-finish t
       :unnarrowed t)
      ("t" "ticket" plain
-      (file "~/Sync/roam/templates/TicketTemplate.org")
+      (file "~/Notes/roam/templates/TicketTemplate.org")
       :if-new
       (file+head "tickets/${slug}.org" "#+title: ${title}\n#+category: %^{ticket-id} %^{category}\n#+filetags: Ticket")
       :unnarrowed t)
      ("p" "project" plain
-      (file "~/Sync/roam/templates/ProjectTemplate.org")
+      (file "~/Notes/roam/templates/ProjectTemplate.org")
       :if-new
       (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n#+category: ${title}\n#+filetags: Project")
       :unnarrowed t)
      ("r" "translate request" plain
-      (file "~/Sync/roam/templates/TranslateRequestTemplate.org")
+      (file "~/Notes/roam/templates/TranslateRequestTemplate.org")
       :if-new
       (file+head "translate-requests/%^{ticketid}.org" "#+title: ${title}\n#+filetags: Translate-Request")
       :unnarrowed t)
      ("h" "href" plain
-      (file "~/Sync/roam/templates/HrefTemplate.org")
+      (file "~/Notes/roam/templates/HrefTemplate.org")
       :if-new
       (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n#+category: %^{category}")
       :unnarrowed t)))
