@@ -6,7 +6,7 @@
 #cell_width_scale = 1.0
 #clickable_url = true
 #dynamic_title = true
-font = Iosevka Term SS03 12
+font = Cozette 13px
 #font = Monospace 9
 #fullscreen = true
 #icon_name = terminal
@@ -41,53 +41,93 @@ cursor_shape = block
 # "off", "left" or "right"
 #scrollbar = off
 
+# [colors]
+# # Base16 Solarized Dark
+# # Scheme author: Ethan Schoonover (modified by aramisgithub)
+# # Template author: Tinted Theming (https://github.com/tinted-theming)
+
+# foreground          = #93a1a1
+# foreground_bold     = #93a1a1
+# cursor              = #93a1a1
+# cursor_foreground   = #002b36
+# background          = #002b36
+
+# # 16 color space
+
+# # Black, Gray, Silver, White
+# color0  = #002b36
+# color8  = #657b83
+# color7  = #93a1a1
+# color15 = #fdf6e3
+
+# # Red
+# color1  = #dc322f
+# color9  = #dc322f
+
+# # Green
+# color2  = #859900
+# color10 = #859900
+
+# # Yellow
+# color3  = #b58900
+# color11 = #b58900
+
+# # Blue
+# color4  = #268bd2
+# color12 = #268bd2
+
+# # Purple
+# color5  = #6c71c4
+# color13 = #6c71c4
+
+# # Teal
+# color6  = #2aa198
+# color14 = #2aa198
+
+# # Extra colors
+# color16 = #cb4b16
+# color17 = #d33682
+# color18 = #073642
+# color19 = #586e75
+# color20 = #839496
+# color21 = #eee8d5
+
 [colors]
-# Base16 Solarized Dark
-# Scheme author: Ethan Schoonover (modified by aramisgithub)
-# Template author: Tinted Theming (https://github.com/tinted-theming)
 
-foreground          = #93a1a1
-foreground_bold     = #93a1a1
-cursor              = #93a1a1
-cursor_foreground   = #002b36
-background          = #002b36
+# special
+foreground      = #657b83
+foreground_bold = #657b83
+cursor          = #657b83
+background      = #fdf6e3
 
-# 16 color space
+# black
+color0  = #073642
+color8  = #002b36
 
-# Black, Gray, Silver, White
-color0  = #002b36
-color8  = #657b83
-color7  = #93a1a1
-color15 = #fdf6e3
-
-# Red
+# red
 color1  = #dc322f
-color9  = #dc322f
+color9  = #cb4b16
 
-# Green
+# green
 color2  = #859900
-color10 = #859900
+color10 = #586e75
 
-# Yellow
+# yellow
 color3  = #b58900
-color11 = #b58900
+color11 = #657b83
 
-# Blue
+# blue
 color4  = #268bd2
-color12 = #268bd2
+color12 = #839496
 
-# Purple
-color5  = #6c71c4
+# magenta
+color5  = #d33682
 color13 = #6c71c4
 
-# Teal
+# cyan
 color6  = #2aa198
-color14 = #2aa198
+color14 = #93a1a1
 
-# Extra colors
-color16 = #cb4b16
-color17 = #d33682
-color18 = #073642
-color19 = #586e75
-color20 = #839496
-color21 = #eee8d5
+# white
+color7  = #eee8d5
+color15 = #fdf6e3
