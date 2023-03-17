@@ -115,8 +115,8 @@ font:
       #   - (Windows) Consolas
 #      family: Iosevka Term SS03
       # The `style` can be specified to pick a specific face.
-      family: Cozette
-      style: Medium
+      family: Gohu GohuFont
+      style: Regular
       #style: Light
 
    # Bold font face
@@ -130,8 +130,8 @@ font:
       # The `style` can be specified to pick a specific face.
       #style: Heavy
  #     style: Semibold
-      family: Cozette
-      style: Medium
+      family: Gohu GohuFont
+      style: Regular
 
    # Italic font face
    italic:
@@ -141,8 +141,8 @@ font:
       # value specified for the normal font.
       #family: monospace
 #      family: Iosevka Term SS03
-      family: Cozette
-      style: Medium
+      family: Gohu GohuFont
+      style: Regular
 
       # The `style` can be specified to pick a specific face.
  #     style: Light Italic
@@ -155,15 +155,15 @@ font:
       # value specified for the normal font.
       #family: monospace
 #      family: Iosevka Term SS03
-      family: Cozette
-      style: Medium
+      family: Gohu GohuFont
+      style: Regular
 
       # The `style` can be specified to pick a specific face.
 #      style: Semibold Italic
       #style: Bold Italic
 
    # Point size
-   size: 13.0
+   size: 14.0
 
    # Offset is the extra space around each character. `offset.y` can be thought
    # of as modifying the line spacing, and `offset.x` as modifying the letter
