@@ -29,10 +29,10 @@
 (require 'defaults)
 (require 'os-specific)
 (require 'org-settings)
-(require 'look-and-feel)
 (require 'note-taking)
 (require 'terminals)
 (require 'coding)
 (require 'completion)
 (require 'text-editing-tools)
+(require 'look-and-feel)
 

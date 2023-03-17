@@ -41,26 +41,56 @@
 ;;; font settings
 (cond
   ((eq system-type 'gnu/linux)
-    (defvar cop/default-font-size 140)
-    (defvar cop/default-variable-font-size 140))
+    (defvar cop/default-font-size 120)
+    (defvar cop/default-variable-font-size 120))
   ((eq system-type 'darwin)
     (defvar cop/default-font-size 180)
     (defvar cop/default-variable-font-size 180))
   (t
     (message "Config for unknown system type.")))
 
-;; font face attributes
+;; TODO: Put face attributes with their respective modules.
+;; The modules are now load-order-dependent because of this
 (set-face-attribute 'default nil
-                    :font "Iosevka Term SS03"
+                    :font "Iosevka Term SS03 Light 12"
                     :height cop/default-font-size
+                    :slant 'normal)
+(set-face-attribute 'font-lock-builtin-face nil
+                    :font "Iosevka Term SS03 Light 12"
+                    :slant 'normal)
+(set-face-attribute 'eglot-highlight-symbol-face nil
+                    :font "Iosevka Term SS03 Semibold 12"
+                    :weight 'semi-bold)
+(set-face-attribute 'font-lock-type-face nil
+                    :inherit 'default
+                    :slant 'normal)
+(set-face-attribute 'font-lock-constant-face nil
+                    :font "Iosevka Term SS03 Light 12"
+                    :slant 'normal)
+(set-face-attribute 'font-lock-comment-face nil
+                    :font "Iosevka Term SS03 Light Oblique 12"
+                    :slant 'oblique)
+(set-face-attribute 'font-lock-keyword-face nil
+                    :font "Iosevka Term SS03 Light 12"
+                    :weight 'light
+                    :slant 'normal)
+(set-face-attribute 'font-lock-function-name-face nil
+                    :font "Iosevka Term SS03 Light 12"
                     :weight 'light)
-(set-face-attribute 'fixed-pitch nil
-                    :font "Iosevka Term SS03"
+(set-face-attribute 'tree-sitter-hl-face:function.call nil
+                    :font "Iosevka Term SS03 Light 12"
+                    :weight 'light)
+(set-face-attribute 'link nil
+                    :font "Iosevka Term SS03 Medium 12"
+                    :weight 'normal)
+(set-face-attribute 'bold nil
+                     :font "Iosevka Term SS03 12"
+                     :height cop/default-font-size
+                     :weight 'medium)
+(set-face-attribute 'tree-sitter-hl-face:property nil
+                    :font "Iosevka Term SS03 Light 12"
                     :height cop/default-font-size
-                    :weight 'light)
-(set-face-attribute 'variable-pitch nil
-                    :font "Iosevka Term SS03"
-                    :height cop/default-variable-font-size
-                    :weight 'light)
+                    :weight 'medium
+                    :slant 'normal)
 
 (provide 'look-and-feel)
