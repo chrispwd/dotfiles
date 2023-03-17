@@ -30,13 +30,13 @@ export EDITOR="emacs"
 if [ $(hostname) = "meep" ]; then
     export TERMINAL="termite"
 else
-    export TERMINAL="kitty"
+    export TERMINAL="alacritty"
 fi
 export BROWSER="brave"
 export SCROTS="$HOME/pics/scrots"
 
 # Qt applications styling
-export QT_STYLE_OVERRIDE=kvantum
+#export QT_STYLE_OVERRIDE=kvantum
 
 ## PATH and all the other env crap that gets initialized
 # pyenv
