@@ -82,7 +82,7 @@
                     :weight 'light)
 (set-face-attribute 'link nil
                     :font "Iosevka Term SS03 Medium 12"
-                    :weight 'normal)
+                    :weight 'medium)
 (set-face-attribute 'bold nil
                      :font "Iosevka Term SS03 12"
                      :height cop/default-font-size
