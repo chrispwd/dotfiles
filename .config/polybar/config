@@ -397,7 +397,8 @@ ramp-capacity-2-foreground = ${colors.green}
 ramp-capacity-1 = "BAT0"
 ramp-capacity-1-foreground = ${colors.yellow}
 ramp-capacity-0 = "BAT0"
-ramp-capacity-0-foreground = ${colors.red}
+ramp-capacity-0-foreground = ${colors.background}
+ramp-capacity-0-background = ${colors.red}
 
 ; animation-charging-4 = 
 ; animation-charging-3 = 
@@ -443,7 +444,8 @@ ramp-capacity-2-foreground = ${colors.green}
 ramp-capacity-1 = "BAT1"
 ramp-capacity-1-foreground = ${colors.yellow}
 ramp-capacity-0 = "BAT1"
-ramp-capacity-0-foreground = ${colors.red}
+ramp-capacity-0-foreground = ${colors.background}
+ramp-capacity-0-background = ${colors.red}
 
 ; animation-charging-4 = 
 ; animation-charging-3 = 
