@@ -1,7 +1,7 @@
 ;;; Bugmacs: for bugtesting
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;            DEFAULTS                ;;
+;;            BEGIN DEFAULTS          ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defun bm-package-initialize ()
   (package-initialize)
@@ -79,7 +79,7 @@
       completion-category-overrides '((file (styles basic partial-completion))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;            DEFAULTS                ;;
+;;            END DEFAULTS            ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (bm-install-package-if-not-already 'nix-mode)
@@ -94,4 +94,3 @@
                                 (shell       . t))))
 
 (require 'ox-md)
-

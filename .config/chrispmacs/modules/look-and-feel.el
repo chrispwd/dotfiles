@@ -14,8 +14,8 @@
 (require 'autothemer)
 ;; config
 (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
-      doom-themes-enable-italic t) ; if nil, italics is universally disabled
-(load-theme 'doom-solarized-light t)
+      doom-themes-enable-italic nil) ; if nil, italics is universally disabled
+(load-theme 'doom-solarized-dark t)
 ;(load-theme 'doom-tomorrow-night t)
 ;(load-theme 'catppuccin-mocha t)
 
@@ -51,46 +51,44 @@
 
 ;; TODO: Put face attributes with their respective modules.
 ;; The modules are now load-order-dependent because of this
-(set-face-attribute 'default nil
-                    :font "Iosevka Term SS03 Light 12"
-                    :height cop/default-font-size
-                    :slant 'normal)
-(set-face-attribute 'font-lock-builtin-face nil
-                    :font "Iosevka Term SS03 Light 12"
-                    :slant 'normal)
-(set-face-attribute 'eglot-highlight-symbol-face nil
-                    :font "Iosevka Term SS03 Semibold 12"
-                    :weight 'semi-bold)
-(set-face-attribute 'font-lock-type-face nil
-                    :inherit 'default
-                    :slant 'normal)
-(set-face-attribute 'font-lock-constant-face nil
-                    :font "Iosevka Term SS03 Light 12"
-                    :slant 'normal)
-(set-face-attribute 'font-lock-comment-face nil
-                    :font "Iosevka Term SS03 Light Oblique 12"
-                    :slant 'oblique)
-(set-face-attribute 'font-lock-keyword-face nil
-                    :font "Iosevka Term SS03 Light 12"
-                    :weight 'light
-                    :slant 'normal)
-(set-face-attribute 'font-lock-function-name-face nil
-                    :font "Iosevka Term SS03 Light 12"
-                    :weight 'light)
-(set-face-attribute 'tree-sitter-hl-face:function.call nil
-                    :font "Iosevka Term SS03 Light 12"
-                    :weight 'light)
-(set-face-attribute 'link nil
-                    :font "Iosevka Term SS03 Medium 12"
-                    :weight 'medium)
+;; (set-face-attribute 'default nil
+;;                     :font "Iosevka Term SS03 Light 12"
+;;                     :height cop/default-font-size
+;;                     :slant 'normal)
+;; (set-face-attribute 'font-lock-builtin-face nil
+;;                     :font "Iosevka Term SS03 Light 12"
+;;                     :slant 'normal)
+;; (set-face-attribute 'eglot-highlight-symbol-face nil
+;;                     :font "Iosevka Term SS03 Semibold 12"
+;;                     :weight 'semi-bold)
+;; (set-face-attribute 'font-lock-type-face nil
+;;                     :inherit 'default
+;;                     :slant 'normal)
+;; (set-face-attribute 'font-lock-constant-face nil
+;;                     :inherit 'default
+;;                     :weight 'normal)
+;; (set-face-attribute 'font-lock-comment-face nil
+;;                     :font "Iosevka Term SS03 Light Oblique 12"
+;;                     :slant 'oblique)
+;; (set-face-attribute 'font-lock-keyword-face nil
+;;                     :weight 'normal)
+;; (set-face-attribute 'font-lock-function-name-face nil
+;;                     :font "Iosevka Term SS03 Light 12"
+;;                     :weight 'light)
+;; (set-face-attribute 'tree-sitter-hl-face:function.call nil
+;;                     :font "Iosevka Term SS03 Light 12"
+;;                     :weight 'light)
+;; (set-face-attribute 'link nil
+;;                     :font "Iosevka Term SS03 Medium 12"
+;;                     :weight 'medium)
+;; (set-face-attribute 'bold nil
+;;                      :font "Iosevka Term SS03 12"
+;;                      :height cop/default-font-size
+;;                      :weight 'medium)
 (set-face-attribute 'bold nil
-                     :font "Iosevka Term SS03 12"
-                     :height cop/default-font-size
-                     :weight 'medium)
+                     :inherit 'default
+                     :weight 'bold)
 (set-face-attribute 'tree-sitter-hl-face:property nil
-                    :font "Iosevka Term SS03 Light 12"
-                    :height cop/default-font-size
-                    :weight 'medium
-                    :slant 'normal)
+                    :inherit 'default)
 
 (provide 'look-and-feel)

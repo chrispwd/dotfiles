@@ -35,7 +35,8 @@ alias \
   za="zathura" \
   v="$EDITOR" \
   iv="sxiv" \
-  nf="neofetch"
+  nf="neofetch" \
+  emac="emacs -nw" \
   #pbcopy='xclip -selection clipboard' \
   #pbpaste='xclip -selection clipboard -o'
 

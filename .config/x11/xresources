@@ -1,3 +1,5 @@
+XTerm.vt100.faceName: Gohu GohuFont:size=14
+Emacs.font: Gohu GohuFont:size=14
 !tomorrow dark
 ! special
 !*.foreground:   #c5c8c6
@@ -76,9 +78,16 @@
 
 ! Solarized-light
 ! special
-*.foreground:   #657b83
-*.background:   #fdf6e3
-*.cursorColor:  #657b83
+!*.foreground:   #657b83
+!*.background:   #fdf6e3
+!*.cursorColor:  #657b83
+
+! Solarized-dark
+! special
+*.foreground:   #839496
+*.background:   #002b36
+*.cursorColor:  #839496
+
 ! black
 *.color0:       #073642
 *.color8:       #002b36

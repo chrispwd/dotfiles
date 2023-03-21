@@ -19,10 +19,9 @@
 [colors]
 ; from xresources
 foreground = ${xrdb:foreground}
-foreground-alt = ${xrdb:color8}
-;background = ${xrdb:background}
-background = #fdf6e3
-background-alt = ${xrdb:color7}
+foreground-alt = ${xrdb:color10}
+background = ${xrdb:background}
+background-alt = ${xrdb:color0}
 primary = ${xrdb:color4}
 secondary = ${xrdb:color2}
 alert = ${xrdb:color1}

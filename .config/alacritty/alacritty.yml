@@ -113,26 +113,26 @@ font:
       #   - (macOS) Menlo
       #   - (Linux/BSD) monospace
       #   - (Windows) Consolas
-      family: Iosevka Term SS03
-      style: Light
+      family: Gohu GohuFont
+      style: Regular
 
    # Bold font face
    bold:
-     family: Iosevka Term SS03
-     style: Regular
+     family: Gohu GohuFont
+     style: Bold
 
    # Italic font face
    italic:
-     family: Iosevka Term SS03
+     family: Gohu GohuFont
      style: Light Italic
 
    # Bold italic font face
    bold_italic:
-      family: Iosevka Term SS03
+      family: Gohu GohuFont
       style: Italic
 
    # Point size
-   size: 12.0
+   size: 14.0
 
    # Offset is the extra space around each character. `offset.y` can be thought
    # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -1052,7 +1052,7 @@ schemes:
 # *solarized-dark
 # *tomorrow-night
 
-colors: *solarized-light
+colors: *solarized-dark
 
 #######################################
 ##       END OF COLOR SCHEMES        ##

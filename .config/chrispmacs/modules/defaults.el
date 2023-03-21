@@ -56,6 +56,10 @@
 (tab-bar-mode 1)
 (setq tab-bar-close-button-show nil
       tab-bar-new-button-show nil)
+(let ((map global-map))
+  (define-key map (kbd "C-o") #'tab-next)
+  (define-key map (kbd "C-S-o") #'tab-previous))
+
 
 ;; dired
 (require 'dired)

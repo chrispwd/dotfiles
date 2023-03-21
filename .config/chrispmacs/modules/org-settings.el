@@ -124,6 +124,14 @@
                               '((sql         . t)
                                 (shell       . t))))
 
+;; enables <-s-TAB shortcut for structure templates
+(require 'org-tempo)
+(add-to-list 'org-structure-template-alist '("sh" . "src shell"))
+(add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))
+(add-to-list 'org-structure-template-alist '("js" . "src js"))
+(add-to-list 'org-structure-template-alist '("py" . "src python"))
+
+
 ;; org-mode config
 (defun cop/org-mode-setup ()
   (org-indent-mode)

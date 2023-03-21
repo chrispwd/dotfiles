@@ -33,7 +33,7 @@ stty stop undef                 # Disable C-s to freeze terminal
 unsetopt BEEP                   # Disable that HORRIBLE beep
 
 # Source aliases
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" ] && . "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc"
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliases" ] && . "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliases"
 
 # Source work stuff
 if [ $(hostname) = "wizmac.local" ]; then
