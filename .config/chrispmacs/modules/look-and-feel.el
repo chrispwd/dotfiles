@@ -86,9 +86,13 @@
 ;;                      :height cop/default-font-size
 ;;                      :weight 'medium)
 (set-face-attribute 'bold nil
-                     :inherit 'default
-                     :weight 'bold)
-(set-face-attribute 'tree-sitter-hl-face:property nil
-                    :inherit 'default)
+                    :inherit 'default
+                    :weight 'bold)
+(set-face-attribute 'font-lock-constant-face nil
+                    :weight 'normal)
+(set-face-attribute 'font-lock-preprocessor-face nil
+                    :weight 'normal)
+(set-face-attribute 'font-lock-keyword-face nil
+                    :weight 'normal)
 
 (provide 'look-and-feel)
