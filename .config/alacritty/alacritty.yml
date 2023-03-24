@@ -163,6 +163,7 @@ cursor:
     shape: Underline
     blinking: Always
   blink_interval: 200
+  blink_timeout: 0
   thickness: 0.4
   
 # Vi mode cursor style
