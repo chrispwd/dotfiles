@@ -3,6 +3,12 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;            BEGIN DEFAULTS          ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'package)
+(when (version< emacs-version "28")
+  (add-to-list 'package-archives '("nongnu" . "https://elpa.nongnu.org/nongnu/")))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives '("stable" . "https://stable.melpa.org/packages/"))
+
 (defun bm-package-initialize ()
   (package-initialize)
   (unless package-archive-contents
@@ -83,6 +89,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (bm-install-package-if-not-already 'nix-mode)
+(bm-install-package-if-not-already 'clipetty)
+(bm-install-package-if-not-already 'xclip)
 
 (require 'nix-mode)
 (with-eval-after-load 'nix-mode 
@@ -94,3 +102,9 @@
                                 (shell       . t))))
 
 (require 'ox-md)
+
+(require 'clipetty)
+(require 'xclip)
+(xclip-mode 1)
+(global-clipetty-mode)
+(setq clipetty-tmux-ssh-tty "tmux show-environment SSH_TTY")

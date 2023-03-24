@@ -2,6 +2,17 @@
 
 ;; Dependencies
 (cop-install-package-if-not-already 'multiple-cursors)
+(cop-install-package-if-not-already 'xclip)
+(cop-install-package-if-not-already 'clipetty)
+
+
+;; Use system clipboard from within terminal/multiplexer
+(require 'clipetty)
+(require 'xclip)
+(xclip-mode 1)
+(global-clipetty-mode)
+(setq clipetty-tmux-ssh-tty "tmux show-environment SSH_TTY")
+
 
 ;; multi-cursors
 (require 'multiple-cursors)
