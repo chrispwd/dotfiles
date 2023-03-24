@@ -78,7 +78,7 @@ bind-mouse 4-1 window-move
 bind-mouse 4S-1 window-lower
 
 # other
-borderwidth 5
+borderwidth 2
 ignore polybar
 ignore MEGAsync
 gap 5 35 5 5

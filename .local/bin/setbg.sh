@@ -18,4 +18,8 @@ case "$(file --mime-type -b "$trueloc")" in
        ;;
 esac
 
-feh --bg-center "$bgloc"
+if [ ! -z "$2" ]; then
+    feh $2 "$bgloc"
+else
+    feh --bg-center "$bgloc"
+fi

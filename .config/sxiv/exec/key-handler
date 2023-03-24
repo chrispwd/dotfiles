@@ -2,28 +2,27 @@
 #
 while read file
 do
-	case "$1" in
-	"C-w")
-		cp -f "$file" "$HOME/.local/share/background/bg.png" &&
-		feh --bg-fill --no-xinerama "$HOME/.local/share/background/bg.png"
-		notify-send -i "$file" "Changing wallpaper (filled)..."
-		;;
+    case "$1" in
+	"C-f")
+            setbg.sh "$file" --bg-fill
+	    ;;
 	"C-s")
-		cp -f "$file" "$HOME/.local/share/background/bg.png" &&
-		feh --bg-scale --no-xinerama "$HOME/.local/share/background/bg.png"
-		notify-send -i "$file" "Changing wallpaper (scaled)..."
-		;;
+	    setbg.sh "$file" --bg-scale
+	    ;;
 	"C-c")
-		setbg.sh "$file"
-		;;
+	    setbg.sh "$file"
+	    ;;
+	"C-i")
+	    notify-send "File:" "$file"
+	    ;;
 	"C-t")
-		notify-send "File:" "$file"
-		;;
+            setbg.sh "$file" --bg-tile
+	    ;;
 	"C-r")
-		name="$(dmenu -p "Rename file to: ")" 2> /dev/null
-		if ! [ -z "$name" ] ; then
-			mv "$file" "$name"
-		fi
-		;;
-	esac
+	    name="$(dmenu -p "Rename file to: ")" 2> /dev/null
+	    if ! [ -z "$name" ] ; then
+		mv "$file" "$name"
+	    fi
+	    ;;
+    esac
 done
