@@ -6,7 +6,7 @@
 #cell_width_scale = 1.0
 #clickable_url = true
 #dynamic_title = true
-font = Cozette 13px
+font = Gohu GohuFont 14px
 #font = Monospace 9
 #fullscreen = true
 #icon_name = terminal
@@ -24,10 +24,10 @@ scrollback_lines = 10000
 #browser = xdg-open
 
 # "system", "on" or "off"
-cursor_blink = system
+cursor_blink = on
 
 # "block", "underline" or "ibeam"
-cursor_shape = block
+cursor_shape = underline
 
 # Hide links that are no longer valid in url select overlay mode
 #filter_unmatched_urls = true
@@ -94,11 +94,17 @@ cursor_shape = block
 
 [colors]
 
-# special
-foreground      = #657b83
-foreground_bold = #657b83
-cursor          = #657b83
-background      = #fdf6e3
+# solarized light
+#foreground      = #657b83
+# foreground_bold = #657b83
+# cursor          = #657b83
+# background      = #fdf6e3
+
+# solarized dark
+foreground      = #839496
+foreground_bold = #839496
+cursor          = #839496
+background      = #002b36
 
 # black
 color0  = #073642
