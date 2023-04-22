@@ -113,23 +113,23 @@ font:
       #   - (macOS) Menlo
       #   - (Linux/BSD) monospace
       #   - (Windows) Consolas
-      family: Gohu GohuFont
+      family: UbuntuMono Nerd Font Mono
       style: Regular
 
    # Bold font face
    bold:
-     family: Gohu GohuFont
+     family: UbuntuMono Nerd Font Mono
      style: Bold
 
    # Italic font face
    italic:
-     family: Gohu GohuFont
-     style: Light Italic
+     family: UbuntuMono Nerd Font Mono
+     style: Italic
 
    # Bold italic font face
    bold_italic:
-      family: Gohu GohuFont
-      style: Italic
+      family: UbuntuMono Nerd Font Mono
+      style: Bold Italic
 
    # Point size
    size: 14.0
