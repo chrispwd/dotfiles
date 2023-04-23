@@ -80,6 +80,7 @@ bind-mouse 4S-1 window-lower
 # other
 borderwidth 2
 ignore polybar
+ignore tint2
 ignore MEGAsync
 gap 5 35 5 5
 #autogroup 0 "polybar,Polybar"
