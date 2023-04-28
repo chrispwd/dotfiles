@@ -25,7 +25,8 @@
 (set-face-attribute 'tree-sitter-hl-face:function.call nil
                     :weight 'normal)
 (set-face-attribute 'tree-sitter-hl-face:property nil
-                    :weight 'normal)
+                    :weight 'normal
+                    :slant 'normal)
 
 ;;; Language modes
 (with-eval-after-load 'tree-sitter
