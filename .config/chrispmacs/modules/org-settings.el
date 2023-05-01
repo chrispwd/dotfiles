@@ -72,7 +72,7 @@
         ("h" "Home Actions"
          ((agenda "" ((org-deadline-warning-days 7)
                       (org-agenda-prefix-format "  %T %?-12t% s")))
-          (tags "+@home"
+          (tags-todo "+TODO=\"NEXT\"+@home"
                 ((org-agenda-overriding-header "@Home")
                  (org-agenda-max-todos nil)
                  (org-agenda-sorting-strategy '(priority-down))
