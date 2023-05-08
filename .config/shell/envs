@@ -30,7 +30,7 @@ export EDITOR="emacs"
 if [ $(hostname) = "meep" ]; then
     export TERMINAL="termite"
 else
-    export TERMINAL="alacritty"
+    export TERMINAL="kitty"
 fi
 export BROWSER="brave"
 export SCROTS="$HOME/pics/scrots"
