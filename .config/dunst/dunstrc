@@ -297,9 +297,9 @@
     #foreground = "#d8dee9"
     #frame_color = "#d8dee9"
     # Tomorrow Night
-    #background = "#1d1f21"
-    # foreground = "#c5c8c6"
-    # frame_color = "#c5c8c6"
+    background = "#1d1f21"
+    foreground = "#c5c8c6"
+    frame_color = "#c5c8c6"
     # Isotope
     #background = "#000000"
     #foreground = "#d0d0d0"
@@ -313,9 +313,9 @@
     #foreground = "#abb2bf"
     #frame_color = "#abb2bf"
     # Solarized Dark
-    background = "#002b36"
-    foreground = "#839496"
-    frame_color = "#839496"
+    # background = "#002b36"
+    # foreground = "#839496"
+    # frame_color = "#839496"
      timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
@@ -326,9 +326,9 @@
     #foreground = "#d8dee9"
     #frame_color = "#d8dee9"
     # Tomorrow Night
-    # background = "#1d1f21"
-    # foreground = "#c5c8c6"
-    # frame_color = "#c5c8c6"
+    background = "#1d1f21"
+    foreground = "#c5c8c6"
+    frame_color = "#c5c8c6"
     # Isotope
     #background = "#000000"
     #foreground = "#d0d0d0"
@@ -342,9 +342,9 @@
     #foreground = "#c5c8c6"
     #frame_color = "#c5c8c6"
     # Solarized Dark
-    background = "#002b36"
-    foreground = "#839496"
-    frame_color = "#839496"
+    # background = "#002b36"
+    # foreground = "#839496"
+    # frame_color = "#839496"
      timeout = 7
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
@@ -356,9 +356,9 @@
     #foreground = "#d8dee9"
     #frame_color = "#d8dee9"
     # Tomorrow Night
-    # background = "#1d1f21"
-    # foreground = "#c5c8c6"
-    # frame_color = "#c5c8c6"
+    background = "#1d1f21"
+    foreground = "#c5c8c6"
+    frame_color = "#c5c8c6"
     # One Dark
     #background = "#1e2127"
     #foreground = "#e06c75"
@@ -368,9 +368,9 @@
     #foreground = "#cf6a4c"
     #frame_color = "#c5c8c6"
     # Solarized Dark
-    background = "#002b36"
-    foreground = "#dc322f"
-    frame_color = "#839496"
+    # background = "#002b36"
+    # foreground = "#dc322f"
+    # frame_color = "#839496"
      timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     #icon = /path/to/icon
