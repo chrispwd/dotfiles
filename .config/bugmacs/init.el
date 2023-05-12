@@ -89,8 +89,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (bm-install-package-if-not-already 'nix-mode)
-(bm-install-package-if-not-already 'clipetty)
+;(bm-install-package-if-not-already 'clipetty)
 (bm-install-package-if-not-already 'xclip)
+(bm-install-package-if-not-already 'evil)
 
 (require 'nix-mode)
 (with-eval-after-load 'nix-mode 
@@ -103,8 +104,17 @@
 
 (require 'ox-md)
 
-(require 'clipetty)
+;(require 'clipetty)
 (require 'xclip)
 (xclip-mode 1)
-(global-clipetty-mode)
-(setq clipetty-tmux-ssh-tty "tmux show-environment SSH_TTY")
+;(global-clipetty-mode)
+;(setq clipetty-tmux-ssh-tty "tmux show-environment SSH_TTY")
+
+(setq evil-want-C-u-scroll t)
+(setq evil-want-Y-yank-to-eol t)
+(setq evil-normal-state-cursor '(box)
+      evil-insert-state-cursor '(bar)
+      evil-visual-state-cursor '(hollow))
+(require 'evil)
+(evil-mode 1)
+
