@@ -2,41 +2,41 @@ XTerm.vt100.faceName: Gohu GohuFont:size=14
 Emacs.font: Gohu GohuFont:size=14
 !tomorrow dark
 ! special
-!*.foreground:   #c5c8c6
-!*.background:   #1d1f21
-!*.cursorColor:  #c5c8c6
+*.foreground:   #c5c8c6
+*.background:   #1d1f21
+*.cursorColor:  #5f819d
 
 ! black
-!*.color0:       #282a2e
-!*.color8:       #373b41
+*.color0:       #282a2e
+*.color8:       #373b41
 
 ! red
-!*.color1:       #a54242
-!*.color9:       #cc6666
+*.color1:       #a54242
+*.color9:       #a54242
 
 ! green
-!*.color2:       #8c9440
-!*.color10:      #b5bd68
+*.color2:       #8c9440
+*.color10:      #8c9440
 
 ! yellow
-!*.color3:       #de935f
-!*.color11:      #f0c674
+*.color3:       #de935f
+*.color11:      #de935f
 
 ! blue
-!*.color4:       #5f819d
-!*.color12:      #81a2be
+*.color4:       #5f819d
+*.color12:      #5f819d
 
 ! magenta
-!*.color5:       #85678f
-!*.color13:      #b294bb
+*.color5:       #85678f
+*.color13:      #85678f
 
 ! cyan
-!*.color6:       #5e8d87
-!*.color14:      #8abeb7
+*.color6:       #5e8d87
+*.color14:      #5e8d87
 
-! white
-!*.color7:       #707880
-!*.color15:      #c5c8c6
+! white!
+*.color7:       #707880
+*.color15:      #c5c8c6
 
 ! Solarized-dark-black-bg
 ! special
@@ -83,32 +83,32 @@ Emacs.font: Gohu GohuFont:size=14
 !*.cursorColor:  #657b83
 
 ! Solarized-dark
-! special
-*.foreground:   #839496
-*.background:   #002b36
-*.cursorColor:  #839496
+! ! special
+! *.foreground:   #839496
+! *.background:   #002b36
+! *.cursorColor:  #839496
 
-! black
-*.color0:       #073642
-*.color8:       #002b36
-! red
-*.color1:       #dc322f
-*.color9:       #cb4b16
-! green
-*.color2:       #859900
-*.color10:      #586e75
-! yellow
-*.color3:       #b58900
-*.color11:      #657b83
-! blue
-*.color4:       #268bd2
-*.color12:      #839496
-! magenta
-*.color5:       #d33682
-*.color13:      #6c71c4
-! cyan
-*.color6:       #2aa198
-*.color14:      #93a1a1
-! white
-*.color7:       #eee8d5
-*.color15:      #fdf6e3
+! ! black
+! *.color0:       #073642
+! *.color8:       #002b36
+! ! red
+! *.color1:       #dc322f
+! *.color9:       #cb4b16
+! ! green
+! *.color2:       #859900
+! *.color10:      #586e75
+! ! yellow
+! *.color3:       #b58900
+! *.color11:      #657b83
+! ! blue
+! *.color4:       #268bd2
+! *.color12:      #839496
+! ! magenta
+! *.color5:       #d33682
+! *.color13:      #6c71c4
+! ! cyan
+! *.color6:       #2aa198
+! *.color14:      #93a1a1
+! ! white
+! *.color7:       #eee8d5
+! *.color15:      #fdf6e3
