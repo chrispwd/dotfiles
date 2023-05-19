@@ -19,7 +19,14 @@ for outp in $outputs ; do
 done
 
 if [ -n "$external_monitor" ]; then
-    xrandr --output $laptop_output --auto --left-of $external_monitor --output $external_monitor --mode 1920x1200
+    case $laptop_output in
+        *LVDS*)
+            xrandr --output $laptop_output --auto --below $external_monitor --output $external_monitor --mode 1920x1200
+            ;;
+        *eDP*)
+            xrandr --output $laptop_output --auto --left-of $external_monitor --output $external_monitor --mode 1920x1200
+            ;;
+    esac
 else
     xrandr --output $laptop_output --auto
 fi
