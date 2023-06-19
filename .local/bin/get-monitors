@@ -21,10 +21,10 @@ done
 if [ -n "$external_monitor" ]; then
     case $laptop_output in
         *LVDS*)
-            xrandr --output $laptop_output --auto --pos 400x1200 $external_monitor --output $external_monitor --mode 1920x1200 --pos 0x0 --primary
+            xrandr --output $laptop_output --auto --pos 400x1200 --output $external_monitor --mode 1920x1200 --pos 0x0 --primary
             ;;
         *eDP*)
-            xrandr --output $laptop_output --auto --pos 0x600 $external_monitor --output $external_monitor --mode 1920x1200 --pos 1920x0 --primary
+            xrandr --output $laptop_output --auto --pos 0x600 --output $external_monitor --mode 1920x1200 --pos 1920x0 --primary
             ;;
     esac
 else
