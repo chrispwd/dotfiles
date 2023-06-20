@@ -24,6 +24,8 @@
              :straight t
              :after (all-the-icons)
              :hook (after-init . doom-modeline-mode)
+	     :init
+	     (setq doom-modeline-icon nil)
              :config
              (customize-set-variable 'doom-modeline-height 15)
              (customize-set-variable 'doom-modeline-bar-width 6)
