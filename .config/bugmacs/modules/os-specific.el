@@ -1,7 +1,7 @@
 ;;; os-specific.el -*- lexical-binding: t; -*-
 
 (straight-use-package 'exec-path-from-shell)
-(straight-use-package 'xclip)
+;(straight-use-package 'xclip)
 (straight-use-package 'evil-terminal-cursor-changer)
 
 ;;; MacOS Tweaks
@@ -28,11 +28,10 @@
   (global-set-key (kbd "<mouse-4>") 'scroll-down-line)
   (global-set-key (kbd "<mouse-5>") 'scroll-up-line))
 
-(use-package xclip
-  :straight t
-  :if (memq window-system '(nil))
-  :config
-  (xclip-mode 1))
+;; (use-package xclip
+;;   :if (memq window-system '(nil))
+;;   :config
+;;   (xclip-mode 1))
 
 (use-package evil-terminal-cursor-changer
   :straight t
