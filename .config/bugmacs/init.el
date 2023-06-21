@@ -33,8 +33,8 @@
 (require 'look-and-feel)
 (require 'coding)
 (require 'org-settings)
-;(require 'note-taking)
-;(require 'terminals)
+(require 'note-taking)
+(require 'terminals)
 
 ;; (bm-install-package-if-not-already 'nix-mode)
 ;; ;(bm-install-package-if-not-already 'clipetty)

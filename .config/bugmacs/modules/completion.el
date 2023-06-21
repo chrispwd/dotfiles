@@ -56,8 +56,8 @@
   :config
   (global-corfu-mode)
   :bind
-  (("TAB" . corfu-next)
-   ("S-TAB" . corfu-previous)))
+  (("<tab>" . corfu-next)
+   ("S-<tab>" . corfu-previous)))
 
 (use-package corfu-terminal
   :straight t

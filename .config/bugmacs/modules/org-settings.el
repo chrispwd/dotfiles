@@ -119,25 +119,27 @@
   (define-key map (kbd "C-c a") #'org-agenda))
 
 ;; org-babel config
-(require 'ox-md)
-(org-babel-do-load-languages 'org-babel-load-languages
-                             (append org-babel-load-languages
-                              '((sql         . t)
-                                (shell       . t))))
+(use-package ox-md
+             :config
+             (org-babel-do-load-languages 'org-babel-load-languages
+                                          (append org-babel-load-languages
+                                                  '((sql         . t)
+                                                    (shell       . t)))))
 
 ;; enables <-s-TAB shortcut for structure templates
-(require 'org-tempo)
-(add-to-list 'org-structure-template-alist '("sh" . "src shell"))
-(add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))
-(add-to-list 'org-structure-template-alist '("js" . "src js"))
-(add-to-list 'org-structure-template-alist '("py" . "src python"))
-
+(use-package org-tempo
+             :config
+             (add-to-list 'org-structure-template-alist '("sh" . "src shell"))
+             (add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))
+             (add-to-list 'org-structure-template-alist '("js" . "src js"))
+             (add-to-list 'org-structure-template-alist '("py" . "src python")))
 
 ;; org-mode config
 (defun cop/org-mode-setup ()
   (org-indent-mode)
   ;;(variable-pitch-mode 1)
-  (visual-line-mode 1))
+  (visual-line-mode 1)
+  (display-line-numbers-mode 0))
 
 (add-hook 'org-mode-hook 'cop/org-mode-setup)
 
