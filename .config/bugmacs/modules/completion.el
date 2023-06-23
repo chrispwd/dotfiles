@@ -53,19 +53,24 @@
   :straight t
   :init
   (setq completion-cycle-threshold 3)
+  :custom
+  (corfu-cycle t)
+  (corfu-preselect 'prompt)
   :config
   (global-corfu-mode)
-  :bind
-  (("<tab>" . corfu-next)
-   ("S-<tab>" . corfu-previous)))
+  ;; :bind
+  ;; (:map corfu-map
+  ;;       ("TAB" . corfu-next)
+  ;;       ([tab] . corfu-next)
+  ;;       ("S-TAB" . corfu-previous)
+  ;;       ([backtab] . corfu-previous))
+  (use-package corfu-terminal
+    :straight t
+    :if (memq window-system '(nil))
+    :config
+    (corfu-terminal-mode +1)))
+  ;; (require 'orderless)
+  ;; (setq completion-styles '(orderless basic)
+  ;;       completion-category-overrides '((file (styles basic partial-completion))))
 
-(use-package corfu-terminal
-  :straight t
-  :if (memq window-system '(nil))
-  :config
-  (corfu-terminal-mode +1))
-;; (require 'orderless)
-;; (setq completion-styles '(orderless basic)
-;;       completion-category-overrides '((file (styles basic partial-completion))))
-
-(provide 'completion)
+  (provide 'completion)
