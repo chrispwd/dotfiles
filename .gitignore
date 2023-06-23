@@ -80,8 +80,16 @@ flycheck_*.el
 # Emacs bugmacs
 /.config/bugmacs/*/
 /.config/bugmacs/*
+!/.config/bugmacs/early-init.el
 !/.config/bugmacs/init.el
 !/.config/bugmacs/modules
+
+# Emacs chrispwdmacs
+/.config/chrispwdmacs/*/
+/.config/chrispwdmacs/*
+!/.config/chrispwdmacs/early-init.el
+!/.config/chrispwdmacs/init.el
+!/.config/chrispwdmacs/modules
 
 # Neovim
 /.config/nvim/*/
