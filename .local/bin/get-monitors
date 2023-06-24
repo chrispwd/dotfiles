@@ -28,5 +28,5 @@ if [ -n "$external_monitor" ]; then
             ;;
     esac
 else
-    xrandr --output $laptop_output --auto
+    xrandr --output $laptop_output --auto --primary
 fi

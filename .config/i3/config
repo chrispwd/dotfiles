@@ -10,11 +10,13 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 # TODO :: Configure monitors / default apps for desktop
+exec sleep 1 && startup
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Gohu GohuFont 14px
+# font pango:Gohu GohuFont 14px
+font pango:Iosevka Term SS03 16px
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -159,27 +161,27 @@ bindsym $mod+Shift+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+# These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+# Pressing left will shrink the window’s width.
+# Pressing right will grow the window’s width.
+# Pressing up will shrink the window’s height.
+# Pressing down will grow the window’s height.
+bindsym j resize shrink width 10 px or 10 ppt
+bindsym k resize grow height 10 px or 10 ppt
+bindsym l resize shrink height 10 px or 10 ppt
+bindsym semicolon resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+# same bindings, but for the arrow keys
+bindsym Left resize shrink width 10 px or 10 ppt
+bindsym Down resize grow height 10 px or 10 ppt
+bindsym Up resize shrink height 10 px or 10 ppt
+bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+# back to normal: Enter or Escape or $mod+r
+bindsym Return mode "default"
+bindsym Escape mode "default"
+bindsym $mod+r mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -187,9 +189,47 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 # TODO :: Configure bar
+set $black                #000000
+set $foreground           #c5c8c6
+set $background           #1d1f21
+set $black0               #282a2e
+set $red1                 #a54242
+set $green2               #8c9440
+set $yellow3              #de935f
+set $blue4                #5f819d
+set $magenta5             #b294bb
+set $cyan6                #5e8d87
+set $white7               #707880
+set $black8               #373b41
+
+# window colors
+#                       border              background         text                 indicator
+client.focused          $black              $black             $foreground          $green2
+client.unfocused        $black0             $black0            $white7              $green2
+client.focused_inactive $black0             $black0            $white7              $green2
+client.urgent           $black0             $black0            $white7              $green2
+
 bar {
-        status_command i3status
+    # output all
+    # tray_output primary
+    status_command i3status
+    position bottom
+    colors {
+       background $black
+       separator #757575
+       #                  border             background         text
+       focused_workspace  $black8            $black8            $foreground
+       inactive_workspace $black0            $black0            $white7
+       urgent_workspace   $red1              $red1              $foreground
+    }
 }
 
-gaps inner 5px
+gaps inner 10px
 gaps outer 10px
+default_border normal 0
+# for_window [all] title_window_icon on
+# for_window [all] title_window_icon padding 5px
+for_window [class=".*"] title_format "%class"
+assign [class="^Emacs$"]         $ws2
+assign [class="(?i)firefox"]     $ws3
+assign [class="(?i)signal beta"] $ws1
