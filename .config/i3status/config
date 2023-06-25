@@ -8,20 +8,26 @@
 
 general {
         colors = true
-        interval = 5
+        interval = 1
+        color_good = "#8c9440"
+        color_degraded = "#707880"
+        color_bad = "#a54242"
+        separator = "|"
 }
 
-order += "ipv6"
-order += "wireless _first_"
-order += "ethernet _first_"
-order += "battery all"
-order += "disk /"
-order += "load"
+order += "battery 0"
+order += "battery 1"
+order += "cpu_usage"
 order += "memory"
+order += "disk /"
+order += "wireless _first_"
+# order += "ipv6"
+# order += "ethernet _first_"
+# order += "load"
 order += "tztime local"
 
 wireless _first_ {
-        format_up = "W: (%quality at %essid) %ip"
+        format_up = "%essid %ip"
         format_down = "W: down"
 }
 
@@ -30,12 +36,28 @@ ethernet _first_ {
         format_down = "E: down"
 }
 
-battery all {
-        format = "%status %percentage %remaining"
+battery 0 {
+        path = "/sys/class/power_supply/BAT%d/uevent"
+        format = "%status0: %percentage"
+        threshold_type = pecentage
+        low_threshold = 20
+}
+
+battery 1 {
+        path = "/sys/class/power_supply/BAT%d/uevent"
+        format = "%status1: %percentage"
+        threshold_type = pecentage
+        low_threshold = 20
+}
+
+cpu_usage {
+        format = "CPU: %usage"
+        degraded_threshold = 90
+        max_threshold = 95
 }
 
 disk "/" {
-        format = "%avail"
+        format = "HD: %avail/%total (%percentage_used)"
 }
 
 load {
@@ -43,9 +65,9 @@ load {
 }
 
 memory {
-        format = "%used | %available"
-        threshold_degraded = "1G"
-        format_degraded = "MEMORY < %available"
+        format = "MEM: %used/%available (%percentage_used)"
+        threshold_degraded = "2G"
+        format_degraded = "MEM < %available"
 }
 
 tztime local {

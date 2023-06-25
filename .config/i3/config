@@ -224,9 +224,9 @@ bar {
     }
 }
 
-gaps inner 10px
-gaps outer 10px
-default_border normal 0
+# gaps inner 10px
+# gaps outer 10px
+default_border normal 1
 # for_window [all] title_window_icon on
 # for_window [all] title_window_icon padding 5px
 for_window [class=".*"] title_format "%class"
