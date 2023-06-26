@@ -113,23 +113,23 @@ font:
       #   - (macOS) Menlo
       #   - (Linux/BSD) monospace
       #   - (Windows) Consolas
-      family: Gohu GohuFont
+      family: Iosevka Term SS03
       style: Regular
 
    # Bold font face
    bold:
-     family: Gohu GohuFont
-     style: Bold
+     family: Iosevka Term SS03
+     style: Semibold
 
    # Italic font face
    italic:
-     family: Gohu GohuFont
-     style: Regular
+     family: Iosevka Term SS03
+     style: Oblique
 
    # Bold italic font face
    bold_italic:
-      family: Gohu GohuFont
-      style: Bold
+      family: Iosevka Term SS03
+      style: Semibold Oblique
 
    # Point size
    size: 14.0
