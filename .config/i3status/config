@@ -10,7 +10,7 @@ general {
         colors = true
         interval = 1
         color_good = "#8c9440"
-        color_degraded = "#707880"
+        color_degraded = "#de935f"
         color_bad = "#a54242"
         separator = "|"
 }
@@ -39,14 +39,14 @@ ethernet _first_ {
 battery 0 {
         path = "/sys/class/power_supply/BAT%d/uevent"
         format = "%status0: %percentage"
-        threshold_type = pecentage
+        threshold_type = percentage
         low_threshold = 20
 }
 
 battery 1 {
         path = "/sys/class/power_supply/BAT%d/uevent"
         format = "%status1: %percentage"
-        threshold_type = pecentage
+        threshold_type = percentage
         low_threshold = 20
 }
 
