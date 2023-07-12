@@ -1,5 +1,5 @@
 XTerm.vt100.faceName: Gohu GohuFont:size=14
-Emacs.font: Gohu GohuFont:size=14
+!Emacs.font: Gohu GohuFont:size=14
 !tomorrow dark
 ! special
 *.foreground:   #c5c8c6

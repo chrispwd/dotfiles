@@ -35,8 +35,8 @@
 ;; Fonts and Faces
 (cond
   ((eq system-type 'gnu/linux)
-    (defvar cop/default-font-size 120)
-    (defvar cop/default-variable-font-size 120))
+    (defvar cop/default-font-size 140)
+    (defvar cop/default-variable-font-size 140))
   ((eq system-type 'darwin)
     (defvar cop/default-font-size 180)
     (defvar cop/default-variable-font-size 180))
@@ -44,14 +44,14 @@
     (message "Config for unknown system type.")))
 
 (set-face-attribute 'default nil
-                    :font "Iosevka Term SS03 Light 12"
+                    :font "Iosevka Term SS12"
                     :height cop/default-font-size
                     :slant 'normal)
 (set-face-attribute 'bold nil
                     :inherit 'default
                     :weight 'bold)
 (set-face-attribute 'font-lock-builtin-face nil
-                    :font "Iosevka Term SS03 Light 12"
+                    :font "Iosevka Term SS12"
                     :slant 'normal)
 (set-face-attribute 'font-lock-constant-face nil
                     :inherit 'default

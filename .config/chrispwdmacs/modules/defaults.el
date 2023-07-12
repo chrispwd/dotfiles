@@ -43,20 +43,19 @@
 (tab-bar-mode 1)
 (setq tab-bar-close-button-show nil
       tab-bar-new-button-show nil)
-;(let ((map global-map))
-  ;(define-key map (kbd "C-o") #'tab-next)
-  ;(define-key map (kbd "C-S-o") #'tab-previous))
+(let ((map global-map))
+  (define-key map (kbd "C-c l") #'tab-next)
+  (define-key map (kbd "C-c h") #'tab-previous))
 
 ;; dired
-(require 'dired)
-;;; config
-(defun cop/dired-mode-setup ()
-  (dired-hide-details-mode 1)
-  (cond ((eq system-type 'darwin)
-         (setq dired-listing-switches "-ahlF"))
-        ((eq system-type 'gnu/linux)
-         (setq dired-listing-switches "-lAh --group-directories-first"))))
-
-(add-hook 'dired-mode-hook 'cop/dired-mode-setup)
+(use-package dired
+  :config
+  (defun cop/dired-mode-setup ()
+    (dired-hide-details-mode 1)
+    (cond ((eq system-type 'darwin)
+           (setq dired-listing-switches "-ahlF"))
+          ((eq system-type 'gnu/linux)
+           (setq dired-listing-switches "-lAh --group-directories-first"))))
+  (add-hook 'dired-mode-hook 'cop/dired-mode-setup))
 
 (provide 'defaults)
