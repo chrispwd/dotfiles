@@ -28,7 +28,7 @@ font pango:Iosevka Term SS12 16px
 set $refresh_i3status killall -SIGUSR1 i3status
 bar {
     # output all
-    # tray_output primary
+    tray_output primary
     status_command i3status
     position bottom
     colors {
@@ -36,6 +36,7 @@ bar {
        separator #757575
        #                  border             background         text
        focused_workspace  $black8            $black8            $foreground
+       active_workspace   $black0            $black0            $white7
        inactive_workspace $black0            $black0            $white7
        urgent_workspace   $red1              $red1              $foreground
     }
@@ -51,6 +52,7 @@ smart_borders on
 #for_window [all] title_window_icon padding 5px
 for_window [class=".*"] title_format "%class"
 assign [class="^Emacs$"]         $ws2
+assign [class="^(?i)alacritty$"] $ws2
 assign [class="(?i)firefox"]     $ws3
 assign [class="(?i)signal beta"] $ws1
 
