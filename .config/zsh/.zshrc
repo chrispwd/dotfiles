@@ -40,9 +40,26 @@ if [ $(hostname) = "wizmac.local" ]; then
     . "$HOME/.secrets"
 fi
 
-# emacs mode
-bindkey -e
+# vim mode
+bindkey -v
+bindkey '^R' history-incremental-search-backward
 export KEYTIMEOUT=1
+# Change cursor shape for different vi modes.
+function zle-keymap-select () {
+    case $KEYMAP in
+        vicmd) echo -ne '\e[1 q';;      # Blinking Block
+        #viins|main) echo -ne '\e[2 q';; # Solid Block
+        viins|main) echo -ne '\e[3 q';; # Blinking underline
+    esac
+}
+zle -N zle-keymap-select
+zle-line-init() {
+    echo -ne "\e[3 q"
+    #echo -ne "\e[1 q"
+}
+zle -N zle-line-init
+echo -ne '\e[3 q'                       # Use beam shape cursor on startup.
+preexec() { echo -ne '\e[3 q' ;}        # Use beam shape cursor for each new prompt.
 
 # Auto/tab complete
 autoload -U compinit; compinit
@@ -52,8 +69,6 @@ _comp_options+=(globdots)               # Include hidden files.
 # Plugins
 # zsh-fast-syntax-highlighting
 source $ZDOTDIR/plugins/fast-syntax-highlighting/F-Sy-H.plugin.zsh
-# zsh-z :: Fast cd'ing into folders
-#source $ZDOTDIR/plugins/zsh-z/zsh-z.plugin.zsh
 
 # zoxide :: zsh-z replacement
 eval "$(zoxide init zsh)"
@@ -75,24 +90,3 @@ eval "$(pyenv init -)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 [[ -s "/home/uhoh/.local/sdkman/bin/sdkman-init.sh" ]] && source "/home/uhoh/.local/sdkman/bin/sdkman-init.sh"
-
-# Keybinds
-#bindkey '^[[P' delete-char                      # Delete key fix
-#bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'    # fzf
-
-# Change cursor shape for different vi modes.
-#function zle-keymap-select () {
-#    case $KEYMAP in
-#        vicmd) echo -ne '\e[2 q';;      # Solid Block
-#        #viins|main) echo -ne '\e[1 q';; # Blinking Block
-#        viins|main) echo -ne '\e[3 q';; # Beam
-#    esac
-#}
-#zle -N zle-keymap-select
-#zle-line-init() {
-#    echo -ne "\e[3 q"
-#    #echo -ne "\e[1 q"
-#}
-#zle -N zle-line-init
-#echo -ne '\e[1 q'                       # Use beam shape cursor on startup.
-#preexec() { echo -ne '\e[3 q' ;}        # Use beam shape cursor for each new prompt.
