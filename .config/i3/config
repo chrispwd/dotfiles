@@ -51,10 +51,12 @@ smart_borders on
 #for_window [all] title_window_icon on
 #for_window [all] title_window_icon padding 5px
 for_window [class=".*"] title_format "%class"
-assign [class="^Emacs$"]         $ws2
-assign [class="^(?i)alacritty$"] $ws2
-assign [class="(?i)firefox"]     $ws3
-assign [class="(?i)signal beta"] $ws1
+assign [class="^Emacs$"]         $ws1
+assign [class="^(?i)alacritty$"] $ws1
+assign [class="^(?i)termite$"]   $ws1
+assign [class="(?i)firefox"]     $ws2
+assign [class="(?i)signal beta"] $ws3
+assign [class="(?i)keepassxc"]   $ws3
 
 # Color
 set $black                #000000
