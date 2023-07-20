@@ -8,6 +8,9 @@ auto-save-list
 tramp
 .\#*
 
+# MacOS
+.DS_Store
+
 # Org-mode
 .org-id-locations
 *_archive
@@ -54,7 +57,6 @@ flycheck_*.el
 /.config/efsmacs/transient/
 /.config/efsmacs/.cache/
 /.config/efsmacs/.lsp-session-v1
-/.local/share/.DS_Store
 /.config/efsmacs/.mc-lists.el
 /.config/efsmacs/.org-jira/
 /.config/efsmacs/request/

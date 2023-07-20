@@ -1,2 +1,2 @@
 #!/bin/sh
-pass ssh/chris-p1
+pass $PASS_PATH
