@@ -56,7 +56,6 @@ assign [class="^(?i)alacritty$"] $ws1
 assign [class="^(?i)termite$"]   $ws1
 assign [class="(?i)firefox"]     $ws2
 assign [class="(?i)signal beta"] $ws3
-assign [class="(?i)keepassxc"]   $ws3
 
 # Color
 set $black                #000000
