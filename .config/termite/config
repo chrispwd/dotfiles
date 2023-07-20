@@ -6,7 +6,8 @@
 #cell_width_scale = 1.0
 #clickable_url = true
 #dynamic_title = true
-font = Gohu GohuFont 14px
+# font = Gohu GohuFont 14px
+ font = Iosevka Term SS12 14px
 #font = Monospace 9
 #fullscreen = true
 #icon_name = terminal

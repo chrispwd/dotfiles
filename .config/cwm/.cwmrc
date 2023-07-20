@@ -82,7 +82,7 @@ borderwidth 2
 ignore polybar
 ignore tint2
 ignore MEGAsync
-gap 5 35 5 5
+gap 35 5 5 5
 #autogroup 0 "polybar,Polybar"
 #autogroup 0 "Polybar tray window,tray"
 autogroup 0 "keepassxc,KeePassXC"
