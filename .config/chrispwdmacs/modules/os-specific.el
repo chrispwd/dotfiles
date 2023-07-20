@@ -3,6 +3,7 @@
 (straight-use-package 'exec-path-from-shell)
 ;(straight-use-package 'xclip)
 (straight-use-package 'evil-terminal-cursor-changer)
+(straight-use-package 'clipetty)
 
 ;;; MacOS Tweaks
 (when (eq system-type 'darwin)
@@ -26,8 +27,11 @@
   ;; activate mouse-based scrolling
   (xterm-mouse-mode 1)
   (global-set-key (kbd "<mouse-4>") 'scroll-down-line)
-  (global-set-key (kbd "<mouse-5>") 'scroll-up-line))
+  (global-set-key (kbd "<mouse-5>") 'scroll-up-line)
 
+  (use-package clipetty
+    :straight t
+    :hook (after-init . global-clipetty-mode)))
 ;; (use-package xclip
 ;;   :if (memq window-system '(nil))
 ;;   :config
