@@ -1,0 +1,4 @@
+#!/bin/sh
+[ $# -ne 2 ] && echo "Usage: ssha <ssh_key> <pass_path>" && exit 1
+
+PASS_PATH="$2" DISPLAY=1 SSH_ASKPASS_REQUIRE="force" SSH_ASKPASS="$(which ssh_askpass)" ssh-add "$1" < /dev/null
