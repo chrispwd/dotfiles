@@ -97,3 +97,6 @@ flycheck_*.el
 /.config/nvim/*/
 /.config/nvim/*
 !/.config/nvim/init.lua
+
+# Source Code Dir
+/.local/src/
