@@ -20,4 +20,10 @@ fi
 #exec bspwm 2> $HOME/.cache/bspwm/log
 #cwm -c $CWMRC
 #exec icewm-session
-exec i3
+# while xsetroot -name "`date` `uptime | sed 's/.*,//'`"
+# do
+#     sleep 1
+# done &
+while type dwm >/dev/null ; do dwm && continue || break ;done
+#exec dwm
+#exec i3

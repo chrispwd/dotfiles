@@ -45,14 +45,14 @@ volume master {
 }
 
 battery 0 {
-        path = "/sys/class/power_supply/BAT%d/uevent"
+        # path = "/sys/class/power_supply/BAT%d/uevent"
         format = "%status0: %percentage"
         threshold_type = percentage
         low_threshold = 20
 }
 
 battery 1 {
-        path = "/sys/class/power_supply/BAT%d/uevent"
+        # path = "/sys/class/power_supply/BAT%d/uevent"
         format = "%status1: %percentage"
         threshold_type = percentage
         low_threshold = 20
