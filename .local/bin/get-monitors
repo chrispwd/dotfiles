@@ -2,7 +2,6 @@
 
 xrandr_data=$(xrandr --query)
 outputs=$(echo "$xrandr_data" | grep " connected" | cut -d" " -f1)
-mode=$(echo "$xrandr_data" | grep -oP '(?<=primary )[x\d]+')
 
 for outp in $outputs ; do
     case $outp in
@@ -16,6 +15,7 @@ for outp in $outputs ; do
             ;;
         *HDMI*)
             external_monitor=$outp
+            external_mode=$(echo "$xrandr_data" | grep -A 1 "$outp connected" | tail -n 1 | awk '{print $1}')
             ;;
     esac
 done
@@ -23,10 +23,10 @@ done
 if [ -n "$external_monitor" ]; then
     case $laptop_output in
         *LVDS*)
-            xrandr --output $laptop_output --auto --pos 400x1200 --output $external_monitor --mode $mode --pos 0x0 --primary
+            xrandr --output $laptop_output --auto --pos 400x1200 --output $external_monitor --mode $external_mode --pos 0x0 --primary
             ;;
         *eDP*)
-            xrandr --output $laptop_output --auto --pos 0x600 --output $external_monitor --mode $mode --pos 1920x0 --primary
+            xrandr --output $laptop_output --auto --pos 0x600 --output $external_monitor --mode $external_mode --pos 1920x0 --primary
             ;;
     esac
 else
