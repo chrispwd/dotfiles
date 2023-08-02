@@ -64,8 +64,8 @@ font-0               = Gohu GohuFont:style=Regular:pixelsize=14;
 ;font-0               = UbuntuMono Nerd Font Mono:style=Regular:pixelsize=14;
 font-1               = Noto Sans Symbols2:style=Regular:pixelsize=11;
 font-2               = Noto Color Emoji:style=Regular:scale=10;
-modules-left         = ewmh
-modules-center       = title
+modules-left         = ewmh title
+;modules-center       = title
 ;modules-right       = ticker-crypto pulseaudio filesystem cpu memory battery battery-1 temperature
 modules-right        = cpu memory filesystem battery battery-1 pulseaudio date
 cursor-click         = pointer
@@ -248,7 +248,7 @@ interval                  = 1
 date                      = "%a %b %d"
 ;date                     = "%s"
 date-alt                  = " %Y-%m-%d"
-time                      = "%d %b %H:%M"
+time                      = "%a %b %d %H:%M"
 time-alt                  = %H:%M:%S
 format-prefix            = "["
 format-prefix-foreground = ${colors.foreground-alt}
