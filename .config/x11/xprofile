@@ -15,7 +15,7 @@ wmname LG3D
 keepassxc &
 megasync &
 syncthing &
-dwmblocks &
+#dwmblocks &
 
 if [ -d "/etc/X11/xinit/xinitrc.d" ]; then
     for f in /etc/X11/xinit/xinitrc.d/*.sh; do
