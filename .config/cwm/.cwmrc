@@ -97,7 +97,7 @@ ignore polybar
 ignore tint2
 ignore MEGAsync
 #ignore "Signal Beta"
-gap 45 5 5 5
+gap 40 5 5 5
 autogroup 0 "keepassxc","KeePassXC"
 #autogroup 0 "megasync,"MEGAsync"
 autogroup 2 "Navigator","firefox"
