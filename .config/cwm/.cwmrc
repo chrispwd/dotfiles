@@ -92,14 +92,14 @@ bind-mouse 4-1 window-move
 bind-mouse 4S-1 window-lower
 
 # other
-borderwidth 2
+borderwidth 1
 ignore polybar
 ignore tint2
 ignore MEGAsync
 #ignore "Signal Beta"
-gap 40 5 5 5
+gap 5 45 5 5
 autogroup 0 "keepassxc","KeePassXC"
-#autogroup 0 "megasync,"MEGAsync"
+autogroup 0 "megasync","MEGAsync"
 autogroup 2 "Navigator","firefox"
 autogroup 3 "Signal Beta"
 
@@ -117,7 +117,7 @@ color menufg          "#c5c8c6"
 color menubg          "#1d1f21"
 color font            "#c5c8c6"
 color selfont         "#1d1f21"
-color activeborder    "#5f819d"
+color activeborder    "#707880"
 color inactiveborder  "#1d1f21"
 color groupborder     "#8c9440"
 color ungroupborder   "#de935f"

@@ -1,4 +1,12 @@
 XTerm.vt100.faceName: Gohu GohuFont:size=14
+XTerm.vt100.metaSendsEscape: true
+XTerm.vt100.backarrowKey: false
+XTerm.vt100.selectToClipboard: true
+XTerm.vt100.translations: #override \
+    Shift Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
+    Shift Ctrl <Key> V: insert-selection(CLIPBOARD)
+XTerm.ttyModes: erase ^?
+XTerm.termName: xterm-256color
 !Emacs.font: Gohu GohuFont:size=14
 !tomorrow dark
 ! special
