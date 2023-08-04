@@ -2,8 +2,10 @@
 
 # apps
 pgrep -x sxhkd > /dev/null || sxhkd &
-# TODO:: Add picom rules to window titles to prevent shadow
-pgrep -x picom > /dev/null || picom &
+
+if [ ! $(hostname) = "meep" ]; then
+    pgrep -x picom > /dev/null || picom &
+fi
 unclutter -b --timeout 3 &
 
 # monitors
