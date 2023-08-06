@@ -5,7 +5,7 @@ snapdist 4
 moveamount 20
 unbind-key all
 
-fontname "Iosevka Term SS12:style=Regular:size=12"
+fontname "Fixed (OTB):sytle=SemiConsensed:pixelsize=11"
 
 # groups
 bind-key 4-1  group-only-1
@@ -97,7 +97,7 @@ ignore polybar
 ignore tint2
 ignore MEGAsync
 #ignore "Signal Beta"
-gap 5 45 5 5
+gap 8 48 8 8
 autogroup 0 "keepassxc","KeePassXC"
 autogroup 0 "megasync","MEGAsync"
 autogroup 2 "Navigator","firefox"

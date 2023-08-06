@@ -113,26 +113,26 @@ font:
       #   - (macOS) Menlo
       #   - (Linux/BSD) monospace
       #   - (Windows) Consolas
-      family: Iosevka Term SS12
-      style: Regular
+      family: Fixed (OTB)
+      style: SemiCondensed
 
    # Bold font face
    bold:
-     family: Iosevka Term SS12
-     style: Semibold
+     family: Fixed (OTB)
+     style: Bold SemiCondensed
 
    # Italic font face
    italic:
-     family: Iosevka Term SS12
-     style: Oblique
+     family: Fixed (OTB)
+     style: Oblique SemiCondensed
 
    # Bold italic font face
    bold_italic:
-      family: Iosevka Term SS12
-      style: Semibold Oblique
+      family: Fixed (OTB)
+      style: Bold Italic
 
    # Point size
-   size: 14.0
+   size: 11.0
 
    # Offset is the extra space around each character. `offset.y` can be thought
    # of as modifying the line spacing, and `offset.x` as modifying the letter
