@@ -7,8 +7,8 @@
 #clickable_url = true
 #dynamic_title = true
 #font = Gohu GohuFont 14px
-#font = Iosevka Term SS12 14px
-font = CodeNewRoman Nerd Font Mono 16px
+font = Iosevka Term SS12 14px
+# font = CodeNewRoman Nerd Font Mono 16px
 #fullscreen = true
 #icon_name = terminal
 #mouse_autohide = false
