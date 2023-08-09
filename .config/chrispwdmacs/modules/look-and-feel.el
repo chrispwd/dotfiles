@@ -38,6 +38,7 @@
 
 (use-package fontaine
   :straight t
+  :if window-system
   :init
   (setq fontaine-latest-state-file
       (locate-user-emacs-file "fontaine-latest-state.eld"))
@@ -125,7 +126,7 @@
                     :inherit 'default
                     :weight 'bold)
 (set-face-attribute 'font-lock-builtin-face nil
-                    :font "Iosevka Term SS12 12"
+                    :font "Iosevka Term SS12"
                     :slant 'normal)
 (set-face-attribute 'font-lock-constant-face nil
                     :inherit 'default
@@ -141,7 +142,7 @@
                     :inherit 'default
                     :slant 'normal)
 (set-face-attribute 'font-lock-function-name-face nil
-                    :font "Iosevka Term SS12 12"
+                    :font "Iosevka Term SS12"
                     :weight 'light)
 ;; (set-face-attribute 'eglot-highlight-symbol-face nil
 ;;                     :font "Iosevka Term SS12 Semibold 12"
