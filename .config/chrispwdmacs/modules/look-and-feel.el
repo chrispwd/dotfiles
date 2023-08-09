@@ -83,7 +83,6 @@
          :italic-family nil
          :italic-slant italic
          :line-spacing nil)))
-  :config
   (fontaine-set-preset (or (fontaine-restore-latest-preset) 'regular))
   :catch (lambda (keyword err)
            (message (error-message-string err)))
@@ -103,10 +102,7 @@
         (6 variable-pitch 1.0)
         (7 variable-pitch 1.0)
         (t variable-pitch 1.0)))
-  :config
-  ;;(mapc #'disable-theme custom-enabled-themes)
-  (ef-themes-select 'ef-dark)
-  )
+  (ef-themes-select 'ef-dark))
 ;; Fonts and Faces
 ;; (cond
 ;;   ((eq system-type 'gnu/linux)
@@ -118,32 +114,32 @@
 ;;   (t
 ;;     (message "Config for unknown system type.")))
 
-(set-face-attribute 'default nil
-                    :font "Iosevka Term SS12"
-                    :height 120
-                    :slant 'normal)
-(set-face-attribute 'bold nil
-                    :inherit 'default
-                    :weight 'bold)
-(set-face-attribute 'font-lock-builtin-face nil
-                    :font "Iosevka Term SS12"
-                    :slant 'normal)
-(set-face-attribute 'font-lock-constant-face nil
-                    :inherit 'default
-                    :weight 'normal)
-;; (set-face-attribute 'font-lock-comment-face nil
-;;                     :font "Iosevka Term SS12 Light Oblique 12"
-;;                     :slant 'oblique)
-(set-face-attribute 'font-lock-preprocessor-face nil
-                    :weight 'normal)
-(set-face-attribute 'font-lock-keyword-face nil
-                    :weight 'normal)
-(set-face-attribute 'font-lock-type-face nil
-                    :inherit 'default
-                    :slant 'normal)
-(set-face-attribute 'font-lock-function-name-face nil
-                    :font "Iosevka Term SS12"
-                    :weight 'light)
+;; (set-face-attribute 'default nil
+;;                     :font "Iosevka Term SS12"
+;;                     :height 120
+;;                     :slant 'normal)
+;; (set-face-attribute 'bold nil
+;;                     :inherit 'default
+;;                     :weight 'bold)
+;; (set-face-attribute 'font-lock-builtin-face nil
+;;                     :font "Iosevka Term SS12"
+;;                     :slant 'normal)
+;; (set-face-attribute 'font-lock-constant-face nil
+;;                     :inherit 'default
+;;                     :weight 'normal)
+;; ;; (set-face-attribute 'font-lock-comment-face nil
+;; ;;                     :font "Iosevka Term SS12 Light Oblique 12"
+;; ;;                     :slant 'oblique)
+;; (set-face-attribute 'font-lock-preprocessor-face nil
+;;                     :weight 'normal)
+;; (set-face-attribute 'font-lock-keyword-face nil
+;;                     :weight 'normal)
+;; (set-face-attribute 'font-lock-type-face nil
+;;                     :inherit 'default
+;;                     :slant 'normal)
+;; (set-face-attribute 'font-lock-function-name-face nil
+;;                     :font "Iosevka Term SS12"
+;;                     :weight 'light)
 ;; (set-face-attribute 'eglot-highlight-symbol-face nil
 ;;                     :font "Iosevka Term SS12 Semibold 12"
 ;;                     :weight 'semi-bold)
