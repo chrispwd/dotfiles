@@ -5,6 +5,8 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 if [ ! $(hostname) = "meep" ]; then
     pgrep -x picom > /dev/null || picom &
+# else
+#     pgrep -x picom > /dev/null || picom --config $XDG_CONFIG_HOME/picom/no-glx/picom.conf &
 fi
 unclutter -b --timeout 3 &
 
