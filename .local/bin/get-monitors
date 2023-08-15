@@ -2,6 +2,7 @@
 
 xrandr_data=$(xrandr --query)
 outputs=$(echo "$xrandr_data" | grep " connected" | cut -d" " -f1)
+disconnected_outputs=$(echo "$xrandr_data" | grep "disconnected" | cut -d" " -f1 | head -n -1)
 
 for outp in $outputs ; do
     case $outp in
@@ -30,5 +31,9 @@ if [ -n "$external_monitor" ]; then
             ;;
     esac
 else
-    xrandr --output $laptop_output --auto --primary
+    other_outputs_off=""
+    for doutp in $disconnected_outputs ; do
+        other_outputs_off="$other_outputs_off --output $doutp --off"
+    done
+    xrandr --output $laptop_output --auto --primary $other_outputs_off
 fi
