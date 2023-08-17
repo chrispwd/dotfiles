@@ -35,7 +35,3 @@
 (require 'org-settings)
 (require 'note-taking)
 (require 'terminals)
-
-;; Interoperability of packages
-(add-to-list 'god-exempt-major-modes 'vterm-mode)
-
