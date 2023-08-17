@@ -44,8 +44,8 @@
 (use-package avy
   :straight t
   :config
-  (global-set-key (kbd "C-:") 'avy-goto-char)
-  (global-set-key (kbd "C-'") 'avy-goto-char-2)
+  (global-set-key (kbd "M-g c") 'avy-goto-char)
+  (global-set-key (kbd "M-g t") 'avy-goto-char-2)
   (global-set-key (kbd "M-g l") 'avy-goto-line)
   (global-set-key (kbd "M-g w") 'avy-goto-word-1)
   (global-set-key (kbd "M-g e") 'avy-goto-word-0))
