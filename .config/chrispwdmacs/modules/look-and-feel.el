@@ -66,7 +66,7 @@
          ;; I keep all properties for didactic purposes, but most can be
          ;; omitted.  See the fontaine manual for the technicalities:
          ;; <https://protesilaos.com/emacs/fontaine>.
-         :default-family "Iosevka Term SS12"
+         :default-family "Hack"
          :default-weight regular
          :default-height 120
          :fixed-pitch-family nil ; falls back to :default-family
@@ -75,7 +75,7 @@
          :fixed-pitch-serif-family nil ; falls back to :default-family
          :fixed-pitch-serif-weight nil ; falls back to :default-weight
          :fixed-pitch-serif-height 1.0
-         :variable-pitch-family "Iosevka Term SS12"
+         :variable-pitch-family "Hack"
          :variable-pitch-weight nil
          :variable-pitch-height 1.0
          :bold-family nil ; use whatever the underlying face has

@@ -3,9 +3,18 @@
 ;;; TODO:: finish setting up multiple-cursors
 (straight-use-package 'multiple-cursors)
 (straight-use-package 'avy)
-;; (straight-use-package 'god-mode)
+(straight-use-package 'god-mode)
 (straight-use-package 'evil)
 (straight-use-package 'evil-collection)
+
+(use-package avy
+  :straight t
+  :config
+  (global-set-key (kbd "M-g c") 'avy-goto-char)
+  (global-set-key (kbd "M-g t") 'avy-goto-char-2)
+  (global-set-key (kbd "M-g l") 'avy-goto-line)
+  (global-set-key (kbd "M-g w") 'avy-goto-word-1)
+  (global-set-key (kbd "M-g e") 'avy-goto-word-0))
 
 (use-package evil
   :straight t
@@ -20,9 +29,8 @@
   (setq evil-insert-state-cursor 'bar)  ; ⎸
   (setq evil-emacs-state-cursor  'hbar) ; _
   :config
-  (evil-mode 1))
-  ;; (define-key evil-normal-state-map (kbd "TAB") 'indent-for-tab-command)
-  ;; (define-key evil-visual-state-map (kbd "TAB") 'indent-for-tab-command))
+  (evil-mode 1)
+  (evil-set-leader 'normal (kbd "SPC")))
 
 (use-package evil-collection
   :straight t
@@ -30,24 +38,10 @@
   :config
   (evil-collection-init))
 
-;; (use-package god-mode
-;;   :straight t
-;;   :config
-;;   (global-set-key (kbd "<escape>") #'god-mode-all)
-;;   (define-key god-local-mode-map (kbd "i") #'god-local-mode)
-;;   (define-key god-local-mode-map (kbd ".") #'repeat)
-;;   (defun my-god-mode-update-cursor-type ()
-;;     (setq cursor-type (if (or god-local-mode buffer-read-only) 'box 'hbar)))
-;;   (add-hook 'post-command-hook #'my-god-mode-update-cursor-type)
-;;   (god-mode))
+(use-package god-mode
+   :straight t)
 
-(use-package avy
-  :straight t
-  :config
-  (global-set-key (kbd "M-g c") 'avy-goto-char)
-  (global-set-key (kbd "M-g t") 'avy-goto-char-2)
-  (global-set-key (kbd "M-g l") 'avy-goto-line)
-  (global-set-key (kbd "M-g w") 'avy-goto-word-1)
-  (global-set-key (kbd "M-g e") 'avy-goto-word-0))
+;; God-mode and evil... Lord have mercy
+(evil-define-key 'normal 'global (kbd "SPC") 'god-execute-with-current-bindings)
 
 (provide 'text-editing)
