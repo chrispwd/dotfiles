@@ -9,9 +9,8 @@ precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 
 # simple
-PROMPT='╭─╸%F{10}%n%f@%F{12}%m%f %F{5}%3~%f ${vcs_info_msg_0_}%(?..%F{9}exit%f %?)
-╰╸%# ' 
-zstyle ':vcs_info:git:*' formats '%F{3}on%f %b '
+PROMPT='${vcs_info_msg_0_}%(?..(%F{9}%?%f%))[%F{10}%n%f@%F{12}%m%f %F{5}%3~%f] %# ' 
+zstyle ':vcs_info:git:*' formats '(%F{3}%b%f%)'
 # two-line
 #PROMPT='%(?.%F{7}╭─╸%f.%F{7}╭─╸%f%F{1}%B✗ %?%b %f)%b%B%F{14}%n%f%b@%B%F{2}%m%f%b %B%F{5}%3~%f%b${vcs_info_msg_0_}%b
 #%F{7}╰╸%f%# '
