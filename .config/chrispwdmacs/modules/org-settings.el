@@ -4,7 +4,7 @@
 ;; it's own module.
 ;; TODO:: Finish this module
 (setq org-agenda-files
-      '("~/Notes/denote/20220821T115434--todo-list__meta.org" "~/Notes/denote/20220822T110458--reminders__meta.org"))
+      '("~/Notes/denote/20220821T115434--todo-list__meta.org" "~/Notes/denote/20220822T110458--reminders__meta.org" "~/Notes/denote/20220823T213739--completed-tasks__meta.org"))
 (setq org-archive-location "~/Notes/denote/20220823T213739--completed-tasks__meta.org::")
 (setq org-ellipsis " ▾"
       org-hide-emphasis-markers t)
