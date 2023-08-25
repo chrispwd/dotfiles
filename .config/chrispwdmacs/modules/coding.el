@@ -5,13 +5,14 @@
 
 ;;; Dependencies
 (straight-use-package 'rainbow-delimiters)
+(straight-use-package 'eglot)
 (straight-use-package 'tree-sitter)
 (straight-use-package 'tree-sitter-langs)
 (straight-use-package 'rust-mode)
 (straight-use-package 'vue-mode)
 (straight-use-package 'typescript-mode)
-(straight-use-package 'eglot)
 (straight-use-package 'nix-mode)
+(straight-use-package 'emmet-mode)
 
 ;;; rainbow-delimiters - colors parens for visual aid
 (use-package rainbow-delimiters
@@ -72,5 +73,11 @@
   :config
   (add-to-list 'eglot-server-programs
                '((vue-mode . ("vls")))))
+
+(use-package emmet-mode
+  :straight t
+  :config
+  (add-hook 'sgml-mode-hook 'emmet-mode)
+  (add-hook 'css-mode-hook  'emmet-mode))
 
 (provide 'coding)
