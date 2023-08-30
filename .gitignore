@@ -93,6 +93,14 @@ flycheck_*.el
 !/.config/chrispwdmacs/init.el
 !/.config/chrispwdmacs/modules
 
+# Emacs mimemacs
+/.config/mimemacs/*/
+/.config/mimemacs/*
+!/.config/mimemacs/early-init.el
+!/.config/mimemacs/init.el
+!/.config/mimemacs/modules
+!/.config/mimemacs/bootstrap
+
 # Neovim
 /.config/nvim/*/
 /.config/nvim/*
