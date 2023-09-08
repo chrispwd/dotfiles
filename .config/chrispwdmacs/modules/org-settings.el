@@ -1,5 +1,7 @@
 ;;; org-settings.el -*- lexical-binding: t; -*-
 
+(straight-use-package 'visual-fill-column)
+
 ;; All my org settings. It can get quite long, so I gave it
 ;; it's own module.
 ;; TODO:: Finish this module
@@ -120,12 +122,36 @@
              (add-to-list 'org-structure-template-alist '("py" . "src python")))
 
 ;; org-mode config
-(defun cop/org-mode-setup ()
+(defun cpwd/configure-org-faces ()
+  (with-eval-after-load 'org-faces
+    (set-face-attribute 'org-block nil    :foreground nil :inherit 'fixed-pitch)
+    (set-face-attribute 'org-table nil    :inherit 'fixed-pitch)
+    (set-face-attribute 'org-formula nil  :inherit 'fixed-pitch)
+    (set-face-attribute 'org-code nil     :inherit '(shadow fixed-pitch))
+    (set-face-attribute 'org-table nil    :inherit '(shadow fixed-pitch))
+    (set-face-attribute 'org-verbatim nil :inherit '(shadow fixed-pitch))
+    (set-face-attribute 'org-special-keyword nil :inherit '(font-lock-comment-face fixed-pitch))
+    (set-face-attribute 'org-meta-line nil :inherit '(font-lock-comment-face fixed-pitch))
+    (set-face-attribute 'org-checkbox nil  :inherit 'fixed-pitch)
+    (set-face-attribute 'line-number nil :inherit 'fixed-pitch)
+    (set-face-attribute 'line-number-current-line nil :inherit 'fixed-pitch)))
+
+(cpwd/configure-org-faces)
+
+(defun cpwd/org-mode-setup ()
   (org-indent-mode)
-  ;;(variable-pitch-mode 1)
+  (variable-pitch-mode 1)
   (visual-line-mode 1)
   (display-line-numbers-mode 0))
 
-(add-hook 'org-mode-hook 'cop/org-mode-setup)
+(add-hook 'org-mode-hook 'cpwd/org-mode-setup)
+
+(defun cpwd/org-mode-visual-fill ()
+  (setq visual-fill-column-width 100)
+  (visual-fill-column-mode 1))
+
+(use-package visual-fill-column
+  :straight t
+  :hook (org-mode . cpwd/org-mode-visual-fill))
 
 (provide 'org-settings)

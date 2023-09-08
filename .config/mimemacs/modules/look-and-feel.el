@@ -66,8 +66,8 @@
          ;; I keep all properties for didactic purposes, but most can be
          ;; omitted.  See the fontaine manual for the technicalities:
          ;; <https://protesilaos.com/emacs/fontaine>.
-         :default-family "Hack"
-         :default-weight regular
+         :default-family "DejaVu Sans Mono"
+         :default-weight book
          :default-height 120
          :fixed-pitch-family nil ; falls back to :default-family
          :fixed-pitch-weight nil ; falls back to :default-weight
@@ -75,14 +75,15 @@
          :fixed-pitch-serif-family nil ; falls back to :default-family
          :fixed-pitch-serif-weight nil ; falls back to :default-weight
          :fixed-pitch-serif-height 1.0
-         :variable-pitch-family "Hack"
-         :variable-pitch-weight nil
+         :variable-pitch-family "DejaVu Sans"
+         :variable-pitch-weight book
          :variable-pitch-height 1.0
          :bold-family nil ; use whatever the underlying face has
          :bold-weight bold
          :italic-family nil
          :italic-slant italic
          :line-spacing nil)))
+  :config
   (fontaine-set-preset (or (fontaine-restore-latest-preset) 'regular))
   :catch (lambda (keyword err)
            (message (error-message-string err)))

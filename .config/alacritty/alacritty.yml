@@ -113,33 +113,22 @@ font:
       #   - (macOS) Menlo
       #   - (Linux/BSD) monospace
       #   - (Windows) Consolas
-      # family: Fixed (OTB)
-      # style: SemiCondensed
-      # family: Source Code Pro
-      family: Hack
+      family: Ubuntu Mono
       style: Regular
 
    # Bold font face
    bold:
-     # family: Fixed (OTB)
-     # style: Bold SemiCondensed
-     # family: Source Code Pro
-     family: Hack
+     family: Ubuntu Mono
      style: Bold
 
    # Italic font face
    italic:
-     # family: Fixed (OTB)
-     # style: Oblique SemiCondensed
-     # family: Source Code Pro
-     family: Hack
+     family: Ubuntu Mono
      style: Italic
 
    # Bold italic font face
    bold_italic:
-      # family: Fixed (OTB)
-     # family: Source Code Pro
-     family: Hack
+     family: Ubuntu Mono
      style: Bold Italic
 
    # Point size

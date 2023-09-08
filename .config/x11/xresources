@@ -1,3 +1,7 @@
+Xft.hinting: 1
+Xft.hintstyle: hintslight
+Xft.antialias: 1
+Xft.rgba: rgb 
 xterm*utf8: 1
 XTerm.vt100.font: fixed
 XTerm.vt100.metaSendsEscape: true
