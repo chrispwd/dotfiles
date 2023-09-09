@@ -1,11 +1,11 @@
-;;; os-specific.el -*- lexical-binding: t; -*-
+; os-specific.el -*- lexical-binding: t; -*-
 
 (cpwd/install-if-not 'exec-path-from-shell)
 ;(cpwd/install-if-not 'xclip)
 (cpwd/install-if-not 'evil-terminal-cursor-changer)
 (cpwd/install-if-not 'clipetty)
 
-;;; MacOS Tweaks
+;; MacOS Tweaks
 (when (eq system-type 'darwin)
   (set-face-attribute 'default (selected-frame) :height 180)
   (setq visible-bell nil))
@@ -26,10 +26,10 @@
   (use-package clipetty
     :ensure t
     :hook (after-init . global-clipetty-mode)))
-;; (use-package xclip
-;;   :if (memq window-system '(nil))
-;;   :config
-;;   (xclip-mode 1))
+;(use-package xclip
+;  :if (memq window-system '(nil))
+;  :config
+;  (xclip-mode 1))
 
 (use-package evil-terminal-cursor-changer
   :ensure t
