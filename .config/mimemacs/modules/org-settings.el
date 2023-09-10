@@ -136,7 +136,6 @@
     (set-face-attribute 'line-number nil :inherit 'fixed-pitch)
     (set-face-attribute 'line-number-current-line nil :inherit 'fixed-pitch)))
 
-
 (defun cpwd/org-mode-setup ()
   (cpwd/configure-org-faces)
   (org-indent-mode)

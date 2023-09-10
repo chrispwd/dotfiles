@@ -16,7 +16,7 @@
 ;(require 'note-taking)
 (require 'org-settings)
 (require 'look-and-feel)
-;(require 'coding)
+(require 'coding)
 ;(require 'terminals)
 
 ;; Module interoperability
@@ -34,7 +34,15 @@
     (set-face-attribute 'line-number nil :inherit 'fixed-pitch)
     (set-face-attribute 'line-number-current-line nil :inherit 'fixed-pitch)))
 
-(add-hook 'ef-themes-post-load-hook 'cpwd/configure-org-faces)
+;;; Set up the `after-enable-theme-hook'
+(defvar after-enable-theme-hook nil
+  "Normal hook run after enabling a theme.")
+(defun run-after-enable-theme-hook (&rest _args)
+  "Run `after-enable-theme-hook'."
+  (run-hooks 'after-enable-theme-hook))
+(advice-add 'enable-theme :after #'run-after-enable-theme-hook)
+
+(add-hook 'after-enable-theme-hook 'cpwd/configure-org-faces)
 
 ;; startup time / message
 (add-hook 'emacs-startup-hook
