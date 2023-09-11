@@ -38,6 +38,7 @@
 
 (use-package fontaine
   :straight t
+  :if (display-graphic-p)
   :init
   (setq fontaine-latest-state-file
       (locate-user-emacs-file "fontaine-latest-state.eld"))
