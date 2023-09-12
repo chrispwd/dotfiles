@@ -4,11 +4,9 @@
 (cpwd/install-if-not 'multiple-cursors)
 (cpwd/install-if-not 'avy)
 (cpwd/install-if-not 'god-mode)
-;(straight-use-package 'evil)
-;(straight-use-package 'evil-collection)
 
 (use-package avy
-  :straight t
+  :ensure t
   :config
   (global-set-key (kbd "M-g c") 'avy-goto-char)
   (global-set-key (kbd "M-g t") 'avy-goto-char-2)
@@ -16,32 +14,20 @@
   (global-set-key (kbd "M-g w") 'avy-goto-word-1)
   (global-set-key (kbd "M-g e") 'avy-goto-word-0))
 
-;; (use-package evil
-;;   :straight t
-;;   :init
-;;   (setq evil-want-integration t)
-;;   (setq evil-want-keybinding nil)
-;;   (setq evil-want-C-u-scroll t)
-;;   (setq evil-want-Y-yank-to-eol t)
-;;   (setq evil-motion-state-cursor 'box)  ; █
-;;   (setq evil-visual-state-cursor 'box)  ; █
-;;   (setq evil-normal-state-cursor 'box)  ; █
-;;   (setq evil-insert-state-cursor 'bar)  ; ⎸
-;;   (setq evil-emacs-state-cursor  'hbar) ; _
-;;   :config
-;;   (evil-mode 1)
-;;   (evil-set-leader 'normal (kbd "SPC")))
-
-;; (use-package evil-collection
-;;   :straight t
-;;   :after evil
-;;   :config
-;;   (evil-collection-init))
-
 (use-package god-mode
-   :straight t)
+  :ensure t
+  :init
+  (setq god-exempt-major-modes nil)
+  (setq god-exempt-predicates nil)
+  :config
+  (global-set-key (kbd "<escape>") #'god-mode-all)
+  (define-key god-local-mode-map (kbd ".") #'repeat)
+  (god-mode))
 
-;; God-mode and evil... Lord have mercy
-(evil-define-key 'normal 'global (kbd "SPC") 'god-execute-with-current-bindings)
+(defun my-god-mode-update-cursor-type ()
+  (setq cursor-type (if (or god-local-mode buffer-read-only) 'hbar 'box)))
+(add-hook 'post-command-hook #'my-god-mode-update-cursor-type)
+
+;; TODO:: configure `multiple-cursors
 
 (provide 'text-editing)

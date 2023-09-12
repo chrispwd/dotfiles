@@ -12,11 +12,11 @@
 (require 'defaults)
 (require 'completion)
 (require 'os-specific)
-;(require 'text-editing)
-;(require 'note-taking)
+(require 'text-editing)
+(require 'note-taking)
 (require 'org-settings)
 (require 'look-and-feel)
-(require 'coding)
+;(require 'coding)
 ;(require 'terminals)
 
 ;; Module interoperability

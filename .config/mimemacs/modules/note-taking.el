@@ -3,11 +3,11 @@
 ;;; Configuration all revolving around taking notes
 
 ;;; Dependencies
-(straight-use-package 'denote)
+(cpwd/install-if-not 'denote)
 
 ;;; denote - a simlpe note-taking package
 (use-package denote
-             :straight t
+             :ensure t
              :init
              (defun cpwd/denote-journal ()
                "Create an entry tagged 'journal' with the date as its title."
@@ -31,12 +31,6 @@
               ("C-c n b" . denote-link-backlinks) 
               ("C-c n r" . denote-rename-file) 
               ("C-c n R" . denote-rename-file-using-front-matter)))
-
-;; (setq denote-link-backlinks-display-buffer-action
-;;       '((display-buffer-reuse-window
-;;          display-buffer-in-side-window)
-;;         (side . left)
-;;         (slot . 99)
-;;         (window-width . 0.3)))
+;; TODO:: Have denote open backlinks buffer like the xref window when running project-find-regexp
 
 (provide 'note-taking)

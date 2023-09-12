@@ -86,8 +86,13 @@
         (5 variable-pitch 1.0) ; absence of weight means `bold'
         (6 variable-pitch 1.0)
         (7 variable-pitch 1.0)
-        (t variable-pitch 1.0)))
-  (ef-themes-select 'ef-night))
+        (t variable-pitch 1.0))))
+;; (ef-themes-select 'ef-night))
+
+(use-package doom-themes
+  :ensure t
+  :config
+  (load-theme 'doom-one t))
 
 ;; Module interoperability
 (add-hook 'ef-themes-post-load-hook #'fontaine-apply-current-preset)
