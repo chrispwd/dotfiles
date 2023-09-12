@@ -11,10 +11,14 @@
   (setq visible-bell nil))
 
 (use-package exec-path-from-shell
-             :if (eq system-type 'darwin)
-             :ensure t
-             :config
-             (exec-path-from-shell-initialize))
+  :if (eq system-type 'darwin)
+  :ensure t
+  :config
+  (exec-path-from-shell-initialize))
+
+;; GUI-only settings
+(unless (not (display-graphic-p))
+  (scroll-bar-mode -1))
 
 ;; Terminal-only settings
 (unless (display-graphic-p)

@@ -25,7 +25,7 @@
 
 (use-package fontaine
   :ensure t
-  :if (display-graphics-p)
+  :if (display-graphic-p)
   :init
   (setq fontaine-latest-state-file
       (locate-user-emacs-file "fontaine-latest-state.eld"))

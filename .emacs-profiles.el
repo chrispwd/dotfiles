@@ -4,4 +4,5 @@
  ("cop"         . ((user-emacs-directory . "~/.config/copmacs")))
  ("test"        . ((user-emacs-directory . "~/.config/bugmacs")))
  ("chrispmacs"  . ((user-emacs-directory . "~/.config/chrispmacs")))
- ("default"     . ((user-emacs-directory . "~/.config/chrispwdmacs"))))
+ ("default"     . ((user-emacs-directory . "~/.config/chrispwdmacs")))
+ ("mime"        . ((user-emacs-directory . "~/.config/mimemacs"))))
