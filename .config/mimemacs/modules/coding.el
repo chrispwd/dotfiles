@@ -5,11 +5,11 @@
 
 ;;; Dependencies
 (cpwd/install-if-not 'rainbow-delimiters)
+(cpwd/install-if-not 'emmet-mode)
 ;; (cpwd/install-if-not 'rust-mode)
 ;; (cpwd/install-if-not 'vue-mode)
 ;; (cpwd/install-if-not 'typescript-mode)
 ;; (cpwd/install-if-not 'nix-mode)
-(cpwd/install-if-not 'emmet-mode)
 
 ;;; rainbow-delimiters - colors parens for visual aid
 (use-package rainbow-delimiters
@@ -23,4 +23,7 @@
   (add-hook 'sgml-mode-hook 'emmet-mode)
   (add-hook 'css-mode-hook  'emmet-mode))
 
+;; TODO :: Configure treesitter and languages
+
+;; TODO :: Configure eglot
 (provide 'coding)
