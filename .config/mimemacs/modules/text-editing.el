@@ -21,6 +21,7 @@
   (setq god-exempt-predicates nil)
   :config
   (global-set-key (kbd "<escape>") #'god-mode-all)
+  (global-set-key (kbd "C-c g") #'god-mode-all)
   (define-key god-local-mode-map (kbd ".") #'repeat)
   (god-mode))
 

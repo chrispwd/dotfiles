@@ -64,18 +64,7 @@
   :init
   (global-corfu-mode)
   (corfu-history-mode)
-  (corfu-popupinfo-mode) ; Popup completion info
-  :config
-  ;; (add-hook 'eshell-mode-hook
-  ;;           (lambda () (setq-local corfu-quit-at-boundary t
-  ;;                                  corfu-quit-no-match t
-  ;;                                  corfu-auto nil)
-  ;;             (corfu-mode)))
-  (use-package corfu-terminal
-    :ensure t
-    :if (not (display-graphic-p))            
-    :config
-    (corfu-terminal-mode +1)))
+  (corfu-popupinfo-mode)) ; Popup completion info
 
 (use-package cape
   :defer 10

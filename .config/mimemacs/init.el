@@ -11,7 +11,7 @@
 
 (require 'defaults)
 (require 'completion)
-(require 'os-specific)
+(require 'environment-specific)
 (require 'text-editing)
 (require 'note-taking)
 (require 'org-settings)
@@ -34,7 +34,7 @@
     (set-face-attribute 'line-number nil :inherit 'fixed-pitch)
     (set-face-attribute 'line-number-current-line nil :inherit 'fixed-pitch)))
 
-;;; Set up the `after-enable-theme-hook'
+;;; Set up the after-enable-theme-hook
 (defvar after-enable-theme-hook nil
   "Normal hook run after enabling a theme.")
 (defun run-after-enable-theme-hook (&rest _args)
