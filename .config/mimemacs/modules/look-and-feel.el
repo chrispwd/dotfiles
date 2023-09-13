@@ -96,6 +96,11 @@
 
 ;; Module interoperability
 (add-hook 'ef-themes-post-load-hook #'fontaine-apply-current-preset)
-(fontaine-apply-current-preset)
+(if (daemonp)
+    (add-hook 'server-after-make-frame-hook
+              (lambda (frame)
+                (with-selected-frame frame)
+                (fontaine-apply-current-preset)))
+(fontaine-apply-current-preset))
 
 (provide 'look-and-feel)
