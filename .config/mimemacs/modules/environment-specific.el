@@ -16,6 +16,7 @@
   (exec-path-from-shell-initialize))
 
 (defun cpwd/terminal-settings ()
+  "Settings that only apply to emacs when ran in a terminal window"
   ;; activate mouse-based scrolling
   (xterm-mouse-mode 1)
   (global-set-key (kbd "<mouse-4>") 'scroll-down-line)
@@ -29,7 +30,12 @@
     (corfu-terminal-mode +1)))
 
 (defun cpwd/gui-settings ()
+  "Settings that only apply to emacs when ran in a full GUI frame"
   (scroll-bar-mode -1))
+
+;; Run if GUI on startup
+(when (display-graphic-p)
+  (cpwd/gui-settings))
 
 ;; Hook ran when a GUI frame is spawned
 (add-hook 'after-make-frame-functions

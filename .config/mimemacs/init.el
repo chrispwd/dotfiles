@@ -16,6 +16,7 @@
 (require 'note-taking)
 (require 'org-settings)
 (require 'look-and-feel)
+(require 'coding)
 ;(require 'coding)
 ;(require 'terminals)
 
