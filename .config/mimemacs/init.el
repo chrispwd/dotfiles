@@ -17,8 +17,7 @@
 (require 'org-settings)
 (require 'look-and-feel)
 (require 'coding)
-;(require 'coding)
-;(require 'terminals)
+(require 'terminals)
 
 ;; Module interoperability
 (defun cpwd/configure-org-faces ()

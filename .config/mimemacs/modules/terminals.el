@@ -1,15 +1,20 @@
 ;;; terminals.el  -*- lexical-binding: t; -*-
 
 ;; Configuration for eshell, shell, term, vterm, etc.
-(straight-use-package 'vterm)
+(cpwd/install-if-not 'vterm)
+(cpwd/install-if-not 'eat)
 
-(unless (memq window-system '(nil))
-  (use-package vterm
-    :straight t
-    :hook
-    (vterm-mode . (lambda () (display-line-numbers-mode 0)))
-    :init
-    (setq term-prompt-regexp "^[^#$%>\n]*[#$%>] *")
-    (setq vterm-max-scrollback 20000)))
+(use-package vterm
+  :ensure t
+  :hook
+  (vterm-mode . (lambda () (display-line-numbers-mode 0)))
+  :init
+  (setq term-prompt-regexp "^[^#$%>\n]*[#$%>] *")
+  (setq vterm-max-scrollback 20000))
+
+(use-package eat
+  :ensure t
+  :init
+  (setq eat-enable-directory-tracking t))
 
 (provide 'terminals)

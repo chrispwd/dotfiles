@@ -41,25 +41,27 @@ if [ $(hostname) = "wizmac.local" ]; then
 fi
 
 # vim mode
-bindkey -v
+#bindkey -v
+# emacs mode
+bindkey -e
 bindkey '^R' history-incremental-search-backward
 export KEYTIMEOUT=1
 # Change cursor shape for different vi modes.
-function zle-keymap-select () {
-    case $KEYMAP in
-        vicmd) echo -ne '\e[1 q';;      # Blinking Block
-        #viins|main) echo -ne '\e[2 q';; # Solid Block
-        viins|main) echo -ne '\e[3 q';; # Blinking underline
-    esac
-}
-zle -N zle-keymap-select
-zle-line-init() {
-    echo -ne "\e[3 q"
-    #echo -ne "\e[1 q"
-}
-zle -N zle-line-init
-echo -ne '\e[3 q'                       # Use beam shape cursor on startup.
-preexec() { echo -ne '\e[3 q' ;}        # Use beam shape cursor for each new prompt.
+# function zle-keymap-select () {
+#     case $KEYMAP in
+#         vicmd) echo -ne '\e[1 q';;      # Blinking Block
+#         #viins|main) echo -ne '\e[2 q';; # Solid Block
+#         viins|main) echo -ne '\e[3 q';; # Blinking underline
+#     esac
+# }
+# zle -N zle-keymap-select
+# zle-line-init() {
+#     echo -ne "\e[3 q"
+#     #echo -ne "\e[1 q"
+# }
+# zle -N zle-line-init
+# echo -ne '\e[3 q'                       # Use beam shape cursor on startup.
+# preexec() { echo -ne '\e[3 q' ;}        # Use beam shape cursor for each new prompt.
 
 # Auto/tab complete
 autoload -U compinit; compinit
@@ -87,6 +89,10 @@ eval "$(pyenv init -)"
 
 # Source nix profile
 [ -f $HOME/.nix-profile/etc/profile.d/nix.sh ] && source $HOME/.nix-profile/etc/profile.d/nix.sh
+
+# emacs-eat shell integration
+[ -n "$EAT_SHELL_INTEGRATION_DIR" ] && \
+    source "$EAT_SHELL_INTEGRATION_DIR/zsh"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 [[ -s "/home/uhoh/.local/sdkman/bin/sdkman-init.sh" ]] && source "/home/uhoh/.local/sdkman/bin/sdkman-init.sh"
