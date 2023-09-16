@@ -30,7 +30,9 @@
               ("C-c n l" . denote-link-find-file) 
               ("C-c n b" . denote-link-backlinks) 
               ("C-c n r" . denote-rename-file) 
-              ("C-c n R" . denote-rename-file-using-front-matter)))
+              ("C-c n R" . denote-rename-file-using-front-matter))
+             :config
+             (denote-rename-buffer-mode))
 ;; TODO:: Have denote open backlinks buffer like the xref window when running project-find-regexp
 
 (provide 'note-taking)
