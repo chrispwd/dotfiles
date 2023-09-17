@@ -18,6 +18,7 @@
 (require 'look-and-feel)
 (require 'coding)
 (require 'terminals)
+(require 'window-management)
 
 ;; Module interoperability
 (defun cpwd/configure-org-faces ()
