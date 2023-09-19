@@ -7,6 +7,7 @@
 ;; TODO:: Finish this module
 (setq org-agenda-files
       '("~/Notes/denote/20230827T231459--project-list__gtd_meta.org"
+        "~/Notes/denote/20230827T235259--someday-maybe-list__gtd_meta.org"
         "~/Notes/denote/20220822T110458--reminders__meta.org"
         "~/Notes/denote/20220823T213739--completed-tasks__meta.org"))
 (setq org-archive-location "~/Notes/denote/20220823T213739--completed-tasks__meta.org::")
