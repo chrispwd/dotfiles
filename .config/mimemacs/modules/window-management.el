@@ -12,6 +12,7 @@
         '("\\*Messages\\*"
           "Output\\*$"
           "\\*Async Shell Command\\*"
+          "\\*Org Agenda\\*"
           help-mode
           compilation-mode))
   (popper-mode +1)
