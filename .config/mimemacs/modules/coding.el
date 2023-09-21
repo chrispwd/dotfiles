@@ -41,7 +41,6 @@
 (use-package go-mode
   :ensure t)
 
-;; TODO :: Configure treesitter and languages
 (unless (version< emacs-version "29")
   
   (cpwd/install-if-not 'treesit-auto)

@@ -92,7 +92,7 @@
 (use-package doom-themes
   :ensure t
   :config
-  (load-theme 'doom-one t))
+  (load-theme 'doom-tomorrow-night t))
 
 ;; Module interoperability
 (add-hook 'ef-themes-post-load-hook #'fontaine-apply-current-preset)

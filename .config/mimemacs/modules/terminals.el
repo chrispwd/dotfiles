@@ -12,6 +12,7 @@
   (setq term-prompt-regexp "^[^#$%>\n]*[#$%>] *")
   (setq vterm-max-scrollback 20000))
 
+;; TODO :: Fix text input bug with MacOS
 (use-package eat
   :ensure t
   :init

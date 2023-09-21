@@ -4,7 +4,6 @@
 
 ;; All my org settings. It can get quite long, so I gave it
 ;; it's own module.
-;; TODO:: Finish this module
 (setq org-agenda-files
       '("~/Notes/denote/20230827T231459--project-list__gtd_meta.org"
         "~/Notes/denote/20230827T235259--someday-maybe-list__gtd_meta.org"
