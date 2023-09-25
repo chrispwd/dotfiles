@@ -26,7 +26,8 @@ export PKG_CONFIG_PATH="/usr/local/opt/postgresql@13/lib/pkgconfig"
 export CWMRC="${XDG_CONFIG_HOME:-$HOME/.config}/cwm/.cwmrc"
 
 # Defaults
-export EDITOR="emacsclient -nw -a 'emacs -nw'"
+export EDITOR="emacsclient -nw"
+export ALTERNATE_EDITOR="emacs -nw --init-directory $HOME/.config/mimemacs"
 if [ $(hostname) = "meep" ]; then
     export TERMINAL="termite"
 else
