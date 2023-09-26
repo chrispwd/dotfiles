@@ -29,6 +29,10 @@ ctrl + alt + mod4 + t
      telegram-desktop
 ctrl + alt + mod4 + e
      emacslauncher
+ctrl + alt + mod4 + d
+     emacs --daemon --init-directory ~/.config/mimemacs
+ctrl + alt + mod4 + c
+     emacsclient -c
 ctrl + alt + mod4 + k
      keepassxc
 ctrl + alt + mod4 + f
