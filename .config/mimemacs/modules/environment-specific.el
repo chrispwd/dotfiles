@@ -3,6 +3,7 @@
 (cpwd/install-if-not 'exec-path-from-shell)
 (cpwd/install-if-not 'clipetty)
 (cpwd/install-if-not 'corfu-terminal)
+(cpwd/install-if-not 'term-keys)
 
 ;; MacOS Tweaks
 (when (eq system-type 'darwin)
@@ -27,7 +28,11 @@
   (use-package corfu-terminal
     :ensure t
     :config
-    (corfu-terminal-mode +1)))
+    (corfu-terminal-mode +1))
+  (use-package term-keys
+    :ensure t
+    :config
+    (term-keys-mode t)))
 
 (defun cpwd/gui-settings ()
   "Settings that only apply to emacs when ran in a full GUI frame"

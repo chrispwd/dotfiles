@@ -11,15 +11,15 @@
   (add-to-list 'package-archives '("nongnu" . "https://elpa.nongnu.org/nongnu/")))
 (add-to-list 'package-archives '("stable" . "https://stable.melpa.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-
+(add-to-list 'package-archives '("cselpa" . "https://elpa.thecybershadow.net/packages/"))
 (customize-set-variable 'package-archive-priorities
                         '(("gnu"    . 99)   ; prefer GNU packages
                           ("nongnu" . 80)   ; use non-gnu packages if
                                             ; not found in GNU elpa
                           ("stable" . 70)   ; prefer "released" versions
                                             ; from melpa
-                          ("melpa"  . 0)))  ; if all else fails, get it
-                                            ; from melpa
+                          ("melpa"  . 50)   ; if all else fails, get it
+                          ("cselpa" . 0)))  ; from melpa (Or this random guy's repo
 (customize-set-variable 'package-user-dir
                         (expand-file-name "elpa/" user-emacs-directory))
 
