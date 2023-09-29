@@ -4,6 +4,7 @@
 (cpwd/install-if-not 'clipetty)
 (cpwd/install-if-not 'corfu-terminal)
 (cpwd/install-if-not 'term-keys)
+(cpwd/install-if-not 'xclip)
 
 ;; MacOS Tweaks
 (when (eq system-type 'darwin)
@@ -22,9 +23,12 @@
   (xterm-mouse-mode 1)
   (global-set-key (kbd "<mouse-4>") 'scroll-down-line)
   (global-set-key (kbd "<mouse-5>") 'scroll-up-line)
-  (use-package clipetty
+  ;; (use-package clipetty
+  ;;   :ensure t
+  ;;   :config (global-clipetty-mode))
+  (use-package xclip
     :ensure t
-    :config (global-clipetty-mode))
+    :config (xclip-mode 1))
   (use-package corfu-terminal
     :ensure t
     :config
