@@ -17,90 +17,72 @@
 (setq org-log-into-drawer t)
 (setq org-scheduled-past-days 5)
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "WAITING(w)" "BACKLOG(b)" "|" "DONE(d!)")))
+      '((sequence "TODO(t)" "NEXT(n)" "WAITING(w!)" "|" "DONE(d!)" "CXLD(x)")))
 
 (setq org-tag-alist
       '((:startgroup)
         (:endgroup)
-        ("@sre"      . ?s)
-        ("@ticket"   . ?t)
-        ("@workflow" . ?w)
-        ("@dev"      . ?d)
-        ("@home"     . ?h)
-        ("@someday"  . ?S)))
+        ("work"      . ?w)
+        ("workflow"  . ?f)
+        ("personal"  . ?p)
+        ("home"      . ?h)
+        ("someday"   . ?s)))
 
 (setq org-agenda-custom-commands
       '(("t" "All TODOs"
-         ((tags-todo "+PRIORITY=\"A\""
-                     ((org-agenda-overriding-header "@Next Actions")
+         ((tags-todo "+TODO=\"NEXT\"+work"
+                     ((org-agenda-overriding-header "Next Actions")
                       (org-agenda-sorting-strategy '(priority-down))
-                      (org-agenda-prefix-format "  %?-12t% s")))
-          (tags-todo "+TODO=\"TODO\"+@sre"
-                     ((org-agenda-overriding-header "@SRE")
+                      (org-agenda-prefix-format "  %?-12b%?-12t% s")))
+          (tags-todo "+TODO=\"TODO\"+work"
+                     ((org-agenda-overriding-header "@Work")
                       (org-agenda-max-todos nil)
                                         ;(org-agenda-sorting-strategy '(priority-down))
-                      (org-agenda-prefix-format "  %?-12t% s")))
-          (tags-todo "+TODO=\"TODO\"+@ticket"
-                     ((org-agenda-overriding-header "@Tickets")
-                      (org-agenda-max-todos nil)
-                                        ;(org-agenda-sorting-strategy '(priority-down))
-                      (org-agenda-prefix-format "  %?-12t% s")))
-          (tags-todo "+TODO=\"TODO\"+@dev"
-                     ((org-agenda-overriding-header "@Dev")
+                      (org-agenda-prefix-format "  %?-12b%?-12t% s")))
+          (tags-todo "+TODO=\"TODO\"+personal"
+                     ((org-agenda-overriding-header "@Personal")
                       (org-agenda-files org-agenda-files)
                                         ;(org-agenda-sorting-strategy '(priority-down))
-                      (org-agenda-prefix-format "  %?-12t% s"))
+                      (org-agenda-prefix-format "  %?-12b%?-12t% s"))
                      (org-agenda-text-search-extra-files nil))
-          (tags-todo "+TODO=\"TODO\"+@workflow"
+          (tags-todo "+TODO=\"TODO\"+workflow"
                      ((org-agenda-overriding-header "@Workflow")
                       (org-agenda-files org-agenda-files)
                                         ;(org-agenda-sorting-strategy '(priority-down))
-                      (org-agenda-prefix-format "  %?-12t% s"))
+                      (org-agenda-prefix-format "  %?-12b%?-12t% s"))
                      (org-agenda-text-search-extra-files nil))
-          (tags-todo "+TODO=\"WAITING\""
+          (tags-todo "+TODO=\"WAITING\"-home"
                      ((org-agenda-overriding-header "@Waiting")
                       (org-agenda-files org-agenda-files)
                                         ;(org-agenda-sorting-strategy '(priority-down))
-                      (org-agenda-prefix-format "  %?-12t% s"))
+                      (org-agenda-prefix-format "  %?-12b%?-12t% s"))
                      (org-agenda-text-search-extra-files nil))
           (agenda "" ((org-deadline-warning-days 7)
-                      (org-agenda-prefix-format "  %T %?-12t% s")))))
+                      (org-agenda-prefix-format "  %?-12b%?-12t% s")))))
         ("h" "Home TODOs"
-         ((tags-todo "+PRIORITY=\"A\"+@home"
+         ((tags-todo "+TODO=\"NEXT\"+home"
                      ((org-agenda-overriding-header "@Next Actions")
                       (org-agenda-sorting-strategy '(priority-down))
-                      (org-agenda-prefix-format "  %?-12t% s")))
-          (tags-todo "+TODO=\"TODO\"+@home"
+                      (org-agenda-prefix-format "  %?-12b%?-12t% s")))
+          (tags-todo "+TODO=\"TODO\"+home"
                      ((org-agenda-overriding-header "@Home")
                       (org-agenda-max-todos nil)
                       (org-agenda-sorting-strategy '(priority-down))
-                      (org-agenda-prefix-format "  %?-12t% s")))
-          (agenda "" ((org-deadline-warning-days 7)
-                      (org-agenda-prefix-format "  %T %?-12t% s")))))
-        ("b" "Backlog Items"
-         ((tags-todo "+PRIORITY=\"A\""
-                     ((org-agenda-overriding-header "@Next Actions")
-                      (org-agenda-sorting-strategy '(priority-down))
-                      (org-agenda-prefix-format "  %?-12t% s")))
-          (tags-todo "+TODO=\"BACKLOG\"+@sre"
-                     ((org-agenda-overriding-header "@SRE")
+                      (org-agenda-prefix-format "  %?-12b%?-12t% s")))
+          (tags-todo "+TODO=\"WAITING\"+home"
+                     ((org-agenda-overriding-header "@Home")
                       (org-agenda-max-todos nil)
                       (org-agenda-sorting-strategy '(priority-down))
-                      (org-agenda-prefix-format "  %?-12t% s")))
-          (tags-todo "+TODO=\"BACKLOG\"+@dev"
-                     ((org-agenda-overriding-header "@Dev")
-                      (org-agenda-files org-agenda-files)
-                      (org-agenda-sorting-strategy '(priority-down))
-                      (org-agenda-prefix-format "  %?-12t% s"))
-                     (org-agenda-text-search-extra-files nil))
-          (tags-todo "+TODO=\"BACKLOG\"+@workflow"
-                     ((org-agenda-overriding-header "@Workflow")
-                      (org-agenda-files org-agenda-files)
-                      (org-agenda-sorting-strategy '(priority-down))
-                      (org-agenda-prefix-format "  %?-12t% s"))
-                     (org-agenda-text-search-extra-files nil))
+                      (org-agenda-prefix-format "  %?-12b%?-12t% s")))
           (agenda "" ((org-deadline-warning-days 7)
-                      (org-agenda-prefix-format "  %T %?-12t% s")))))))
+                      (org-agenda-prefix-format "  %?-12b%?-12t% s")))))
+        ("s" "Someday-Maybe TODOs"
+         ((tags-todo "+someday"
+                     ((org-agenda-overriding-header "@Someday-Maybe")
+                      (org-agenda-sorting-strategy '(priority-down))
+                      (org-agenda-prefix-format "  %?-12b%?-12t% s")))
+          (agenda "" ((org-deadline-warning-days 7)
+                      (org-agenda-prefix-format "  %?-12b%?-12t% s")))))))
 
 (let ((map global-map))
   (define-key map (kbd "C-c a") #'org-agenda))
