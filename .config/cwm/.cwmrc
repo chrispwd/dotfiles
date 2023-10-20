@@ -92,7 +92,7 @@ bind-mouse 4-1  window-move
 bind-mouse 4S-1 window-lower
 
 # other
-borderwidth  1
+borderwidth  3
 ignore       polybar
 ignore       tint
 ignore       MEGAsync
