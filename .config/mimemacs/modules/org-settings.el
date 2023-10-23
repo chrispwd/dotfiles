@@ -15,7 +15,7 @@
 (setq org-agenda-start-with-log-mode t)
 (setq org-log-done 'time)
 (setq org-log-into-drawer t)
-(setq org-scheduled-past-days 5)
+(setq org-scheduled-past-days 0)
 (setq org-todo-keywords
       '((sequence "TODO(t)" "NEXT(n)" "WAITING(w!)" "|" "DONE(d!)" "CXLD(x)")))
 
