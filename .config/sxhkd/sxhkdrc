@@ -3,7 +3,7 @@
 #
 
 # terminal emulator
-mod4 + Return
+mod4 + alt + Return
 	$TERMINAL
 
 # program launcher
