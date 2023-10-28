@@ -15,6 +15,7 @@ wmname LG3D
 keepassxc &
 megasync &
 syncthing &
+multiload-ng-systray &
 #dwmblocks &
 
 if [ -d "/etc/X11/xinit/xinitrc.d" ]; then
