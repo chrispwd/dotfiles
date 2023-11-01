@@ -28,7 +28,7 @@ export CWMRC="${XDG_CONFIG_HOME:-$HOME/.config}/cwm/.cwmrc"
 # Defaults
 export EDITOR="emacsclient -nw"
 export ALTERNATE_EDITOR="emacs -nw --init-directory $HOME/.config/mimemacs"
-if [ $(uname) = "Linux" ]; then
+if [ $(hostname) = "meep" ]; then
     export TERMINAL="st"
 else
     export TERMINAL="kitty"

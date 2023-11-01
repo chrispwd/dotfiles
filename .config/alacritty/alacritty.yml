@@ -113,26 +113,26 @@ font:
       #   - (macOS) Menlo
       #   - (Linux/BSD) monospace
       #   - (Windows) Consolas
-      family: Fixed (OTB)
-      style: SemiCondensed
+      family: UbuntuMono Nerd Font Mono
+      style: Regular
 
    # Bold font face
    bold:
-     family: Fixed (OTB)
-     style: Bold SemiCondensed
+     family: UbuntuMono Nerd Font Mono
+     style: Bold
 
    # Italic font face
    italic:
-     family: Fixed (OTB)
-     style: Oblique SemiCondensed
+     family: UbuntuMono Nerd Font Mono 
+     style: Italic
 
    # Bold italic font face
    bold_italic:
-     family: Ubuntu Mono
+     family: UbuntuMono Nerd Font Mono
      style: Bold Italic
 
    # Point size
-   size: 11.0
+   size: 12.0
 
    # Offset is the extra space around each character. `offset.y` can be thought
    # of as modifying the line spacing, and `offset.x` as modifying the letter
