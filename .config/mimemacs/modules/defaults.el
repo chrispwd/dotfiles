@@ -23,7 +23,7 @@
 
 ;; line and character numbers
 (column-number-mode)
-(setq display-line-numbers-type 'relative)
+;(setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode t)
 
 ;; Typed text replaces the selection if the selection is active,
