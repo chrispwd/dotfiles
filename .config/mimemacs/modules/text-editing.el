@@ -37,6 +37,7 @@
   :init
   (defun meow-setup ()
     (setq meow-cheatsheet-layout meow-cheatsheet-layout-qwerty)
+    (setq meow-expand-exclude-mode-list nil)
     (meow-motion-overwrite-define-key
      '("j" . meow-next)
      '("k" . meow-prev)

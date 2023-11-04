@@ -119,16 +119,16 @@
     (set-face-attribute 'line-number-current-line nil :inherit 'fixed-pitch)))
 
 (defun cpwd/org-mode-setup ()
-  (cpwd/configure-org-faces)
+  ;;(variable-pitch-mode 1)
+  ;;(cpwd/configure-org-faces)
   (org-indent-mode)
-  (variable-pitch-mode 1)
   (visual-line-mode 1)
   (display-line-numbers-mode 1))
 
 (add-hook 'org-mode-hook 'cpwd/org-mode-setup)
 
 (defun cpwd/org-mode-visual-fill ()
-  (setq visual-fill-column-width 100)
+  (setq visual-fill-column-width 80)
   (visual-fill-column-mode 1))
 
 (use-package visual-fill-column
