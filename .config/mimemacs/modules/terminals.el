@@ -2,6 +2,7 @@
 
 ;; Configuration for eshell, shell, term, vterm, etc.
 (cpwd/install-if-not 'vterm)
+(cpwd/install-if-not 'multi-vterm)
 (cpwd/install-if-not 'eat)
 
 (use-package vterm
@@ -11,6 +12,9 @@
   :init
   (setq term-prompt-regexp "^[^#$%>\n]*[#$%>] *")
   (setq vterm-max-scrollback 20000))
+
+(use-package multi-vterm
+  :ensure t)
 
 ;; TODO :: Fix text input bug with MacOS
 (use-package eat
