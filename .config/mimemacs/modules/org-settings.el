@@ -30,7 +30,7 @@
 
 (setq org-agenda-custom-commands
       '(("t" "All TODOs"
-         ((tags-todo "+TODO=\"NEXT\"+work"
+         ((tags-todo "+TODO=\"NEXT\"+personal-home|+TODO=\"NEXT\"+work-home"
                      ((org-agenda-overriding-header "Next Actions")
                       (org-agenda-sorting-strategy '(priority-down))
                       (org-agenda-prefix-format "  %?-12b%?-12t% s")))
@@ -51,7 +51,7 @@
                                         ;(org-agenda-sorting-strategy '(priority-down))
                       (org-agenda-prefix-format "  %?-12b%?-12t% s"))
                      (org-agenda-text-search-extra-files nil))
-          (tags-todo "+TODO=\"WAITING\"-home"
+          (tags-todo "+TODO=\"WAITING\"+personal-home|+TODO=\"WAITING\"+work-home"
                      ((org-agenda-overriding-header "@Waiting")
                       (org-agenda-files org-agenda-files)
                                         ;(org-agenda-sorting-strategy '(priority-down))
