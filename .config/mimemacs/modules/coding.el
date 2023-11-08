@@ -53,28 +53,30 @@
     (global-treesit-auto-mode))
 
   (setq major-mode-remap-alist
-        '((yaml-mode . yaml-ts-mode)
-          (toml-mode . toml-ts-mode)
-          (rust-mode . rust-ts-mode)
-          (c-mode . c-ts-mode)
-          (c++-mode . c++-ts-mode)
-          (c-or-c++-mode . c-or-c++-ts-mode)
-          (go-mode . go-ts-mode)
+        '((yaml-mode       . yaml-ts-mode)
+          (toml-mode       . toml-ts-mode)
+          (rust-mode       . rust-ts-mode)
+          (c-mode          . c-ts-mode)
+          (c++-mode        . c++-ts-mode)
+          (c-or-c++-mode   . c-or-c++-ts-mode)
+          (go-mode         . go-ts-mode)
           (javascript-mode . js-ts-mode)
-          (js-json-mode . json-ts-mode)
+          (js-json-mode    . json-ts-mode)
           (dockerfile-mode . dockerfile-ts-mode)
-          (css-mode . css-ts-mode)
-          (python-mode . python-ts-mode)
-          (gdscript-mode . gdscript-ts-mode)))
+          (css-mode        . css-ts-mode)
+          (python-mode     . python-ts-mode)
+          (gdscript-mode   . gdscript-ts-mode)))
   
   (with-eval-after-load 'eglot
     (dolist (mode '(rust-ts-mode-hook
                     js-ts-mode-hook
                     tsx-ts-mode-hook
+                    typescript-ts-mode-hook
                     json-ts-mode-hook
                     c-ts-mode-hook
                     c++-ts-mode-hook
                     c-or-c++-ts-mode-hook
+                    go-ts-mode-hook
                     yaml-ts-mode-hook
                     css-ts-mode-hook
                     python-ts-mode-hook))
