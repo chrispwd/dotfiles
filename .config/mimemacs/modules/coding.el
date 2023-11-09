@@ -66,6 +66,14 @@
           (css-mode        . css-ts-mode)
           (python-mode     . python-ts-mode)
           (gdscript-mode   . gdscript-ts-mode)))
+
+  (use-package typescript-ts-mode
+    :config
+    (add-to-list 'auto-mode-alist '("\\.tsx?\\'" . typescript-ts-mode)))
+  
+  (use-package yaml-ts-mode
+    :config
+    (add-to-list 'auto-mode-alist '("\\.ya?ml\\'" . yaml-ts-mode)))
   
   (with-eval-after-load 'eglot
     (dolist (mode '(rust-ts-mode-hook
