@@ -68,7 +68,7 @@
 
 (use-package cape
   :defer 10
-  :bind ("C-c f" . cape-file)
+  :bind ("C-c c" . cape-file)
   :init
   ;; Add `completion-at-point-functions', used by `completion-at-point'.
   (add-to-list 'completion-at-point-functions #'cape-file)
