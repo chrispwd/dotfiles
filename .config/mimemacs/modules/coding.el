@@ -8,11 +8,13 @@
 (cpwd/install-if-not 'emmet-mode)
 (cpwd/install-if-not 'eglot)
 (cpwd/install-if-not 'rust-mode)
-;; (cpwd/install-if-not 'vue-mode)
-;; (cpwd/install-if-not 'typescript-mode)
 (cpwd/install-if-not 'nix-mode)
 (cpwd/install-if-not 'dockerfile-mode)
 (cpwd/install-if-not 'toml-mode)
+(cpwd/install-if-not 'magit)
+
+(use-package magit
+  :ensure t)
 
 ;;; rainbow-delimiters - colors parens for visual aid
 (use-package rainbow-delimiters
