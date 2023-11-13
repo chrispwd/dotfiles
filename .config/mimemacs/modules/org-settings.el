@@ -1,6 +1,7 @@
 ;;; org-settings.el -*- lexical-binding: t; -*-
 
 (cpwd/install-if-not 'visual-fill-column)
+(cpwd/install-if-not 'yankpad)
 
 ;; All my org settings. It can get quite long, so I gave it
 ;; it's own module.
@@ -134,5 +135,15 @@
 (use-package visual-fill-column
   :ensure t
   :hook (org-mode . cpwd/org-mode-visual-fill))
+
+(use-package yankpad
+  :ensure t
+  :defer 10
+  :init
+  (setq yankpad-file "~/Notes/denote/20231113T064822--yankpad__meta.org")
+  :config
+  (bind-key "<f7>" 'yankpad-insert)
+  (bind-key "<f5>" 'yankpad-reload)
+  (bind-key "<f12>" 'yankpad-expand))
 
 (provide 'org-settings)
