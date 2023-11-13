@@ -142,8 +142,9 @@
   :init
   (setq yankpad-file "~/Notes/denote/20231113T064822--yankpad__meta.org")
   :config
-  (bind-key "<f7>" 'yankpad-insert)
-  (bind-key "<f5>" 'yankpad-reload)
-  (bind-key "<f12>" 'yankpad-expand))
+  (bind-key "C-c y i" 'yankpad-insert)
+  (bind-key "C-c y r" 'yankpad-reload)
+  (bind-key "C-c y c" 'yankpad-set-category)
+  (bind-key "C-c y e" 'yankpad-expand))
 
 (provide 'org-settings)
