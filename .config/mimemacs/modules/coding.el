@@ -90,6 +90,10 @@
                     yaml-ts-mode-hook
                     css-ts-mode-hook
                     python-ts-mode-hook))
-      (add-hook mode 'eglot-ensure))))
+      (add-hook mode 'eglot-ensure)))
+
+  (defun eglot-format-buffer-on-save ()
+    (add-hook 'before-save-hook #'eglot-format-buffer -10 t))
+  (add-hook 'go-ts-mode-hook #'eglot-format-buffer-on-save))
 
 (provide 'coding)
