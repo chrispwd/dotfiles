@@ -2,6 +2,7 @@
 
 (cpwd/install-if-not 'visual-fill-column)
 (cpwd/install-if-not 'yankpad)
+(cpwd/install-if-not 'ob-go)
 
 ;; All my org settings. It can get quite long, so I gave it
 ;; it's own module.
@@ -96,6 +97,13 @@
                                        '((sql         . t)
                                          (shell       . t)))))
 
+(use-package ob-go
+  :ensure t
+  :config
+  (org-babel-do-load-languages 'org-babel-load-languages
+                               (append org-babel-load-languages
+                                       '((go       . t)))))
+  
 ;; enables <-s-TAB shortcut for structure templates
 (use-package org-tempo
   :config
