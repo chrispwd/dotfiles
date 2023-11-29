@@ -48,7 +48,7 @@
       tab-bar-new-button-show nil)
 (let ((map global-map))
   (define-key map (kbd "C-c f") #'tab-next)
-  ;; (define-key map (kbd "C-<backtab>") #'tab-previous)
+  (define-key map (kbd "C-<backtab>") #'tab-previous)
   (define-key map (kbd "C-c b") #'tab-previous))
 
 ;; dired
