@@ -1,6 +1,6 @@
 #!/bin/sh
 
-setxkbmap -option caps:escape
+setxkbmap -option ctrl:nocaps
 # # Toggles colemak-dh and switches capslock to control
 # if [ $# -eq 0 ]
 # then
