@@ -55,12 +55,12 @@ border-size          = 0
 border-color         = #268bd2
 padding-left         = 1
 padding-right        = 2
-bottom               = true
+bottom               = false
 module-margin-left   = 1
 module-margin-right  = 1
 separator            = ""
 separator-foreground = ${colors.foreground-alt}
-font-0               = Source Code Pro:style=Regular:pixelsize=13;
+font-0               = GeistMono Nerd Font Mono:style=Light:pixelsize=13;
 font-1               = Symbols Nerd Font:style=Regular:pixelsize=18;
 ;font-0               = Fixed (OTB):style=SemiCondensed:pixelsize=13;
 ;font-1               = Cozette:style=Medium:pixelsize=13;
@@ -341,10 +341,10 @@ type                                  = internal/battery
 battery                               = BAT1
 adapter                               = AC
 full-at                               = 98
-format-full-prefix                    = "[1:󰁹"
+format-full-prefix                    = "1:󰁹"
 format-full-prefix-foreground         = ${colors.foreground-alt}
-format-full-suffix                    = "]"
-format-full-suffix-foreground         = ${colors.foreground-alt}
+; format-full-suffix                    = "]"
+; format-full-suffix-foreground         = ${colors.foreground-alt}
 ramp-capacity-4                       = "1:󰁹"
 ramp-capacity-4-foreground            = ${colors.foreground-alt}
 ramp-capacity-3                       = "1:󰂂"

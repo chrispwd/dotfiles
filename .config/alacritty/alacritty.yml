@@ -113,26 +113,26 @@ font:
       #   - (macOS) Menlo
       #   - (Linux/BSD) monospace
       #   - (Windows) Consolas
-      family: SauceCodePro Nerd Font Mono
-      style: Regular
+      family: GeistMono Nerd Font Mono
+      style: Light
 
    # Bold font face
    bold:
-     family: SauceCodePro Nerd Font Mono
-     style: Bold
+      family: GeistMono Nerd Font Mono
+      style: Black
 
    # Italic font face
    italic:
-     family: SauceCodePro Nerd Font Mono 
-     style: Italic
+      family: GeistMono Nerd Font Mono
+      style: SemiBold
 
    # Bold italic font face
    bold_italic:
-     family: SauceCodePro Nerd Font Mono
-     style: Bold Italic
+      family: GeistMono Nerd Font Mono
+      style: Bold
 
    # Point size
-   size: 13.0
+   size: 12.0
 
    # Offset is the extra space around each character. `offset.y` can be thought
    # of as modifying the line spacing, and `offset.x` as modifying the letter
