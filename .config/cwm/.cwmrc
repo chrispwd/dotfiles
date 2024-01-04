@@ -3,9 +3,11 @@
 sticky      yes
 snapdist    4
 moveamount  25
+borderwidth 2
+gap         56 16 16 16
 unbind-key  all
 
-fontname "Fixed (OTB):sytle=SemiConsensed:pixelsize=11"
+fontname "SauceCodePro Nerd Font Mono:sytle=Light:pixelsize=16"
 
 # groups
 bind-key 4-1   group-only-1
@@ -86,18 +88,15 @@ bind-key 4M-l    window-resize-right
 
 # mousebinds
 unbind-mouse all
-
 bind-mouse 4-3  window-resize
 bind-mouse 4-1  window-move
 bind-mouse 4S-1 window-lower
 
 # other
-borderwidth  2
 ignore       polybar
 ignore       tint
 ignore       MEGAsync
 #ignore      "Signal Beta"
-gap          48 8 8 8
 autogroup    0 "keepassxc","KeePassXC"
 autogroup    0 "megasync","MEGAsync"
 autogroup    2 "Navigator","firefox"
@@ -117,7 +116,7 @@ color menufg          "#c5c8c6"
 color menubg          "#1d1f21"
 color font            "#c5c8c6"
 color selfont         "#1d1f21"
-color activeborder    "#5f819d"
+color activeborder    "#373b41"
 color inactiveborder  "#1d1f21"
 color groupborder     "#8c9440"
 color ungroupborder   "#de935f"
