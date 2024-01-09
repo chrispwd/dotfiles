@@ -8,7 +8,7 @@ mod4 + alt + Return
 
 # program launcher
 mod4 + @space
-	dmenu_run -l 12 -fn 'Ubuntu Mono-14' 
+	dmenu_run -l 12 -fn 'Source Code Pro-14' 
 
 # make sxhkd reload its configuration files:
 mod4 + alt + Escape
