@@ -30,8 +30,8 @@ alias \
   pfetch="PF_ASCII='gnu' PF_INFO='ascii title os host kernel uptime pkgs memory palette' pfetch" \
   wp="sxiv ~/pics/wallpapers" \
   mkdir="mkdir -p" \
-  scr="scrot '%Y-%m-%d-%M_%X.png' -e 'mv \$f \$\$SCROTS'" \
-  scrs="scrot '%Y-%m-%d-%M_%X.png' -e 'mv \$f \$\$SCROTS' -s" \
+  scr="scrot '%Y%m%dT%H%M%S--screenshot.png' -e 'mv \$f \$\$SCROTS'" \
+  scrs="scrot '%Y%m%dT%H%M%S--screenshot.png' -e 'mv \$f \$\$SCROTS' -s" \
   za="zathura" \
   v="$EDITOR" \
   iv="sxiv" \
