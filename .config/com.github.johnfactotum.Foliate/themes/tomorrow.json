@@ -1,0 +1,13 @@
+{
+    "label": "Tomorrow",
+    "light": {
+        "fg": "#1d1f21",
+        "bg": "#c5c8c6",
+        "link": "#5f819d"
+    },
+    "dark": {
+        "fg": "#c5c8c6",
+        "bg": "#1d1f21",
+        "link": "#5f819d"
+    }
+}
