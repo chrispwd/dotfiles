@@ -7,7 +7,7 @@ borderwidth 2
 gap         56 16 16 16
 unbind-key  all
 
-fontname "SauceCodePro Nerd Font Mono:sytle=Light:pixelsize=16"
+fontname "Hack Nerd Font Mono:sytle=Italic:pixelsize=16"
 
 # groups
 bind-key 4-1   group-only-1

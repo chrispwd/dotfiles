@@ -113,22 +113,22 @@ font:
       #   - (macOS) Menlo
       #   - (Linux/BSD) monospace
       #   - (Windows) Consolas
-      family: SauceCodePro Nerd Font Mono
-      style: Light
+      family: Hack Nerd Font Mono
+      style: Regular
 
    # Bold font face
    bold:
-      family: SauceCodePro Nerd Font Mono
+      family: Hack Nerd Font Mono
       style: Bold
 
    # Italic font face
    italic:
-      family: SauceCodePro Nerd Font Mono
-      style: Light Italic
+      family: Hack Nerd Font Mono
+      style: Italic
 
    # Bold italic font face
    bold_italic:
-      family: SauceCodePro Nerd Font Mono
+      family: Hack Nerd Font Mono
       style: Bold Italic
 
    # Point size
