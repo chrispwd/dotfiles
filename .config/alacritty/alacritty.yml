@@ -919,7 +919,7 @@ schemes:
       white:   '#fdf6e3' # base3
 
   ### Solarized Dark Black Background ###
-  solarized-dark: &solarized-dark-black-bg
+  solarized-dark-black-bg: &solarized-dark-black-bg
     # Default colors
     primary:
       background: '#000000' # black
@@ -1037,7 +1037,8 @@ schemes:
 # *solarized-dark
 # *tomorrow-night
 
-colors: *tomorrow-night
+colors:
+  << : *tomorrow-night
 
 #######################################
 ##       END OF COLOR SCHEMES        ##

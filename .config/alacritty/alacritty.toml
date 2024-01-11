@@ -1,0 +1,60 @@
+[cursor]
+blink_interval = 200
+blink_timeout = 0
+thickness = 0.4
+
+[cursor.style]
+blinking = "Always"
+shape = "Block"
+
+[env]
+TERM = "xterm-256color"
+WINIT_X11_SCALE_FACTOR = "1.0"
+
+[font]
+size = 13.0
+
+[font.bold]
+family = "Hack Nerd Font Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "Hack Nerd Font Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "Hack Nerd Font Mono"
+style = "Italic"
+
+[font.normal]
+family = "Hack Nerd Font Mono"
+style = "Regular"
+
+# Tomorrow Night
+[colors.bright]
+black = "#373b41"
+blue = "#5f819d"
+cyan = "#5e8d87"
+green = "#8c9440"
+magenta = "#b294bb"
+red = "#a54242"
+white = "#c5c8c6"
+yellow = "#de935f"
+
+[colors.cursor]
+cursor = "#81a2be"
+text = "#1d1f21"
+
+[colors.normal]
+black = "#282a2e"
+blue = "#5f819d"
+cyan = "#5e8d87"
+green = "#8c9440"
+magenta = "#b294bb"
+red = "#a54242"
+white = "#707880"
+yellow = "#de935f"
+
+[colors.primary]
+background = "#1d1f21"
+foreground = "#c5c8c6"
