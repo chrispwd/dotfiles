@@ -37,7 +37,7 @@ alias \
   iv="sxiv" \
   nf="neofetch" \
   e="emacsclient -nw" \
-  ed="emacs --daemon --init-directory $HOME/.config/mimemacs"
+  el="emacslauncher" \
   sshazen="ssha ~/.ssh/stage-zengine-v2-nat-chrisp.pem ssh/zengine-nat" \
   sshawig="ssha ~/.ssh/wigeon-bastion ssh/wigeon" \
   sshacp1="ssha ~/Keepass/.ssh/chris-p1 ssh/chris-p1" \
