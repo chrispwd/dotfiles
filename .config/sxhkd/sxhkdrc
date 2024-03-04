@@ -27,14 +27,16 @@ ctrl + alt + mod4 + b
      $BROWSER
 ctrl + alt + mod4 + t
      telegram-desktop
-ctrl + alt + mod4 + d
-     emacslauncher
-ctrl + alt + mod4 + c
-     emacsclient -c
+# ctrl + alt + mod4 + d
+#      emacslauncher
+# ctrl + alt + mod4 + c
+#      emacsclient -c
 ctrl + alt + mod4 + k
      keepassxc
 ctrl + alt + mod4 + f
      firefox
+ctrl + alt + mod4 + v
+     timestamp.sh
 
 #
 # # bspwm
