@@ -3,11 +3,10 @@
 alt + cmd - return : open -na /Applications/iTerm.app
 #alt + cmd - return : open -na /Applications/kitty.app
 ctrl + cmd + alt - b : open -na /Applications/Google\ Chrome.app
-ctrl + cmd + alt - e : ~/.local/bin/emacslauncher
-ctrl + cmd + alt - d : /usr/local/bin/emacs --init-directory $HOME/.config/mimemacs --daemon
-ctrl + cmd + alt - c : /usr/local/bin/emacsclient -c
 ctrl + cmd + alt - f : open -a /Applications/Firefox.app
 #ctrl + cmd + alt - g : warpd --hint
+ctrl + cmd + alt - t : ~/.local/bin/timestamp.sh
+
 #
 ## yabai
 #
