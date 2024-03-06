@@ -1,3 +1,3 @@
 #!/bin/sh
 
-date "+%Y%m%dT%H%M%S" | pbcopy
+date "+%Y%m%dT%H%M%S" | tr -d '\n' | pbcopy
