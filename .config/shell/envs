@@ -34,7 +34,7 @@ else
     export TERMINAL="kitty"
 fi
 export BROWSER="firefox"
-export SCROTS="$HOME/Sync/Media/scrots"
+export SCROTS="$HOME/Sync/Resources/scrots"
 
 # Qt applications styling
 #export QT_STYLE_OVERRIDE=kvantum
