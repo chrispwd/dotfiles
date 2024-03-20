@@ -17,43 +17,81 @@ XTerm.ttyModes: erase ^?
 XTerm.termName: xterm-256color
 XTerm*boldMode: true
 
-!tomorrow dark
+! Badger
 ! special
-*.foreground:   #c5c8c6
-*.background:   #1d1f21
-*.cursorColor:  #5f819d
+*.foreground:   #f6f3e8
+*.background:   #171717
+*.cursorColor:  #f6f3e8
 
 ! black
-*.color0:       #282a2e
-*.color8:       #373b41
+*.color0:       #1d1d1d
+*.color8:       #433f4f
 
 ! red
-*.color1:       #a54242
-*.color9:       #a54242
+*.color1:       #e2434c
+*.color9:       #ea9847
 
 ! green
-*.color2:       #8c9440
-*.color10:      #8c9440
+*.color2:       #86b187
+*.color10:      #65a399
 
 ! yellow
-*.color3:       #de935f
-*.color11:      #de935f
+*.color3:       #e0d063
+*.color11:      #e0d063
 
 ! blue
-*.color4:       #5f819d
-*.color12:      #5f819d
+*.color4:       #2257a0
+*.color12:      #8ac6f2
 
 ! magenta
-*.color5:       #85678f
-*.color13:      #85678f
+*.color5:       #bf93c3
+*.color13:      #e18cbb
 
 ! cyan
-*.color6:       #5e8d87
-*.color14:      #5e8d87
+*.color6:       #00cdcd
+*.color14:      #5699af
 
-! white!
-*.color7:       #707880
-*.color15:      #c5c8c6
+! white
+*.color7:       #656868
+*.color15:      #dfdfdf
+
+! !tomorrow dark
+! ! special
+! *.foreground:   #c5c8c6
+! *.background:   #1d1f21
+! *.cursorColor:  #5f819d
+
+! ! black
+! *.color0:       #282a2e
+! *.color8:       #373b41
+
+! ! red
+! *.color1:       #a54242
+! *.color9:       #a54242
+
+! ! green
+! *.color2:       #8c9440
+! *.color10:      #8c9440
+
+! ! yellow
+! *.color3:       #de935f
+! *.color11:      #de935f
+
+! ! blue
+! *.color4:       #5f819d
+! *.color12:      #5f819d
+
+! ! magenta
+! *.color5:       #85678f
+! *.color13:      #85678f
+
+! ! cyan
+! *.color6:       #5e8d87
+! *.color14:      #5e8d87
+
+! ! white!
+! *.color7:       #707880
+! *.color15:      #c5c8c6
 
 ! Solarized-dark-black-bg
 ! special

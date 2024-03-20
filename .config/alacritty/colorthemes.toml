@@ -327,3 +327,31 @@ yellow = "#b58900"
 [schemes.solarized-light.primary]
 background = "#fdf6e3"
 foreground = "#657b83"
+
+[schemes.badger.primary]
+background = "#171717"
+foreground = "#f6f3e8"
+
+[schemes.badger.normal]
+black = "#1d1d1d"
+red = "#E2434C"
+green = "#86B187"
+yellow = "#E0D063"
+blue = "#2257A0"
+magenta = "#BF93C3"
+cyan = "#00cdcd"
+white = "#656868"
+
+[schemes.badger.bright]
+black = "#433f4f"
+red = "#EA9847" 
+green = "#65A399" 
+yellow = "#E0D063" 
+blue = "#8AC6F2" 
+magenta = "#E18Cbb" 
+cyan = "5699AF"
+white = "#dfdfdf"
+
+[schemes.badger.cursor]
+cursor = "#8ac6f2"
+text = "#171717"
