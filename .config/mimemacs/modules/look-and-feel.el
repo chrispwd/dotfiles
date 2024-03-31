@@ -93,7 +93,7 @@
 (use-package doom-themes
   :ensure t
   :config
-  (load-theme 'doom-badger t))
+  (load-theme 'doom-gruvbox t))
 
 ;; Module interoperability
 (add-hook 'ef-themes-post-load-hook #'fontaine-apply-current-preset)
