@@ -12,8 +12,9 @@ alias \
   mv="mv -iv" \
   rm="rm -vI" \
   mkd="mkdir -pv" \
-  ls="ls -hN --color=auto --group-directories-first" \
-  ll="ls -al" \
+  ls="ls --color=auto" \
+  la="ls -A" \
+  ll="ls -Al" \
   lsd="lsd -h --color auto --group-dirs first" \
   grep="grep --color=auto" \
   diff="diff --color=auto" \
@@ -24,11 +25,11 @@ alias \
 alias \
   ka="killall" \
   shutdown="shutdown -h now" \
-  la="lsd -A" \
-  lla="lsd -Al" \
-  lt="lsd --tree" \
+  lsda="lsd -A" \
+  lsdal="lsd -Al" \
+  lsdt="lsd --tree" \
   pfetch="PF_ASCII='gnu' PF_INFO='ascii title os host kernel uptime pkgs memory palette' pfetch" \
-  wp="sxiv ~/pics/wallpapers" \
+  wp="sxiv ~/Sync/Resources/wallpapers" \
   mkdir="mkdir -p" \
   scr="scrot '%Y%m%dT%H%M%S--screenshot.png' -e 'mv \$f \$\$SCROTS'" \
   scrs="scrot '%Y%m%dT%H%M%S--screenshot.png' -e 'mv \$f \$\$SCROTS' -s" \
@@ -37,18 +38,6 @@ alias \
   iv="sxiv" \
   nf="neofetch" \
   e="emacsclient -nw" \
-  el="emacslauncher" \
-  sshazen="ssha ~/.ssh/stage-zengine-v2-nat-chrisp.pem ssh/zengine-nat" \
-  sshawig="ssha ~/.ssh/wigeon-bastion ssh/wigeon" \
-  sshacp1="ssha ~/Keepass/.ssh/chris-p1 ssh/chris-p1" \
-  sshacpwd="ssha ~/Keepass/.ssh/chrispwd ssh/chrispwd"
+  el="emacslauncher"
   #pbcopy='xclip -selection clipboard' \
   #pbpaste='xclip -selection clipboard -o'
-
-# Directory Shortcuts
-alias \
-  home="$HOME" \
-  dl="$HOME/Downloads" \
-  proj="$HOME/projects" \
-  pics="$HOME/pics" \
-  conf="$HOME/.config"
