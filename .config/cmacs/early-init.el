@@ -12,5 +12,9 @@
 ;; Make the initial buffer load faster by setting its mode to fundamental-mode
 (customize-set-variable 'initial-major-mode 'fundamental-mode)
 
-;; ensure only straight.el is being used
-(setq package-enable-at-startup nil)
+;;; Package system
+;; Load the package-system. 
+(defvar bootstrap-directory (expand-file-name "bootstrap/" user-emacs-directory)
+  "Package system bootstrap configuration.")
+
+(load (expand-file-name "package-system.el" bootstrap-directory))

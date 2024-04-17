@@ -4,8 +4,11 @@
 ; no startup message
 (setq inhibit-startup-message t)
 
-;; no menu bar
+;; no menu bar or tooltip
 (menu-bar-mode -1)
+;(scroll-bar-mode -1)
+(tool-bar-mode -1)
+(tooltip-mode -1)
 
 ;; quick jump to recent files in recentf buffer
 (recentf-mode 1)
@@ -20,7 +23,7 @@
 
 ;; line and character numbers
 (column-number-mode)
-(setq display-line-numbers-type 'relative)
+;(setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode t)
 
 ;; Typed text replaces the selection if the selection is active,
@@ -44,18 +47,19 @@
 (setq tab-bar-close-button-show nil
       tab-bar-new-button-show nil)
 (let ((map global-map))
-  (define-key map (kbd "C-c l") #'tab-next)
-  (define-key map (kbd "C-c h") #'tab-previous))
+  (define-key map (kbd "C-c f") #'tab-next)
+  (define-key map (kbd "C-<backtab>") #'tab-previous)
+  (define-key map (kbd "C-c b") #'tab-previous))
 
 ;; dired
 (use-package dired
   :config
-  (defun cop/dired-mode-setup ()
+  (defun cpwd/dired-mode-setup ()
     (dired-hide-details-mode 1)
     (cond ((eq system-type 'darwin)
            (setq dired-listing-switches "-ahlF"))
           ((eq system-type 'gnu/linux)
            (setq dired-listing-switches "-lAh --group-directories-first"))))
-  (add-hook 'dired-mode-hook 'cop/dired-mode-setup))
+  (add-hook 'dired-mode-hook 'cpwd/dired-mode-setup))
 
 (provide 'defaults)

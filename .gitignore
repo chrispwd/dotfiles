@@ -101,6 +101,14 @@ flycheck_*.el
 !/.config/mimemacs/modules
 !/.config/mimemacs/bootstrap
 
+# Emacs cmacs
+/.config/cmacs/*/
+/.config/cmacs/*
+!/.config/cmacs/early-init.el
+!/.config/cmacs/init.el
+!/.config/cmacs/modules
+!/.config/cmacs/bootstrap
+
 # Neovim
 /.config/nvim/*/
 /.config/nvim/*

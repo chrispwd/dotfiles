@@ -1,7 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
-if [ $(emacs --version | head -n1 | cut -d" " -f3 | cut -d'.' -f1) -lt 29 ]; then
-    emacs --daemon --with-profile "mime"
+emacs_version=$(emacs --version | head -n1 | awk '{print $3}' | head -c2)
+if [[ $emacs_version -lt 29 ]]; then
+    emacs --daemon --with-profile "cmacs"
 else
-    emacs --daemon --init-directory "$HOME/.config/mimemacs"
+    emacs --daemon --init-directory "$HOME/.config/cmacs"
 fi
