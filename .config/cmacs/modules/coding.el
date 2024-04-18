@@ -71,7 +71,8 @@
 
   (use-package typescript-ts-mode
     :config
-    (add-to-list 'auto-mode-alist '("\\.tsx?\\'" . typescript-ts-mode)))
+    (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-ts-mode))
+    (add-to-list 'auto-mode-alist '("\\.tsx\\'" . tsx-ts-mode)))
   
   (use-package yaml-ts-mode
     :config
@@ -87,11 +88,23 @@
                     c++-ts-mode-hook
                     c-or-c++-ts-mode-hook
                     go-ts-mode-hook
-                    yaml-ts-mode-hook
+;                    yaml-ts-mode-hook
                     css-ts-mode-hook
                     python-ts-mode-hook))
       (add-hook mode 'eglot-ensure)))
 
+  (with-eval-after-load 'treesit-auto
+    (setq treesit-language-source-alist
+      '((tsx        "https://github.com/tree-sitter/tree-sitter-typescript"
+                    "v0.20.3"
+                    "tsx/src")
+        (typescript "https://github.com/tree-sitter/tree-sitter-typescript"
+                    "v0.20.3"
+                    "typescript/src")
+        (javascript "https://github.com/tree-sitter/tree-sitter-javascript"
+                    "v0.20.1"
+                    "src"))))
+  
   (defun eglot-format-buffer-on-save ()
     (add-hook 'before-save-hook #'eglot-format-buffer -10 t))
   (add-hook 'go-ts-mode-hook #'eglot-format-buffer-on-save))

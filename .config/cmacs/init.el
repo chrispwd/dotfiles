@@ -23,5 +23,5 @@
 ;; startup time / message
 (add-hook 'emacs-startup-hook
           (lambda ()
-            (message "MIMEmacs loaded in %s."
+            (message "cmacs loaded in %s."
                      (emacs-init-time))))
