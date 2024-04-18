@@ -33,6 +33,9 @@
 ;; spaces instead of tabs
 (setq-default indent-tabs-mode nil)
 
+;; if the buffer needs tabs, use a width of 4
+(setq-default tab-width 4)
+
 ;; auto-revert dired and other buffers
 (setq global-auto-revert-non-file-buffers t)
 
