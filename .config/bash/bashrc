@@ -2,7 +2,20 @@
 [[ $- != *i* ]] && return
 
 # Source aliasrc
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc"
+#-------------------------------------------------------------------------
+
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliases" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliases"
+
+# Local utility functions
+#-------------------------------------------------------------------------
+
+_have() { type "$1" > /dev/null 2>&1; }
+
+# Bash options
+#-------------------------------------------------------------------------
+shopt -s checkwinsize
+shopt -s expand_aliases
+set -o vi
 
 # get current branch in git repo
 function parse_git_branch() {
@@ -51,6 +64,34 @@ function parse_git_dirty {
 	fi
 }
 
-export PS1="\[\e[32m\]\u\[\e[m\]@\[\e[34m\]\h\[\e[m\] \[\e[35m\]\w\[\e[m\] \\$ "
+# Bash Prompt
+#-------------------------------------------------------------------------
+exit_status() {
+    [ "$?" == 0 ] && printf "" || printf "$? "
+}
 
-eval "$(zoxide init bash)"
+_ps1() {
+
+local bl='\e[0;30m'
+local r='\e[0;31m'
+local g='\e[0;32m'
+local y='\e[0;33m'
+local b='\e[0;34m'
+local mg='\e[0;35m'
+local cy='\e[0;36m'
+local wh='\e[0;37m'
+local cr='\e[0m'
+
+B=$(git branch --show-current 2>/dev/null)
+[[ -n "$B" ]] && B="$bl:$cr$y$B$cr"
+PS1="$bl╭─╼$cr $g\u$cr$bl@$cr$b\h$cr $mg\w$cr$B \n$bl╰╼$cr $r\$(exit_status)$cr\\$ "
+
+}
+
+PROMPT_COMMAND="_ps1"
+
+# Development tools
+#-------------------------------------------------------------------------
+if _have zoxide; then
+   eval "$(zoxide init bash)"
+fi
