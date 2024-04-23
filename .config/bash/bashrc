@@ -95,3 +95,7 @@ PROMPT_COMMAND="_ps1"
 if _have zoxide; then
    eval "$(zoxide init bash)"
 fi
+
+if _have mise; then
+   eval "$(mise activate bash)"
+fi

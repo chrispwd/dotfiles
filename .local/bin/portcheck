@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ "$(uname)" == "Darwin" ]]; then
+	lsof -i -P -n | grep LISTEN
+else
+	ss -tulpn | grep LISTEN
+fi
