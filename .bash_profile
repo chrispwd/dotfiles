@@ -3,6 +3,6 @@
 #
 
 [ -f ~/.config/shell/envs ] && . ~/.config/shell/envs
-[ -f ~/.config/bash/bashrc ] && . ~/.config/bash/bashrc
+[ -f ~/.bashrc ] && . ~/.bashrc
 
 if [ -e /home/uhoh/.nix-profile/etc/profile.d/nix.sh ]; then . /home/uhoh/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
