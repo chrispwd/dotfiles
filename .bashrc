@@ -83,8 +83,8 @@ local wh='\[\e[0;37m\]'
 local cr='\[\e[0m\]'
 
 B=$(git branch --show-current 2>/dev/null)
-[[ -n "$B" ]] && B="$bl:$cr$y$B$cr"
-PS1="$r\$(exit_status)$cr[$g\u$cr$bl@$cr$b\h$cr $mg\W$cr$B] \\$ "
+[[ -n "$B" ]] && B="$wh($cr$y$B$cr$wh)$cr"
+PS1="$r\$(exit_status)$cr[$g\u$cr$wh@$cr$b\h$cr$wh:$cr$mg\W$cr$B] \\$ "
 
 }
 
