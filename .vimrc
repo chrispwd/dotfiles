@@ -160,7 +160,7 @@ set background=dark
 hi SignColumn ctermbg=NONE
 
 " base default color changes (gruvbox dark friendly)
-hi StatusLine ctermfg=black ctermbg=NONE
+hi StatusLine ctermfg=darkgray ctermbg=NONE
 hi StatusLineNC ctermfg=black ctermbg=NONE
 hi Normal ctermbg=NONE
 hi Special ctermfg=cyan
@@ -179,9 +179,11 @@ hi vimTodo ctermbg=236 ctermfg=darkred
 hi Todo ctermbg=236 ctermfg=darkred
 hi IncSearch ctermbg=236 cterm=NONE ctermfg=darkyellow
 hi MatchParen ctermbg=236 ctermfg=darkred
+hi PreProc ctermfg=darkblue ctermbg=NONE
+hi Type ctermfg=cyan ctermbg=NONE
 
 " color overrides
-au FileType * hi StatusLine ctermfg=black ctermbg=NONE
+au FileType * hi StatusLine ctermfg=darkgray ctermbg=NONE
 au FileType * hi StatusLineNC ctermfg=black ctermbg=NONE
 au FileType * hi Normal ctermbg=NONE
 au FileType * hi Special ctermfg=cyan
@@ -191,6 +193,7 @@ au FileType * hi ModeMsg ctermfg=white cterm=NONE ctermbg=NONE
 au FileType * hi MoreMsg ctermfg=black ctermbg=NONE
 au FileType * hi NonText ctermfg=black ctermbg=NONE
 au FileType * hi vimGlobal ctermfg=black ctermbg=NONE
+au FileType * hi Comment ctermfg=darkgray ctermbg=NONE
 au FileType * hi goComment ctermfg=black ctermbg=NONE
 au FileType * hi ErrorMsg ctermbg=234 ctermfg=darkred cterm=NONE
 au FileType * hi Error ctermbg=234 ctermfg=darkred cterm=NONE
@@ -212,3 +215,4 @@ au FileType c set sw=8
 au FileType markdown,pandoc noremap j gj
 au FileType markdown,pandoc noremap k gk
 au FileType sh set noet
+
