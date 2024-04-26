@@ -29,7 +29,7 @@ alias \
   lsda="lsd -A" \
   lsdal="lsd -Al" \
   lsdt="lsd --tree" \
-  pfetch="PF_INFO='ascii title os host kernel uptime pkgs memory palette' pfetch" \
+  pfetch="echo; PF_INFO='ascii title os host kernel shell uptime pkgs memory palette' pfetch" \
   wp="sxiv ~/Sync/Resources/wallpapers" \
   mkdir="mkdir -p" \
   scr="scrot '%Y%m%dT%H%M%S--screenshot.png' -e 'mv \$f \$\$SCROTS'" \
