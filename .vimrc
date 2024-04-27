@@ -49,7 +49,9 @@ set smartindent
 
 set smarttab
 
+" ignore case unless uppercase present
 set smartcase
+set ignorecase
 
 if v:version >= 800
   " stop vim from silently messing with files that it shouldn't
@@ -94,6 +96,8 @@ set icon
 
 " center the cursor always on the screen
 "set scrolloff=999
+" leave a little space at the bottom of the screen
+set scrolloff=10
 
 " highlight search hits
 set hlsearch
@@ -215,4 +219,67 @@ au FileType c set sw=8
 au FileType markdown,pandoc noremap j gj
 au FileType markdown,pandoc noremap k gk
 au FileType sh set noet
+
+" "(ru)ler (f)ormat (look at the bottom right of your window)
+set ruf=%30(%=%#LineNr#%.50F\ [%{strlen(&ft)?&ft:'none'}]\ %l:%c\ %p%%%)
+
+"reload vimrc
+nnoremap confr :source $HOME/.vimrc<CR>
+
+" Y should be y$ always
+map Y y$
+
+" better command-line completion
+set wildmenu
+
+" :nohighlight
+nnoremap <C-L> :noh<CR><C-L>
+
+" enable omni-completion
+set omnifunc=syntaxcomplete#Complete
+
+"fix bork bash detection
+if has("eval")  " vim-tiny detection
+  fun! s:DetectBash()
+    if getline(1) == '#!/usr/bin/bash' || getline(1) == '#!/bin/bash'
+      set ft=bash
+      set shiftwidth=2
+    endif
+  endfun
+  autocmd BufNewFile,BufRead * call s:DetectBash()
+endif
+
+" Syntax of current token under cursor
+if has("syntax")
+  function! <SID>SynStack()
+    if !exists("*synstack")
+      return
+    endif
+    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+  endfunc
+endif
+
+" Opens file in last place you edited
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+" Function keys
+map <F1> :set number!<CR>
+map <F2> :call <SID>SynStack()<CR>
+
+" Plugins
+if filereadable(expand("~/.vim/autoload/plug.vim"))
+
+  call plug#begin("~/.local/share/vim/plugins")
+  Plug 'morhetz/gruvbox'
+  call plug#end()
+
+endif
+
+colorscheme gruvbox
+
+" read personal/private vim configuration (keep last to override)
+"set rtp^=~/.vimpersonal
+"set rtp^=~/.vimprivate
+"set rtp^=~/.vimwork
+
 

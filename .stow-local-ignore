@@ -15,3 +15,5 @@ misc
 ^/COPYING
 .DS_Store
 \.config/chrispwdmacs/history
+\.vim/\.netrwhist
+\.viminfo

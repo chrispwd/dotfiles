@@ -116,3 +116,7 @@ flycheck_*.el
 
 # Source Code Dir
 /.local/src/
+
+/.vim/*/
+/.vim/.netrwhist
+!/.vim/autoload/plug.vim
