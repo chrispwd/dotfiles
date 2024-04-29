@@ -1,0 +1,8 @@
+[alias]
+  st=status
+  cm="commit -m"
+  co=checkout
+  ll="log --oneline"
+  lg="log --oneline --graph"
+  pom="push origin master"
+  po="push origin"

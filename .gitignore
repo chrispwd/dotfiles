@@ -119,3 +119,5 @@ flycheck_*.el
 
 /.vim/.netrwhist
 !/.vim/autoload/plug.vim
+/.local/share/vim/*
+/.local/share/vim/*/
