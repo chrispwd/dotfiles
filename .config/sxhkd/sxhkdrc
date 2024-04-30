@@ -8,7 +8,7 @@ mod4 + alt + Return
 
 # program launcher
 mod4 + @space
-	dmenu_run -l 12 -fn 'Iosevka Nerd Font Mono-12:Italic' 
+	dmenu_run -l 12 -fn 'UbuntuMono Nerd Font Mono-12:Italic'
 
 # make sxhkd reload its configuration files:
 mod4 + alt + Escape
@@ -30,7 +30,7 @@ ctrl + alt + mod4 + k
 ctrl + alt + mod4 + f
      firefox
 ctrl + alt + mod4 + t
-     timestamp.sh
+     timestamp
 
 #
 # # bspwm
