@@ -1,0 +1,19 @@
+#!/bin/bash
+
+usage() {
+  echo "
+  Usage:
+    todos CATEGORY"
+}
+
+category="wizehive"
+
+if [[ -n "$1" ]]; then
+  category="$1"
+fi
+
+dir="$HOME/Notes/$category"
+
+vim "$(ls -1 $dir/*inbox__gtd_meta*)"
+
+

@@ -1,0 +1,33 @@
+#!/bin/bash
+
+usage() {
+  echo "
+  Usage:
+    todos CATEGORY"
+}
+
+category="wizehive"
+
+if [[ -z "$1" ]]; then
+  category="wizehive"
+else
+  category="$1"
+fi
+
+folder="$HOME/Notes/$category"
+
+echo "######################### IN PROGRESS ##################################"
+rg -N "\* NEXT:" "$folder"
+echo
+
+echo "######################### TODO #########################################"
+rg -N "\* TODO:" "$folder"
+echo
+
+echo "######################### BACKLOG ######################################"
+rg -N "\* BACKLOG:" "$folder"
+echo
+
+echo "######################### DONE #########################################"
+rg -N "\* DONE:" "$folder"
+echo
