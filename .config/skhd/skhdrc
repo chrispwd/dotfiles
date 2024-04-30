@@ -5,7 +5,7 @@ alt + cmd - return : open -na /Applications/iTerm.app
 ctrl + cmd + alt - b : open -na /Applications/Google\ Chrome.app
 ctrl + cmd + alt - f : open -a /Applications/Firefox.app
 #ctrl + cmd + alt - g : warpd --hint
-ctrl + cmd + alt - t : ~/.local/bin/timestamp.sh
+ctrl + cmd + alt - t : ~/.local/bin/timestamp
 
 #
 ## yabai
