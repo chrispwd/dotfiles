@@ -201,7 +201,7 @@ hi SignColumn ctermbg=NONE
 "au FileType * hi goComment ctermfg=darkgray ctermbg=NONE
 "au FileType * hi ErrorMsg ctermbg=234 ctermfg=darkred cterm=NONE
 "au FileType * hi Error ctermbg=234 ctermfg=darkred cterm=NONE
-"au FileType * hi SpellBad ctermbg=234 ctermfg=darkred cterm=NONE
+au FileType * hi SpellBad ctermbg=234 ctermfg=darkred cterm=NONE
 "au FileType * hi SpellRare ctermbg=234 ctermfg=darkred cterm=NONE
 ""au FileType * hi Search ctermbg=236 ctermfg=darkred
 "au FileType * hi vimTodo ctermbg=236 ctermfg=darkred
