@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+weekday="$(date '+%a')"
+
+month="$(date '+%b')"
+
+day="$(date '+%d')"
+
+year="$(date '+%Y')"
+
+regex="^#{1,4}\s$weekday\s$month\s$day\s.*$year$"
+
+category="wizehive"
+
+if [ -n "$1" ]; then
+	category="$1"
+fi
+
+dir="$HOME/Notes/$category"
+
+
+log="# Log for $weekday, $month $day, $year
+
+$(rg --heading -N -g '!*_log*' -A 20 -e "$regex" "$dir")
+"
+timestamp="$(date '+%Y%m%dT%H%M%S')"
+fileglob="$(date '+%Y%m%d')*$weekday*$month*$day*_log*"
+filename="$timestamp--$weekday-$month-$day-log__log.md"
+logfile="$(ls -1 $dir/$fileglob 2>/dev/null)"
+
+if [ -n "$logfile" ]; then
+	echo "$log"
+	echo "$log" > $logfile
+else
+	echo "$log"
+	echo "$log" > $dir/$filename
+fi
+
