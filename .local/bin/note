@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "hi!!!"
+vim "$(rightnow)--$1__$2.md"

@@ -18,7 +18,6 @@ fi
 
 dir="$HOME/Notes/$category"
 
-
 log="# Log for $weekday, $month $day, $year
 
 $(rg --heading -N -g '!*_log*' -A 20 -e "$regex" "$dir")
@@ -29,10 +28,11 @@ filename="$timestamp--$weekday-$month-$day-log__log.md"
 logfile="$(ls -1 $dir/$fileglob 2>/dev/null)"
 
 if [ -n "$logfile" ]; then
-	echo "$log"
 	echo "$log" > $logfile
+	vim $logfile
 else
-	echo "$log"
+	echo "Creating log for today..."
 	echo "$log" > $dir/$filename
+	vim $dir/$filename
 fi
 
