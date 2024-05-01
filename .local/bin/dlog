@@ -4,7 +4,7 @@ weekday="$(date '+%a')"
 
 month="$(date '+%b')"
 
-day="$(date '+%d')"
+day="$(date '+%e')"
 
 year="$(date '+%Y')"
 
