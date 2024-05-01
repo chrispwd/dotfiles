@@ -1,4 +1,16 @@
 #!/usr/bin/env bash
 
-echo "hi!!!"
-vim "$(rightnow)--$1__$2.md"
+filename="$(rightnow)--$1__$2.md"
+note_title="$(echo "$1" | sed -E 's/-/ /g')"
+
+echo "# $note_title
+
+## Ref
+
+## Notes
+
+## Tasks
+
+## Log" > $filename
+
+vim $filename
