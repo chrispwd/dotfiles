@@ -245,6 +245,9 @@ set wildmenu
 " :nohighlight
 nnoremap <C-L> :noh<CR><C-L>
 
+" fzf
+map <leader>f :FZF<CR>
+
 " enable omni-completion
 set omnifunc=syntaxcomplete#Complete
 
