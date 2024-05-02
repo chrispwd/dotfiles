@@ -164,8 +164,17 @@ set background=dark
 hi SignColumn ctermbg=NONE
 
 " base default color changes (gruvbox dark friendly)
-"hi StatusLine ctermfg=darkgray ctermbg=NONE
-"hi StatusLineNC ctermfg=black ctermbg=NONE
+hi StatusLine ctermfg=7 ctermbg=NONE
+hi StatusLineNC ctermfg=8 ctermbg=NONE
+hi String ctermfg=2 ctermbg=NONE
+hi Statement ctermfg=1
+hi Constant ctermfg=3
+hi Comment ctermfg=8
+hi Type ctermfg=5
+hi Special ctermfg=6
+hi PreProc ctermfg=6
+hi Identifier ctermfg=6
+hi Function ctermfg=4
 "hi Normal ctermbg=NONE
 "hi Special ctermfg=cyan
 "hi LineNr ctermfg=darkgray ctermbg=NONE
@@ -201,7 +210,7 @@ hi SignColumn ctermbg=NONE
 "au FileType * hi goComment ctermfg=darkgray ctermbg=NONE
 "au FileType * hi ErrorMsg ctermbg=234 ctermfg=darkred cterm=NONE
 "au FileType * hi Error ctermbg=234 ctermfg=darkred cterm=NONE
-au FileType * hi SpellBad ctermbg=234 ctermfg=darkred cterm=NONE
+au FileType * hi SpellBad ctermbg=0 ctermfg=1 cterm=NONE
 "au FileType * hi SpellRare ctermbg=234 ctermfg=darkred cterm=NONE
 ""au FileType * hi Search ctermbg=236 ctermfg=darkred
 "au FileType * hi vimTodo ctermbg=236 ctermfg=darkred
