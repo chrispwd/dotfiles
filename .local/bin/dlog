@@ -22,10 +22,10 @@ log="# Log for $weekday, $month $day, $year
 
 $(rg --heading -N -g '!*_log*' -A 20 -e "$regex" "$dir")
 "
-timestamp="$(date '+%Y%m%dT%H%M%S')"
+timestamp="$(rightnow)"
 fileglob="$(date '+%Y%m%d')*$weekday*$month*$day*_log*"
-filename="$timestamp--$weekday-$month-$day-log__log.md"
 logfile="$(ls -1 $dir/$fileglob 2>/dev/null)"
+filename="$timestamp--$weekday-$month-$day-log__log_ignore.md"
 
 if [ -n "$logfile" ]; then
 	echo "$log" > $logfile

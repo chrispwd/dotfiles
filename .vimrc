@@ -271,14 +271,14 @@ map <F2> :call <SID>SynStack()<CR>
 if filereadable(expand("~/.vim/autoload/plug.vim"))
 
   call plug#begin("~/.local/share/vim/plugins")
-  Plug 'morhetz/gruvbox'
+  "Plug 'morhetz/gruvbox'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   call plug#end()
 
 endif
 
-let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
+"let g:gruvbox_contrast_dark = 'hard'
+"colorscheme gruvbox
 
 " read personal/private vim configuration (keep last to override)
 "set rtp^=~/.vimpersonal
