@@ -34,6 +34,7 @@ if [ -n "$logfile" ]; then
 	vim $logfile
 else
 	echo "Creating log for today..."
+	echo "$log" > $dir/$filename
 	vim $dir/$filename
 fi
 
