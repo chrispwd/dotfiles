@@ -175,7 +175,8 @@ hi Special ctermfg=6
 hi PreProc ctermfg=6
 hi Identifier ctermfg=6
 hi Function ctermfg=4
-"hi Normal ctermbg=NONE
+hi ErrorMsg ctermfg=1 ctermbg=NONE term=reverse
+hi Normal ctermbg=NONE ctermfg=15
 "hi Special ctermfg=cyan
 "hi LineNr ctermfg=darkgray ctermbg=NONE
 "hi SpecialKey ctermfg=black ctermbg=NONE
@@ -218,7 +219,10 @@ au FileType * hi SpellBad ctermbg=0 ctermfg=1 cterm=NONE
 ""au FileType * hi IncSearch ctermbg=236 cterm=NONE ctermfg=darkred
 "au FileType * hi MatchParen ctermbg=236 ctermfg=darkred
 
-au FileType markdown,pandoc hi Title ctermfg=yellow ctermbg=NONE
+au FileType markdown,pandoc hi Title ctermfg=3 ctermbg=NONE
+au FileType markdown hi markdownError ctermfg=1 ctermbg=NONE
+au FileType markdown hi markdownListMarker ctermfg=8 ctermbg=NONE
+au FileType markdown hi markdownCode ctermfg=7 ctermbg=NONE
 au FileType markdown,pandoc hi Operator ctermfg=yellow ctermbg=NONE
 au FileType markdown,pandoc set tw=0
 au FileType markdown,pandoc set wrap
