@@ -6,3 +6,4 @@
   lg="log --oneline --graph"
   pom="push origin master"
   po="push origin"
+  wt="worktree"
