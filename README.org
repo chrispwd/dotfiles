@@ -14,7 +14,7 @@ You must have ~stow~ installed on your system. This will take care of symlinking
 
 #+begin_src sh
   cd $HOME
-  git clone <this_repo.git>
+  git clone https://github.com/chrispwd/dotfiles.git
 #+end_src
 
 After cloning, recurse the submodules to pull in the latest changes.
