@@ -24,6 +24,6 @@
 (use-package doom-themes
   :ensure t
   :config
-  (load-theme 'doom-gruvbox t))
+  (load-theme 'doom-tokyo-night t))
 
 (provide 'look-and-feel)
