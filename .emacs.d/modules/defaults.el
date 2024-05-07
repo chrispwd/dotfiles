@@ -23,8 +23,10 @@
 
 ;; line and character numbers
 (column-number-mode)
+
+;; Don't display line numbers on the side
 ;(setq display-line-numbers-type 'relative)
-(global-display-line-numbers-mode t)
+(global-display-line-numbers-mode 0)
 
 ;; Typed text replaces the selection if the selection is active,
 ;; pressing delete or backspace deletes the selection.

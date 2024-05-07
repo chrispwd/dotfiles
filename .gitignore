@@ -122,3 +122,13 @@ flycheck_*.el
 !/.vim/autoload/plug.vim
 /.local/share/vim/*
 /.local/share/vim/*/
+
+# Emacs.d
+
+/.emacs.d/*/
+/.emacs.d/*
+/.emacs.d/projects
+!/.emacs.d/early-init.el
+!/.emacs.d/init.el
+!/.emacs.d/modules
+!/.emacs.d/bootstrap

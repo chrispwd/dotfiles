@@ -10,7 +10,7 @@ day00="$(date '+%d')"
 
 year="$(date '+%Y')"
 
-regex="^#{1,4}\s$weekday\s$month\s$day0\s.*$year$"
+regex="^*{1,7}\s$weekday\s$month\s$day0\s.*$year$"
 
 category="wizehive"
 
@@ -27,14 +27,14 @@ $(rg --heading -N -g '!*_log*' -A 20 -e "$regex" "$dir")
 timestamp="$(rightnow)"
 fileglob="$(date '+%Y%m%d')*$weekday*$month*$day00*_log*"
 logfile="$(ls -1 $dir/$fileglob 2>/dev/null)"
-filename="$timestamp--$weekday-$month-$day00-log__log_ignore.md"
+filename="$timestamp--$weekday-$month-$day00-log__log_ignore.org"
 
 if [ -n "$logfile" ]; then
 	echo "$log" > $logfile
-	vim $logfile
+	cat $logfile
 else
 	echo "Creating log for today..."
 	echo "$log" > $dir/$filename
-	vim $dir/$filename
+	cat $dir/$filename
 fi
 

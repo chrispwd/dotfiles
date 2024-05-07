@@ -4,6 +4,7 @@
 
 ;;; Dependencies
 (cpwd/install-if-not 'denote)
+(cpwd/install-if-not 'markdown-mode)
 
 ;;; denote - a simlpe note-taking package
 (use-package denote
@@ -17,7 +18,7 @@
                 '("journal")))
              (setq denote-directory (expand-file-name "~/Notes/denote"))
              (setq denote-known-keywords '("emacs" "testing" "project"))
-             (setq denote-file-type nil)
+             (setq denote-file-type nil) ; default to org
              (setq denote-link-fontify-backlinks t)
              :hook
              (dired-mode . denote-dired-mode)
@@ -34,5 +35,10 @@
              :config
              (denote-rename-buffer-mode))
 ;; TODO:: Have denote open backlinks buffer like the xref window when running project-find-regexp
+
+(use-package markdown-mode
+  :ensure t
+  :mode ("README\\.md\\'" . gfm-mode)
+  :init (setq markdown-command "multimarkdown"))
 
 (provide 'note-taking)
