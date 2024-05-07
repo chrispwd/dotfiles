@@ -1,0 +1,41 @@
+;;;; Emacs Bookmark Format Version 1;;;; -*- coding: utf-8-emacs; mode: lisp-data -*-
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("Comptia Security+ SY0-701 Certification"
+ (filename . "~/Sync/Projects/Comptia Security+ SY0-701 Certification/")
+ (front-context-string . "comptia-security")
+ (rear-context-string . "7K Feb 11 22:05 ")
+ (position . 113)
+ (last-modified 26058 8062 651515 248000))
+("Downloads"
+ (filename . "~/Downloads/")
+ (front-context-string . "com.valvesoftwar")
+ (rear-context-string . "0K Dec 22  2021 ")
+ (position . 2762)
+ (last-modified 26057 43503 318625 204000))
+("Media"
+ (filename . "~/Media/")
+ (front-context-string . "educational\n  dr")
+ (rear-context-string . "0K Feb  9 22:02 ")
+ (position . 66)
+ (last-modified 26055 4649 975306 884000))
+("Sync"
+ (filename . "~/Sync/")
+ (front-context-string . "Archive\n  drwxr-")
+ (rear-context-string . "0K Jul 26 08:50 ")
+ (position . 65)
+ (last-modified 25975 63756 159145 302000))
+("Project List"
+ (filename . "~/Notes/denote/20230827T231459--project-list__gtd_meta.org")
+ (front-context-string . "#+title:      Pr")
+ (rear-context-string)
+ (position . 1)
+ (last-modified 25856 1698 404563 141000))
+("denote"
+ (filename . "~/Notes/denote/")
+ (front-context-string . "20220802T115641-")
+ (rear-context-string . "70 Aug  2  2022 ")
+ (position . 171)
+ (last-modified 25856 1365 518372 971000))
+)
