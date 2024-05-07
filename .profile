@@ -19,8 +19,8 @@ export SAVEHIST=10000
 export CWMRC="${XDG_CONFIG_HOME:-$HOME/.config}/cwm/.cwmrc"
 
 # Default programs
-export EDITOR="emacsclient -nw"
-export ALTERNATE_EDITOR="emacs -nw --init-directory $HOME/.config/mimemacs"
+export EDITOR="emacs -nw"
+export ALTERNATE_EDITOR="vim"
 
 if [ $(hostname) = "meep" ]; then
     export TERMINAL="st"

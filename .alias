@@ -35,8 +35,9 @@ alias \
   scr="scrot '%Y%m%dT%H%M%S--screenshot.png' -e 'mv \$f \$\$SCROTS'" \
   scrs="scrot '%Y%m%dT%H%M%S--screenshot.png' -e 'mv \$f \$\$SCROTS' -s" \
   za="zathura" \
-  v="vim" \
   iv="sxiv" \
   nf="neofetch" \
-  e="emacsclient -nw" \
+  v="vim" \
+  e="emacs -nw" \
+  ec="emacsclient -nw" \
   el="emacslauncher"
