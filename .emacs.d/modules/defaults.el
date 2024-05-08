@@ -7,7 +7,7 @@
 ;; no menu bar or tooltip
 (menu-bar-mode -1)
 ;(scroll-bar-mode -1)
-(tool-bar-mode -1)
+;(tool-bar-mode -1)
 (tooltip-mode -1)
 
 ;; quick jump to recent files in recentf buffer

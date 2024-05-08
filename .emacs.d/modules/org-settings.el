@@ -7,9 +7,7 @@
 ;; All my org settings. It can get quite long, so I gave it
 ;; it's own module.
 (setq org-agenda-files
-      '("~/Notes/denote/20230827T231459--project-list__gtd_meta.org"
-        "~/Notes/denote/20230827T235259--someday-maybe-list__gtd_meta.org"
-        "~/Notes/denote/20220822T110458--reminders__meta.org"
+      '("~/Notes/denote/20240507T235852--todo-list__gtd_meta.org"
         "~/Notes/denote/20220823T213739--completed-tasks__meta.org"))
 (setq org-archive-location "~/Notes/denote/20220823T213739--completed-tasks__meta.org::")
 (setq org-ellipsis " ▾"
@@ -25,45 +23,30 @@
       '((:startgroup)
         (:endgroup)
         ("work"      . ?w)
-        ("workflow"  . ?f)
-        ("personal"  . ?p)
-        ("home"      . ?h)
-        ("someday"   . ?s)))
+        ("home"      . ?h)))
 
 (setq org-agenda-custom-commands
-      '(("t" "All TODOs"
-         ((tags-todo "+TODO=\"ACTIVE\"+personal-home|+TODO=\"ACTIVE\"+work-home"
+      '(("w" "Work TODOs"
+         ((tags-todo "+TODO=\"ACTIVE\"+work"
                      ((org-agenda-overriding-header "In Progress")
                       (org-agenda-sorting-strategy '(priority-down))
                       (org-agenda-prefix-format "  %?-12b%?-12t% s")))
-         (tags-todo "+TODO=\"NEXT\"+personal-home|+TODO=\"NEXT\"+work-home"
+         (tags-todo "+TODO=\"NEXT\"+work"
                      ((org-agenda-overriding-header "Up Next")
                       (org-agenda-sorting-strategy '(priority-down))
                       (org-agenda-prefix-format "  %?-12b%?-12t% s")))
-          (tags-todo "+TODO=\"TODO\"+work"
-                     ((org-agenda-overriding-header "Todos")
-                      (org-agenda-max-todos nil)
-                                        ;(org-agenda-sorting-strategy '(priority-down))
-                      (org-agenda-prefix-format "  %?-12b%?-12t% s")))
-          (tags-todo "+TODO=\"WAITING\"+personal-home|+TODO=\"WAITING\"+work-home"
+          (tags-todo "+TODO=\"WAITING\"+work"
                      ((org-agenda-overriding-header "Waiting On")
                       (org-agenda-files org-agenda-files)
                                         ;(org-agenda-sorting-strategy '(priority-down))
                       (org-agenda-prefix-format "  %?-12b%?-12t% s"))
                      (org-agenda-text-search-extra-files nil))
-          (tags-todo "+TODO=\"TODO\"+personal"
-                     ((org-agenda-overriding-header "Personal Todos")
-                      (org-agenda-files org-agenda-files)
-                                        ;(org-agenda-sorting-strategy '(priority-down))
-                      (org-agenda-prefix-format "  %?-12b%?-12t% s"))
-                     (org-agenda-text-search-extra-files nil))
-          (tags-todo "+TODO=\"TODO\"+workflow"
-                     ((org-agenda-overriding-header "Workflow Todos")
-                      (org-agenda-files org-agenda-files)
-                                        ;(org-agenda-sorting-strategy '(priority-down))
-                      (org-agenda-prefix-format "  %?-12b%?-12t% s"))
-                     (org-agenda-text-search-extra-files nil))
           (agenda "" ((org-deadline-warning-days 7)
+                      (org-agenda-prefix-format "  %?-12b%?-12t% s")))
+          (tags-todo "+TODO=\"TODO\"+work"
+                     ((org-agenda-overriding-header "Todos")
+                      (org-agenda-max-todos nil)
+                                        ;(org-agenda-sorting-strategy '(priority-down))
                       (org-agenda-prefix-format "  %?-12b%?-12t% s")))))
         ("h" "Home TODOs"
          ((tags-todo "+TODO=\"ACTIVE\"+home"
@@ -74,24 +57,18 @@
                      ((org-agenda-overriding-header "Up Next")
                       (org-agenda-sorting-strategy '(priority-down))
                       (org-agenda-prefix-format "  %?-12b%?-12t% s")))
+          (tags-todo "+TODO=\"WAITING\"+home"
+                     ((org-agenda-overriding-header "Waiting On")
+                      (org-agenda-files org-agenda-files)
+                                        ;(org-agenda-sorting-strategy '(priority-down))
+                      (org-agenda-prefix-format "  %?-12b%?-12t% s"))
+                     (org-agenda-text-search-extra-files nil))
+          (agenda "" ((org-deadline-warning-days 7)
+                      (org-agenda-prefix-format "  %?-12b%?-12t% s")))
           (tags-todo "+TODO=\"TODO\"+home"
                      ((org-agenda-overriding-header "Todos")
                       (org-agenda-max-todos nil)
-                      (org-agenda-sorting-strategy '(priority-down))
-                      (org-agenda-prefix-format "  %?-12b%?-12t% s")))
-          (tags-todo "+TODO=\"WAITING\"+home"
-                     ((org-agenda-overriding-header "Waiting On")
-                      (org-agenda-max-todos nil)
-                      (org-agenda-sorting-strategy '(priority-down))
-                      (org-agenda-prefix-format "  %?-12b%?-12t% s")))
-          (agenda "" ((org-deadline-warning-days 7)
-                      (org-agenda-prefix-format "  %?-12b%?-12t% s")))))
-        ("s" "Someday-Maybe TODOs"
-         ((tags-todo "+someday"
-                     ((org-agenda-overriding-header "Someday-Maybe")
-                      (org-agenda-sorting-strategy '(priority-down))
-                      (org-agenda-prefix-format "  %?-12b%?-12t% s")))
-          (agenda "" ((org-deadline-warning-days 7)
+                                        ;(org-agenda-sorting-strategy '(priority-down))
                       (org-agenda-prefix-format "  %?-12b%?-12t% s")))))))
 
 (let ((map global-map))
@@ -124,7 +101,7 @@
 (defun cpwd/org-mode-setup ()
   (org-indent-mode)
   (visual-line-mode 1)
-  (display-line-numbers-mode 1))
+  (display-line-numbers-mode 0))
 
 (add-hook 'org-mode-hook 'cpwd/org-mode-setup)
 

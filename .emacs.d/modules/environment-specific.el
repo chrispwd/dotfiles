@@ -40,7 +40,8 @@
 
 (defun cpwd/gui-settings ()
   "Settings that only apply to emacs when ran in a full GUI frame"
-  (scroll-bar-mode -1))
+  (scroll-bar-mode -1)
+  (tool-bar-mode -1))
 
 ;; Run if GUI on startup
 (when (display-graphic-p)
