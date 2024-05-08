@@ -24,8 +24,9 @@ log="* Log for $weekday, $month $day0, $year
 
 $(rg --heading -N -g '!*_log*' -A 20 -e "$regex" "$dir")
 "
+
 timestamp="$(rightnow)"
-fileglob="$(date '+%Y%m%d')*$weekday*$month*$day00*_log_ignore*"
+fileglob="$(date '+%Y%m%d')*$weekday*$month*$day00*_log_ignore.org"
 logfile="$(ls -1 $dir/$fileglob 2>/dev/null)"
 filename="$timestamp--$weekday-$month-$day00-log__log_ignore.org"
 
