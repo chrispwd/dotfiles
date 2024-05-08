@@ -169,14 +169,14 @@ hi StatusLineNC ctermfg=8 ctermbg=NONE
 hi String ctermfg=2 ctermbg=NONE
 hi Statement ctermfg=1
 hi Constant ctermfg=3
-hi Comment ctermfg=8
+hi Comment ctermfg=7
 hi Type ctermfg=5
 hi Special ctermfg=6
 hi PreProc ctermfg=6
 hi Identifier ctermfg=6
 hi Function ctermfg=4
 hi ErrorMsg ctermfg=1 ctermbg=NONE term=reverse
-hi Normal ctermbg=NONE ctermfg=15
+hi Normal ctermbg=NONE ctermfg=NONE
 "hi Special ctermfg=cyan
 "hi LineNr ctermfg=darkgray ctermbg=NONE
 "hi SpecialKey ctermfg=black ctermbg=NONE

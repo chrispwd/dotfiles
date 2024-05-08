@@ -24,6 +24,6 @@
 (use-package doom-themes
   :ensure t
   :config
-  (load-theme 'doom-tokyo-night t))
+  (load-theme 'doom-ayu-dark t))
 
 (provide 'look-and-feel)

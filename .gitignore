@@ -132,3 +132,4 @@ flycheck_*.el
 !/.emacs.d/init.el
 !/.emacs.d/modules
 !/.emacs.d/bootstrap
+!/.emacs.d/themes
