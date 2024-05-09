@@ -9,20 +9,17 @@ if [ -n "$1" ]; then
     input="$1"
 fi
 
-year="$(date --date="$input" '+%Y')"
-daystr="$(date --date="$input" '+%a %b %e')"
-echo "$year"
-echo "$daystr.*$year"
+# Need to specify GNU date on non-Linux machines
+if date --version >/dev/null 2>&1 ; then
+    year="$(date --date="$input" '+%Y')"
+    daystr="$(date --date="$input" '+%a %b %e')"
+else
+    year="$(gdate --date="$input" '+%Y')"
+    daystr="$(gdate --date="$input" '+%a %b %e')"
+fi
 
-regex="$daystr"
+regex="$daystr\s.*$year"
 
 dir="${NOTES:-$(pwd)}"
-echo "$dir"
 
-log="* Log for $daystr, $year
-
-$(rg --heading -N -g '!*_log_ignore*' -A 20 -e "$regex" $dir)
-"
-
-echo "$log"
-
+rg --heading -N -g '!*_log_ignore*' -A 20 -e "$regex" "$dir"
