@@ -12,7 +12,7 @@ fi
 year="$(date --date="$input" '+%Y')"
 daystr="$(date --date="$input" '+%a %b %e')"
 echo "$year"
-echo "$daystr"
+echo "$daystr.*$year"
 
 regex="$daystr"
 
