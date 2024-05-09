@@ -1,41 +1,28 @@
 #!/usr/bin/env bash
 
-weekday="$(date '+%a')"
+# Usage: dlog [DATESTRING]
+# No DATESTRING defaults to "today"
 
-month="$(date '+%b')"
-
-day0="$(date '+%e')"
-
-day00="$(date '+%d')"
-
-year="$(date '+%Y')"
-
-regex="^\*{1,7}\s$weekday\s$month\s$day0\s.*$year$"
-
-category="wizehive"
+input="today"
 
 if [ -n "$1" ]; then
-	category="$1"
+    input="$1"
 fi
 
-dir="$HOME/Notes/$category"
+year="$(date --date="$input" '+%Y')"
+daystr="$(date --date="$input" '+%a %b %e')"
+echo "$year"
+echo "$daystr"
 
-log="* Log for $weekday, $month $day0, $year
+regex="$daystr"
 
-$(rg --heading -N -g '!*_log*' -A 20 -e "$regex" "$dir")
+dir="${NOTES:-$(pwd)}"
+echo "$dir"
+
+log="* Log for $daystr, $year
+
+$(rg --heading -N -g '!*_log_ignore*' -A 20 -e "$regex" $dir)
 "
 
-timestamp="$(rightnow)"
-fileglob="$(date '+%Y%m%d')*$weekday*$month*$day00*_log_ignore.org"
-logfile="$(ls -1 $dir/$fileglob 2>/dev/null)"
-filename="$timestamp--$weekday-$month-$day00-log__log_ignore.org"
-
-if [ -n "$logfile" ]; then
-	echo "$log" > $logfile
-	cat $logfile
-else
-	echo "Creating log for today..."
-	echo "$log" > $dir/$filename
-	cat $dir/$filename
-fi
+echo "$log"
 

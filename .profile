@@ -10,13 +10,19 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc"
 export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
-export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
 export HISTSIZE=10000
 export SAVEHIST=10000
-
-# wm
+export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 export CWMRC="${XDG_CONFIG_HOME:-$HOME/.config}/cwm/.cwmrc"
+export DESKTOP="$HOME/Desktop"
+export DOCUMENTS="$HOME/Documents"
+export DOWNLOADS="$HOME/Downloads"
+export DOTFILES="$HOME/dotfiles"
+export NOTES="$HOME/Notes/denote"
+export SYNC="$HOME/Sync"
+export SCROTS="$HOME/Sync/Resources/scrots"
+export BROWSER="firefox"
 
 # Default programs
 export EDITOR="emacs -nw"
@@ -28,8 +34,6 @@ else
     export TERMINAL="kitty"
 fi
 
-export BROWSER="firefox"
-export SCROTS="$HOME/Sync/Resources/scrots"
 
 ########################## PATH ########################################
 
