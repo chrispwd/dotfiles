@@ -15,19 +15,19 @@ WINIT_X11_SCALE_FACTOR = "1.0"
 size = 13.0
 
 [font.bold]
-family = "Iosevka Nerd Font Mono"
+family = "AnonymicePro Nerd Font Mono"
 style = "Bold"
 
 [font.bold_italic]
-family = "Iosevka Nerd Font Mono"
+family = "AnonymicePro Nerd Font Mono"
 style = "Bold Italic"
 
 [font.italic]
-family = "Iosevka Nerd Font Mono"
+family = "AnonymicePro Nerd Font Mono"
 style = "Italic"
 
 [font.normal]
-family = "Iosevka Nerd Font Mono"
+family = "AnonymicePro Nerd Font Mono"
 style = "Regular"
 
 # Tomorrow Night
@@ -60,30 +60,55 @@ style = "Regular"
 # foreground = "#c5c8c6"
 
 # Badger
+#[colors.primary]
+#background = "#171717"
+#foreground = "#f6f3e8"
+
+#[colors.normal]
+#black = "#1d1d1d"
+#red = "#E2434C"
+#green = "#86B187"
+#yellow = "#E0D063"
+#blue = "#2257A0"
+#magenta = "#BF93C3"
+#cyan = "#00cdcd"
+#white = "#656868"
+
+#[colors.bright]
+#black = "#433f4f"
+#red = "#EA9847" 
+#green = "#65A399" 
+#yellow = "#E0D063" 
+#blue = "#8AC6F2" 
+#magenta = "#E18Cbb" 
+#cyan = "#5699AF"
+#white = "#dfdfdf"
+
+#[colors.cursor]
+#cursor = "#8ac6f2"
+#text = "#171717"
+
+# ayu-dark
 [colors.primary]
-background = "#171717"
-foreground = "#f6f3e8"
+background = "#0d1017"
+foreground = "#bfbdb6"
 
 [colors.normal]
-black = "#1d1d1d"
-red = "#E2434C"
-green = "#86B187"
-yellow = "#E0D063"
-blue = "#2257A0"
-magenta = "#BF93C3"
-cyan = "#00cdcd"
-white = "#656868"
+black =   "#0b0e14"
+red =     "#f07178"
+green =   "#aad94c"
+yellow =  "#ffb454"
+blue =    "#39bae6"
+magenta = "#d2a6ff"
+cyan =    "#95e6cb"
+white =   "#636a72"
 
 [colors.bright]
-black = "#433f4f"
-red = "#EA9847" 
-green = "#65A399" 
-yellow = "#E0D063" 
-blue = "#8AC6F2" 
-magenta = "#E18Cbb" 
-cyan = "#5699AF"
-white = "#dfdfdf"
-
-[colors.cursor]
-cursor = "#8ac6f2"
-text = "#171717"
+black =   "#444b55"
+red =     "#f26d78"
+green =   "#7fd962"
+yellow =  "#ff8f40"
+blue =    "#59c2ff"
+magenta = "#d2a6ff"
+cyan =    "#a6fde1"
+white =   "#ebe8df"

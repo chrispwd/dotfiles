@@ -355,3 +355,27 @@ white = "#dfdfdf"
 [schemes.badger.cursor]
 cursor = "#8ac6f2"
 text = "#171717"
+
+[schemes.ayudark.primary]
+background = "#0d1017"
+foreground = "#bfbdb6"
+
+[schemes.ayudark.normal]
+black =   "#0b0e14"
+red =     "#f07178"
+green =   "#aad94c"
+yellow =  "#ffb454"
+blue =    "#39bae6"
+magenta = "#d2a6ff"
+cyan =    "#95e6cb"
+white =   "#636a72"
+
+[schemes.ayudark.bright]
+black =   "#444b55"
+red =     "#f26d78"
+green =   "#7fd962"
+yellow =  "#ff8f40"
+blue =    "#59c2ff"
+magenta = "#d2a6ff"
+cyan =    "#a6fde1"
+white =   "#ebe8df"
