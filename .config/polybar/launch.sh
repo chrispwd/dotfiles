@@ -2,30 +2,16 @@
 
 killall -q polybar
 
-while pgrep -u $UID -x polybar >/dev/null; do sleep 0.5; done
-
-outputs=$(xrandr --query | grep " connected" | cut -d" " -f1)
+#while pgrep -u $UID -x polybar >/dev/null; do sleep 0.5; done
 
 if [ "$(hostname)" == "meep" ]; then
-    tray_output=LVDS1
     mount='/home'
 else
-    tray_output=eDP1
     mount='/'
 fi
 
-for m in $outputs; do
-    case $m in
-	*HDMI*)
-	    tray_output=$m
-	    ;;
-    esac
-done
+outputs=$(xrandr --query | grep " connected" | cut -d" " -f1)
 
 for m in $outputs ; do
-    if [[ $m == $tray_output ]]; then
-	TRAY_POSITION=right MONITOR=$m MOUNTPOINT=$mount polybar --reload cwmbar 2>~/.cache/polybar/$m.log &
-    else
-	TRAY_POSITION=none MONITOR=$m MOUNTPOINT=$mount polybar --reload cwmbar 2>~/.cache/polybar/$m.log &
-    fi
+    MONITOR=$m MOUNTPOINT=$mount polybar --reload mybar > ~/.cache/polybar/$m.log 2>&1 &
 done

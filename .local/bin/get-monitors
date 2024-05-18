@@ -1,39 +1,70 @@
 #!/bin/sh
 
-xrandr_data=$(xrandr --query)
-outputs=$(echo "$xrandr_data" | grep " connected" | cut -d" " -f1)
-disconnected_outputs=$(echo "$xrandr_data" | grep "disconnected" | cut -d" " -f1 | head -n -1)
+show_help() {
+    echo "
+Usage: get-monitors [-c|-d][-h]
+    Gets a shorthand list of connected or disconnected monitors
 
-for outp in $outputs ; do
-    case $outp in
-        # meep
-        *LVDS*)
-            laptop_output=$outp
+    Reads monitor query from \`xrandr'
+
+    Options:
+    -c, --connected    Show connected monitors
+    -d, --disconnected Show disconnected monitors
+    -h, -?, --help     Show this help text
+"
+}
+
+connected_outputs=$(xrandr --query | grep " connected" | cut -d" " -f1)
+disconnected_outputs=$(echo "$xrandr_data" | grep "disconnected" | cut -d" " -f1 | head -n -1)
+output=$connected_outputs
+
+while :; do
+    case $1 in
+        -h|-\?|--help)   # Call a "show_help" function to display a synopsis, then exit.
+            show_help
+            exit
             ;;
-        # stinky
-        *eDP*)
-            laptop_output=$outp
+        #-f|--file)       # Takes an option argument, ensuring it has been specified.
+            #if [ -n "$2" ]; then
+                #file=$2
+                #shift
+            #else
+                #printf 'ERROR: "--file" requires a non-empty option argument.\n' >&2
+                #exit 1
+            #fi
+            #;;
+        #--file=?*)
+            #file=${1#*=} # Delete everything up to "=" and assign the remainder.
+            #;;
+        #--file=)         # Handle the case of an empty --file=
+            #printf 'ERROR: "--file" requires a non-empty option argument.\n' >&2
+            #exit 1
+            #;;
+        #-v|--verbose)
+            #verbose=$((verbose + 1)) # Each -v argument adds 1 to verbosity.
+            #;;
+        --)              # End of all options.
+            shift
+            break
             ;;
-        *HDMI*)
-            external_monitor=$outp
-            external_mode=$(echo "$xrandr_data" | grep -A 1 "$outp connected" | tail -n 1 | awk '{print $1}')
+        -c|--connected)
+             output=$connected_outputs
+             shift
+             break
+             ;;
+        -d|--disconnected)
+             output=$disconnected_outputs
+             shift
+             break
+             ;;
+        -?*)
+            printf 'WARN: Unknown option (ignored): %s\n' "$1" >&2
             ;;
+        *)               # Default case: If no more options then break out of the loop.
+            break
     esac
+
+    shift
 done
 
-if [ -n "$external_monitor" ]; then
-    case $laptop_output in
-        *LVDS*)
-            xrandr --output $laptop_output --auto --pos 400x1200 --output $external_monitor --mode $external_mode --pos 0x0 --primary
-            ;;
-        *eDP*)
-            xrandr --output $laptop_output --auto --pos 0x600 --output $external_monitor --mode $external_mode --pos 1920x0 --primary
-            ;;
-    esac
-else
-    other_outputs_off=""
-    for doutp in $disconnected_outputs ; do
-        other_outputs_off="$other_outputs_off --output $doutp --off"
-    done
-    xrandr --output $laptop_output --auto --primary $other_outputs_off
-fi
+echo $output

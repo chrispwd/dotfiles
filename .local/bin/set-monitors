@@ -1,0 +1,39 @@
+#!/bin/sh
+
+xrandr_data=$(xrandr --query)
+outputs=$(echo "$xrandr_data" | grep " connected" | cut -d" " -f1)
+disconnected_outputs=$(echo "$xrandr_data" | grep "disconnected" | cut -d" " -f1 | head -n -1)
+
+for outp in $outputs ; do
+    case $outp in
+        # meep
+        *LVDS*)
+            laptop_output=$outp
+            ;;
+        # stinky
+        *eDP*)
+            laptop_output=$outp
+            ;;
+        *HDMI*)
+            external_monitor=$outp
+            external_mode=$(echo "$xrandr_data" | grep -A 1 "$outp connected" | tail -n 1 | awk '{print $1}')
+            ;;
+    esac
+done
+
+if [ -n "$external_monitor" ]; then
+    case $laptop_output in
+        *LVDS*)
+            xrandr --output $laptop_output --auto --pos 400x1200 --output $external_monitor --mode $external_mode --pos 0x0 --primary
+            ;;
+        *eDP*)
+            xrandr --output $laptop_output --auto --pos 0x600 --output $external_monitor --mode $external_mode --pos 1920x0 --primary
+            ;;
+    esac
+else
+    other_outputs_off=""
+    for doutp in $disconnected_outputs ; do
+        other_outputs_off="$other_outputs_off --output $doutp --off"
+    done
+    xrandr --output $laptop_output --auto --primary $other_outputs_off
+fi

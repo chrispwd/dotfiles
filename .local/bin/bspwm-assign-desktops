@@ -1,0 +1,30 @@
+#!/bin/sh
+
+outputs=$(get-monitors)
+#disconnected_outputs=$(echo "$xrandr_data" | grep "disconnected" | cut -d" " -f1 | head -n -1)
+
+for outp in $outputs ; do
+    case $outp in
+        # meep
+        *LVDS*)
+            internal_monitor=$outp
+            ;;
+        # stinky
+        *eDP*)
+            internal_monitor=$outp
+            ;;
+        *HDMI*)
+            external_monitor=$outp
+            ;;
+    esac
+done
+
+if [ -z "$external_monitor" ]; then
+    # Laptop monitor only
+    bspc monitor $internal_monitor -d 1 2 3 4 5 6 7 8 9 10
+else
+    # Add desktops to external monitor
+    bspc monitor $external_monitor -d 1 2 3 4
+    bspc monitor $internal_monitor -d 5 6 7 8 9 10
+    bspc wm -O $external_monitor $internal_monitor
+fi
