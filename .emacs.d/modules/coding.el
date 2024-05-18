@@ -43,6 +43,9 @@
 (use-package go-mode
   :ensure t)
 
+(use-package php-mode
+  :ensure t)
+
 (unless (version< emacs-version "29")
   
   (cpwd/install-if-not 'treesit-auto)
