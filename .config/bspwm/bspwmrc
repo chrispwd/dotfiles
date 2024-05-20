@@ -1,11 +1,12 @@
 #!/bin/sh
 
-startup &
+startup
 
 if [[ "$1" -eq 0 ]]; then
+    echo "$1" >> /tmp/bspwm-log
     bspwm-assign-desktops &
 else
-    echo "$1" >> /tmp/bspwmtest
+    echo "$1" >> /tmp/bspwm-log
     bspwm-reload-desktops &
 fi
 # monitor

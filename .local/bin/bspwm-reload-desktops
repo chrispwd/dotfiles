@@ -1,6 +1,47 @@
 #!/bin/sh
 
-for monitor in $(get-monitors); do
+# TODO :: finish
+mv_to_external() {
+    # Move first 4 desktops to external monitor
+    first_four=$(bspc query -D --names -m "$internal_monitor" | sed 4q)
+    echo "$(date) Hotplug: first four desktops on $internal_monitor: $first_four" >> /tmp/bspwm-log
+    for desktop in $first_four; do
+        echo "$(date): Adding desktop $desktop to $external_monitor..." >> /tmp/bspwm-log
+        bspc desktop "$desktop" --to-monitor "$external_monitor"
+    done
+
+    # Remove default desktop created by bspwm
+    bspc desktop Desktop --remove
+
+    echo "[$(date)]: Desktops on $external_monitor: $(bspc query --names -m $external_monitor -D)" >> /tmp/bspwm-log
+    # reorder monitors
+    bspc wm -O "$external_monitor" "$internal_monitor"
+}
+
+mv_from_external() {
+    #ghost_external_monitor="$(bspc query --names -M | grep -v $internal_monitor)"
+#
+    #echo "[$(date)]: ghost: $ghost_external_monitor" >> /tmp/bspwm-log
+    ## Add default temp desktop because a minimum of one desktop is required per monitor
+    #bspc monitor "$ghost_external_monitor" -a Desktop
+#
+    ## Move all desktops except the last default desktop to internal monitor
+    #desktops_on_ghost=$(bspc query -D -m "$ghost_external_monitor")
+    #echo "[$(date)]: Desktops on disconnected monitor: $desktops_on_ghost" >> /tmp/bspwm-log
+    #for desktop in $desktops_on_ghost; do
+        #bspc desktop "$desktop" --to-monitor "$internal_monitor"
+    #done
+#
+    ## delete default desktops
+    #bspc desktop Desktop --remove
+
+    # reorder desktops
+    bspc monitor "$internal_monitor" -o 1 2 3 4 5 6 7 8 9 10
+}
+
+mons=$(get-monitors)
+echo "[$(date)]: mons: $mons" >> /tmp/bspwm-log
+for monitor in $mons; do
     case $monitor in
         # meep
         *LVDS*)
@@ -15,57 +56,23 @@ for monitor in $(get-monitors); do
     esac
 done
 
-# TODO :: finish
-mv_to_external() {
-    # Move first 4 desktops to external monitor
-    for desktop in $(bspc query -D --names -m "$internal_monitor" | sed 4q); do
-        echo "$(date): Adding desktop $desktop to $external_monitor..." >> /tmp/bspwm-log
-        bspc desktop "$desktop" --to-monitor "$external_monitor"
-    done
+echo "[$(date)]: Running bspwm-reload-monitors" >> /tmp/bspwm-log
 
-    # Remove default desktop created by bspwm
-    bspc desktop Desktop --remove
+internal_mon_count=$(bspc query -D --names -m "$internal_monitor" | wc -l)
+echo "[$(date)]: Internal mon count on $internal_monitor: $internal_mon_count" >> /tmp/bspwm-log
+echo "[$(date)]: Current value of \$external_monitor: $external_monitor" >> /tmp/bspwm-log
 
-    echo "$(date): Desktops on $external_monitor: $(bspc query --names -m $external_monitor -D)" >> /tmp/bspwm-log
-    # reorder monitors
-    bspc wm -O "$external_monitor" "$internal_monitor"
-}
-
-mv_from_external() {
-    ghost_external_monitor="$(bspc query --names -M | grep -v $internal_monitor)"
-
-    echo "ghost: $ghost_external_monitor" >> /tmp/bspwmtest
-    # Add default temp desktop because a minimum of one desktop is required per monitor
-    bspc monitor "$ghost_external_monitor" -a Desktop
-
-    # Move all desktops except the last default desktop to internal monitor
-    for desktop in $(bspc query -D -m "$ghost_external_monitor"); do
-        bspc desktop "$desktop" --to-monitor "$internal_monitor"
-    done
-
-    # delete default desktops
-    bspc desktop Desktop --remove
-
-    # reorder desktops
-    bspc monitor "$internal_monitor" -o 1 2 3 4 5 6 7 8 9 10
-}
-
-echo "bspwm-reload-monitors" >> /tmp/bspwmtest
-
-if [ -z "$external_monitor" ] && \
-       [ $(bspc query -D --names -m "$internal_monitor" | wc -l) -lt 10 ]; then
+if [ -z "$external_monitor" ]; then
 
     # Hot unplug external
-    echo "hot unplug" >> /tmp/bspwmtest
+    echo "[$(date)]: hot unplug detected" >> /tmp/bspwm-log
     mv_from_external
 
 elif [ -n "$external_monitor" ] && \
-       [ $(bspc query -D --names -m "$internal_monitor" | wc -l) -gt 8 ]; then
+       [ $internal_mon_count -gt 8 ]; then
 
     # Hot plug external
-    echo "hot plug" >> /tmp/bspwmtest
+    echo "[$(date)]: hot plug detected" >> /tmp/bspwm-log
+    echo "[$(date)]: external mon value is $external_monitor" >> /tmp/bspwm-log
     mv_to_external
 fi
-
-
-

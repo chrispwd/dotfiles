@@ -11,6 +11,7 @@ else
 fi
 
 outputs=$(xrandr --query | grep " connected" | cut -d" " -f1)
+echo "[$(date)]: (POLYBAR) outputs: $outputs" >> /tmp/bspwm-log
 
 for m in $outputs ; do
     MONITOR=$m MOUNTPOINT=$mount polybar --reload mybar > ~/.cache/polybar/$m.log 2>&1 &
