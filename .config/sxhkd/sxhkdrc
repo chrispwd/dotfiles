@@ -84,7 +84,7 @@ mod4 + {p,b,comma,period}
 
 # # focus the next/previous window in the current desktop
 alt + {_,shift + }Tab
-	bspc node -f {next,prev}.local.!hidden.window
+	bspc node -f last.!hidden.window
 
 # # focus the next/previous desktop in the current monitor
 mod4 + {_,shift + }Tab
@@ -92,13 +92,13 @@ mod4 + {_,shift + }Tab
 
 # # focus the last node
 mod4 + {_,shift + }grave
-	bspc {node,desktop} -f last
+	bspc node -f last.!same_class
 	
 # # focus the older or newer node in the focus history
-# mod4 + {o,i}
-# 	bspc wm -h off; \
-# 	bspc node {older,newer} -f; \
-# 	bspc wm -h on
+mod4 + {o,i}
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
 
 # # focus or send to the given desktop
 mod4 + {_,shift + }{1-9,0}
