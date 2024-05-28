@@ -40,4 +40,5 @@ alias \
   v="vim" \
   e="emacs -nw" \
   ec="emacsclient -nw" \
-  el="emacslauncher"
+  el="emacslauncher" \
+  ytm="ytfzf -m"
