@@ -22,7 +22,7 @@ set $ws10 "10"
 
 # Font
 #font pango:Gohu GohuFont 14px
-font pango:AnonymicePro Nerd Font Mono 16px
+font pango:CommitMono Nerd Font Mono 16px
 
 # Bar
 set $refresh_i3status killall -SIGUSR1 i3status
