@@ -42,7 +42,7 @@ export GOPATH="$HOME/go"
 export GOBIN="$HOME/go/bin"
 
 # PATH 
-export PATH="$PATH:$GOBIN:/bin:/sbin:/usr/local/sbin/:/usr/local/bin:/usr/bin:$HOME/.local/bin:$HOME/.emacs.d/bin:$HOME/.local/bin/fnm:/usr/local/opt/postgresql@13/bin:$HOME/.rbenv/bin:$HOME/.cargo/bin:$PYENV_ROOT/bin"
+export PATH="$PATH:$GOBIN:/bin:/sbin:/usr/local/sbin/:/usr/local/bin:/usr/bin:$HOME/.local/bin:$HOME/.emacs.d/bin:$HOME/.local/bin/fnm:/usr/local/opt/postgresql@13/bin:$HOME/.rbenv/bin:$HOME/.cargo/bin:$PYENV_ROOT/bin:/opt/homebrew/bin"
 
 # other stupid env crap that clutters up my dotfiles
 

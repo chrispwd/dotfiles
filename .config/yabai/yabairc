@@ -1,0 +1,31 @@
+#!/usr/bin/env sh
+
+# for this to work you must configure sudo such that
+# it will be able to run the command without password
+
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
+# debug messages
+yabai -m config debug_output on
+
+# binary space partioning layout
+yabai -m config layout bsp
+
+# Floating point value between 0 and 1 (default: 0.5)
+yabai -m config split_ratio 0.55
+
+# set mouse follows focus mode (default: off)
+yabai -m config mouse_follows_focus on
+
+# create minimum 4 desktops on startup
+desktop_total=$(yabai -m query --spaces | jq .[].id | wc -l | sed 's/ //g')
+left_to_create=$(( 4 - $desktop_total ))
+
+if [ $left_to_create -gt 0 ]; then
+    
+    for desktop in $left_to_create; do
+        yabai -m space --create
+    done
+
+fi
