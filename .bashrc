@@ -8,6 +8,7 @@
 #################### Local utility functions ###########################
 
 _have() { type "$1" > /dev/null 2>&1; }
+_source_if() { [[ -r "$1" ]] && source "$1"; }
 
 ######################### Bash options #################################
 
@@ -55,3 +56,8 @@ fi
 if _have mise; then
    eval "$(mise activate bash)"
 fi
+
+######################### Private / Work Configs #######################
+
+_source_if "$HOME/.bash_work"
+_source_if "$HOME/.bash_private"

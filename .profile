@@ -42,12 +42,7 @@ export GOPATH="$HOME/go"
 export GOBIN="$HOME/go/bin"
 
 # PATH 
-export PATH="$PATH:$GOBIN:/bin:/sbin:/usr/local/sbin/:/usr/local/bin:/usr/bin:$HOME/.local/bin:$HOME/.emacs.d/bin:$HOME/.local/bin/fnm:/usr/local/opt/postgresql@13/bin:$HOME/.rbenv/bin:$HOME/.cargo/bin:$PYENV_ROOT/bin:/opt/homebrew/bin"
-
-# other stupid env crap that clutters up my dotfiles
-
-# pkg-config (needed for postgresql@13 for brightfunds)
-export PKG_CONFIG_PATH="/usr/local/opt/postgresql@13/lib/pkgconfig"
+export PATH="$PATH:$GOBIN:/bin:/sbin:/usr/local/sbin/:/usr/local/bin:/usr/bin:$HOME/.local/bin:$HOME/.emacs.d/bin:$HOME/.local/bin/fnm:$HOME/.cargo/bin:$PYENV_ROOT/bin:/opt/homebrew/bin"
 
 # zoxide
 export _ZO_DATA_DIR=${XDG_DATA_HOME:-$HOME/.local/share}

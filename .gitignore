@@ -133,3 +133,6 @@ flycheck_*.el
 !/.emacs.d/modules
 !/.emacs.d/bootstrap
 !/.emacs.d/themes
+
+# Work files
+.bash_work
