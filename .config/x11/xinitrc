@@ -17,8 +17,8 @@ fi
 [ -f ~/.config/x11/xresources ] && xrdb -merge ~/.config/x11/xresources
 
 # wm
-exec bspwm 2> /tmp/bspwm-log
-#cwm -c $CWMRC
+#exec bspwm 2> /tmp/bspwm-log
+cwm -c $CWMRC
 #exec icewm-session
 # while xsetroot -name "`date` `uptime | sed 's/.*,//'`"
 # do

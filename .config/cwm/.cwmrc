@@ -2,12 +2,12 @@
 
 sticky      yes
 snapdist    4
-moveamount  25
+moveamount  32
 borderwidth 2
 gap         56 16 16 16
 unbind-key  all
 
-fontname "Hack Nerd Font Mono:sytle=Italic:pixelsize=16"
+fontname "CommitMono Nerd Font Mono:sytle=Italic:pixelsize=16"
 
 # groups
 bind-key 4-1   group-only-1
@@ -48,13 +48,14 @@ bind-key M-grave  window-cycle-inclass
 bind-key MS-grave window-rcycle-inclass
 bind-key 4-Tab    group-cycle
 bind-key 4S-Tab   group-rcycle
-bind-key 4-m      window-maximize
+bind-key 4M-m     window-maximize
+bind-key 4MS-m    window-maximize
 bind-key 4M-v     window-vmaximize
 bind-key 4M-g     window-hmaximize
 bind-key 4-f      window-fullscreen
 bind-key 4-w      window-close
 bind-key 4-s      window-stick
-bind-key 4S-z     window-hide
+bind-key 4S-m     window-hide
 bind-key 4S-f     window-freeze
 bind-key 4C-m     menu-window
 bind-key 4C-z     menu-window-hidden
@@ -112,15 +113,23 @@ autogroup    3 "Signal Beta"
 # color inactiveborder "#292d3e"
 
 # Tomorrow dark
-color menufg          "#c5c8c6"
-color menubg          "#1d1f21"
-color font            "#c5c8c6"
-color selfont         "#1d1f21"
-color activeborder    "#373b41"
-color inactiveborder  "#1d1f21"
-color groupborder     "#8c9440"
-color ungroupborder   "#de935f"
-color urgencyborder   "#a54242"
+#color menufg          "#c5c8c6"
+#color menubg          "#1d1f21"
+#color font            "#c5c8c6"
+#color selfont         "#1d1f21"
+#color activeborder    "#373b41"
+#color inactiveborder  "#1d1f21"
+#color groupborder     "#8c9440"
+#color ungroupborder   "#de935f"
+#color urgencyborder   "#a54242"
+
+# ayu-dark
+color menufg         "#bfbdb6"
+color menubg         "#0d1017"
+color font           "#bfbdb6"
+color selfont        "#0d1017"
+color activeborder   "#39bae6"
+color inactiveborder "#636a72"
 
 # Modus-vivendi
 #color menufg          "#ffffff"
