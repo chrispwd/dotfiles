@@ -8,3 +8,4 @@
   po="push origin"
   wt="worktree"
   br="branch"
+  pr="pull --rebase"
