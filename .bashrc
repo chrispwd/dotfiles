@@ -37,10 +37,10 @@ local cr='\[\e[0m\]'
 B=$(git branch --show-current 2>/dev/null)
 
 #[[ -n "$B" ]] && B="$wh($cr$y$B$cr$wh)$cr"
-[[ -n "$B" ]] && B="$wh on $cr$y$B$cr"
+[[ -n "$B" ]] && B=" on $y$B$cr"
 
 #PS1="$r\$(exit_status)$cr[$g\u$cr$wh@$cr$b\h$cr$wh:$cr$mg\W$cr$B] \\$ "
-PS1="$g\u$cr$wh at $cr$b\h$cr$wh in $cr$mg\W$cr$B
+PS1="$g\u$cr at $b\h$cr in $mg\W$cr$B
 $r\$(exit_status)$cr> \\$ "
 
 }
@@ -55,6 +55,10 @@ fi
 
 if _have mise; then
    eval "$(mise activate bash)"
+fi
+
+if _have fnm; then
+    eval "$(fnm env --use-on-cd)"
 fi
 
 ######################### Private / Work Configs #######################
