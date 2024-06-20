@@ -16,6 +16,7 @@
 (setq org-log-done 'time)
 (setq org-log-into-drawer t)
 (setq org-scheduled-past-days 0)
+(setq org-agenda-entry-text-maxlines 50)
 (setq org-todo-keywords
       '((sequence "TODO(t)" "NEXT(n)" "ACTIVE(a)" "WAITING(w!)" "|" "DONE(d!)" "CXLD(x)")))
 
