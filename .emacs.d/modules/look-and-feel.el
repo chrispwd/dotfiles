@@ -19,11 +19,12 @@
   (customize-set-variable 'doom-modeline-height 15)
   (customize-set-variable 'doom-modeline-bar-width 6)
   (customize-set-variable 'doom-modeline-minor-modes t)
-  (customize-set-variable 'doom-modeline-buffer-file-name-style 'truncate-except-project))
+  (customize-set-variable
+   'doom-modeline-buffer-file-name-style 'truncate-except-project))
 
 (use-package doom-themes
   :ensure t
   :config
-  (load-theme 'doom-ayu-dark t))
+  (load-theme 'doom-solarized-dark t))
 
 (provide 'look-and-feel)

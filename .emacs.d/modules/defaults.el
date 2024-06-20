@@ -24,6 +24,10 @@
 ;; line and character numbers
 (column-number-mode)
 
+;; Highlight column 80
+(add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
+(setq-default display-fill-column-indicator-column 80)
+
 ;; Don't display line numbers on the side
 ;(setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode 0)
