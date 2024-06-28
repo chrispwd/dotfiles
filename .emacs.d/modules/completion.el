@@ -32,8 +32,9 @@
   :init
   (setq completion-styles '(substring basic))
   :bind
-  (("C-s" . consult-line)                             
-   ("C-M-y" . consult-yank-from-kill-ring)))
+  (("C-s"   . consult-line)                             
+   ("C-M-y" . consult-yank-from-kill-ring)
+   ("C-c o" . consult-mark)))
 
 (use-package orderless
   :ensure t
