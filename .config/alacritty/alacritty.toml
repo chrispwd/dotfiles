@@ -15,20 +15,20 @@ WINIT_X11_SCALE_FACTOR = "1.0"
 size = 13.0
 
 [font.bold]
-family = "CommitMono Nerd Font Mono"
-style = "Bold"
+family = "Iosevka Term"
+style = "Semibold"
 
 [font.bold_italic]
-family = "CommitMono Nerd Font Mono"
-style = "Bold Italic"
+family = "Iosevka Term"
+style = "Semibold Italic"
 
 [font.italic]
-family = "CommitMono Nerd Font Mono"
-style = "Italic"
+family = "Iosevka Term"
+style = "Light Italic"
 
 [font.normal]
-family = "CommitMono Nerd Font Mono"
-style = "Regular"
+family = "Iosevka Term"
+style = "Light"
 
 # Tomorrow Night
 # [colors.bright]
