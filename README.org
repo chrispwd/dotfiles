@@ -30,10 +30,10 @@ From the top-level directory, run ~stow~.
   stow .
 #+end_src
 
-Any time you pull in new changes, you must refresh the symlinks for changes to take effect. To do so, use the ~-R~ flag.
+Any time you pull in new changes that contain new files, you must refresh the symlinks for the new files to appear. To do so, use the ~-R~ flag.
 
 #+begin_src sh :results verbatim
   stow -R .
 #+end_src
 
-All files should now be refreshed. This only needs to be done on pulled changes. Any local edits will take effect as expected.
+All files should now be refreshed. This only needs to be done on newly added files.
