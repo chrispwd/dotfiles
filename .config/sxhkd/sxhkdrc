@@ -8,7 +8,7 @@ mod4 + alt + Return
 
 # program launcher
 mod4 + @space
-	dmenu_run -l 12 -fn 'Iosevka Term-12:Italic'
+	dmenu_run -l 12 -fn 'CommitMono-12:Italic'
 
 # make sxhkd reload its configuration files:
 mod4 + alt + Escape
