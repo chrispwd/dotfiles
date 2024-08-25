@@ -31,6 +31,8 @@ ctrl + alt + mod4 + f
      firefox
 ctrl + alt + mod4 + t
      timestamp
+ctrl + alt + mod4 + r
+     startup
 
 #
 ## bspwm
