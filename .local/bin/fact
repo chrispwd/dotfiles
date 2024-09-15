@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+function fact() {
+  num=$1
+  res=1
+  while [ $num -gt 1 ]
+    do
+     res=$(expr $num \* $res)
+     num=$(expr $num - 1)
+    done
+  echo $res
+}
+
+fact $1
