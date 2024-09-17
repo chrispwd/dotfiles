@@ -51,35 +51,35 @@
   (cpwd/install-if-not 'treesit-auto)
   
   (use-package treesit-auto
-    :ensure t
-    :init
-    (setq treesit-auto-install 'prompt)
+    :custom
+    (treesit-auto-install 'prompt)
     :config
+    (treesit-auto-add-to-auto-mode-alist 'all)
     (global-treesit-auto-mode))
 
-  (setq major-mode-remap-alist
-        '((yaml-mode       . yaml-ts-mode)
-          (toml-mode       . toml-ts-mode)
-          (rust-mode       . rust-ts-mode)
-          (c-mode          . c-ts-mode)
-          (c++-mode        . c++-ts-mode)
-          (c-or-c++-mode   . c-or-c++-ts-mode)
-          (go-mode         . go-ts-mode)
-          (javascript-mode . js-ts-mode)
-          (js-json-mode    . json-ts-mode)
-          (dockerfile-mode . dockerfile-ts-mode)
-          (css-mode        . css-ts-mode)
-          (python-mode     . python-ts-mode)
-          (gdscript-mode   . gdscript-ts-mode)))
-
-  (use-package typescript-ts-mode
-    :config
-    (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-ts-mode))
-    (add-to-list 'auto-mode-alist '("\\.tsx\\'" . tsx-ts-mode)))
-  
-  (use-package yaml-ts-mode
-    :config
-    (add-to-list 'auto-mode-alist '("\\.ya?ml\\'" . yaml-ts-mode)))
+  ;;(setq major-mode-remap-alist
+        ;;'((yaml-mode       . yaml-ts-mode)
+          ;;(toml-mode       . toml-ts-mode)
+          ;;(rust-mode       . rust-ts-mode)
+          ;;(c-mode          . c-ts-mode)
+          ;;(c++-mode        . c++-ts-mode)
+          ;;(c-or-c++-mode   . c-or-c++-ts-mode)
+          ;;(go-mode         . go-ts-mode)
+          ;;(javascript-mode . js-ts-mode)
+          ;;(js-json-mode    . json-ts-mode)
+          ;;(dockerfile-mode . dockerfile-ts-mode)
+          ;;(css-mode        . css-ts-mode)
+          ;;(python-mode     . python-ts-mode)
+          ;;(gdscript-mode   . gdscript-ts-mode)))
+;;
+  ;;(use-package typescript-ts-mode
+    ;;:config
+    ;;(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-ts-mode))
+    ;;(add-to-list 'auto-mode-alist '("\\.tsx\\'" . tsx-ts-mode)))
+ ;; 
+  ;;(use-package yaml-ts-mode
+    ;;:config
+    ;;(add-to-list 'auto-mode-alist '("\\.ya?ml\\'" . yaml-ts-mode)))
   
   (with-eval-after-load 'eglot
     (dolist (mode '(rust-ts-mode-hook
@@ -96,20 +96,21 @@
                     python-ts-mode-hook))
       (add-hook mode 'eglot-ensure)))
 
-  (with-eval-after-load 'treesit-auto
-    (setq treesit-language-source-alist
-      '((tsx        "https://github.com/tree-sitter/tree-sitter-typescript"
-                    "v0.20.3"
-                    "tsx/src")
-        (typescript "https://github.com/tree-sitter/tree-sitter-typescript"
-                    "v0.20.3"
-                    "typescript/src")
-        (javascript "https://github.com/tree-sitter/tree-sitter-javascript"
-                    "v0.20.1"
-                    "src"))))
+  ;;(with-eval-after-load 'treesit-auto
+    ;;(setq treesit-language-source-alist
+      ;;'((tsx        "https://github.com/tree-sitter/tree-sitter-typescript"
+                    ;;"v0.20.3"
+                    ;;"tsx/src")
+        ;;(typescript "https://github.com/tree-sitter/tree-sitter-typescript"
+                    ;;"v0.20.3"
+                    ;;"typescript/src")
+        ;;(javascript "https://github.com/tree-sitter/tree-sitter-javascript"
+                    ;;"v0.20.1"
+                    ;;"src")))
+    )
   
-  (defun eglot-format-buffer-on-save ()
-    (add-hook 'before-save-hook #'eglot-format-buffer -10 t))
-  (add-hook 'go-ts-mode-hook #'eglot-format-buffer-on-save))
+(defun eglot-format-buffer-on-save ()
+  (add-hook 'before-save-hook #'eglot-format-buffer -10 t))
+(add-hook 'go-ts-mode-hook #'eglot-format-buffer-on-save)
 
 (provide 'coding)
