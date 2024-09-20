@@ -16,7 +16,7 @@ mod4 + alt + Escape
 
 # Volume controls
 {XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute}
-	pactl set-sink-{volume 0 +10%,volume 0 -10%,mute 0 toggle}
+	pactl set-sink-{volume @DEFAULT_SINK@ +10%,volume @DEFAULT_SINK@ -10%,mute @DEFAULT_SINK@ toggle}
 
 # Brightness controls (~/.local/bin/brightness)
 XF86MonBrightness{Up,Down}
