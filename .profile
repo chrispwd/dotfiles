@@ -28,7 +28,7 @@ export BROWSER="firefox"
 export EDITOR="emacs -nw"
 export ALTERNATE_EDITOR="vim"
 
-if [ $(hostname) = "meep" ]; then
+if [ $(uname -n) = "meep" ]; then
     export TERMINAL="st"
 else
     export TERMINAL="kitty"
