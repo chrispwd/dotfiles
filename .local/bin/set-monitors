@@ -14,6 +14,10 @@ for outp in $outputs ; do
         *eDP*)
             laptop_output=$outp
             ;;
+        *DP2*)
+            external_monitor=$outp
+            external_mode=$(echo "$xrandr_data" | grep -A 1 "$outp connected" | tail -n 1 | awk '{print $1}')
+            ;;
         *HDMI*)
             external_monitor=$outp
             external_mode=$(echo "$xrandr_data" | grep -A 1 "$outp connected" | tail -n 1 | awk '{print $1}')
