@@ -70,7 +70,7 @@ _comp_options+=(globdots)               # Include hidden files.
 
 # Plugins
 # zsh-fast-syntax-highlighting
-source $ZDOTDIR/plugins/fast-syntax-highlighting/F-Sy-H.plugin.zsh
+#source $ZDOTDIR/plugins/fast-syntax-highlighting/F-Sy-H.plugin.zsh
 
 # zoxide :: zsh-z replacement
 eval "$(zoxide init zsh)"
