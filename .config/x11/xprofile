@@ -8,7 +8,7 @@ xsetroot -cursor_name left_ptr &
 # startup apps
 dunst &
 nm-applet &
-if [ $(hostname) = "stinky" ]; then
+if [ $(uname -n) = "stinky" ]; then
     blueman-applet &
 fi
 wmname LG3D

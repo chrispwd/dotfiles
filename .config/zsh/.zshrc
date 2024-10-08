@@ -36,7 +36,7 @@ unsetopt BEEP                   # Disable that HORRIBLE beep
 [ -f ~/.alias ] && . ~/.alias
 
 # Source work stuff
-if [ $(hostname) = "wizmac.local" ]; then
+if [ $(uname -n) = "wizmac.local" ]; then
     . "$HOME/.secrets"
 fi
 
