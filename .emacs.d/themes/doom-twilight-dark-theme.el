@@ -131,6 +131,7 @@ determine the exact padding."
    ;;;; misc
    (font-lock-keyword-face :foreground yellow :weight 'normal)
    (widget-field :background grey :foreground fg)
+   (shadow :foreground fg-alt)
    (diff-removed :background (doom-lighten bg-alt 0.1) :foreground red)
    (magit-diff-removed :background (doom-lighten bg-alt 0.1) :foreground red)
    (widget-single-line-field :background grey :foreground fg)
