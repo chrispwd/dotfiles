@@ -32,7 +32,7 @@ determine the exact padding."
   "A theme based off of Chris Kempson's Tomorrow Dark."
 
   ;; name        gui       256       16
-  ((bg         '("#1e1e1e" nil       nil          ))
+  ((bg         '("#222222" nil       nil          ))
    (bg-alt     '("#161719" nil       nil          ))
    (base0      '("#0d0d0d" "black"   "black"      ))
    (base1      '("#cf6a4c" "#1b1b1b"              ))
@@ -114,15 +114,29 @@ determine the exact padding."
    (rainbow-delimiters-depth-7-face :foreground teal)
    ;;;; doom-modeline
    (doom-modeline-buffer-path       :foreground violet :bold t)
+   (doom-modeline-buffer-file       :foreground fg :bold nil)
    (doom-modeline-buffer-major-mode :inherit 'doom-modeline-buffer-path)
 
+   ;;;; org-mode
    (org-block-begin-line :background (doom-lighten bg-alt 0.1)
                          :foreground fg-alt)
    (org-block-end-line :background (doom-lighten bg-alt 0.1))
    (org-block :background (doom-lighten bg-alt 0.1))
-   (font-lock-keyword-face :foreground yellow :weight 'normal))
+   (org-done :foreground comments)
+   (org-todo :foreground yellow :bold t)
+   (org-date :foreground comments :bold nil)
+   (org-headline-done :foreground comments)
+
+   ;;;; misc
+   (font-lock-keyword-face :foreground yellow :weight 'normal)
+   (widget-field :background grey :foreground fg)
+   (diff-removed :background grey :foreground red)
+   (widget-single-line-field :background grey :foreground fg)
+   (markdown-code-face :background (doom-lighten bg-alt 0.1)
+                       :foreground fg)
+   (link :foreground cyan :underline t))
   ;; --- variables --------------------------
   ;; ()
-  )
+)
 
 ;;; doom-twilight-dark-theme.el ends here
