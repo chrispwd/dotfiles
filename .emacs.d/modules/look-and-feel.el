@@ -5,6 +5,9 @@
 (cpwd/install-if-not 'doom-modeline)
 (cpwd/install-if-not 'autothemer)
 
+;; Custom themes dir
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+
 ;; Theme
 (use-package all-the-icons
   :ensure t)
@@ -24,6 +27,8 @@
 
 (use-package doom-themes
   :ensure t
+  :init
+  (setq doom-themes-enable-bold nil)
   :config
   (load-theme 'doom-solarized-dark t))
 
