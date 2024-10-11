@@ -120,7 +120,8 @@ determine the exact padding."
    ;;;; org-mode
    (org-block-begin-line :background (doom-lighten bg-alt 0.1)
                          :foreground fg-alt)
-   (org-block-end-line :background (doom-lighten bg-alt 0.1))
+   (org-block-end-line :background (doom-lighten bg-alt 0.1)
+                       :foreground fg-alt)
    (org-block :background (doom-lighten bg-alt 0.1))
    (org-done :foreground comments)
    (org-todo :foreground yellow :bold t)
