@@ -30,6 +30,6 @@
   :init
   (setq doom-themes-enable-bold nil)
   :config
-  (load-theme 'doom-solarized-dark t))
+  (load-theme 'doom-twilight-dark t))
 
 (provide 'look-and-feel)
