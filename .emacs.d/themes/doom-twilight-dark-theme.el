@@ -43,7 +43,7 @@ determine the exact padding."
    (base6      '("#afc4db" "#6b6b6b" "brightblack"))
    (base7      '("#a7a7a7" "#979797" "brightblack"))
    (base8      '("#ffffff" "#ffffff" "white"      ))
-   (fg         '("#a7a7a7" "#a7a7a7" "white"))
+   (fg         '("#959595" "#a7a7a7" "white"))
    (fg-alt     (doom-darken fg 0.4))
 
    (grey       '("#5f5a60" "#5a5a5a" "brightblack"))
@@ -137,7 +137,9 @@ determine the exact padding."
    (widget-single-line-field :background grey :foreground fg)
    (markdown-code-face :background (doom-lighten bg-alt 0.1)
                        :foreground fg)
-   (link :foreground cyan :underline t))
+   (link :foreground blue :underline t)
+   (link-visited :foreground magenta :underline t)
+   )
   ;; --- variables --------------------------
   ;; ()
 )
