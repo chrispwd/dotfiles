@@ -27,8 +27,8 @@
 
 (use-package doom-themes
   :ensure t
-  :init
-  (setq doom-themes-enable-bold nil)
+  ;; :init
+  ;; (setq doom-themes-enable-bold nil)
   :config
   (load-theme 'doom-twilight-dark t))
 

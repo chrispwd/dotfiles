@@ -29,6 +29,7 @@
   (setq evil-insert-state-cursor 'bar)  ; ⎸
   ;(setq evil-insert-state-cursor 'hbar) ; _
   (setq evil-emacs-state-cursor  'hbar) ; _
+  (setq evil-undo-system 'undo-redo)
   :config
   (evil-mode 1)
   (evil-set-leader 'normal (kbd "SPC"))

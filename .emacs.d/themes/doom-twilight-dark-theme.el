@@ -139,6 +139,7 @@ determine the exact padding."
                        :foreground fg)
    (link :foreground blue :underline t)
    (link-visited :foreground magenta :underline t)
+   (bold :foreground (doom-lighten fg 0.1) :bold t)
    )
   ;; --- variables --------------------------
   ;; ()
