@@ -40,7 +40,7 @@ B=$(git branch --show-current 2>/dev/null)
 [[ -n "$B" ]] && B=" on $y$B$cr"
 
 #PS1="$r\$(exit_status)$cr[$g\u$cr$wh@$cr$b\h$cr$wh:$cr$mg\W$cr$B] \\$ "
-PS1="$g\u$cr at $b\h$cr in $mg\W$cr$B
+PS1="$g\u$cr at $b\h$cr$B in $mg\w$cr
 $r\$(exit_status)$cr> \\$ "
 
 }
