@@ -238,8 +238,8 @@ XTerm*boldMode: true
 
 ! Twilight dark
 ! special
-*.foreground:   #a7a7a7
-*.background:   #1e1e1e
+*.foreground:   #959595
+*.background:   #222222
 *.cursorColor:  #afc4db
 
 ! black
