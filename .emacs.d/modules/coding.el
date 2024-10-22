@@ -111,6 +111,14 @@
   
 (defun eglot-format-buffer-on-save ()
   (add-hook 'before-save-hook #'eglot-format-buffer -10 t))
+
+(defun eglot-format-imports-on-save ()
+  (add-hook 'before-save-hook
+            (lambda ()
+              (call-interactively 'eglot-code-action-organize-imports))
+            nil t))
+
 (add-hook 'go-ts-mode-hook #'eglot-format-buffer-on-save)
+(add-hook 'go-ts-mode-hook #'eglot-format-imports-on-save)
 
 (provide 'coding)
