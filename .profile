@@ -11,6 +11,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc"
 export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
 export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
+export HISTCONTROL=ignoreboth
 export HISTSIZE=10000
 export SAVEHIST=10000
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
@@ -33,7 +34,6 @@ if [ $(uname -n) = "meep" ]; then
 else
     export TERMINAL="kitty"
 fi
-
 
 ########################## PATH ########################################
 
