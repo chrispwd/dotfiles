@@ -38,9 +38,6 @@ bind-key 4S-7  window-movetogroup-7
 bind-key 4S-8  window-movetogroup-8
 bind-key 4S-9  window-movetogroup-9
 
-# execs
-#bind-key 4-Return '/usr/bin/alacritty'
-
 # keybinds
 bind-key M-Tab    window-cycle
 bind-key MS-Tab   window-rcycle
@@ -112,6 +109,17 @@ autogroup    3 "Signal Beta"
 # color activeborder   "#c792ea"
 # color inactiveborder "#292d3e"
 
+# Twilight dark
+color menufg          "#959595"
+color menubg          "#222222"
+color font            "#959595"
+color selfont         "#222222"
+color activeborder    "#7587a6"
+color inactiveborder  "#222222"
+color groupborder     "#8f9d6a"
+color ungroupborder   "#f9ee98"
+color urgencyborder   "#cf6a4c"
+
 # Tomorrow dark
 #color menufg          "#c5c8c6"
 #color menubg          "#1d1f21"
@@ -124,12 +132,12 @@ autogroup    3 "Signal Beta"
 #color urgencyborder   "#a54242"
 
 # ayu-dark
-color menufg         "#bfbdb6"
-color menubg         "#0d1017"
-color font           "#bfbdb6"
-color selfont        "#0d1017"
-color activeborder   "#39bae6"
-color inactiveborder "#636a72"
+#color menufg         "#bfbdb6"
+#color menubg         "#0d1017"
+#color font           "#bfbdb6"
+#color selfont        "#0d1017"
+#color activeborder   "#39bae6"
+#color inactiveborder "#636a72"
 
 # Modus-vivendi
 #color menufg          "#ffffff"
