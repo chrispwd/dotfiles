@@ -116,7 +116,8 @@
 (add-hook 'org-mode-hook 'cpwd/org-mode-setup)
 
 (defun cpwd/org-mode-visual-fill ()
-  (setq visual-fill-column-width 100)
+  (setq visual-fill-column-width 100
+        visual-fill-column-center-text t)
   (visual-fill-column-mode 1))
 
 (use-package visual-fill-column
