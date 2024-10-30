@@ -17,7 +17,7 @@
                 (format-time-string "%A %B %e %Y") ; format like Tuesday June 14 2022
                 '("journal")))
              (setq denote-directory (expand-file-name "~/Notes/denote"))
-             (setq denote-known-keywords '("emacs" "testing" "project"))
+             (setq denote-known-keywords '("work" "home" "ref" "howto"))
              (setq denote-file-type nil) ; default to org
              (setq denote-link-fontify-backlinks t)
              :hook
@@ -26,10 +26,10 @@
              (("C-c n j" . cpwd/denote-journal)
               ("C-c n n" . denote)
               ("C-c n f" . denote-open-or-create)
-              ("C-c n i" . denote-link)
+              ("C-c n i" . denote-link-or-create)
               ("C-c n I" . denote-link-add-links)                               
               ("C-c n l" . denote-link-find-file) 
-              ("C-c n b" . denote-link-backlinks) 
+              ("C-c n b" . denote-backlinks) 
               ("C-c n r" . denote-rename-file) 
               ("C-c n R" . denote-rename-file-using-front-matter))
              :config
