@@ -5,6 +5,7 @@
 ;;; Dependencies
 (cpwd/install-if-not 'denote)
 (cpwd/install-if-not 'markdown-mode)
+(cpwd/install-if-not 'link-hint)
 
 ;;; denote - a simlpe note-taking package
 (use-package denote
@@ -40,5 +41,11 @@
   :ensure t
   :mode ("README\\.md\\'" . gfm-mode)
   :init (setq markdown-command "multimarkdown"))
+
+(use-package link-hint
+  :ensure t
+  :bind
+  ("C-c l o" . link-hint-open-link)
+  ("C-c l c" . link-hint-copy-link))
 
 (provide 'note-taking)

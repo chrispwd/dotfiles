@@ -46,6 +46,11 @@
 (use-package php-mode
   :ensure t)
 
+(use-package restclient
+  :ensure t
+  :init
+  (add-to-list 'auto-mode-alist '("\\.http\\'" . restclient-mode)))
+
 (unless (version< emacs-version "29")
   
   (cpwd/install-if-not 'treesit-auto)
