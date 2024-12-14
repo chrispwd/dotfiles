@@ -10,6 +10,10 @@ mod4 + alt + Return
 mod4 + @space
 	dmenu_run -l 12 -fn 'BlexMono Nerd Font-12:Italic'
 
+# char search
+mod4 + shift + @space
+	dmenuchar
+
 # make sxhkd reload its configuration files:
 mod4 + alt + Escape
 	pkill -USR1 -x sxhkd
