@@ -673,6 +673,7 @@
 ⁺ math_sup_plus; $i
 ⁻ math_sup_minus; $i
 ⁼ math_sup_eq; $i
+ᐟ math_sup_div; $i
 ⁽ math_sup_parenopen; $i
 ⁾ math_sup_parenclose; $i
 ᵃ math_sup_a; $i
@@ -685,6 +686,8 @@
 ᵒ math_sup_o; $i
 𐞥 math_sup_q; $i
 ˢ math_sup_s; $i
+ᵗ math_sup_t; $i
 ᵘ math_sup_u; $i
 ʷ math_sup_w; $i
 ʸ math_sup_y; $i
+∞ math_infinity; $i
