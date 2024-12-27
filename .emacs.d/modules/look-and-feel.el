@@ -30,6 +30,21 @@
   ;; :init
   ;; (setq doom-themes-enable-bold nil)
   :config
-  (load-theme 'doom-twilight-dark t))
+  (load-theme 'doom-solarized-dark t)
+  (custom-set-faces
+   `(font-lock-regexp-grouping-backslash ((t (:weight
+                                              normal
+                                              :foreground
+                                              ,(doom-color 'grey)))))
+   `(link ((t (:weight
+               normal))))
+   `(font-lock-keyword-face ((t (:weight
+                                 normal
+                                 :foreground
+                                 ,(doom-color 'green)))))
+  `(font-lock-constant-face ((t (:weight
+                                 normal
+                                 :foreground
+                                 ,(doom-color 'violet)))))))
 
 (provide 'look-and-feel)

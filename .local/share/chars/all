@@ -627,9 +627,14 @@
  dev_d3js; $i
  dev_sqlite; $i
  dev_vim; $i
-Δ math_delta; $i
+Δ math_delta_uppercase; $i
+δ math_delta_lowercase; $i
 ° math_degree; $i
 π math_pi; $i
+log₁₀ math_log_base_10; $i
+logₑ math_log_base_e; $i
+⁽¹ᐟ²⁾ math_square_root; $i
+⁽¹ᐟ³⁾ math_cube_root; $i
 Σ math_capital_sigma; $i
 ± math_plus_or_minus; $i
 α math_alpha; $i
@@ -654,6 +659,7 @@
 ₎ math_sub_parenclose; $i
 ₓ math_sub_x; $i
 ₐ math_sub_a; $i
+𞁓 math_sub_b; $i
 ₑ math_sub_e; $i
 ₒ math_sub_o; $i
 ₙ math_sub_n; $i
@@ -685,9 +691,11 @@
 ᵐ math_sup_m; $i
 ᵒ math_sup_o; $i
 𐞥 math_sup_q; $i
+ʳ math_sup_r; $i
 ˢ math_sup_s; $i
 ᵗ math_sup_t; $i
 ᵘ math_sup_u; $i
 ʷ math_sup_w; $i
+ˣ math_sup_x; $i
 ʸ math_sup_y; $i
 ∞ math_infinity; $i
