@@ -32,12 +32,10 @@
   :config
   (load-theme 'doom-solarized-dark t)
   (custom-set-faces
-   `(font-lock-regexp-grouping-backslash ((t (:weight
-                                              normal
-                                              :foreground
-                                              ,(doom-color 'grey)))))
-   `(link ((t (:weight
-               normal))))
+   `(link ((t (:weight normal))))
+   `(org-block ((t (:background ,(doom-darken (doom-color 'bg) 0.1)))))
+   `(org-block-begin-line ((t (:background
+                               ,(doom-darken (doom-color 'bg) 0.1)))))
    `(font-lock-keyword-face ((t (:weight
                                  normal
                                  :foreground
@@ -45,6 +43,10 @@
   `(font-lock-constant-face ((t (:weight
                                  normal
                                  :foreground
-                                 ,(doom-color 'violet)))))))
+                                 ,(doom-color 'violet)))))
+   `(font-lock-regexp-grouping-backslash ((t (:weight
+                                              normal
+                                              :foreground
+                                              ,(doom-color 'grey)))))))
 
 (provide 'look-and-feel)
