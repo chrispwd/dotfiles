@@ -642,6 +642,7 @@ logₑ math_log_base_e; $i
 θ math_theta; $i
 ν math_nu; $i
 μ math_mu; $i
+∪ math_union; $i
 ₀ math_sub_0; $i
 ₁ math_sub_1; $i
 ₂ math_sub_2; $i

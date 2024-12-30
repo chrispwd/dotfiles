@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+OS=$(uname -s)
+OPTIONS=""
+
+for arg in "$@"
+do
+  # if an argument contains a white space, enclose it in single quotes and append to the list
+  # otherwise simply append the argument to the list
+  if echo $arg | grep -q " "; then
+      OPTIONS="$OPTIONS '$arg'"
+  else
+      OPTIONS="$OPTIONS $arg"
+  fi
+done
+
+if [ -n "$OPTIONS" ]; then
+    case "$OS" in
+    darwin*)
+        DATE=$(eval "gdate $OPTIONS") ;;
+    *)
+        DATE=$(eval "date $OPTIONS") ;;
+    esac
+else
+    DATE=$(date)
+fi
+
+echo "** $DATE"
