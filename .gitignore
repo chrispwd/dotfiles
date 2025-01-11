@@ -136,3 +136,4 @@ flycheck_*.el
 
 # Work files
 .bash_work
+.bash_private

@@ -668,7 +668,9 @@ logₑ math_log_base_e; $i
 ⁰ math_sup_0; $i
 ¹ math_sup_1; $i
 ² math_sup_2; $i
+² math_squared; $i
 ³ math_sup_3; $i
+³ math_cubed; $i
 ⁴ math_sup_4; $i
 ⁵ math_sup_5; $i
 ⁶ math_sup_6; $i
