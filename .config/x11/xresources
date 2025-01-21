@@ -267,8 +267,8 @@ XTerm*boldMode: true
 *.color13:      #9b859d
 
 ! cyan
-*.color6:       #afc4db
-*.color14:      #afc4db
+*.color6:       #94a6b9
+*.color14:      #94a6b9
 
 ! white
 *.color7:       #a7a5a1
