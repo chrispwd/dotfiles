@@ -635,6 +635,7 @@ log₁₀ math_log_base_10; $i
 logₑ math_log_base_e; $i
 ⁽¹ᐟ²⁾ math_square_root; $i
 ⁽¹ᐟ³⁾ math_cube_root; $i
+√ math_radical; $i
 Σ math_capital_sigma; $i
 ± math_plus_or_minus; $i
 α math_alpha; $i
