@@ -109,16 +109,16 @@ autogroup    3 "Signal Beta"
 # color activeborder   "#c792ea"
 # color inactiveborder "#292d3e"
 
-# Twilight dark
-color menufg          "#959595"
-color menubg          "#222222"
-color font            "#959595"
-color selfont         "#222222"
-color activeborder    "#7587a6"
-color inactiveborder  "#222222"
+# Twilight
+color menufg          "#95928f"
+color menubg          "#222120"
+color font            "#95928f"
+color selfont         "#222120"
+color activeborder    "#94a6b9"
+color inactiveborder  "#222120"
 color groupborder     "#8f9d6a"
-color ungroupborder   "#f9ee98"
-color urgencyborder   "#cf6a4c"
+color ungroupborder   "#c0b775"
+color urgencyborder   "#b95f44"
 
 # Tomorrow dark
 #color menufg          "#c5c8c6"
