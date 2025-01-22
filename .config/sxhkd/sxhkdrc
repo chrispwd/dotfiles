@@ -8,7 +8,7 @@ mod4 + alt + Return
 
 # program launcher
 mod4 + @space
-	dmenu_run -l 12 -fn 'BlexMono Nerd Font-12:Italic'
+	mydmenu_run -l 12
 
 # char search
 mod4 + shift + @space

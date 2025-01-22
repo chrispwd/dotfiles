@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+OPTIONS="${MYDMENUOPTS:-}"
+
+for arg in "$@"
+do
+  # if an argument contains a white space, enclose it in single quotes and append to the list
+  # otherwise simply append the argument to the list
+  if echo $arg | grep -q " "; then
+      OPTIONS="$OPTIONS '$arg'"
+  else
+      OPTIONS="$OPTIONS $arg"
+  fi
+done
+
+if [ -n "$OPTIONS" ]; then
+    eval "dmenu $OPTIONS"
+else
+    dmenu
+fi

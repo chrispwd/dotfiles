@@ -24,6 +24,7 @@ export NOTES="$HOME/Notes/denote"
 export SYNC="$HOME/Sync"
 export SCROTS="$HOME/Sync/Resources/scrots"
 export BROWSER="firefox"
+export MYDMENUOPTS="-fn 'BlexMono Nerd Font-12:Italic' -nb '#222120' -nf '#95928f' -sf '#222120' -sb '#95928f'"
 
 # Default programs
 export EDITOR="emacs -nw"
