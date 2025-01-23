@@ -1,0 +1,36 @@
+
+foreground =   #95928f
+background =   #222120
+cursor-color = #95928f
+
+# black
+palette = 0=#1e1d1c
+palette = 8=#605e5a
+
+# red
+palette = 1=#b95f44
+palette = 9=#b95f44
+
+# green
+palette = 2=#8f9d6a
+palette = 10=#8f9d6a
+
+# yellow
+palette = 3=#c0b775
+palette = 11=#c0b775
+
+# blue
+palette = 4=#7587a6
+palette = 12=#7587a6
+
+# magenta
+palette = 5=#9b859d
+palette = 13=#9b859d
+
+# cyan
+palette = 6=#94a6b9
+palette = 14=#94a6b9
+
+# white
+palette = 7=#a7a5a1
+palette = 15=#c9c5bf

@@ -53,10 +53,6 @@ if _have zoxide; then
    eval "$(zoxide init bash)"
 fi
 
-if _have mise; then
-   eval "$(mise activate bash)"
-fi
-
 if _have fnm; then
     eval "$(fnm env --use-on-cd)"
 fi
