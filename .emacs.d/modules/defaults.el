@@ -60,15 +60,4 @@
   (define-key map (kbd "C-<backtab>") #'tab-previous)
   (define-key map (kbd "C-c b") #'tab-previous))
 
-;; dired
-(use-package dired
-  :config
-  (defun cpwd/dired-mode-setup ()
-    (dired-hide-details-mode 1)
-    (cond ((eq system-type 'darwin)
-           (setq dired-listing-switches "-ahlF"))
-          ((eq system-type 'gnu/linux)
-           (setq dired-listing-switches "-lAh --group-directories-first"))))
-  (add-hook 'dired-mode-hook 'cpwd/dired-mode-setup))
-
 (provide 'defaults)

@@ -18,6 +18,7 @@
 (add-to-list 'load-path (expand-file-name "modules/" user-emacs-directory))
 
 (require 'defaults)
+(require 'dired-config)
 (require 'completion)
 (require 'environment-specific)
 (require 'text-editing)
