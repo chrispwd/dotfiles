@@ -12,6 +12,7 @@
 (cpwd/install-if-not 'dockerfile-mode)
 (cpwd/install-if-not 'toml-mode)
 (cpwd/install-if-not 'magit)
+(cpwd/install-if-not 'jq-mode)
 
 (use-package magit
   :ensure t)
@@ -44,6 +45,9 @@
   :ensure t)
 
 (use-package php-mode
+  :ensure t)
+
+(use-package jq-mode
   :ensure t)
 
 (use-package restclient

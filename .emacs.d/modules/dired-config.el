@@ -14,6 +14,8 @@
 
 (use-package dired-quick-sort
   :ensure t
+  :init
+  (setq dired-quick-sort-suppress-setup-warning t)
   :config
   (dired-quick-sort-setup))
 
