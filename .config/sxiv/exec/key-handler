@@ -4,7 +4,7 @@ while read file
 do
     case "$1" in
 	"C-f")
-            setbg.sh "$file" --bg-fill
+        setbg.sh "$file" --bg-fill
 	    ;;
 	"C-s")
 	    setbg.sh "$file" --bg-scale
@@ -16,7 +16,7 @@ do
 	    notify-send "File:" "$file"
 	    ;;
 	"C-t")
-            setbg.sh "$file" --bg-tile
+        setbg.sh "$file" --bg-tile
 	    ;;
 	"C-r")
 	    name="$(dmenu -p "Rename file to: ")" 2> /dev/null

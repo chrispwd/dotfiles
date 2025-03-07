@@ -21,5 +21,15 @@ esac
 if [ ! -z "$2" ]; then
     feh $2 "$bgloc"
 else
-    feh --bg-center "$bgloc"
+
+    img_w="$(feh -L '%w' "$bgloc")"
+    img_h="$(feh -L '%h' "$bgloc")"
+
+    if [ $img_w -eq $img_h ]; then
+        feh --bg-tile "$bgloc"
+    elif [ $img_w -lt 1920 ] || [ $img_h -lt 1200 ]; then
+        feh --bg-fill "$bgloc"
+    else
+        feh --bg-center "$bgloc"
+    fi
 fi
