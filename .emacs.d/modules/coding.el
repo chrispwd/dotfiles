@@ -13,6 +13,7 @@
 (cpwd/install-if-not 'toml-mode)
 (cpwd/install-if-not 'magit)
 (cpwd/install-if-not 'jq-mode)
+(cpwd/install-if-not 'yaml-pro)
 
 (use-package magit
   :ensure t)
@@ -90,6 +91,12 @@
     ;;:config
     ;;(add-to-list 'auto-mode-alist '("\\.ya?ml\\'" . yaml-ts-mode)))
   
+  (use-package yaml-pro
+    :ensure t
+    :config
+    (add-to-list 'auto-mode-alist '("\\.ya?ml\\'" . yaml-ts-mode))
+    (add-hook 'yaml-ts-mode-hook 'yaml-pro-ts-mode 100))
+
   (with-eval-after-load 'eglot
     (dolist (mode '(rust-ts-mode-hook
                     js-ts-mode-hook

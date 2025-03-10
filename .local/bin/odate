@@ -16,7 +16,7 @@ done
 
 if [ -n "$OPTIONS" ]; then
     case "$OS" in
-    darwin*)
+    darwin*|Darwin*)
         DATE=$(eval "gdate $OPTIONS") ;;
     *)
         DATE=$(eval "date $OPTIONS") ;;

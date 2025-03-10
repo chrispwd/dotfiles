@@ -163,17 +163,17 @@ set background=dark
 " make gutter less annoying
 hi SignColumn ctermbg=NONE
 
-" base default color changes (gruvbox dark friendly)
+" base default color changes
 hi StatusLine ctermfg=7 ctermbg=NONE
 hi StatusLineNC ctermfg=8 ctermbg=NONE
 hi String ctermfg=2 ctermbg=NONE
-hi Statement ctermfg=1
-hi Constant ctermfg=3
-hi Comment ctermfg=7
-hi Type ctermfg=5
+hi Statement ctermfg=3
+hi Constant ctermfg=5
+hi Comment ctermfg=8
+hi Type ctermfg=NONE ctermbg=NONE
 hi Special ctermfg=6
 hi PreProc ctermfg=6
-hi Identifier ctermfg=6
+hi Identifier ctermfg=15
 hi Function ctermfg=4
 hi ErrorMsg ctermfg=1 ctermbg=NONE term=reverse
 hi Normal ctermbg=NONE ctermfg=NONE
