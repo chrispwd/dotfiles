@@ -169,7 +169,8 @@ Also bind `class' to ((class color) (min-colors 89))."
 
 ;;;;; basic coloring
    '(button ((t (:underline t))))
-   `(link ((t (:foreground ,zenburn-yellow :underline t :weight bold))))
+   ;; `(link ((t (:foreground ,zenburn-yellow :underline t :weight bold))))
+   `(link ((t (:foreground ,zenburn-yellow :underline t))))
    `(link-visited ((t (:foreground ,zenburn-yellow-2 :underline t :weight normal))))
    `(default ((t (:foreground ,zenburn-fg :background ,zenburn-bg))))
    `(cursor ((t (:foreground ,zenburn-fg :background ,zenburn-fg+1))))
@@ -268,17 +269,22 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(trailing-whitespace ((t (:background ,zenburn-red))))
    `(vertical-border ((t (:foreground ,zenburn-fg))))
 ;;;;; font lock
-   `(font-lock-builtin-face ((t (:foreground ,zenburn-fg :weight bold))))
+   ;; `(font-lock-builtin-face ((t (:foreground ,zenburn-fg :weight bold))))
+   `(font-lock-builtin-face ((t (:foreground ,zenburn-fg))))
    `(font-lock-comment-face ((t (:foreground ,zenburn-green))))
    `(font-lock-comment-delimiter-face ((t (:foreground ,zenburn-green-2))))
    `(font-lock-constant-face ((t (:foreground ,zenburn-green+4))))
    `(font-lock-doc-face ((t (:foreground ,zenburn-green+2))))
    `(font-lock-function-name-face ((t (:foreground ,zenburn-cyan))))
-   `(font-lock-keyword-face ((t (:foreground ,zenburn-yellow :weight bold))))
-   `(font-lock-negation-char-face ((t (:foreground ,zenburn-yellow :weight bold))))
+   ;; `(font-lock-keyword-face ((t (:foreground ,zenburn-yellow :weight bold))))
+   `(font-lock-keyword-face ((t (:foreground ,zenburn-yellow))))
+   ;; `(font-lock-negation-char-face ((t (:foreground ,zenburn-yellow :weight bold))))
+   `(font-lock-negation-char-face ((t (:foreground ,zenburn-yellow))))
    `(font-lock-preprocessor-face ((t (:foreground ,zenburn-blue+1))))
-   `(font-lock-regexp-grouping-construct ((t (:foreground ,zenburn-yellow :weight bold))))
-   `(font-lock-regexp-grouping-backslash ((t (:foreground ,zenburn-green :weight bold))))
+   ;; `(font-lock-regexp-grouping-construct ((t (:foreground ,zenburn-yellow :weight bold))))
+   `(font-lock-regexp-grouping-construct ((t (:foreground ,zenburn-yellow))))
+   ;; `(font-lock-regexp-grouping-backslash ((t (:foreground ,zenburn-green :weight bold))))
+   `(font-lock-regexp-grouping-backslash ((t (:foreground ,zenburn-green))))
    `(font-lock-string-face ((t (:foreground ,zenburn-red))))
    `(font-lock-type-face ((t (:foreground ,zenburn-blue-1))))
    `(font-lock-variable-name-face ((t (:foreground ,zenburn-orange))))
@@ -680,32 +686,38 @@ Also bind `class' to ((class color) (min-colors 89))."
      ((((supports :underline (:style wave)))
        (:underline (:style wave :color ,zenburn-red)
                    :inherit unspecified :foreground unspecified :background unspecified))
-      (t (:foreground ,zenburn-red-1 :weight bold :underline t))))
+      ;; (t (:foreground ,zenburn-red-1 :weight bold :underline t))))
+      (t (:foreground ,zenburn-red-1 :underline t))))
    `(flymake-warnline
      ((((supports :underline (:style wave)))
        (:underline (:style wave :color ,zenburn-orange)
                    :inherit unspecified :foreground unspecified :background unspecified))
-      (t (:foreground ,zenburn-orange :weight bold :underline t))))
+      ;; (t (:foreground ,zenburn-orange :weight bold :underline t))))
+      (t (:foreground ,zenburn-orange :underline t))))
    `(flymake-infoline
      ((((supports :underline (:style wave)))
        (:underline (:style wave :color ,zenburn-green)
                    :inherit unspecified :foreground unspecified :background unspecified))
-      (t (:foreground ,zenburn-green-2 :weight bold :underline t))))
+      ;; (t (:foreground ,zenburn-green-2 :weight bold :underline t))))
+      (t (:foreground ,zenburn-green-2 :underline t))))
    `(flymake-error
      ((((supports :underline (:style wave)))
        (:underline (:style wave :color ,zenburn-red)
                    :inherit unspecified :foreground unspecified :background unspecified))
-      (t (:foreground ,zenburn-red-1 :weight bold :underline t))))
+      ;; (t (:foreground ,zenburn-red-1 :weight bold :underline t))))
+      (t (:foreground ,zenburn-red-1 :underline t))))
    `(flymake-warning
      ((((supports :underline (:style wave)))
        (:underline (:style wave :color ,zenburn-orange)
                    :inherit unspecified :foreground unspecified :background unspecified))
-      (t (:foreground ,zenburn-orange :weight bold :underline t))))
+      ;; (t (:foreground ,zenburn-orange :weight bold :underline t))))
+      (t (:foreground ,zenburn-orange :underline t))))
    `(flymake-note
      ((((supports :underline (:style wave)))
        (:underline (:style wave :color ,zenburn-green)
                    :inherit unspecified :foreground unspecified :background unspecified))
-      (t (:foreground ,zenburn-green-2 :weight bold :underline t))))
+      ;; (t (:foreground ,zenburn-green-2 :weight bold :underline t))))
+      (t (:foreground ,zenburn-green-2 :underline t))))
 ;;;;; flyspell
    `(flyspell-duplicate
      ((((supports :underline (:style wave)))
@@ -1713,6 +1725,9 @@ Also bind `class' to ((class color) (min-colors 89))."
 ;;;;; yascroll
    `(yascroll:thumb-text-area ((t (:background ,zenburn-bg-1))))
    `(yascroll:thumb-fringe ((t (:background ,zenburn-bg-1 :foreground ,zenburn-bg-1))))
+
+;;;;; denote
+   `(denote-faces-delimiter ((t (:foreground ,zenburn-bg+3))))
    ))
 
 ;;; Theme Variables
