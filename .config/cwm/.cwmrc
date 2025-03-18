@@ -3,11 +3,11 @@
 sticky      yes
 snapdist    4
 moveamount  32
-borderwidth 2
+borderwidth 1
 gap         56 16 16 16
 unbind-key  all
 
-fontname "CommitMono Nerd Font Mono:sytle=Italic:pixelsize=16"
+fontname "BlexMono Nerd Font:sytle=Italic:pixelsize=16"
 
 # groups
 bind-key 4-1   group-only-1

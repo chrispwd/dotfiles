@@ -238,41 +238,41 @@ XTerm*boldMode: true
 
 ! Twilight dark
 ! special
-*.foreground:   #95928f
-*.background:   #222120
-*.cursorColor:  #95928f
+!*.foreground:   #95928f
+!*.background:   #222120
+!*.cursorColor:  #95928f
 
 ! black
-*.color0:       #1e1d1c
-*.color8:       #605e5a
+!*.color0:       #1e1d1c
+!*.color8:       #605e5a
 
 ! red
-*.color1:       #b95f44
-*.color9:       #b95f44
+!*.color1:       #b95f44
+!*.color9:       #b95f44
 
 ! green
-*.color2:       #8f9d6a
-*.color10:      #8f9d6a
+!*.color2:       #8f9d6a
+!*.color10:      #8f9d6a
 
 ! yellow
-*.color3:       #c0b775
-*.color11:      #c0b775
+!*.color3:       #c0b775
+!*.color11:      #c0b775
 
 ! blue
-*.color4:       #7587a6
-*.color12:      #7587a6
+!*.color4:       #7587a6
+!*.color12:      #7587a6
 
 ! magenta
-*.color5:       #9b859d
-*.color13:      #9b859d
+!*.color5:       #9b859d
+!*.color13:      #9b859d
 
 ! cyan
-*.color6:       #94a6b9
-*.color14:      #94a6b9
+!*.color6:       #94a6b9
+!*.color14:      #94a6b9
 
 ! white
-*.color7:       #a7a5a1
-*.color15:      #c9c5bf
+!*.color7:       #a7a5a1
+!*.color15:      #c9c5bf
 
 ! Ayu Dark
 ! special
@@ -303,3 +303,40 @@ XTerm*boldMode: true
 ! white
 !*.color7:       #636a72
 !*.color15:      #ebe8df
+
+! Zenburn
+*.foreground:   #DCDCCC
+*.background:   #3F3F3F
+*.cursorColor:  #BFBFBF
+
+! black
+*.color0:       #3F3F3F
+*.color8:       #7F7F7F
+
+! red
+*.color1:       #CC9393
+*.color9:       #9C6363
+
+! green
+*.color2:       #7F9F7F
+*.color10:      #5F7F5F
+
+! yellow
+*.color3:       #F0DFAF
+*.color11:      #D0BF8F
+
+! blue
+*.color4:       #8CD0D3
+*.color12:      #94BFF3
+
+! magenta
+*.color5:       #DC8CC3
+*.color13:      #CB7BB2
+
+! cyan
+*.color6:       #93E0E3
+*.color14:      #82CFD2
+
+! white
+*.color7:       #DCDCCC
+*.color15:      #FFFFEF

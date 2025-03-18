@@ -49,11 +49,13 @@
 ;;                                               :foreground
 ;;                                               ,(doom-color 'grey)))))))
 
-(use-package doom-themes
-  :ensure t
-  ;; :init
-  ;; (setq doom-themes-enable-bold nil)
-  :config
-  (load-theme 'doom-twilight t))
+;; (use-package doom-themes
+;;   :ensure t
+;;   ;; :init
+;;   ;; (setq doom-themes-enable-bold nil)
+;;   :config
+;;   (load-theme 'doom-twilight t))
+
+(load-theme 'zenburn t)
 
 (provide 'look-and-feel)

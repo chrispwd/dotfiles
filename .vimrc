@@ -164,19 +164,19 @@ set background=dark
 hi SignColumn ctermbg=NONE
 
 " base default color changes
-hi StatusLine ctermfg=7 ctermbg=NONE
-hi StatusLineNC ctermfg=8 ctermbg=NONE
-hi String ctermfg=2 ctermbg=NONE
-hi Statement ctermfg=3
-hi Constant ctermfg=5
-hi Comment ctermfg=8
-hi Type ctermfg=NONE ctermbg=NONE
-hi Special ctermfg=6
-hi PreProc ctermfg=6
-hi Identifier ctermfg=15
-hi Function ctermfg=4
-hi ErrorMsg ctermfg=1 ctermbg=NONE term=reverse
-hi Normal ctermbg=NONE ctermfg=NONE
+"hi StatusLine ctermfg=7 ctermbg=NONE
+"hi StatusLineNC ctermfg=8 ctermbg=NONE
+"hi String ctermfg=2 ctermbg=NONE
+"hi Statement ctermfg=3
+"hi Constant ctermfg=5
+"hi Comment ctermfg=8
+"hi Type ctermfg=NONE ctermbg=NONE
+"hi Special ctermfg=6
+"hi PreProc ctermfg=6
+"hi Identifier ctermfg=15
+"hi Function ctermfg=4
+"hi ErrorMsg ctermfg=1 ctermbg=NONE term=reverse
+"hi Normal ctermbg=NONE ctermfg=NONE
 "hi Special ctermfg=cyan
 "hi LineNr ctermfg=darkgray ctermbg=NONE
 "hi SpecialKey ctermfg=black ctermbg=NONE
@@ -294,7 +294,7 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
 endif
 
 "let g:gruvbox_contrast_dark = 'hard'
-"colorscheme gruvbox
+colorscheme zenburn
 
 " read personal/private vim configuration (keep last to override)
 "set rtp^=~/.vimpersonal

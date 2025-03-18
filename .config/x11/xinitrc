@@ -18,7 +18,7 @@ fi
 
 # wm
 #exec bspwm 2> /tmp/bspwm-log
-cwm -c $CWMRC
+#cwm -c $CWMRC
 #exec icewm-session
 # while xsetroot -name "`date` `uptime | sed 's/.*,//'`"
 # do
@@ -27,3 +27,4 @@ cwm -c $CWMRC
 #while type dwm >/dev/null ; do dwm && continue || break ;done
 #exec dwm
 #exec i3
+exec fvwm3
