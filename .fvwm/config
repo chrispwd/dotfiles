@@ -267,7 +267,9 @@ Style * !Icon
 Style * Lenience
 
 # Window Specific Styles
-Style RightPanel !Title, !Borders, !Handles, Sticky, \
+# Style RightPanel !Title, !Borders, !Handles, Sticky, \
+#                  WindowListSkip, NeverFocus
+Style RightPanel !Title, !Handles, Sticky, \
                  WindowListSkip, NeverFocus
 Style ConfirmQuit !Title, PositionPlacement Center, WindowListSkip, Layer 6
 Style FvwmIdent WindowListSkip
@@ -313,6 +315,17 @@ Style FvwmIdent WindowListSkip
 # Colorset 13 fg #ffffff, bg #006c6c, hi, sh, Plain, NoShape
 # Colorset 14 fg #a8988f, bg #2b4e5e, hi #aaaaaa, sh #999999, Plain, NoShape
 
+# Lucien theme OldMigo
+# Colorset 0 fg black, bg rgb:c2/b1/a0, hi, sh, Plain, NoShape
+# Colorset 1 fg black, bg rgb:c2/b1/a0, hi, sh, Plain, NoShape
+# Colorset 2 fg black, bg rgb:c0/c0/b4, hi, sh, Plain, NoShape
+# Colorset 3 fg black, bg rgb:c2/b1/a0, hi, sh, Plain, NoShape
+# Colorset 4 fg black, bg rgb:c0/c0/b4, hi, sh, Plain, NoShape
+# Colorset 5 fg black, bg rgb:c2/b1/a0, hi, sh, Plain, NoShape
+# Colorset 6 fg black, bg rgb:80/80/78, hi, sh, Plain, NoShape
+# Colorset 7 fg white, bg rgb:00/00/30, hi, sh, Plain, NoShape
+# Colorset 8 fg black, bg rgb:c2/b1/a0, hi, sh, Plain, NoShape
+
 # CDE theme charcoal
 Colorset 0 fg white, bg #767279, hi, sh, Plain, NoShape
 Colorset 1 fg white, bg #767279, hi, sh, Plain, NoShape
@@ -323,6 +336,7 @@ Colorset 5 fg white, bg #767279, hi, sh, Plain, NoShape
 Colorset 6 fg white, bg #696363, hi, sh, Plain, NoShape
 Colorset 7 fg white, bg #896d6d, hi, sh, Plain, NoShape
 Colorset 8 fg white, bg #767279, hi, sh, Plain, NoShape
+
 # Copied from default theme temporarily
 Colorset 10 fg #ffffff, bg #2b4e5e, hi #aaaaaa, sh #999999, Plain, NoShape
 Colorset 11 fg #ffffff, bg #1a6e99, hi #ffffff, sh #ffffff, Plain, NoShape
@@ -412,7 +426,6 @@ AddToMenu   MenuWindowOpsLong "$[gt.Window Ops]" Title
 + "$[gt.(No)Title Bar]%icons/win/title.png%" Pick (CirculateHit) ToggleTitle
 + "$[gt.Send To]%icons/win/sendto.png%"      Popup MenuSendTo
 + "" Nop
-# TODO: Add popup for cde themes
 + "$[gt.Set Color Theme]%icons/win/shade.png%" Popup MenuColorThemes
 + "$[gt.Close]%icons/win/close.png%"     Close
 + "$[gt.Destroy]%icons/win/destroy.png%" Destroy
@@ -545,10 +558,14 @@ PipeRead 'for i in $[FVWM_USERDIR]/LuthienColors/*.fvwm2rc; do \
 Silent Key F1      A M Menu MenuFvwmRoot
 Silent Key Menu    A A Menu MenuFvwmRoot
 Silent Key Tab     A M WindowList Root c c NoDeskSort, NoGeometry, SelectOnRelease Alt_R, CurrentAtEnd
-Silent Key 1       A 4 GotoDesk 0 0
-Silent Key 2       A 4 GotoDesk 0 1
-Silent Key 3       A 4 GotoDesk 0 2
-Silent Key 4       A 4 GotoDesk 0 3
+Silent Key 1       A 4 GotoPage 0 0
+Silent Key 2       A 4 GotoPage 0 1
+Silent Key 3       A 4 GotoPage 1 0
+Silent Key 4       A 4 GotoPage 1 1
+Silent Key 1       A 4S MovetoPage 0 0
+Silent Key 2       A 4S MovetoPage 0 1
+Silent Key 3       A 4S MovetoPage 1 0
+Silent Key 4       A 4S MovetoPage 1 1
 Silent Key Super_R A A Exec exec $[infostore.terminal]
 Test (x $[infostore.runcmd]) Silent Key Space A M Exec exec $[infostore.runcmd] $[infostore.runcmdopt]
 
@@ -596,17 +613,36 @@ AddToFunc   ShuffleDir
 + I Move shuffle layers $[w.layer] $[w.layer] snap windows $0
 + I WarpToWindow 50 50
 
-# snap window <dir>
-Key k  A  C4   ShuffleDir up
-Key j  A  C4   ShuffleDir down
-Key h  A  C4   ShuffleDir left
-Key l  A  C4   ShuffleDir right
+# move window 5% <dir>
+Key h  A  4  Move w-5 keep Warp
+Key j  A  4  Move keep w+5 Warp
+Key k  A  4  Move keep w-5 Warp
+Key l  A  4  Move w+5 keep Warp
 
-# grow window <dir>
-Key k  A  4SM  Maximize True 0 growup
-Key j  A  4SM  Maximize True 0 growdown
-Key l  A  4SM  Maximize True growright 0
-Key h  A  4SM  Maximize True growleft 0
+# snap window <dir>
+Key k  A  C4  ShuffleDir up
+Key j  A  C4  ShuffleDir down
+Key h  A  C4  ShuffleDir left
+Key l  A  C4  ShuffleDir right
+
+# temp vert/horiz max
+Key v  A  4M  Maximize 0 100
+Key g  A  4M  Maximize 100 0
+
+# maximize window
+Key m  A  4M  Maximize 100 100
+
+# grow window
+Key j  A  4SM  ResizeMove w+5 w+5 w-5w w-5w Warp
+Key k  A  4SM  ResizeMove w-5 w-5 w+5w w+5w Warp
+# Key l  A  4SM  Maximize True growright 0
+# Key h  A  4SM  Maximize True growleft 0
+
+# center window
+Key c  A  4M  ResizeMove 85 85 50-50wa 50-50wa
+
+# close window
+Key q  A  4  Close
 
 # restart fvwm3
 Key r  A  4M  Restart
@@ -688,7 +724,8 @@ DestroyModuleConfig FvwmIdent:*
 #   - Quit - This is a popup that asks for quit confirmation before
 #     quitting fvwm.
 DestroyModuleConfig FvwmScript:*
-*FvwmScript: DefaultColorset 10
+*FvwmScript: DefaultColorset 1
+*FvwmScript: Font "xft:monospace:size=10:antialias=True"
 
 # FvwmButtons - RightPanel
 #
@@ -700,7 +737,7 @@ DestroyModuleConfig FvwmScript:*
 # Note - To use the system tray you must have "stalonetray" installed.
 DestroyModuleConfig RightPanel:*
 *RightPanel: Geometry 120x$[monitor.$[monitor.primary].height]-0+0@p
-*RightPanel: Colorset 10
+*RightPanel: Colorset 1
 *RightPanel: Rows $[monitor.$[monitor.primary].height]
 *RightPanel: Columns 120
 *RightPanel: Frame 0
@@ -726,7 +763,7 @@ Test (!x stalonetray) *RightPanel: (120x$[math.-.$[monitor.$[monitor.primary].he
     Top, Swallow FvwmIconMan 'Module FvwmIconMan', Frame 0)
 *RightPanel: (120x45, Swallow DateTime 'Module FvwmScript FvwmScript-DateTime',\
     Frame 0)
-*RightPanel: (120x5, Frame 0)
+# *RightPanel: (120x5, Frame 0)
 
 # FvwmPager
 #
@@ -751,10 +788,10 @@ DestroyModuleConfig FvwmPager:*
 # is used as the window list in the panel or taskbar.
 DestroyModuleConfig FvwmIconMan:*
 *FvwmIconMan: UseWinList true
-*FvwmIconMan: ButtonGeometry 120x20
+*FvwmIconMan: ButtonGeometry 120x30
 *FvwmIconMan: ManagerGeometry 1x1
-*FvwmIconMan: Colorset 10
-*FvwmIconMan: FocusColorset 11
+*FvwmIconMan: Colorset 1
+*FvwmIconMan: FocusColorset 2
 *FvwmIconMan: IconColorset 14
 *FvwmIconMan: FocusAndSelectColorset 12
 *FvwmIconMan: SelectColorset 12
