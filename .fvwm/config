@@ -29,7 +29,7 @@
 #
 # The following is used in various menus and also sets the terminal
 # that FvwmConsole uses. Change this to your terminal of choice
-InfoStoreAdd terminal xterm
+InfoStoreAdd terminal st
 
 # This is used for "Run Command" and the Meta+Space key-binding.
 # runcmd is the binary name and runcmdopt contains additional
@@ -204,7 +204,7 @@ Style * EdgeMoveDelay 350, EdgeMoveResistance 350
 # EwmhBaseStruts [screen name] [left] [right] [top] [bottom]
 # Reserves space along the edge(s) of the Screen that will not
 # be covered when maximizing or placing windows.
-EwmhBaseStruts screen $[monitor.primary] 0 120 0 0
+EwmhBaseStruts screen $[monitor.primary] 5 125 35 5
 
 # This sets the ClickTime and MoveThreshold used to determine
 # Double Clicks, Hold and Move for the mouse.
@@ -273,6 +273,10 @@ Style RightPanel !Title, !Handles, Sticky, \
                  WindowListSkip, NeverFocus
 Style ConfirmQuit !Title, PositionPlacement Center, WindowListSkip, Layer 6
 Style FvwmIdent WindowListSkip
+Test (x stalonetray) Style stalonetray !Title, Sticky, \
+                 WindowListSkip, NeverFocus
+Test (x trayer) Style trayer !Title, Sticky, \
+                 WindowListSkip, NeverFocus
 
 #######
 # 3: Colorsets
@@ -742,7 +746,11 @@ DestroyModuleConfig RightPanel:*
 *RightPanel: Columns 120
 *RightPanel: Frame 0
 *RightPanel: Font "xft:monospace:style=SemiBold Italic:size=12:antialias=True"
-*RightPanel: (120x45, Icon "fvwm-logo-small.png", Frame 0)
+# *RightPanel: (120x45, Icon "fvwm-logo-small.png", Frame 0)
+*RightPanel: (120x45, Swallow DateTime 'Module FvwmScript FvwmScript-DateTime',\
+    Frame 0)
+Test (x xclock) *RightPanel: (120x120, Swallow(NoClose,UseOld) \
+    xclock 'Exec exec xclock', Frame 0)
 *RightPanel: (120x5, Frame 0)
 *RightPanel: (10x25, Frame 0)
 *RightPanel: (25x25, Id desk0, Title "0", Action (Mouse 1) GotoDesk 0 0, Colorset 11, ActiveColorset 12, Frame 0)
@@ -754,15 +762,20 @@ DestroyModuleConfig RightPanel:*
 *RightPanel: (110x80, Swallow FvwmPager 'Module FvwmPager *', Frame 0)
 *RightPanel: (5x80, Frame 0)
 *RightPanel: (120x5, Frame 0)
-Test (x stalonetray) *RightPanel: (120x20, Swallow(NoClose,UseOld) \
-    stalonetray 'Exec exec stalonetray --config \
-    "$[FVWM_DATADIR]/default-config/stalonetrayrc"', Frame 0)
-Test (x stalonetray) *RightPanel: (120x$[math.-.$[monitor.$[monitor.primary].height],230], \
+Test (x xclock) *RightPanel: (120x$[math.-.$[monitor.$[monitor.primary].height],330], \
     Top, Swallow FvwmIconMan 'Module FvwmIconMan', Frame 0)
-Test (!x stalonetray) *RightPanel: (120x$[math.-.$[monitor.$[monitor.primary].height],210], \
+Test (!x xclock) *RightPanel: (120x$[math.-.$[monitor.$[monitor.primary].height],210], \
     Top, Swallow FvwmIconMan 'Module FvwmIconMan', Frame 0)
-*RightPanel: (120x45, Swallow DateTime 'Module FvwmScript FvwmScript-DateTime',\
-    Frame 0)
+# Default config
+# Test (x stalonetray) *RightPanel: (120x20, Swallow(NoClose,UseOld) \
+#     stalonetray 'Exec exec stalonetray --config \
+#     "$[FVWM_DATADIR]/default-config/stalonetrayrc"', Frame 0)
+# Test (x stalonetray) *RightPanel: (120x$[math.-.$[monitor.$[monitor.primary].height],230], \
+#     Top, Swallow FvwmIconMan 'Module FvwmIconMan', Frame 0)
+# Test (!x stalonetray) *RightPanel: (120x$[math.-.$[monitor.$[monitor.primary].height],210], \
+#     Top, Swallow FvwmIconMan 'Module FvwmIconMan', Frame 0)
+# *RightPanel: (120x45, Swallow DateTime 'Module FvwmScript FvwmScript-DateTime',\
+#     Frame 0)
 # *RightPanel: (120x5, Frame 0)
 
 # FvwmPager
@@ -779,7 +792,8 @@ DestroyModuleConfig FvwmPager:*
 *FvwmPager: Balloons All
 *FvwmPager: BalloonFont "xft:Sans:Bold:size=8:antialias=True"
 *FvwmPager: BallonYOffset +2
-*FvwmPager: Window3dBorders
+*FvwmPager: Window3DBorders
+*FvwmPager: WindowBorderWidth 1
 *FvwmPager: MiniIcons
 
 # FvwmIconMan
@@ -797,7 +811,7 @@ DestroyModuleConfig FvwmIconMan:*
 *FvwmIconMan: SelectColorset 12
 *FvwmIconMan: IconAndSelectColorset 12
 *FvwmIconMan: DrawIcons always
-*FvwmIconMan: ReliefThickness 0
+*FvwmIconMan: ReliefThickness 1
 *FvwmIconMan: Format "%t"
 *FvwmIconMan: Font "xft:monospace:style=SemiBold Italic:size=10:antialias=True"
 *FvwmIconMan: Action Mouse 0 A ret
