@@ -77,8 +77,15 @@ DesktopConfiguration global
 DestroyFunc StartFunction
 AddToFunc   StartFunction
 #+ I Test (Init) InitBackground
-+ I Module FvwmButtons RightPanel
+# + I Module FvwmButtons RightPanel
++ I Module FvwmButtons SensorDock
 + I Module FvwmEvent EventNewDesk
+# # Set the time to the current time
+# + I PipeRead 'echo "SendToModule FvwmButtons ChangeButton \
+# TaskTime Title \"`date \'+%a,%b,%e,%R\'`\""'
+# Schedule the time to update every 10 seconds
++ I Schedule Periodic 5000 PipeRead 'echo "SendToModule \
+FvwmButtons ChangeButton TaskTime Title \"`date +%R`\""'
 
 # Function to set background when fvwm starts
 DestroyFunc InitBackground
@@ -161,11 +168,11 @@ AddToFunc   ToggleTitle
 # This function is called by FvwmEvent every time the Desk is changed.
 DestroyFunc ChangeDesk
 AddToFunc   ChangeDesk
-+ I SendToModule FvwmButtons ChangeButton desk0 Colorset 10
-+ I SendToModule FvwmButtons ChangeButton desk1 Colorset 10
-+ I SendToModule FvwmButtons ChangeButton desk2 Colorset 10
-+ I SendToModule FvwmButtons ChangeButton desk3 Colorset 10
-+ I SendToModule FvwmButtons ChangeButton desk$0 Colorset 11
++ I SendToModule FvwmButtons ChangeButton desk0 Colorset 1
++ I SendToModule FvwmButtons ChangeButton desk1 Colorset 1
++ I SendToModule FvwmButtons ChangeButton desk2 Colorset 1
++ I SendToModule FvwmButtons ChangeButton desk3 Colorset 1
++ I SendToModule FvwmButtons ChangeButton desk$0 Colorset 1
 
 
 #############
@@ -184,10 +191,14 @@ AddToFunc   ChangeDesk
 #   |   |   |
 #   +---+---+
 #
-DesktopName 0 Main
-DesktopName 1 Desk1
-DesktopName 2 Desk2
-DesktopName 3 Desk3
+DesktopName 0 Desk1
+DesktopName 1 Desk2
+DesktopName 2 Desk3
+DesktopName 3 Desk4
+DesktopName 4 Desk5
+DesktopName 5 Desk6
+DesktopName 6 Desk7
+DesktopName 7 Desk8
 DesktopSize 2x2
 
 # EdgeScroll will move the view port between the Pages when the mouse
@@ -201,10 +212,14 @@ EdgeResistance 450
 EdgeThickness 1
 Style * EdgeMoveDelay 350, EdgeMoveResistance 350
 
+# FvwmTaskBar styles
+Style FvwmTaskBar !Borders, !Title, WindowListSkip, \
+                  StaysOnTop, Sticky
+
 # EwmhBaseStruts [screen name] [left] [right] [top] [bottom]
 # Reserves space along the edge(s) of the Screen that will not
 # be covered when maximizing or placing windows.
-EwmhBaseStruts screen $[monitor.primary] 5 125 35 5
+EwmhBaseStruts screen $[monitor.primary] 125 5 5 5
 
 # This sets the ClickTime and MoveThreshold used to determine
 # Double Clicks, Hold and Move for the mouse.
@@ -270,6 +285,8 @@ Style * Lenience
 # Style RightPanel !Title, !Borders, !Handles, Sticky, \
 #                  WindowListSkip, NeverFocus
 Style RightPanel !Title, !Handles, Sticky, \
+                 WindowListSkip, NeverFocus
+Style SensorDock !Title, Handles, Sticky, \
                  WindowListSkip, NeverFocus
 Style ConfirmQuit !Title, PositionPlacement Center, WindowListSkip, Layer 6
 Style FvwmIdent WindowListSkip
@@ -562,14 +579,22 @@ PipeRead 'for i in $[FVWM_USERDIR]/LuthienColors/*.fvwm2rc; do \
 Silent Key F1      A M Menu MenuFvwmRoot
 Silent Key Menu    A A Menu MenuFvwmRoot
 Silent Key Tab     A M WindowList Root c c NoDeskSort, NoGeometry, SelectOnRelease Alt_R, CurrentAtEnd
-Silent Key 1       A 4 GotoPage 0 0
-Silent Key 2       A 4 GotoPage 0 1
-Silent Key 3       A 4 GotoPage 1 0
-Silent Key 4       A 4 GotoPage 1 1
-Silent Key 1       A 4S MovetoPage 0 0
-Silent Key 2       A 4S MovetoPage 0 1
-Silent Key 3       A 4S MovetoPage 1 0
-Silent Key 4       A 4S MovetoPage 1 1
+Silent Key 1       A 4 GotoDesk 0 0
+Silent Key 2       A 4 GotoDesk 0 1
+Silent Key 3       A 4 GotoDesk 0 2
+Silent Key 4       A 4 GotoDesk 0 3
+Silent Key 5       A 4 GotoDesk 0 4
+Silent Key 6       A 4 GotoDesk 0 5
+Silent Key 7       A 4 GotoDesk 0 6
+Silent Key 8       A 4 GotoDesk 0 7
+Silent Key 1       A 4S MovetoDesk 0 0
+Silent Key 2       A 4S MovetoDesk 0 1
+Silent Key 3       A 4S MovetoDesk 0 2
+Silent Key 4       A 4S MovetoDesk 0 3
+Silent Key 5       A 4S MovetoDesk 0 4
+Silent Key 6       A 4S MovetoDesk 0 5
+Silent Key 7       A 4S MovetoDesk 0 6
+Silent Key 8       A 4S MovetoDesk 0 7
 Silent Key Super_R A A Exec exec $[infostore.terminal]
 Test (x $[infostore.runcmd]) Silent Key Space A M Exec exec $[infostore.runcmd] $[infostore.runcmdopt]
 
@@ -730,6 +755,44 @@ DestroyModuleConfig FvwmIdent:*
 DestroyModuleConfig FvwmScript:*
 *FvwmScript: DefaultColorset 1
 *FvwmScript: Font "xft:monospace:size=10:antialias=True"
+*FvwmScript: Center
+
+# SensorDock
+DestroyModuleConfig SensorDock: *
+*SensorDock: Geometry 120x300+5+5
+*SensorDock: Colorset 1
+*SensorDock: Rows 72
+*SensorDock: Columns 24
+*SensorDock: Font "xft:monospace:style=Italic:size=10:antialias=True"
+*SensorDock: Frame 1
+# 24 x 24
+*SensorDock: (24x24, Swallow(NoClose,UseOld) xclock 'Exec exec xclock', Frame 1)
+# 24 x 8
+*SensorDock: (24x2, Frame 0)
+*SensorDock: (24x4, Swallow DateTime 'Module FvwmScript FvwmScript-DateTime', Frame 0)
+*SensorDock: (24x2, Frame 0)
+# 24 x 5
+*SensorDock: (2x5, Frame 0)
+*SensorDock: (5x5, Id desk1, Title "1", Action (Mouse 1) GotoDesk 0 0, Colorset 1, ActiveColorset 2, Frame 1)
+*SensorDock: (5x5, Id desk2, Title "2", Action (Mouse 1) GotoDesk 0 1, Colorset 1, ActiveColorset 2, Frame 1)
+*SensorDock: (5x5, Id desk3, Title "3", Action (Mouse 1) GotoDesk 0 2, Colorset 1, ActiveColorset 2, Frame 1)
+*SensorDock: (5x5, Id desk4, Title "4", Action (Mouse 1) GotoDesk 0 3, Colorset 1, ActiveColorset 2, Frame 1)
+*SensorDock: (2x5, Frame 0)
+# 24 x 5
+*SensorDock: (2x5, Frame 0)
+*SensorDock: (5x5, Id desk5, Title "5", Action (Mouse 1) GotoDesk 0 4, Colorset 1, ActiveColorset 2, Frame 1)
+*SensorDock: (5x5, Id desk6, Title "6", Action (Mouse 1) GotoDesk 0 5, Colorset 1, ActiveColorset 2, Frame 1)
+*SensorDock: (5x5, Id desk7, Title "7", Action (Mouse 1) GotoDesk 0 6, Colorset 1, ActiveColorset 2, Frame 1)
+*SensorDock: (5x5, Id desk8, Title "8", Action (Mouse 1) GotoDesk 0 7, Colorset 1, ActiveColorset 2, Frame 1)
+*SensorDock: (2x5, Frame 0)
+# 24 x 12
+*SensorDock: (2x12, Frame 0)
+*SensorDock: (20x12, Swallow FvwmPager 'Module FvwmPager *', Frame -1)
+*SensorDock: (2x12, Frame 0)
+# 24 x 18
+*SensorDock: (2x18, Frame 0)
+*SensorDock: (20x18, Swallow(NoClose,UseOld) "stalonetray" 'Exec exec stalonetray', Frame 0)
+*SensorDock: (2x18, Frame 0)
 
 # FvwmButtons - RightPanel
 #
@@ -740,7 +803,7 @@ DestroyModuleConfig FvwmScript:*
 #
 # Note - To use the system tray you must have "stalonetray" installed.
 DestroyModuleConfig RightPanel:*
-*RightPanel: Geometry 120x$[monitor.$[monitor.primary].height]-0+0@p
+*RightPanel: Geometry 120x$[math./.$[monitor.$[monitor.primary].height],2]+0-48@p
 *RightPanel: Colorset 1
 *RightPanel: Rows $[monitor.$[monitor.primary].height]
 *RightPanel: Columns 120
@@ -751,7 +814,7 @@ DestroyModuleConfig RightPanel:*
     Frame 0)
 Test (x xclock) *RightPanel: (120x120, Swallow(NoClose,UseOld) \
     xclock 'Exec exec xclock', Frame 0)
-*RightPanel: (120x5, Frame 0)
+*RightPanel: (120x370, Frame 0)
 *RightPanel: (10x25, Frame 0)
 *RightPanel: (25x25, Id desk0, Title "0", Action (Mouse 1) GotoDesk 0 0, Colorset 11, ActiveColorset 12, Frame 0)
 *RightPanel: (25x25, Id desk1, Title "1", Action (Mouse 1) GotoDesk 0 1, ActiveColorset 12, Frame 0)
@@ -762,10 +825,10 @@ Test (x xclock) *RightPanel: (120x120, Swallow(NoClose,UseOld) \
 *RightPanel: (110x80, Swallow FvwmPager 'Module FvwmPager *', Frame 0)
 *RightPanel: (5x80, Frame 0)
 *RightPanel: (120x5, Frame 0)
-Test (x xclock) *RightPanel: (120x$[math.-.$[monitor.$[monitor.primary].height],330], \
-    Top, Swallow FvwmIconMan 'Module FvwmIconMan', Frame 0)
-Test (!x xclock) *RightPanel: (120x$[math.-.$[monitor.$[monitor.primary].height],210], \
-    Top, Swallow FvwmIconMan 'Module FvwmIconMan', Frame 0)
+# Test (x xclock) *RightPanel: (120x$[math.-.$[monitor.$[monitor.primary].height],330], \
+#     Top, Swallow FvwmIconMan 'Module FvwmIconMan', Frame 0)
+# Test (!x xclock) *RightPanel: (120x$[math.-.$[monitor.$[monitor.primary].height],210], \
+#     Top, Swallow FvwmIconMan 'Module FvwmIconMan', Frame 0)
 # Default config
 # Test (x stalonetray) *RightPanel: (120x20, Swallow(NoClose,UseOld) \
 #     stalonetray 'Exec exec stalonetray --config \
@@ -778,12 +841,47 @@ Test (!x xclock) *RightPanel: (120x$[math.-.$[monitor.$[monitor.primary].height]
 #     Frame 0)
 # *RightPanel: (120x5, Frame 0)
 
+# Fvwm taskbar
+DestroyModuleConfig FvwmTaskBar: *
+*FvwmTaskBar: Geometry $[monitor.$[monitor.primary].width]x54+0-0
+*FvwmTaskBar: Colorset 1
+*FvwmTaskBar: Frame 2
+*FvwmTaskBar: Font "xft:monospace:size=10:style=SemiBold Italic:antialias=True"
+*FvwmTaskBar: Rows 2
+*FvwmTaskBar: Columns $[monitor.$[monitor.primary].width]
+# Menu Button
+*FvwmTaskBar: (55x2, Title "Fvwm", ActiveColorset 16, Action(Mouse 1) \
+               Menu MenuFvwmRoot Root 0 o100-24p, Frame 2)
+# Quick Launch Buttons
+# *FvwmTaskBar: (25x1, Icon "icons/mini/xterm.png", ActiveColorset 16, \
+#                Action(Mouse 1) "Exec exec xterm")
+# *FvwmTaskBar: (25x1, Icon "icons/mini/firefox.png", ActiveColorset 16, \
+#                Action(Mouse 1) "Exec exec gimp")
+# *FvwmTaskBar: (25x1, Icon "icons/mini/xteddy.png", ActiveColorset 16, \
+#                Action(Mouse 1) "Exec exec xteddy")
+# Swallow FvwmIconMan TaskBarIcons
+*FvwmTaskBar: (1200x2, Left, Swallow TaskBarIcons 'Module FvwmIconMan \
+               TaskBarIcons')
+*FvwmTaskBar: (25x1, Id desk0, Title "0", Action (Mouse 1) GotoDesk 0 0, Colorset 11, ActiveColorset 12, Frame 1)
+*FvwmTaskBar: (25x1, Id desk1, Title "1", Action (Mouse 1) GotoDesk 0 1, ActiveColorset 12, Frame 1)
+*FvwmTaskBar: (25x1, Id desk2, Title "2", Action (Mouse 1) GotoDesk 0 2, ActiveColorset 12, Frame 1)
+*FvwmTaskBar: (25x1, Id desk3, Title "3", Action (Mouse 1) GotoDesk 0 3, ActiveColorset 12, Frame 1)
+*FvwmTaskBar: (110x2, Swallow FvwmPager 'Module FvwmPager *', Frame -1)
+# system tray
+# *FvwmTaskBar: (220x2, Swallow(NoClose, UseOld) trayer \
+#                'Exec exec trayer --height 48 --width 200', Frame 0)
+*FvwmTaskBar: (200x2, Swallow(NoClose, UseOld) stalonetray \
+               'Exec exec stalonetray', Frame -1)
+# Time Button with id TaskTime
+*FvwmTaskBar: (100x2, id "TaskTime", ActiveColorset 6, Title "Time", Frame 0)
+
 # FvwmPager
 #
 # This module displays the location of the windows on the various Pages
 # and Desks. This is setup to show only the Pages on the current Desk.
 DestroyModuleConfig FvwmPager:*
-*FvwmPager: Geometry 110x80
+# *FvwmPager: Geometry 110x80
+*FvwmPager: Geometry 110x50
 *FvwmPager: Colorset * 10
 *FvwmPager: HilightColorset * 13
 *FvwmPager: BalloonColorset * 10
@@ -802,8 +900,8 @@ DestroyModuleConfig FvwmPager:*
 # is used as the window list in the panel or taskbar.
 DestroyModuleConfig FvwmIconMan:*
 *FvwmIconMan: UseWinList true
-*FvwmIconMan: ButtonGeometry 120x30
-*FvwmIconMan: ManagerGeometry 1x1
+*FvwmIconMan: ButtonGeometry 120x25
+*FvwmIconMan: ManagerGeometry 1x2
 *FvwmIconMan: Colorset 1
 *FvwmIconMan: FocusColorset 2
 *FvwmIconMan: IconColorset 14
@@ -821,6 +919,41 @@ DestroyModuleConfig FvwmIconMan:*
 *FvwmIconMan: Tips needed
 *FvwmIconMan: Sort id
 
+# TaskBarIcons
+#
+# Configures how the buttons on the taskbar work
+DestroyModuleConfig TaskBarIcons: *
+*TaskBarIcons: IconName TaskBarIcons
+*TaskBarIcons: UseWinList true
+*TaskBarIcons: Resolution global
+*TaskBarIcons: Tips needed
+*TaskBarIcons: Font "xft:monospace:size=8:style=Italic:antialias=True"
+
+# Manager Size
+*TaskBarIcons: ButtonGeometry 120x24
+*TaskBarIcons: MaxButtonWidth 120
+*TaskBarIcons: ManagerGeometry 1x2
+
+# Button Styles
+*TaskBarIcons: DrawIcons always
+*TaskBarIcons: ReliefThickness 2
+*TaskBarIcons: Format "%t"
+*TaskBarIcons: IconButton up
+*TaskBarIcons: IconAndSelectButton down
+*TaskBarIcons: SelectButton up
+*TaskBarIcons: Background #767279
+*TaskBarIcons: Foreground #000000
+*TaskBarIcons: PlainColorset 5
+*TaskBarIcons: FocusButton down
+*TaskBarIcons: FocusColorset 6
+*TaskBarIcons: FocusAndSelectColorset 6
+*TaskBarIcons: SelectColorset 6
+*TaskBarIcons: IconAndSelectColorset 6
+
+# Button Actions
+*TaskBarIcons: Action Mouse 1 A sendcommand IconManClick
+*TaskBarIcons: Action Mouse 2 A sendcommand Nop
+*TaskBarIcons: Action Mouse 3 A sendcommand "Menu MenuIconOps Mouse 0 o100"
 # FvwmEvent
 #
 # FvwmEvent is a module that can run an action or function
