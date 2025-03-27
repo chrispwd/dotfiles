@@ -258,7 +258,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                            :background ,zenburn-bg-1
                            :box (:line-width -1 :style released-button)))
       (t :inverse-video t)))
-   `(mode-line-buffer-id ((t (:foreground ,zenburn-yellow :weight bold))))
+   `(mode-line-buffer-id ((t (:foreground ,zenburn-fg :weight bold))))
    `(mode-line-inactive
      ((t (:foreground ,zenburn-green-2
                       :background ,zenburn-bg-05

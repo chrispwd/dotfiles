@@ -48,8 +48,8 @@
   (corfu-cycle t)                 ; Allows cycling through candidates
   (corfu-auto t)                  ; Enable auto completion
   (corfu-auto-prefix 2)
-  (corfu-auto-delay 0.0)
-  (corfu-popupinfo-delay '(0.5 . 0.2))
+  (corfu-auto-delay 0.7)
+  (corfu-popupinfo-delay '(0.7 . 0.4))
   (corfu-preview-current 'insert) ; Do not preview current candidate
   (corfu-preselect 'prompt)
   (corfu-on-exact-match nil)      ; Don't auto expand tempel snippets
