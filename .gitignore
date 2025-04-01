@@ -109,6 +109,14 @@ flycheck_*.el
 !/.config/cmacs/modules
 !/.config/cmacs/bootstrap
 
+# Emacs cmacs-solo
+/.config/cmacs-solo/*/
+/.config/cmacs-solo/*
+!/.config/cmacs-solo/early-init.el
+!/.config/cmacs-solo/init.el
+!/.config/cmacs-solo/modules
+
+
 # Neovim
 /.config/nvim/*/
 /.config/nvim/*
