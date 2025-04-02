@@ -1,4 +1,4 @@
-;;;; package-system.el -*- lexical-binding: t; -*-
+;;; package-system.el --- Packaging setup -*- lexical-binding: t; -*-
 
 ;;; do package stuff
 (require 'package)
@@ -24,12 +24,14 @@
                         (expand-file-name "elpa/" user-emacs-directory))
 
 (defmacro cpwd/install-if-not (package)
-  "Only install the package if it is not already installed."
+  "Only install PACKAGE if it is not already installed."
   `(unless (package-installed-p ,package) (package-install ,package)))
 
 (defun cpwd/package-initialize ()
+  "Refresh package archive if not already cached."
   (package-initialize)
   (unless package-archive-contents
     (package-refresh-contents)))
 
 (provide 'package-system)
+;;; package-system.el ends here

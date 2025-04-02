@@ -1,4 +1,4 @@
-;;;; note-taking.el -*- lexical-binding: t; -*-
+;;; note-taking.el ---- Config involving notes  -*- lexical-binding: t; -*-
 
 ;;; Configuration all revolving around taking notes
 
@@ -28,11 +28,11 @@
               ("C-c n n" . denote)
               ("C-c n f" . denote-open-or-create)
               ("C-c n i" . denote-link-or-create)
-              ("C-c n I" . denote-link-add-links)                               
-              ("C-c n l" . denote-link-find-file) 
-              ("C-c n h" . denote-org-extras-link-to-heading) 
-              ("C-c n b" . denote-backlinks) 
-              ("C-c n r" . denote-rename-file) 
+              ("C-c n I" . denote-link-add-links)
+              ("C-c n l" . denote-link-find-file)
+              ("C-c n h" . denote-org-extras-link-to-heading)
+              ("C-c n b" . denote-backlinks)
+              ("C-c n r" . denote-rename-file)
               ("C-c n R" . denote-rename-file-using-front-matter))
              :config
              (denote-rename-buffer-mode))

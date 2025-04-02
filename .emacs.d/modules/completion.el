@@ -1,14 +1,10 @@
-;;;; completion.el -*- lexical-binding: t; -*-
-
-(cpwd/install-if-not 'vertico)
-(cpwd/install-if-not 'consult)
-(cpwd/install-if-not 'savehist)
-(cpwd/install-if-not 'marginalia)
-(cpwd/install-if-not 'orderless)
-(cpwd/install-if-not 'corfu)
-(cpwd/install-if-not 'cape)
-(cpwd/install-if-not 'corfu-terminal)
-
+;;; completion.el ---- Completion packages -*- lexical-binding: t; -*-
+;;
+;;; Commentary:
+;;
+;; Code:
+;;
+;;; VERTICO
 (use-package vertico
   :ensure t
   :init
@@ -16,37 +12,41 @@
   :config
   (vertico-mode))
 
-(use-package savehist
-  :ensure t
-  :config
-  (savehist-mode))
+;; (use-package savehist
+;;   :ensure t
+;;   :config
+;;   (savehist-mode))
 
+;;; MARGINALIA
 (use-package marginalia
   :ensure t
   :after (vertico)
   :config
   (marginalia-mode))
 
+;;; CONSULT
 (use-package consult
   :ensure t
   :init
   (setq completion-styles '(substring basic))
   :bind
-  (("C-s"   . consult-line)                             
+  (;; ("C-s"   . consult-line)
    ("C-M-y" . consult-yank-from-kill-ring)
    ("C-c o" . consult-mark)))
 
+;;; ORDERLESS
 (use-package orderless
   :ensure t
   :init
   (setq completion-styles '(orderless basic)
         completion-category-overrides '((file (styles basic partial-completion)))))
 
+;;; CORFU
 (use-package corfu
   ;; Optional customizations
   :custom
   (corfu-cycle t)                 ; Allows cycling through candidates
-  (corfu-auto t)                  ; Enable auto completion
+  (corfu-auto nil)                  ; {En,Dis}able auto completion
   (corfu-auto-prefix 2)
   (corfu-auto-delay 0.7)
   (corfu-popupinfo-delay '(0.7 . 0.4))
@@ -67,6 +67,14 @@
   (corfu-history-mode)
   (corfu-popupinfo-mode)) ; Popup completion info
 
+;; Use corfu-terminal on non-GUI (this will not be necessary in version 31+)
+(when (not (display-graphic-p))
+  (use-package corfu-terminal
+    :ensure t
+    :config
+    (corfu-terminal-mode +1)))
+
+;;; CAPE
 (use-package cape
   :defer 10
   :bind ("C-c c" . cape-file)
@@ -80,4 +88,5 @@
   ;; and behaves as a pure `completion-at-point-function'.
   (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-purify))
 
-  (provide 'completion)
+(provide 'completion)
+;;; completion.el ends here

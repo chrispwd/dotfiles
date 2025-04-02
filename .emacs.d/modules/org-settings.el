@@ -8,8 +8,7 @@
 ;; All my org settings. It can get quite long, so I gave it
 ;; it's own module.
 (setq org-agenda-files
-      '("~/Notes/denote/20240507T235852--todo-list__gtd_meta.org"
-        "~/Notes/denote/20220823T213739--completed-tasks__meta.org"))
+      '("~/Notes/denote/20250201T192254--todos__gtd_meta.org"))
 (setq org-archive-location "~/Notes/denote/20220823T213739--completed-tasks__meta.org::")
 (setq org-ellipsis " ▾"
       org-hide-emphasis-markers t)
