@@ -7,6 +7,7 @@
 
 (require 'cpwd-package)
 (require 'tty-config)
+(require 'org-config)
 
 ;;; -------------------- GENERAL EMACS CONFIG
 ;;; EMACS
