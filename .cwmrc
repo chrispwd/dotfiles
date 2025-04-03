@@ -4,7 +4,7 @@ sticky      yes
 snapdist    4
 moveamount  32
 borderwidth 1
-gap         68 16 16 16
+gap         64 15 15 15
 unbind-key  all
 
 fontname "xft:monospace:style=italic:pixelsize=16"
