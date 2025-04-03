@@ -1,4 +1,9 @@
-;;; early-init.el -*- lexical-binding: t; -*-
+;;; early-init.el --- Early expressions to run before init -*- lexical-binding: t; -*-
+;;
+;;; Commentary:
+;;
+;;; Code:
+;;
 
 ;;; Garbage collection
 ;; Increase the GC threshold for faster startup
@@ -16,10 +21,10 @@
 (setq inhibit-compacting-font-caches t)
 
 ;; Disables unused UI Elements
-(menu-bar-mode -1)
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
-(tooltip-mode -1)
+(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+(if (fboundp 'scoll-bar-mode) (scroll-bar-mode -1))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'tooltip-mode) (tooltip-mode -1))
 
 ;;; Package system
 ;; Load the package-system. 

@@ -17,6 +17,7 @@
    ("C-x C-b" . ibuffer)
    ("RET" . newline-and-indent)
    ("C-z" . nil)
+   ("C-<backtab>" . tab-previous)
    ;; ("C-x C-z" . nil)
    ("C-x C-k RET" . nil))
 
@@ -98,17 +99,10 @@
   ;; won't ask for encoding (because undecided-unix) every single keystroke
   (modify-coding-system-alist 'file "" 'utf-8)
 
-  (set-face-attribute 'default nil :family "BlexMono Nerd Font" :height 125)
-
   (when (eq system-type 'darwin)
     (setq insert-directory-program "gls")
-    (setq mac-command-modifier 'meta)
-    (set-face-attribute 'default nil :family "BlexMono Nerd Font" :height 140))
-
-  ;; Load themes directory and theme
-  (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-  (load-theme 'zenburn t)
-  
+    (setq mac-command-modifier 'meta))
+    
   ;; Save manual customizations to other file than init.el
   (setq custom-file (locate-user-emacs-file "custom-vars.el"))
   (load custom-file 'noerror 'nomessage)

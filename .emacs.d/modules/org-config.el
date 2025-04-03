@@ -60,7 +60,7 @@
   org-agenda-prefix-format " %?-12b%?-12t% s")
   
   ;; Ellipsis styling
-  (setq org-ellipsis " ▼ ")
+  (setq org-ellipsis "…")
   (set-face-attribute 'org-ellipsis nil :inherit 'default :box nil)
   
   (defun cpwd/org-mode-setup ()
@@ -148,6 +148,16 @@
               ("C-c n R" . denote-rename-file-using-front-matter))
              :config
              (denote-rename-buffer-mode))
+
+(use-package yankpad
+  :ensure t
+  :init
+  (setq yankpad-file "~/Notes/denote/20231113T064822--yankpad__meta.org")
+  :bind
+  (("C-c y i" . yankpad-insert)
+   ("C-c y r" . yankpad-reload)
+   ("C-c y c" . yankpad-set-category)
+   ("C-c y e" . yankpad-expand)))
 
 (provide 'org-config)
 ;;; org-config.el ends here

@@ -15,8 +15,6 @@
 ;; https://github.com/LionyxML/emacs-solo
 ;;
 ;;; Code:
-;;
-;; (cpwd/install-if-not 'use-package)
 
 ;; Add the modules folder to the load path
 (add-to-list 'load-path (expand-file-name "modules/" user-emacs-directory))
@@ -29,6 +27,7 @@
 (require 'default-config)
 ;; (require 'dired-config)
 (require 'completion)
+(require 'style-config)
 (when (eq system-type 'darwin)
   (require 'macos-config))
 ;; (require 'environment-specific)
@@ -38,5 +37,6 @@
 ;; (require 'look-and-feel)
 (require 'coding)
 (require 'tty-config)
+(require 'navigation)
 ;; (require 'window-management)
 ;;; init.el ends here
