@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #setxkbmap -option ctrl:ralt_rctrl
-setxkbmap -option ctrl:nocaps -option altwin:swap_lalt_lwin
+setxkbmap -option ctrl:nocaps -option altwin:prtsc_rwin
 #setxkbmap -option caps:swapescape
 # # Toggles colemak-dh and switches capslock to control
 # if [ $# -eq 0 ]

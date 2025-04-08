@@ -1,0 +1,36 @@
+! Zenburn
+*.foreground:   #DCDCCC
+*.background:   #3F3F3F
+*.cursorColor:  #BFBFBF
+
+! black
+*.color0:       #2B2B2B
+*.color8:       #6F6F6F
+
+! red
+*.color1:       #DFAF8F
+*.color9:       #9C6363
+
+! green
+*.color2:       #7F9F7F
+*.color10:      #BFEBBF
+
+! yellow
+*.color3:       #F0DFAF
+*.color11:      #D0BF8F
+
+! blue
+*.color4:       #8CD0D3
+*.color12:      #94BFF3
+
+! magenta
+*.color5:       #DC8CC3
+*.color13:      #DC8CC3
+
+! cyan          
+*.color6:       #93E0E3
+*.color14:      #93E0E3
+
+! white
+*.color7:       #989890
+*.color15:      #FFFFEF
