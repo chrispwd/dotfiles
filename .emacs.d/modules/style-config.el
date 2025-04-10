@@ -9,8 +9,8 @@
 ;; Default face (gui only)
 (unless (not (display-graphic-p))
   (if (eq system-type 'darwin)
-      (set-face-attribute 'default nil :family "RobotoMono Nerd Font" :height 145)
-	(set-face-attribute 'default nil :family "RobotoMono Nerd Font" :height 125)))
+      (set-face-attribute 'default nil :family "CommitMono Nerd Font" :height 145)
+	(set-face-attribute 'default nil :family "CommitMono Nerd Font" :height 125)))
 
 ;;; ICON ASSETS
 (use-package all-the-icons
