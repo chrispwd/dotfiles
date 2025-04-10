@@ -60,7 +60,7 @@
   org-agenda-prefix-format " %?-12b%?-12t% s")
   
   ;; Ellipsis styling
-  (setq org-ellipsis "…")
+  (setq org-ellipsis "...")
   (set-face-attribute 'org-ellipsis nil :inherit 'default :box nil)
   
   (defun cpwd/org-mode-setup ()
