@@ -24,7 +24,7 @@ export NOTES="$HOME/Notes/denote"
 export SYNC="$HOME/Sync"
 export SCROTS="$HOME/Sync/Resources/scrots"
 export BROWSER="firefox"
-export MYDMENUOPTS="-fn 'CommitMono Nerd Font-12:Italic' -nb '#3f3f3f' -nf '#dcdccc' -sf '#3f3f3f' -sb '#dcdccc'"
+export MYDMENUOPTS="-fn 'MesloLGSDZ Nerd Font-12:Italic' -nb '#3f3f3f' -nf '#dcdccc' -sf '#3f3f3f' -sb '#dcdccc'"
 
 # Default programs
 export EDITOR="emacs -nw"
