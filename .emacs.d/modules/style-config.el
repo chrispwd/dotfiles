@@ -4,7 +4,8 @@
 
 ;; Load themes directory and theme
 (add-to-list 'custom-theme-load-path (concat user-emacs-directory "themes"))
-(load-theme 'zenburn t)
+(use-package solarized-theme)
+(load-theme 'solarized-dark t)
 
 ;; Default face (gui only)
 (unless (not (display-graphic-p))

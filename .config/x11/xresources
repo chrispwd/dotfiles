@@ -1,9 +1,10 @@
 #include "Xresources.d/themes/zenburn"
 
-Xft.hinting: 1
-Xft.hintstyle: hintslight
 Xft.antialias: 1
-Xft.rgba: rgb 
+Xft.hinting: 1
+Xft.rgba: rgb
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
 xterm*utf8: 1
 XTerm.vt100.font: fixed
 XTerm.vt100.metaSendsEscape: true
