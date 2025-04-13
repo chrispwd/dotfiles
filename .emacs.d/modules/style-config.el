@@ -4,7 +4,8 @@
 
 ;; Load themes directory and theme
 (add-to-list 'custom-theme-load-path (concat user-emacs-directory "themes"))
-(use-package solarized-theme)
+(use-package solarized-theme
+  :ensure t)
 (load-theme 'solarized-dark t)
 
 ;; Default face (gui only)
