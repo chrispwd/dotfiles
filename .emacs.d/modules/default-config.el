@@ -15,6 +15,7 @@
    ("M-s g" . grep)
    ("M-s f" . find-name-dired)
    ("C-x C-b" . ibuffer)
+   ("C-x 4 o" . window-swap-states)
    ("RET" . newline-and-indent)
    ("C-z" . nil)
    ("C-<backtab>" . tab-previous)

@@ -19,7 +19,7 @@ set -o emacs
 ######################### Prompt #######################################
 
 exit_status() {
-    [ "$?" == 0 ] && printf "" || printf " $?"
+    [ "$?" == 0 ] && printf "" || printf " ($?)"
 }
 
 _ps1() {
@@ -32,18 +32,26 @@ local b='\[\e[0;34m\]'
 local mg='\[\e[0;35m\]'
 local cy='\[\e[0;36m\]'
 local wh='\[\e[0;37m\]'
+local brbl='\[\e[0;90m\]'
+local brr='\[\e[0;91m\]'
+local brg='\[\e[0;92m\]'
+local bry='\[\e[0;93m\]'
+local brb='\[\e[0;94m\]'
+local brmg='\[\e[0;95m\]'
+local brcy='\[\e[0;96m\]'
+local brwh='\[\e[0;97m\]'
 local cr='\[\e[0m\]'
 
 B=$(git branch --show-current 2>/dev/null)
 
 #[[ -n "$B" ]] && B="$wh($cr$y$B$cr$wh)$cr"
-[[ -n "$B" ]] && B=" $y($B)$cr"
+[[ -n "$B" ]] && B=" $bry($B)$cr"
 
 #PS1="$r\$(exit_status)$cr[$g\u$cr$wh@$cr$b\h$cr$wh:$cr$mg\W$cr$B] \\$ "
 # PS1="$g\u$cr at $b\h$cr$B in $mg\w$cr
 # $r\$(exit_status)$cr> \\$ "
 #PS1="$mg\w$cr$B$r\$(exit_status)$cr \\$ "
-PS1="# $g@\h:$cr $mg\w$cr$B$r\$(exit_status)$cr
+PS1="# $brg@\h:$cr $brmg\w$cr$B$brr\$(exit_status)$cr
 # > "
 
 }

@@ -1,4 +1,4 @@
-#include "Xresources.d/themes/zenburn"
+#include "Xresources.d/themes/sanityinc-tomorrow-eighties"
 
 Xft.antialias: 1
 Xft.hinting: 1

@@ -7,7 +7,7 @@ borderwidth 1
 gap         64 15 15 15
 unbind-key  all
 
-fontname "xft:monospace:style=italic:pixelsize=16"
+fontname "xft:monospace:style=Regular:size=11"
 
 # groups
 bind-key 4-1   group-only-1
@@ -120,15 +120,15 @@ autogroup    3 "Signal Beta"
 # color ungroupborder   "#c0b775"
 # color urgencyborder   "#b95f44"
 
-# Tomorrow dark
-#color menufg          "#c5c8c6"
-#color menubg          "#1d1f21"
-#color font            "#c5c8c6"
-#color selfont         "#1d1f21"
-#color activeborder    "#373b41"
-#color inactiveborder  "#1d1f21"
-#color groupborder     "#8c9440"
-#color ungroupborder   "#de935f"
+# Tomorrow eighties (sanityinc)
+color menufg          "#acafad"
+color menubg          "#2b2b2b"
+color font            "#acafad"
+color selfont         "#2b2b2b"
+color activeborder    "#8abeb7"
+color inactiveborder  "#888888"
+color groupborder     "#8c9440"
+color ungroupborder   "#de935f"
 #color urgencyborder   "#a54242"
 
 # ayu-dark
@@ -164,12 +164,12 @@ autogroup    3 "Signal Beta"
 # color inactiveborder   "#93a1a1"
 
 # Zenburn
-color menufg          "#dcdccc"
-color menubg          "#3f3f3f"
-color font            "#dcdccc"
-color selfont         "#3f3f3f"
-color activeborder    "#93E0E3"
-color inactiveborder  "#7f7f7f"
-color groupborder     "#7f9f7f"
+# color menufg          "#dcdccc"
+# color menubg          "#3f3f3f"
+# color font            "#dcdccc"
+# color selfont         "#3f3f3f"
+# color activeborder    "#93E0E3"
+# color inactiveborder  "#7f7f7f"
+# color groupborder     "#7f9f7f"
 # color ungroupborder   "#f0dfaf"
 # color urgencyborder   "#cc9393"

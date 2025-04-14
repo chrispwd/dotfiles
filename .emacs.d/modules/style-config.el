@@ -4,9 +4,11 @@
 
 ;; Load themes directory and theme
 (add-to-list 'custom-theme-load-path (concat user-emacs-directory "themes"))
-(use-package solarized-theme
-  :ensure t)
-(load-theme 'solarized-dark t)
+(require 'color-theme-sanityinc-tomorrow)
+;; (use-package solarized-theme
+  ;; :ensure t)
+(load-theme 'sanityinc-tomorrow-eighties t)
+
 
 ;; Default face (gui only)
 (unless (not (display-graphic-p))
