@@ -39,12 +39,24 @@
    org-agenda-custom-commands
    '(("w" "Work Todos" ;; agenda with only work items
 	  ((agenda "" ((org-agenda-ndays 8)
-				   (org-deadline-warning-days 7))))
+				   (org-deadline-warning-days 7)))
+	   (todo "BACKLOG"
+			 ((org-agenda-overriding-header "Backlog")
+              (org-agenda-sorting-strategy '(priority-down))))
+	   (todo "WAITING"
+			 ((org-agenda-overriding-header "Waiting")
+              (org-agenda-sorting-strategy '(priority-down)))))
 	  ((org-agenda-tag-filter-preset '("+work"))))
 
 	 ("h" "Home Todos" ;; agenda with only Home items
 	  ((agenda "" ((org-agenda-ndays 8)
-				   (org-deadline-warning-days 7))))
+				   (org-deadline-warning-days 7)))
+	   (todo "BACKLOG"
+			 ((org-agenda-overriding-header "Backlog")
+              (org-agenda-sorting-strategy '(priority-down))))
+	   (todo "WAITING"
+			 ((org-agenda-overriding-header "Waiting")
+              (org-agenda-sorting-strategy '(priority-down)))))
 	  ((org-agenda-tag-filter-preset '("+home")))))
 	 
    ;; Agenda styling
@@ -57,7 +69,9 @@
      " ┄┄┄┄┄ " "┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄")
    org-agenda-current-time-string
    "◀── now ─────────────────────────────────────────────────"
-  org-agenda-prefix-format " %?-12b%?-12t% s")
+  org-agenda-deadline-leaders (quote ("Today: " "in%2d: " "over +%d!:"))
+  org-agenda-scheduled-leaders (quote ("" "S%3d: "))
+  org-agenda-prefix-format " %?-32b %?-12t% s")
   
   ;; Ellipsis styling
   (setq org-ellipsis "...")
