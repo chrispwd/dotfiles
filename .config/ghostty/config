@@ -1,5 +1,7 @@
 
-font-family = "BlexMono Nerd Font"
-font-size = 18
+font-family = "Iosevka Nerd Font"
+font-size = 16
 
 theme = twilight
+
+window-decoration = none

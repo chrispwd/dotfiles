@@ -17,3 +17,4 @@ misc
 \.config/chrispwdmacs/history
 \.vim/\.netrwhist
 \.viminfo
+flake.nix
