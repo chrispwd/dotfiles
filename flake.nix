@@ -31,6 +31,7 @@
           # A simple package to start
           pkgs.pipes
           pkgs.asciiquarium
+          pkgs.stow
         ];
 
       in
