@@ -30,6 +30,7 @@
         deps = [
           # A simple package to start
           pkgs.pipes
+          pkgs.asciiquarium
         ];
 
       in
