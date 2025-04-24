@@ -28,10 +28,15 @@
 
         # Define the list of packages we want to be present on the system here.
         deps = [
-          # A simple package to start
-          pkgs.pipes
+          # A simple package list of absolute essentials to start
           pkgs.asciiquarium
+          #libgccjit derivation failing. need to try another way
+          #pkgs-unstable.emacs
+          pkgs.pipes
           pkgs.stow
+          pkgs.tmux
+          pkgs.tmux-xpanes
+          pkgs.zoxide
         ];
 
       in

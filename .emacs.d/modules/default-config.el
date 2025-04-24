@@ -26,6 +26,7 @@
   (ad-redefinition-action 'accept)
   (column-number-mode nil)
   (line-number-mode nil)
+  (indent-tabs-mode nil)
   (completion-ignore-case t)
   (completions-detailed t)
   (delete-by-moving-to-trash t)
@@ -179,7 +180,6 @@
   ;; (toggle-frame-maximized)
   (select-frame-set-input-focus (selected-frame))
   (global-auto-revert-mode 1)
-  (indent-tabs-mode -1)
   (recentf-mode 1)
   (repeat-mode 1)
   (savehist-mode 1)
@@ -851,7 +851,7 @@ and restart Flymake to apply the changes."
   :mode "Gemfile\\'"
   :custom
   (add-to-list 'treesit-language-source-alist '(ruby "https://github.com/tree-sitter/tree-sitter-ruby" "master" "src"))
-  (ruby-indent-level 2)
+  (ruby-indent-level 4)
   (ruby-indent-tabs-mode nil))
 
 ;;; JS-TS-MODE
@@ -860,7 +860,7 @@ and restart Flymake to apply the changes."
   :mode "\\.jsx?\\'"
   :defer 't
   :custom
-  (js-indent-level 2)
+  (js-indent-level 4)
   :config
   (add-to-list 'treesit-language-source-alist '(javascript "https://github.com/tree-sitter/tree-sitter-javascript" "master" "src"))
   (add-to-list 'treesit-language-source-alist '(jsdoc "https://github.com/tree-sitter/tree-sitter-jsdoc" "master" "src")))
@@ -870,7 +870,7 @@ and restart Flymake to apply the changes."
   :mode "\\.ts\\'"
   :defer 't
   :custom
-  (typescript-indent-level 2)
+  (typescript-indent-level 4)
   :config
   (add-to-list 'treesit-language-source-alist '(typescript "https://github.com/tree-sitter/tree-sitter-typescript" "master" "typescript/src"))
   (unbind-key "M-." typescript-ts-base-mode-map))
@@ -880,7 +880,7 @@ and restart Flymake to apply the changes."
   :mode "\\.tsx\\'"
   :defer 't
   :custom
-  (typescript-indent-level 2)
+  (typescript-indent-level 4)
   :config
   (add-to-list 'treesit-language-source-alist '(tsx "https://github.com/tree-sitter/tree-sitter-typescript" "master" "tsx/src"))
   (unbind-key "M-." typescript-ts-base-mode-map))
@@ -891,7 +891,7 @@ and restart Flymake to apply the changes."
   :mode "\\.rs\\'"
   :defer 't
   :custom
-  (rust-indent-level 2)
+  (rust-indent-level 4)
   :config
   (add-to-list 'treesit-language-source-alist '(rust "https://github.com/tree-sitter/tree-sitter-rust" "master" "src")))
 
@@ -936,6 +936,8 @@ and restart Flymake to apply the changes."
   :ensure go-ts-mode
   :mode "\\.go\\'"
   :defer 't
+  :custom
+  (go-indent-level 4)
   :config
   (add-to-list 'treesit-language-source-alist '(go "https://github.com/tree-sitter/tree-sitter-go" "master" "src")))
 

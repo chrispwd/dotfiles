@@ -32,6 +32,7 @@
    org-agenda-files
    '("~/Notes/denote/20250201T192254--todos__gtd_meta_work.org"
 	 "~/Notes/denote/20220821T204611--inbox__home_inbox_meta.org")
+   org-archive-location "~/Notes/denote/20220823T213739--completed-tasks__meta.org::"
    org-scheduled-past-days 0
    org-agenda-entry-text-maxlines 50
    org-todo-keywords '((sequence
