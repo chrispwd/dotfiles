@@ -1,4 +1,4 @@
-#include "Xresources.d/themes/sanityinc-tomorrow-eighties"
+#include "Xresources.d/themes/aquarium-light"
 
 Xft.antialias: 1
 Xft.hinting: 1

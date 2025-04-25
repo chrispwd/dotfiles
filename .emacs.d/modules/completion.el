@@ -30,9 +30,12 @@
   :init
   (setq completion-styles '(substring basic))
   :bind
-  (;; ("C-s"   . consult-line)
+  (("C-c s s"   . consult-line)
    ("C-M-y" . consult-yank-from-kill-ring)
-   ("C-c o" . consult-mark)))
+   ("C-c s C-y" . consult-yank-from-kill-ring)
+   ("C-c s o h" . consult-org-heading)
+   ("C-c s o a" . consult-org-agenda)
+   ("C-c s r" . consult-ripgrep)))
 
 ;;; ORDERLESS
 (use-package orderless
