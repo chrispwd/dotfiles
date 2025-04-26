@@ -7,8 +7,8 @@ set selection-clipboard clipboard
 set adjust-open "best-fit"
 
 # Dark Mode
-set default-bg "#e6e6f1" #00
-set default-fg "#708190" #01
+set default-bg "#103c48" #00
+set default-fg "#adbcbd" #01
 
 set statusbar-fg "#B0B0B0" #04
 set statusbar-bg "#202020" #01
@@ -35,7 +35,7 @@ set notification-bg "#90A959" #0B
 set notification-fg "#151515" #00
 
 set recolor "true"
-set recolor-lightcolor "#e6e6f1" #00
-set recolor-darkcolor "#708190" #06
+set recolor-lightcolor "#adbcbc" #00
+set recolor-darkcolor "#103c48" #06
 set recolor-reverse-video "true"
 set recolor-keephue "true"
