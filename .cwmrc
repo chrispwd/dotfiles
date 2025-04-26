@@ -5,9 +5,10 @@ snapdist    4
 moveamount  32
 borderwidth 1
 gap         64 15 15 15
+vtile       50
 unbind-key  all
 
-fontname "xft:monospace:style=Regular:size=11"
+fontname "monospace:style=Regular:size=12"
 
 # groups
 bind-key 4C-1   group-only-1
@@ -48,7 +49,9 @@ bind-key 4S-Tab   group-rcycle
 bind-key 4M-m     window-maximize
 bind-key 4MS-m    window-maximize
 bind-key 4M-v     window-vmaximize
+bind-key 4C-v     window-vtile
 bind-key 4M-g     window-hmaximize
+bind-key 4C-g     window-htile
 bind-key 4-f      window-fullscreen
 bind-key 4-w      window-close
 bind-key 4-s      window-stick

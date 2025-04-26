@@ -5,9 +5,10 @@
 ;; Load themes directory and theme
 (add-to-list 'custom-theme-load-path (concat user-emacs-directory "themes"))
 
-(require 'doom-themes)
+(use-package solarized-theme
+  :ensure t)
 
-(load-theme 'doom-aquarium-light t)
+(load-theme 'solarized-selenized-dark t)
 
 ;; Default face (gui only)
 (unless (not (display-graphic-p))
