@@ -6,7 +6,8 @@
 (add-to-list 'custom-theme-load-path (concat user-emacs-directory "themes"))
 
 (use-package solarized-theme
-  :ensure t)
+  :ensure t
+  :config (setq solarized-use-less-bold t))
 
 (load-theme 'solarized-selenized-dark t)
 
