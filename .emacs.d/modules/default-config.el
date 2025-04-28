@@ -572,7 +572,7 @@
      ("\\.\\(mp[34]\\|m4a\\|ogg\\|flac\\|webm\\|mkv\\)" "mpv" "xdg-open" "open")
      (".*" "xdg-open" "open")))
   (dired-kill-when-opening-new-dired-buffer t)
-  (dired-listing-switches "-al --group-directories-first"))
+  (dired-listing-switches "-ahl --group-directories-first"))
 
 ;;; WDIRED
 (use-package wdired
