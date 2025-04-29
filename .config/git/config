@@ -1,4 +1,7 @@
 [alias]
+  p="pull"
+  ps="push"
+  o="origin"
   st=status
   cm="commit -m"
   co=checkout

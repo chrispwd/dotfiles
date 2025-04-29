@@ -42,4 +42,5 @@ alias \
   ec="emacsclient -nw" \
   el="emacslauncher" \
   ytm="ytfzf -m" \
-  mpv="mpv --hwdec=auto-safe --profile=fast"
+  mpv="mpv --hwdec=auto-safe --profile=fast" \
+  tks="tmux kill-server"
