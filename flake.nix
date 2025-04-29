@@ -16,26 +16,31 @@
     # This is very helpful but sometimes not enough.
     # You can use https://www.nixhub.io/ to find the commit reference that introduced the version.
     # nixpkgs-go-1_19.url = "github:NixOS/nixpkgs/8ba120420fbdd9bd35b3a5366fa0206d8c99ade3";
+    # url for yt-x
+    yt-x.url = "github:Benexl/yt-x";
   };
 
-  outputs = { self, flake-utils, nixpkgs, nixpkgs-unstable, ... }:
+  outputs = { self, flake-utils, nixpkgs, nixpkgs-unstable, yt-x, ... }:
     # In previous flakes we hardcoded the current system. flake-utils exports a
     # function that lets us define our packages for all systems.
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
         pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
+        pkgs-yt-x = yt-x.packages.${system}.default;
 
         # Define the list of packages we want to be present on the system here.
         deps = [
           # A simple package list of absolute essentials to start
           pkgs.asciiquarium
-          #libgccjit derivation failing. need to try another way
+          #libgccjit derivation failing on MacOS. need to try another way
           #pkgs-unstable.emacs
+          pkgs.qbittorrent
           pkgs.pipes
           pkgs.stow
           pkgs.tmux
           pkgs.tmux-xpanes
+          pkgs-yt-x
           pkgs.zoxide
         ];
 
