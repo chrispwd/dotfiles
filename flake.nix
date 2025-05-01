@@ -1,68 +1,79 @@
+# SPDX-FileCopyrightText: 2023 Jade Lovelace
+#
+# SPDX-License-Identifier: CC0-1.0
+
 {
-  description = "Manage installed packages";
+  description = "Basic usage of flakey-profile";
 
   inputs = {
-    # Common flake utilities
+    flakey-profile.url = "github:lf-/flakey-profile";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
-
-    # Our package sources. I want some packages from a stable release and some to up-to-date.
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
-
-    # It could be that we need to install a specific version of a package.
-    # Some package definitions let you pick the right version.
-    # See `nodejs` for example: https://search.nixos.org/packages?channel=23.05&query=nodejs
-    # You can pick `nodejs_20`, `nodejs_18` or `nodejs_16`.
-    # This is very helpful but sometimes not enough.
-    # You can use https://www.nixhub.io/ to find the commit reference that introduced the version.
-    # nixpkgs-go-1_19.url = "github:NixOS/nixpkgs/8ba120420fbdd9bd35b3a5366fa0206d8c99ade3";
-    # url for yt-x
     yt-x.url = "github:Benexl/yt-x";
   };
 
-  outputs = { self, flake-utils, nixpkgs, nixpkgs-unstable, yt-x, ... }:
-    # In previous flakes we hardcoded the current system. flake-utils exports a
-    # function that lets us define our packages for all systems.
+  outputs = { self, nixpkgs, flake-utils, flakey-profile, yt-x }: #, yt-x
     flake-utils.lib.eachDefaultSystem (system:
       let
-        pkgs = nixpkgs.legacyPackages.${system};
-        pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
-        pkgs-yt-x = yt-x.packages.${system}.default;
+        pkgs = import nixpkgs {
+          inherit system;
+        };
 
-        # Define the list of packages we want to be present on the system here.
-        deps = [
-          # A simple package list of absolute essentials to start
-          pkgs.asciiquarium
-          #libgccjit derivation failing on MacOS. need to try another way
-          #pkgs-unstable.emacs
-          pkgs.qbittorrent
-          pkgs.pipes
-          pkgs.stow
-          pkgs.tmux
-          pkgs.tmux-xpanes
-          pkgs-yt-x
-          pkgs.zoxide
-        ];
+        pkgs-other = {
+          yt-x = yt-x.packages.${system}.default;        
+        };
 
+        deps = system:
+          let
+            # for both linux and darwin
+            basePkgs = [
+              pkgs.asciiquarium
+              pkgs.pipes
+              pkgs.stow
+              pkgs.tmux
+              pkgs.tmux-xpanes
+              pkgs.zoxide
+              pkgs-other.yt-x
+            ];
+
+            darwinOnly = if pkgs.stdenv.isDarwin then
+              []
+            else
+              [];
+
+            linuxOnly = if pkgs.stdenv.isLinux then
+              [
+                pkgs.qbittorrent
+                pkgs.mpd
+                pkgs.ncmpcpp
+                pkgs.nicotine-plus
+                pkgs.nsxiv
+              ]
+            else
+              [];
+            
+          in basePkgs ++ darwinOnly ++ linuxOnly;
+        
       in
       {
-        # Combine all packages together to return a single derivation.
-        # Install locally with `nix profile install .`
-        packages.default = pkgs.symlinkJoin {
-          name = "my-packages";
-          paths = deps;
+        # Any extra arguments to mkProfile are forwarded directly to pkgs.buildEnv.
+        #
+        # Usage:
+        # Switch to this flake:
+        #   nix run .#profile.switch
+        # Revert a profile change (note: does not revert pins):
+        #   nix run .#profile.rollback
+        # Build, without switching:
+        #   nix build .#profile
+        # Pin nixpkgs in the flake registry and in NIX_PATH, so that
+        # `nix run nixpkgs#hello` and `nix-shell -p hello --run hello` will
+        # resolve to the same hello as below [should probably be run as root, see README caveats]:
+        #   sudo nix run .#profile.pin
+        packages.profile = flakey-profile.lib.mkProfile {
+          inherit pkgs;
+          # Specifies things to pin in the flake registry and in NIX_PATH.
+          pinned = { nixpkgs = toString nixpkgs; };
+          paths = deps system;
         };
-
-        # Let's say you want your collegue to run the project but they don't want
-        # to install anything globally.
-        # `nix develop` let's you start a new shell with all the packages present
-        # in the environment.
-        devShells.default = pkgs.mkShell {
-          buildInputs = deps;
-        };
-
-        # Format with `nix fmt`
-        formatter = pkgs.nixpkgs-fmt;
-      }
-    );
+      });
 }
