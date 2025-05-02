@@ -15,12 +15,17 @@
   outputs = { self, nixpkgs, flake-utils, flakey-profile, yt-x }: #, yt-x
     flake-utils.lib.eachDefaultSystem (system:
       let
+        ncmpcppWithVisualizer = final: prev: {
+          ncmpcpp = prev.ncmpcpp.override { visualizerSupport = true; };
+        };
+
         pkgs = import nixpkgs {
           inherit system;
+          overlays = [ ncmpcppWithVisualizer ];
         };
 
         pkgs-other = {
-          yt-x = yt-x.packages.${system}.default;        
+          yt-x = yt-x.packages.${system}.default;
         };
 
         deps = system:
@@ -51,9 +56,9 @@
               ]
             else
               [];
-            
+
           in basePkgs ++ darwinOnly ++ linuxOnly;
-        
+
       in
       {
         # Any extra arguments to mkProfile are forwarded directly to pkgs.buildEnv.
