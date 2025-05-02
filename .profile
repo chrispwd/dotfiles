@@ -36,6 +36,11 @@ else
     export TERMINAL="kitty"
 fi
 
+# Net interfaces
+if [ $(uname -o) = "GNU/Linux" ]; then
+    export NETINTF="$(ls /sys/class/ieee80211/*/device/net/)"
+fi
+
 ########################## PATH ########################################
 
 # Go
