@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+[ ! -f ~/.stow-global-ignore ] && cp ./.stow-global-ignore ~/
+    
+for pkg in */; do
+    #stow -R "$pkg"
+    if [ -n $@ ]; then
+        arg=$@
+    fi
+    eval "stow $arg $pkg"
+done

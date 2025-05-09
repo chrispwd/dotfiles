@@ -50,97 +50,35 @@ flycheck_*.el
 # network security
 /network-security.data
 
-# Emacs efs
-/.config/efsmacs/org-roam.db
-/.config/efsmacs/bookmarks
-/.config/efsmacs/eshell/
-/.config/efsmacs/transient/
-/.config/efsmacs/.cache/
-/.config/efsmacs/.lsp-session-v1
-/.config/efsmacs/.mc-lists.el
-/.config/efsmacs/.org-jira/
-/.config/efsmacs/request/
-/.local/share/fonts/.uuid
-/.config/zsh/.zsh_history
-/.config/zsh/.zsh_sessions/
-/.config/efsmacs/projects
-/.config/efsmacs/games/
-
-# Emacs cop
-/.config/copmacs/*/
-/.config/copmacs/*
-!/.config/copmacs/init.el
-
-# Emacs chrispmacs
-/.config/chrispmacs/*/
-/.config/chrispmacs/*
-!/.config/chrispmacs/init.el
-!/.config/chrispmacs/early-init.el
-!/.config/chrispmacs/modules
-!/.config/chrispmacs/bootstrap
-
-# Emacs bugmacs
-/.config/bugmacs/*/
-/.config/bugmacs/*
-!/.config/bugmacs/early-init.el
-!/.config/bugmacs/init.el
-!/.config/bugmacs/modules
-
-# Emacs chrispwdmacs
-/.config/chrispwdmacs/*/
-/.config/chrispwdmacs/*
-!/.config/chrispwdmacs/early-init.el
-!/.config/chrispwdmacs/init.el
-!/.config/chrispwdmacs/modules
-
-# Emacs mimemacs
-/.config/mimemacs/*/
-/.config/mimemacs/*
-!/.config/mimemacs/early-init.el
-!/.config/mimemacs/init.el
-!/.config/mimemacs/modules
-!/.config/mimemacs/bootstrap
-
-# Emacs cmacs
-/.config/cmacs/*/
-/.config/cmacs/*
-!/.config/cmacs/early-init.el
-!/.config/cmacs/init.el
-!/.config/cmacs/modules
-!/.config/cmacs/bootstrap
-
-# Emacs cmacs-solo
-/.config/cmacs-solo/*/
-/.config/cmacs-solo/*
-!/.config/cmacs-solo/early-init.el
-!/.config/cmacs-solo/init.el
-!/.config/cmacs-solo/modules
-
+# Emacs
+emacs/.config/**
+!/emacs/.config/*/early-init.el
+!/emacs/.config/*/init.el
+!/emacs/.config/*/modules
+!/emacs/.config/*/bootstrap
+!/emacs/.config/*/themes
+/emacs/.emacs.d/**
+/emacs/.emacs.d/projects
+!emacs/.emacs.d/early-init.el
+!emacs/.emacs.d/init.el
+!emacs/.emacs.d/modules
+!emacs/.emacs.d/bootstrap
+!emacs/.emacs.d/themes
 
 # Neovim
-/.config/nvim/*/
-/.config/nvim/*
-!/.config/nvim/init.lua
+/nvim/.config/nvim/**
+!/nvim/.config/nvim/init.lua
 
 # Source Code Dir
 /.local/src/
 
-/.vim/.netrwhist
-/.vim/spell
+# Vim
+/vim/.vim/**
 !/.vim/autoload/plug.vim
-/.local/share/vim/*
-/.local/share/vim/*/
 
-# Emacs.d
-
-/.emacs.d/*/
-/.emacs.d/*
-/.emacs.d/projects
-!/.emacs.d/early-init.el
-!/.emacs.d/init.el
-!/.emacs.d/modules
-!/.emacs.d/bootstrap
-!/.emacs.d/themes
+# Zsh
+/zsh/**
+!/zsh/.zshrc
 
 # Work files
 .bash_work

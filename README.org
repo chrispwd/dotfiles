@@ -10,30 +10,35 @@ You must have ~stow~ installed on your system. This will take care of symlinking
 
 ** Installation
 
-~stow~ will make symlinks of everything in the project directory into the immediate parent directory. Therefore, the directory structure is mirrored from where you intend to place it. This repo was designed to be placed in =$HOME=. Clone this repo there.
+~stow~ will make symlinks of the contents of every dotfile directory (aka "package") here into the immediate parent directory of wherever you clone this. Therefore, each "package" here will have subdirectories indicating where its files will be placed, e.g. ~.config~, ~.local~, etc. (See [[https://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html][this blog post]] for a great breakdown of the directory structure).
+
+This repo was designed to be placed in =$HOME=. Start by cloning this repo there.
 
 #+begin_src sh
   cd $HOME
   git clone https://github.com/chrispwd/dotfiles.git
 #+end_src
 
-After cloning, recurse the submodules to pull in the latest changes.
+I've written a simple wrapper script ~stowg~ that will set up stow and link all the packages. Make it executable, then run it.
 
 #+begin_src sh
-  git submodule update --init --recursive
-#+end_src
-
-From the top-level directory, run ~stow~.
-
-#+begin_src sh :results verbatim
   cd dotfiles
-  stow .
+  chmod +x stowg
+  # First time? Run with no args
+  ./stowg
+  # Pass `-R` to clean up/remove previous symlinks and re-link
+  ./stowg -R
+  # Pass `-D` to remove all links
+  ./stow -D
 #+end_src
 
-Any time you pull in new changes that contain new files, you must refresh the symlinks for the new files to appear. To do so, use the ~-R~ flag.
+Any time you pull in new changes that contain new files, you must refresh the symlinks for the new files to appear. You can use my wrapper script for all packages, or use the regular ~stow~ command to select individual packages. To do so, use the ~-R~ flag.
 
 #+begin_src sh :results verbatim
-  stow -R .
+  # wrapper for all
+  ./stowg -R
+  # Or just a few using base `stow`
+  stow -R emacs bash tmux
 #+end_src
 
 All files should now be refreshed. This only needs to be done on newly added files.

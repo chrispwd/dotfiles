@@ -1,0 +1,14 @@
+^/.*\.org
+^/.*\~
+\.git
+\.gitignore
+\.gitmodules
+.+~
+\#.*\#
+^/README.*
+^/LICENSE.*
+^/COPYING
+\.DS_Store
+/flake.*
+/old
+/stowg
