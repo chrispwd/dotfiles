@@ -5,17 +5,24 @@
 ;; Load themes directory and theme
 (add-to-list 'custom-theme-load-path (concat user-emacs-directory "themes"))
 
-(use-package solarized-theme
-  :ensure t
-  :config (setq solarized-use-less-bold t))
+;; (use-package solarized-theme
+;;   :ensure t
+;;   :config (setq solarized-use-less-bold t))
 
-(load-theme 'solarized-selenized-dark t)
+;; (load-theme 'solarized-selenized-dark t)
+
+(use-package doom-themes
+  :ensure t
+  :config
+  (setq doom-gruvbox-material-dark-variant "soft"))
+
+(load-theme 'doom-gruvbox-material t)
 
 ;; Default face (gui only)
 (unless (not (display-graphic-p))
   (if (eq system-type 'darwin)
-      (set-face-attribute 'default nil :family "MesloLGSDZ Nerd Font" :height 145)
-	(set-face-attribute 'default nil :family "MesloLGSDZ Nerd Font" :height 125)))
+      (set-face-attribute 'default nil :family ,(get-env "MY_MONO_FONT") :height 145)
+	(set-face-attribute 'default nil :family ,(get-env "MY_MONO_FONT") :height 125)))
 
 ;;; ICON ASSETS
 (use-package all-the-icons
