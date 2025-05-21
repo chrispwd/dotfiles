@@ -24,7 +24,8 @@ export NOTES="$HOME/Notes/denote"
 export SYNC="$HOME/Sync"
 export SCROTS="$HOME/Sync/Resources/scrots"
 export BROWSER="firefox"
-export MYDMENUOPTS="-fn 'MesloLGS Nerd Font-12:Italic' -nb '#2d2d2d' -nf '#acafad' -sf '#2d2d2d' -sb '#acafad'"
+export MY_MONO_FONT="Hack Nerd Font"
+export MYDMENUOPTS="-fn '${MY_MONO_FONT:-monospace}-12:Italic' -nb '#2d2d2d' -nf '#acafad' -sf '#2d2d2d' -sb '#acafad'"
 
 # Default programs
 export EDITOR="emacs -nw"
