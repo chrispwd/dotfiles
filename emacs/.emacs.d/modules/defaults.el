@@ -23,6 +23,7 @@
 
 ;; line and character numbers
 (column-number-mode)
+(global-hl-line-mode 1)
 
 ;; Highlight column 80
 (add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
@@ -61,3 +62,4 @@
   (define-key map (kbd "C-c b") #'tab-previous))
 
 (provide 'defaults)
+;;; defaults.el ends here

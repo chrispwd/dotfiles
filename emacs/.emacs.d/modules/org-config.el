@@ -81,7 +81,8 @@
   (defun cpwd/org-mode-setup ()
 	(org-indent-mode)
 	(visual-line-mode 1)
-	(display-line-numbers-mode 0))
+	(display-line-numbers-mode 0)
+    (hl-line-mode -1))
 
   :hook
   (org-mode . cpwd/org-mode-setup))

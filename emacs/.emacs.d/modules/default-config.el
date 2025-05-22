@@ -104,7 +104,8 @@
   (when (eq system-type 'darwin)
     (setq insert-directory-program "gls")
     (setq mac-command-modifier 'meta))
-    
+
+  ;;; Settings when in a prog-mode
   ;; Save manual customizations to other file than init.el
   (setq custom-file (locate-user-emacs-file "custom-vars.el"))
   (load custom-file 'noerror 'nomessage)
@@ -113,6 +114,9 @@
   (setq display-line-numbers-type 'relative)
   (add-hook 'prog-mode-hook #'display-line-numbers-mode)
 
+  ;; Highlight the current line
+  (add-hook 'prog-mode-hook #'hl-line-mode)
+  
   ;; Highlight column 80
   (add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
   (setq-default display-fill-column-indicator-column 80)

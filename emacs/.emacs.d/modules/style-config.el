@@ -21,8 +21,8 @@
 ;; Default face (gui only)
 (unless (not (display-graphic-p))
   (if (eq system-type 'darwin)
-      (set-face-attribute 'default nil :family ,(get-env "MY_MONO_FONT") :height 145)
-	(set-face-attribute 'default nil :family ,(get-env "MY_MONO_FONT") :height 125)))
+      (set-face-attribute 'default nil :family (getenv "MY_MONO_FONT") :height 145)
+	(set-face-attribute 'default nil :family (getenv "MY_MONO_FONT") :height 125)))
 
 ;;; ICON ASSETS
 (use-package all-the-icons
