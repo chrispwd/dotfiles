@@ -292,14 +292,18 @@
     [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
+    # gruvbox-material-soft
+    background = "#282828"
+    foreground = "#d4be98"
+    frame_color = "#7daea3"
     # Nord
     # background = "#2e3440"
     # foreground = "#d8dee9"
     # frame_color = "#d8dee9"
     # Tomorrow Eighties (sanityinc)
-    background = "#2d2d2d"
-    foreground = "#acafad"
-    frame_color = "#acafad"
+    # background = "#2d2d2d"
+    # foreground = "#acafad"
+    # frame_color = "#acafad"
     # Aquarium light
     # background = "#e6e6f1"
     # foreground = "#708190"
@@ -328,15 +332,19 @@
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
-[urgency_normal]
+    [urgency_normal]
+    # gruvbox-material-soft
+    background = "#282828"
+    foreground = "#d4be98"
+    frame_color = "#a9b665"
     # Nord
     # background = "#2e3440"
     # foreground = "#d8dee9"
     # frame_color = "#d8dee9"
     # Tomorrow Eighties (sanityinc)
-    background = "#2d2d2d"
-    foreground = "#acafad"
-    frame_color = "#acafad"
+    # background = "#2d2d2d"
+    # foreground = "#acafad"
+    # frame_color = "#acafad"
     # Aquarium light
     # background = "#e6e6f1"
     # foreground = "#708190"
@@ -365,16 +373,19 @@
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
 
-[urgency_critical]
-
+    [urgency_critical]
+    # gruvbox-material-soft
+    background = "#3c1f1e"
+    foreground = "#ddc7a1"
+    frame_color = "#ea6962"
     # Nord
     # background = "#2e3440"
     # foreground = "#d8dee9"
     # frame_color = "#d8dee9"
     # Tomorrow Eighties (sanityinc)
-    background = "#cc6666"
-    foreground = "#acafad"
-    frame_color = "#acafad"
+    # background = "#cc6666"
+    # foreground = "#acafad"
+    # frame_color = "#acafad"
     # Aquarium light
     # background = "#e6e6f1"
     # foreground = "#c34864"
