@@ -28,7 +28,7 @@ fi
 #     sleep 1
 # done &
 #while type dwm >/dev/null ; do dwm && continue || break ;done
-#exec dwm
 #exec i3
 #exec fvwm3
-exec cwm
+#exec cwm
+exec dwm
