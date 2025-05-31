@@ -16,10 +16,10 @@ wmname LG3D
 keepassxc &
 #megasync &
 syncthing &
-# multiload-ng-systray &
+#multiload-ng-systray &
 cbatticon BAT0 &
 cbatticon BAT1 &
-volumeicon &
+#volumeicon &
 #dwmblocks &
 
 if [ -d "/etc/X11/xinit/xinitrc.d" ]; then

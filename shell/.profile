@@ -25,7 +25,9 @@ export SYNC="$HOME/Sync"
 export SCROTS="$HOME/Sync/Resources/scrots"
 export BROWSER="firefox"
 export MY_MONO_FONT="Hack Nerd Font"
-export MYDMENUOPTS="-fn '${MY_MONO_FONT:-monospace}-12:Italic' -nb '#2d2d2d' -nf '#acafad' -sf '#2d2d2d' -sb '#acafad'"
+export COLOR_FG="#d4be98"
+export COLOR_BG="#32302f"
+export MYDMENUOPTS="-fn '${MY_MONO_FONT:-monospace}-12:Italic' -nb '${COLOR_BG}' -nf '${COLOR_FG}' -sf '${COLOR_BG}' -sb '${COLOR_FG}'"
 
 # Default programs
 export EDITOR="emacs -nw"

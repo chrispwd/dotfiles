@@ -101,7 +101,7 @@ ignore       MEGAsync
 autogroup    4 "keepassxc","KeePassXC"
 autogroup    0 "megasync","MEGAsync"
 autogroup    2 "Navigator","firefox"
-autogroup    3 "Signal Beta"
+autogroup    3 "signal","Signal"
 
 # colors
 # Palenight
