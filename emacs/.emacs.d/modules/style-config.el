@@ -14,9 +14,9 @@
 (use-package doom-themes
   :ensure t
   :config
-  (setq doom-gruvbox-material-dark-variant "soft"))
+  (setq doom-everforest-dark-variant "soft"))
 
-(load-theme 'doom-gruvbox-material t)
+(load-theme 'doom-everforest t)
 
 ;; Default face (gui only)
 (unless (not (display-graphic-p))
