@@ -4,7 +4,7 @@
 *.cursorColor:  #a5a2a2
 
 ! black
-*.color0:       #3a3432
+*.color0:       #282625
 *.color8:       #4a4543
 
 ! red

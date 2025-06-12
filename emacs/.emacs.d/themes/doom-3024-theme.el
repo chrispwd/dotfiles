@@ -108,6 +108,7 @@ determine the exact padding."
   ((button :foreground cyan :underline t :weight 'bold)
    (cursor :background "white")
    (hl-line :background base1)
+   ((tab-bar &override) :background base1)
    ((tab-bar-tab &override) :foreground fg-alt :background bg)
    ((tab-bar-tab-inactive &override) :foreground fg)
    (font-lock-keyword-face :foreground violet)
