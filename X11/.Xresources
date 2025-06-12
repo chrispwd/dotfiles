@@ -1,4 +1,4 @@
-#include "Xresources.d/themes/gruvbox-material"
+#include "Xresources.d/themes/3024-dark"
 
 Xft.antialias: 1
 Xft.hinting: 1

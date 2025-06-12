@@ -12,11 +12,9 @@
 ;; (load-theme 'solarized-selenized-dark t)
 
 (use-package doom-themes
-  :ensure t
-  :config
-  (setq doom-everforest-dark-variant "soft"))
+  :ensure t)
 
-(load-theme 'doom-everforest t)
+(load-theme 'doom-3024 t)
 
 ;; Default face (gui only)
 (unless (not (display-graphic-p))
