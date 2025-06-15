@@ -12,9 +12,11 @@
 ;; (load-theme 'solarized-selenized-dark t)
 
 (use-package doom-themes
-  :ensure t)
+  :ensure t
+  :config
+  (setq doom-gruvbox-material-dark-variant "soft"))
 
-(load-theme 'doom-3024 t)
+(load-theme 'doom-gruvbox-material t)
 
 ;; Default face (gui only)
 (unless (not (display-graphic-p))

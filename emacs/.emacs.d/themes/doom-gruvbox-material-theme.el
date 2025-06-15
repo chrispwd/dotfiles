@@ -82,7 +82,7 @@ background contrast. All other values default to \"medium\"."
    (blue        '("#83a598" "#83a598" "brightblue"))    ; bright-blue
    (dark-blue   '("#458588" "#458588" "blue"))          ; blue
    (cyan        '("#8ec07c" "#8ec07c" "brightcyan"))    ; bright-aqua
-   (my-black    '("#37302f" "#37302f" "black"))
+   (my-black    '("#1d2021" "#37302f" "black"))
    (dark-cyan   '("#689d6a" "#689d6a" "cyan"))          ; aqua
 
    ;; face categories
