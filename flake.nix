@@ -24,10 +24,6 @@
           overlays = [ ncmpcppWithVisualizer ];
         };
 
-        pkgs-other = {
-          yt-x = yt-x.packages.${system}.default;
-        };
-
         deps = system:
           let
             # for both linux and darwin
@@ -38,7 +34,8 @@
               pkgs.tmux
               pkgs.tmux-xpanes
               pkgs.zoxide
-              pkgs-other.yt-x
+              pkgs.neofetch
+              pkgs.fzf
             ];
 
             darwinOnly = if pkgs.stdenv.isDarwin then
