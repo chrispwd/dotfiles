@@ -13,10 +13,11 @@
 
 (use-package doom-themes
   :ensure t
-  :config
-  (setq doom-gruvbox-material-dark-variant "soft"))
+  ;; :config
+  ;; (setq doom-gruvbox-material-dark-variant "soft"))
+  )
 
-(load-theme 'doom-gruvbox-material t)
+(load-theme 'doom-lucius t)
 
 ;; Default face (gui only)
 (unless (not (display-graphic-p))

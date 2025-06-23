@@ -293,8 +293,7 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
 
 endif
 
-"let g:gruvbox_contrast_dark = 'hard'
-colorscheme zenburn
+colorscheme lucius
 
 " read personal/private vim configuration (keep last to override)
 "set rtp^=~/.vimpersonal
