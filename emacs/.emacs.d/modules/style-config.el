@@ -17,7 +17,7 @@
   ;; (setq doom-gruvbox-material-dark-variant "soft"))
   )
 
-(load-theme 'doom-lucius t)
+(load-theme 'doom-one t)
 
 ;; Default face (gui only)
 (unless (not (display-graphic-p))

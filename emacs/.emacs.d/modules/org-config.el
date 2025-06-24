@@ -149,6 +149,7 @@
              (setq denote-known-keywords '("work" "home" "ref" "howto"))
              (setq denote-file-type nil) ; default to org
              (setq denote-link-fontify-backlinks t)
+             (setq denote-rename-buffer-backlinks-indicator  " (b)")
              :hook
              (dired-mode . denote-dired-mode)
              :bind
@@ -163,7 +164,7 @@
               ("C-c n r" . denote-rename-file)
               ("C-c n R" . denote-rename-file-using-front-matter))
              :config
-             (denote-rename-buffer-mode))
+             (denote-rename-buffer-mode 1))
 
 (use-package denote-org
   :ensure t
