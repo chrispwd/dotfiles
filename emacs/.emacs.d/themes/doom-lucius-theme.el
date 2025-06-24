@@ -55,7 +55,7 @@ determine the exact padding."
    (magenta     '("#af87af" "#af87af" "brightmagenta")) ; magenta
    (orange      '("#d7875f" "#d7875f" "orange"))        ; orange (more dark yellow)
    (yellow      '("#afaf87" "#afaf87" "yellow"))        ; yellow
-   (dark-yellow '("#d7af5f" "#d7af5f" "yellow"))        ; yellow (ignore)
+   (dark-yellow '("#afaf5f" "#afaf5f" "yellow"))        ; yellow (ignore)
    (teal        '("#83c092" "#8ec07c" "green"))         ; teal (not "true" lucius)
    (green       '("#87af5f" "#87af5f" "green"))         ; bright-green
    (dark-green  '("#1E6B42" "#98971a" "green"))         ; green
