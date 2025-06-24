@@ -155,15 +155,21 @@
              (("C-c n j" . cpwd/denote-journal)
               ("C-c n n" . denote)
               ("C-c n f" . denote-open-or-create)
+              ("C-c n g" . denote-grep)
               ("C-c n i" . denote-link-or-create)
               ("C-c n I" . denote-link-add-links)
               ("C-c n l" . denote-link-find-file)
-              ("C-c n h" . denote-org-extras-link-to-heading)
               ("C-c n b" . denote-backlinks)
               ("C-c n r" . denote-rename-file)
               ("C-c n R" . denote-rename-file-using-front-matter))
              :config
              (denote-rename-buffer-mode))
+
+(use-package denote-org
+  :ensure t
+  :after (denote)
+  :bind
+  ("C-c n h" . denote-org-link-to-heading))
 
 (use-package yankpad
   :ensure t
