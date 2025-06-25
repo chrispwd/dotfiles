@@ -1,4 +1,4 @@
-#include "Xresources.d/themes/lucius"
+#include "Xresources.d/themes/doom-one"
 
 Xft.antialias: 1
 Xft.hinting: 1
