@@ -686,7 +686,7 @@ Key c  A  4M  ResizeMove 85 85 50-50wa 50-50wa
 Key q  A  4  Close
 
 # restart fvwm3
-Key r  A  4M  Restart
+Key r  A  4S  Restart
 
 #######
 # 6: Window Decor
