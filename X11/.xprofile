@@ -4,7 +4,10 @@
 xset s off
 xset dpms 0 0 0
 xsetroot -cursor_name left_ptr &
-
+xclock -digital -strftime "%a %b %d %H:%M" \
+       -face "monospace:style=Italic:size=9" \
+       -bg "$COLOR_FG" -fg "$COLOR_BG" \
+       -geometry 125x30-10+5 &
 # startup apps
 dunst &
 nm-applet &
@@ -13,6 +16,7 @@ if [ $(uname -n) = "stinky" ]; then
 fi
 wmname LG3D
 #stalonetray &
+trayer --distancefrom right --distance 5 --widthtype pixel --width 120 &
 keepassxc &
 #megasync &
 syncthing &
