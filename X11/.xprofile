@@ -16,7 +16,9 @@ if [ $(uname -n) = "stinky" ]; then
 fi
 wmname LG3D
 #stalonetray &
-trayer --distancefrom right --distance 5 --widthtype pixel --width 120 &
+trayer --edge left --align right \
+       --margin 10 --widthtype request \
+       --width 10 &
 keepassxc &
 #megasync &
 syncthing &
