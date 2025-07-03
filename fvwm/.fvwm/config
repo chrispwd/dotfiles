@@ -352,12 +352,34 @@ Test (x trayer) Style trayer !Title, Sticky, \
 # Colorset 7 fg white, bg rgb:00/00/30, hi, sh, Plain, NoShape
 # Colorset 8 fg black, bg rgb:c2/b1/a0, hi, sh, Plain, NoShape
 
+# CDE Theme NorthernSky
+# Colorset 0 fg white, bg #1b5d6c, hi, sh, Plain, NoShape
+# Colorset 1 fg white, bg #1b5d6c, hi, sh, Plain, NoShape
+# Colorset 2 fg white, bg #a47591, hi, sh, Plain, NoShape
+# Colorset 3 fg white, bg #1b5d6c, hi, sh, Plain, NoShape
+# Colorset 4 fg white, bg #a47591, hi, sh, Plain, NoShape
+# Colorset 5 fg white, bg #1b5d6c, hi, sh, Plain, NoShape
+# Colorset 6 fg white, bg #0c5a87, hi, sh, Plain, NoShape
+# Colorset 7 fg white, bg #00577a, hi, sh, Plain, NoShape
+# Colorset 8 fg white, bg #1b5d6c, hi, sh, Plain, NoShape
+
 # CDE theme charcoal
+# Colorset 0 fg white, bg #767279, hi, sh, Plain, NoShape
+# Colorset 1 fg white, bg #767279, hi, sh, Plain, NoShape
+# Colorset 2 fg white, bg #87b4b0, hi, sh, Plain, NoShape
+# Colorset 3 fg white, bg #767279, hi, sh, Plain, NoShape
+# Colorset 4 fg white, bg #87b4b0, hi, sh, Plain, NoShape
+# Colorset 5 fg white, bg #767279, hi, sh, Plain, NoShape
+# Colorset 6 fg white, bg #696363, hi, sh, Plain, NoShape
+# Colorset 7 fg white, bg #896d6d, hi, sh, Plain, NoShape
+# Colorset 8 fg white, bg #767279, hi, sh, Plain, NoShape
+
+# Color Scheme CharcoalRose (BeigeRose + Charcoal)
 Colorset 0 fg white, bg #767279, hi, sh, Plain, NoShape
 Colorset 1 fg white, bg #767279, hi, sh, Plain, NoShape
-Colorset 2 fg white, bg #87b4b0, hi, sh, Plain, NoShape
+Colorset 2 fg white, bg #618888, hi, sh, Plain, NoShape
 Colorset 3 fg white, bg #767279, hi, sh, Plain, NoShape
-Colorset 4 fg white, bg #87b4b0, hi, sh, Plain, NoShape
+Colorset 4 fg white, bg #618888, hi, sh, Plain, NoShape
 Colorset 5 fg white, bg #767279, hi, sh, Plain, NoShape
 Colorset 6 fg white, bg #696363, hi, sh, Plain, NoShape
 Colorset 7 fg white, bg #896d6d, hi, sh, Plain, NoShape
@@ -546,6 +568,7 @@ DestroyMenu MenuColorThemes
 AddToMenu MenuColorThemes
 + "$[gt.CDE]"        Popup CdeColorMenu
 + "$[gt.Luthien]"    Popup LuthienColorMenu
++ "$[gt.Custom]"     Popup CustomColorMenu
 
 # CDE color themes menu
 DestroyMenu CdeColorMenu
@@ -558,6 +581,12 @@ DestroyMenu LuthienColorMenu
 AddToMenu LuthienColorMenu "Luthien Colors" Title
 PipeRead 'for i in $[FVWM_USERDIR]/LuthienColors/*.fvwm2rc; do \
   echo "AddToMenu LuthienColorMenu $(basename -s .fvwm2rc $i) Read $i"; done'
+
+# Custom color themes menu
+DestroyMenu CustomColorMenu
+AddToMenu CustomColorMenu "Custom Colors" Title
+PipeRead 'for i in $[FVWM_USERDIR]/CustomColors/*.fvwm2rc; do \
+  echo "AddToMenu CustomColorMenu $(basename -s .fvwm2rc $i) Read $i"; done'
 
 
 #######
@@ -730,7 +759,7 @@ AddToDecor CDEDecor
 + TitleStyle    AllActive -- Raised
 + ButtonStyle   All Simple -- UseTitleStyle
 + BorderStyle   Simple
-+ TitleStyle    Centered -- Raised
++ TitleStyle    LeftJustified -- Raised
 + ButtonStyle   All -- Raised
 
 + AddButtonStyle 1 Vector 3 23x58@0 77x58@0 77x42@0
