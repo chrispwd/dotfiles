@@ -8,17 +8,18 @@
 # (login screen) and so they are needed there. To prevent doubling up commands,
 # I source them here with the line below.
 
+if [ -d "${XDG_CONFIG_HOME:-$HOME/.config}/X11/Xresources.d" ]; then
+    [ -f ~/.Xresources ] && xrdb -merge -I${HOME}/.config/X11 ~/.Xresources
+else
+    [ -f ~/.Xresources ] && xrdb -merge ~/.Xresources
+fi
+
 if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/X11/xprofile" ]; then
 	. "${XDG_CONFIG_HOME:-$HOME/.config}/X11/xprofile"
 else
 	[ -f ~/.xprofile ] && . ~/.xprofile
 fi
 
-if [ -d "${XDG_CONFIG_HOME:-$HOME/.config}/X11/Xresources.d" ]; then
-    [ -f ~/.Xresources ] && xrdb -merge -I${HOME}/.config/X11 ~/.Xresources
-else
-    [ -f ~/.Xresources ] && xrdb -merge ~/.Xresources
-fi
 
 # wm
 #exec bspwm 2> /tmp/bspwm-log
