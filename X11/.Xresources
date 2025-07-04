@@ -19,3 +19,10 @@ XTerm.vt100.translations: #override \
 XTerm.ttyModes: erase ^?
 XTerm.termName: xterm-256color
 XTerm*boldMode: true
+XClock*foreground: #bbc2cf
+XClock*background: #3f444a
+XClock*geometry: 125x30-10+5
+XClock*strftime:  %a %d, %H:%M
+XClock.Clock.analog: false
+XClock.Clock.update: 1
+XClock.Clock.face: monospace:style=Italic:size=10

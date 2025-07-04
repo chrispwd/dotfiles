@@ -4,10 +4,8 @@
 xset s off
 xset dpms 0 0 0
 xsetroot -cursor_name left_ptr &
-xclock -digital -strftime "%a %b %d %H:%M" \
-       -face "monospace:style=Italic:size=9" \
-       -bg "$COLOR_FG" -fg "$COLOR_BG" \
-       -geometry 125x30-10+5 &
+xclock &
+
 # startup apps
 dunst &
 nm-applet &
