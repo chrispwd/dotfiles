@@ -18,4 +18,4 @@ set-monitors
 setbg.sh "$HOME/.local/share/background" || setbg.sh "$HOME/.dotfiles/.local/share/dark-sunset.jpg" &
 
 #dwm -s "$(date)"
-#$HOME/.config/polybar/launch.sh &
+$HOME/.config/polybar/launch.sh &

@@ -19,10 +19,37 @@ XTerm.vt100.translations: #override \
 XTerm.ttyModes: erase ^?
 XTerm.termName: xterm-256color
 XTerm*boldMode: true
-XClock*foreground: #bbc2cf
-XClock*background: #3f444a
-XClock*geometry: 125x30-10+5
+XClock*foreground: #acafad
+XClock*background: #2d2d2d
+XClock*geometry: 125x125-0+35
 XClock*strftime:  %a %d, %H:%M
-XClock.Clock.analog: false
+XClock.Clock.analog: true
 XClock.Clock.update: 1
 XClock.Clock.face: monospace:style=Italic:size=10
+XClock.Clock.majorColor: #acafad
+XClock.Clock.minorColor: #515151
+XClock.Clock.hourColor: #acafad
+XClock.Clock.minuteColor: #acafad
+XClock.Clock.secondColor: #515151
+xosview*geometry:125x80-0+160
+xosview*font: 6x13
+xosview*labels: false
+xosview*background: #2d2d2d
+xosview*foreground: #acafad
+xosview*load: false
+xosview*cpu: true
+xosview*cpuFormat: single
+xosview*cpuFreeColor: #515151
+xosview*mem: true
+xosview*memFreeColor: #515151
+xosview*swap: false
+xosview*page: false
+xosview*gfx: false
+xosview*NFSStats: false
+xosview*NFSDStats: false
+xosview*wireless: false
+xosview*disk: false
+xosview*battery: false
+xosview*net: true
+xosview*netBackground: #515151
+

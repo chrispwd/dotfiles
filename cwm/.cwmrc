@@ -3,12 +3,13 @@
 sticky      yes
 snapdist    4
 moveamount  32
-borderwidth 1
-gap         60 30 30 30
+borderwidth 2
+gap         30 30 30 30
 vtile       50
+htile       50
 unbind-key  all
 
-fontname "monospace:style=Regular:size=12"
+fontname "monospace:style=Italic:size=12"
 
 # groups
 bind-key 4-1   group-only-1
@@ -49,19 +50,19 @@ bind-key 4S-Tab   group-rcycle
 bind-key 4M-m     window-maximize
 bind-key 4MS-m    window-maximize
 bind-key 4M-v     window-vmaximize
-bind-key 4C-v     window-vtile
+bind-key 4MS-v     window-vtile
 bind-key 4M-g     window-hmaximize
-bind-key 4C-g     window-htile
-bind-key 4-f      window-fullscreen
+bind-key 4MS-g     window-htile
+bind-key 4M-f     window-fullscreen
 bind-key 4-w      window-close
 bind-key 4-s      window-stick
-bind-key 4S-m     window-hide
+bind-key 4S-z     window-hide
 bind-key 4S-f     window-freeze
-bind-key 4C-m     menu-window
-bind-key 4C-z     menu-window-hidden
-bind-key 4C-d     menu-cmd
-bind-key 4M-r     restart
-bind-key 4M-q     quit
+bind-key 4-m      menu-window
+bind-key 4-z      menu-window-hidden
+bind-key 4-d      menu-cmd
+bind-key 4S-r     restart
+bind-key 4S-q     quit
 
 # window movement
 bind-key 4-h    window-move-left
@@ -97,11 +98,16 @@ bind-mouse 4S-1 window-lower
 ignore       polybar
 ignore       tint
 ignore       MEGAsync
-#ignore      "Signal Beta"
+ignore       trayer
+ignore       xclock
+ignore       xosview
 autogroup    4 "keepassxc","KeePassXC"
-autogroup    0 "megasync","MEGAsync"
 autogroup    2 "Navigator","firefox"
 autogroup    3 "signal","Signal"
+autogroup    0 "megasync","MEGAsync"
+autogroup    0 "xclock", "XClock"
+autogroup    0 "xosview", "XOsview"
+autogroup    0 "panel","trayer"
 
 # colors
 # Palenight
@@ -124,15 +130,15 @@ autogroup    3 "signal","Signal"
 # color urgencyborder   "#b95f44"
 
 # Tomorrow eighties (sanityinc)
-# color menufg          "#acafad"
-# color menubg          "#2b2b2b"
-# color font            "#acafad"
-# color selfont         "#2b2b2b"
-# color activeborder    "#8abeb7"
-# color inactiveborder  "#888888"
-# color groupborder     "#8c9440"
-# color ungroupborder   "#de935f"
-#color urgencyborder   "#a54242"
+color menufg          "#acafad"
+color menubg          "#2d2d2d"
+color font            "#acafad"
+color selfont         "#2d2d2d"
+color activeborder    "#8abeb7"
+color inactiveborder  "#515151"
+color groupborder     "#8c9440"
+color ungroupborder   "#de935f"
+color urgencyborder   "#a54242"
 
 # ayu-dark
 #color menufg         "#bfbdb6"
@@ -200,12 +206,12 @@ autogroup    3 "signal","Signal"
 # color urgencyborder   "#db2d20"
 
 # lucius
-color menufg          "#b2b2b2"
-color menubg          "#303030"
-color font            "#b2b2b2"
-color selfont         "#303030"
-color activeborder    "#8abeb7"
-color inactiveborder  "#303030"
-color groupborder     "#87af5f"
-color ungroupborder   "#afaf87"
-color urgencyborder   "#d75f5f"
+# color menufg          "#b2b2b2"
+# color menubg          "#303030"
+# color font            "#b2b2b2"
+# color selfont         "#303030"
+# color activeborder    "#8abeb7"
+# color inactiveborder  "#303030"
+# color groupborder     "#87af5f"
+# color ungroupborder   "#afaf87"
+# color urgencyborder   "#d75f5f"
