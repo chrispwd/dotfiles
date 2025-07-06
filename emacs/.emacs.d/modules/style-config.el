@@ -5,19 +5,19 @@
 ;; Load themes directory and theme
 (add-to-list 'custom-theme-load-path (concat user-emacs-directory "themes"))
 
-;; (use-package solarized-theme
-;;   :ensure t
-;;   :config (setq solarized-use-less-bold t))
-
-;; (load-theme 'solarized-selenized-dark t)
-
-(use-package doom-themes
+(use-package solarized-theme
   :ensure t
-  ;; :config
-  ;; (setq doom-gruvbox-material-dark-variant "soft"))
-  )
+  :config (setq solarized-use-less-bold t))
 
-(load-theme 'doom-one t)
+(load-theme 'solarized-selenized-dark t)
+
+;; (use-package doom-themes
+;;   :ensure t
+;;   ;; :config
+;;   ;; (setq doom-gruvbox-material-dark-variant "soft"))
+;;   )
+
+;; (load-theme 'doom-terminix t)
 
 ;; Default face (gui only)
 (unless (not (display-graphic-p))
