@@ -578,7 +578,7 @@ names to which it refers are bound."
       (org-agenda-structure (:foreground ,purple))
       (org-agenda-current-time (:foreground ,yellow))
       (org-agenda-date (:foreground ,blue :underline nil))
-      (org-agenda-done (:foreground ,green))
+      (org-agenda-done (:foreground ,comment))
       (org-agenda-dimmed-todo-face (:foreground ,comment))
       (org-block (:background ,low-contrast-bg))
       (org-block-begin-line (:background ,background :foreground ,comment :slant italic))
@@ -698,10 +698,8 @@ names to which it refers are bound."
                                 :foreground ,purple
                                 :inverse-video nil
                                 :box (:line-width 1 :style released-button)))
-      (tab-bar-tab-inactive (:inherit tab-bar-tab
-                                      :background ,comment
-                                      :foreground ,highlight
-                                      :inverse-video t))
+      (tab-bar-tab-inactive (:background ,highlight
+                                      :foreground ,comment))
 
       ;; tab-line (built-in)
       (tab-line (:foreground ,comment :background ,highlight))

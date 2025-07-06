@@ -5,11 +5,11 @@
 ;; Load themes directory and theme
 (add-to-list 'custom-theme-load-path (concat user-emacs-directory "themes"))
 
-(use-package solarized-theme
-  :ensure t
-  :config (setq solarized-use-less-bold t))
+;; (use-package solarized-theme
+;;   :ensure t
+;;   :config (setq solarized-use-less-bold t))
 
-(load-theme 'solarized-selenized-dark t)
+;; (load-theme 'solarized-selenized-dark t)
 
 ;; (use-package doom-themes
 ;;   :ensure t
@@ -18,6 +18,9 @@
 ;;   )
 
 ;; (load-theme 'doom-terminix t)
+
+(require 'color-theme-sanityinc-tomorrow)
+(load-theme 'sanityinc-tomorrow-eighties t)
 
 ;; Default face (gui only)
 (unless (not (display-graphic-p))
