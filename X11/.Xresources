@@ -21,7 +21,7 @@ XTerm.termName: xterm-256color
 XTerm*boldMode: true
 XClock*foreground: #acafad
 XClock*background: #2d2d2d
-XClock*geometry: 125x125-0+35
+XClock*geometry: 125x125-5+40
 XClock*strftime:  %a %d, %H:%M
 XClock.Clock.analog: true
 XClock.Clock.update: 1
@@ -31,7 +31,7 @@ XClock.Clock.minorColor: #515151
 XClock.Clock.hourColor: #acafad
 XClock.Clock.minuteColor: #acafad
 XClock.Clock.secondColor: #515151
-xosview*geometry:125x80-0+160
+xosview*geometry:125x70-6+170
 xosview*font: 6x13
 xosview*labels: false
 xosview*background: #2d2d2d
