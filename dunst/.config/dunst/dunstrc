@@ -300,10 +300,10 @@
     # background = "#2e3440"
     # foreground = "#d8dee9"
     # frame_color = "#d8dee9"
-    # Tomorrow Eighties (sanityinc)
-    # background = "#2d2d2d"
-    # foreground = "#acafad"
-    # frame_color = "#acafad"
+    # Tomorrow Night (sanityinc)
+    background = "#282a2e"
+    foreground = "#a5a8a6"
+    frame_color = "#707880"
     # Aquarium light
     # background = "#e6e6f1"
     # foreground = "#708190"
@@ -345,10 +345,10 @@
     # background = "#2e3440"
     # foreground = "#d8dee9"
     # frame_color = "#d8dee9"
-    # Tomorrow Eighties (sanityinc)
-    # background = "#2d2d2d"
-    # foreground = "#acafad"
-    # frame_color = "#acafad"
+    # Tomorrow Night (sanityinc)
+    background = "#282a2e"
+    foreground = "#a5a8a6"
+    frame_color = "#c5c8c6"
     # Aquarium light
     # background = "#e6e6f1"
     # foreground = "#708190"
@@ -374,9 +374,9 @@
     # foreground = "#dcdccc"
     # frame_color = "#dcdccc"
     # Lucius
-    background = "#282828"
-    foreground = "#b2b2b2"
-    frame_color = "#5fafd7"
+    # background = "#282828"
+    # foreground = "#b2b2b2"
+    # frame_color = "#5fafd7"
     timeout = 7
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
@@ -390,10 +390,10 @@
     # background = "#2e3440"
     # foreground = "#d8dee9"
     # frame_color = "#d8dee9"
-    # Tomorrow Eighties (sanityinc)
-    # background = "#cc6666"
-    # foreground = "#acafad"
-    # frame_color = "#acafad"
+    # Tomorrow Night (sanityinc)
+    background = "#1d1f21"
+    foreground = "#c5c8c6"
+    frame_color = "#cc6666"
     # Aquarium light
     # background = "#e6e6f1"
     # foreground = "#c34864"
@@ -415,9 +415,9 @@
     # foreground = "#cc9393"
     # frame_color = "#cc9393"
     # Lucius
-    background = "#870000"
-    foreground = "#d75f5f"
-    frame_color = "#afaf87"
+    # background = "#870000"
+    # foreground = "#d75f5f"
+    # frame_color = "#afaf87"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     #icon = /path/to/icon

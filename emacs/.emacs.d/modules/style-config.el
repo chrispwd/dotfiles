@@ -20,7 +20,7 @@
 ;; (load-theme 'doom-terminix t)
 
 (require 'color-theme-sanityinc-tomorrow)
-(load-theme 'sanityinc-tomorrow-eighties t)
+(load-theme 'sanityinc-tomorrow-night t)
 
 ;; Default face (gui only)
 (unless (not (display-graphic-p))

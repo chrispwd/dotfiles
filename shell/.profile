@@ -24,9 +24,9 @@ export NOTES="$HOME/Notes/denote"
 export SYNC="$HOME/Sync"
 export SCROTS="$HOME/Sync/Pictures/scrots"
 # export BROWSER="firefox"
-export MY_MONO_FONT="BlexMono Nerd Font"
-export COLOR_FG="#acafad"
-export COLOR_BG="#2d2d2d"
+export MY_MONO_FONT="0xProto Nerd Font"
+export COLOR_FG="#a5a8a6"
+export COLOR_BG="#282a2e"
 export MYDMENUOPTS="-fn '${MY_MONO_FONT:-monospace}-12:Italic' -nb '${COLOR_BG}' -nf '${COLOR_FG}' -sf '${COLOR_BG}' -sb '${COLOR_FG}'"
 
 # Default programs

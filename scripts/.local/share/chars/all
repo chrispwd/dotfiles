@@ -633,6 +633,8 @@
 δ math_delta_lowercase; $i
 ° math_degree; $i
 π math_pi; $i
+f(x) math_function; $i
+f⁻¹(x) math_function_inverse; $i
 log₁₀ math_log_base_10; $i
 logₑ math_log_base_e; $i
 ⁽¹ᐟ²⁾ math_square_root; $i
@@ -700,6 +702,8 @@ tan⁻¹θ math_arctan; $i
 ⁿ math_sup_n; $i
 ⁺ math_sup_plus; $i
 ⁻ math_sup_minus; $i
+⁻¹ math_sup_minus_1; $i
+⁻² math_sup_minus_2; $i
 ⁼ math_sup_eq; $i
 ᐟ math_sup_div; $i
 ⁽ math_sup_parenopen; $i
