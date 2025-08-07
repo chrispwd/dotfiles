@@ -627,6 +627,7 @@
  dev_d3js; $i
  dev_sqlite; $i
  dev_vim; $i
+≈ math_approximation; $i
 Δ math_delta_uppercase; $i
 ε math_epsilon_lowercase; $i
 ϵ math_epsilon_uppercase; $i
@@ -637,8 +638,8 @@ f(x) math_function; $i
 f⁻¹(x) math_function_inverse; $i
 log₁₀ math_log_base_10; $i
 logₑ math_log_base_e; $i
-⁽¹ᐟ²⁾ math_square_root; $i
-⁽¹ᐟ³⁾ math_cube_root; $i
+¹ᐟ² math_square_root; $i
+¹ᐟ³ math_cube_root; $i
 ≅ math_congruent; $i
 √ math_radical; $i
 Σ math_capital_sigma; $i
