@@ -1,8 +1,13 @@
 ;;; default-config.el --- default config -*- lexical-binding: t; -*-
-;;; Commentary: Default configuration for native packages (minus a few with their
-;;;             separate repos).
+;;;
+;;; Commentary:
+;;;
+;;;     Default configuration for native packages (minus a few with their
+;;;     separate repos).
+;;;
 ;;; Code:
-;;
+;;;
+
 ;;; -------------------- GENERAL EMACS CONFIG
 ;;; EMACS
 ;; Yes, you can actually use use-package like this for configuring defaults

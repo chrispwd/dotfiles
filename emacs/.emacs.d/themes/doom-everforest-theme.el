@@ -49,12 +49,12 @@ background contrast. All other values default to \"medium\"."
   ((bg
     (cond ((equal doom-everforest-dark-variant "hard") '("#1d2021" "#1e1e1e" nil))   ; bg0_h
           ((equal doom-everforest-dark-variant "soft") '("#333c43" "#323232" nil))   ; bg0_s
-          (t                                        '("#282828" "#282828" nil)))) ; bg0
+          (t                                        '("#2d353b" "#282828" nil)))) ; bg0
    (bg-alt
     (cond ((equal doom-everforest-dark-variant "hard") '("#0d1011" "black" nil))     ; (self-defined)
           ((equal doom-everforest-dark-variant "soft") '("#293136" "#282828" nil))   ; bg0
           (t                                        '("#1d2021" "#1e1e1e" nil)))) ; bg_h
-   (bg-alt2    '("#555f66" "#504945" "brown"      )) ; bg2 (for region, selection etc.)
+   (bg-alt2    '("#543A48" "#504945" "brown"      )) ; bg2 (for region, selection etc.)
 
    (base0      '("#293136" "black"   "black"      )) ; (self-defined)
    (base1      '("#293136" "#1d1d1d" "brightblack")) ; bg0_h

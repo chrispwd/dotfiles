@@ -685,6 +685,7 @@ tan⁻¹θ math_arctan; $i
 ₐ math_sub_a; $i
 𞁓 math_sub_b; $i
 ₑ math_sub_e; $i
+ᵢ math_sub_i; $i
 ₒ math_sub_o; $i
 ₙ math_sub_n; $i
 ᵣ math_sub_r; $i
@@ -727,4 +728,5 @@ tan⁻¹θ math_arctan; $i
 ˣ math_sup_x; $i
 ʸ math_sup_y; $i
 ∞ math_infinity; $i
+∫ math_integral; $i
 ℝ math_real_numbers; $i

@@ -1,4 +1,4 @@
-#include "Xresources.d/themes/sanityinc-tomorrow-night"
+#include "Xresources.d/themes/atelier-cave-dark"
 
 Xft.antialias: 1
 Xft.hinting: 1

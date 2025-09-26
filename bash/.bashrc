@@ -45,13 +45,13 @@ local cr='\[\e[0m\]'
 B=$(git branch --show-current 2>/dev/null)
 
 #[[ -n "$B" ]] && B="$wh($cr$y$B$cr$wh)$cr"
-[[ -n "$B" ]] && B=" $bry($B)$cr"
+[[ -n "$B" ]] && B=" $y($B)$cr"
 
 #PS1="$r\$(exit_status)$cr[$g\u$cr$wh@$cr$b\h$cr$wh:$cr$mg\W$cr$B] \\$ "
 # PS1="$g\u$cr at $b\h$cr$B in $mg\w$cr
 # $r\$(exit_status)$cr> \\$ "
 #PS1="$mg\w$cr$B$r\$(exit_status)$cr \\$ "
-PS1="# $brg@\h:$cr $brmg\w$cr$B$brr\$(exit_status)$cr
+PS1="# $g@\h:$cr $brcy\w$cr$B$r\$(exit_status)$cr
 # > "
 
 }
