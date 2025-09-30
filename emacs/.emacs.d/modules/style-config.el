@@ -48,7 +48,31 @@
    `(org-level-8
      ((t (:foreground
           ,(plist-get my/base16-colors :base0A)))))
-   `(line-number
+    `(denote-faces-hour
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base03)))))
+    `(denote-faces-minute
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base03)))))
+    `(denote-faces-second
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base03)))))
+    `(denote-faces-delimiter
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base02)))))
+    `(denote-faces-year
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base0D)))))
+    `(denote-faces-month
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base0B)))))
+    `(denote-faces-day
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base0C)))))
+    `(denote-faces-keywords
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base0A)))))
+    `(line-number
      ((t (:foreground
           ,(plist-get my/base16-colors :base03)
           :background
@@ -104,7 +128,8 @@
      ((t (:foreground
           ,(plist-get my/base16-colors :base06)
           :weight
-          bold))))))
+          bold)))))
+  )
 
 ;; (use-package solarized-theme
 ;;   :ensure t
