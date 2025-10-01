@@ -51,7 +51,7 @@ B=$(git branch --show-current 2>/dev/null)
 # PS1="$g\u$cr at $b\h$cr$B in $mg\w$cr
 # $r\$(exit_status)$cr> \\$ "
 #PS1="$mg\w$cr$B$r\$(exit_status)$cr \\$ "
-PS1="# $g@\h:$cr $brcy\w$cr$B$r\$(exit_status)$cr
+PS1="# $g@\h:$cr $mg\w$cr$B$r\$(exit_status)$cr
 # > "
 
 }

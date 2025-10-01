@@ -1,4 +1,4 @@
-#include "Xresources.d/themes/atelier-cave-dark"
+#include "Xresources.d/themes/tomorrow-solarized"
 
 Xft.antialias: 1
 Xft.hinting: 1
