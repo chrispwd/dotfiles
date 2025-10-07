@@ -689,6 +689,7 @@ tan⁻¹θ math_arctan; $i
 ₒ math_sub_o; $i
 ₙ math_sub_n; $i
 ᵣ math_sub_r; $i
+ᵘ math_sub_u; $i
 ⁰ math_sup_0; $i
 ¹ math_sup_1; $i
 ² math_sup_2; $i
@@ -701,6 +702,7 @@ tan⁻¹θ math_arctan; $i
 ⁷ math_sup_7; $i
 ⁸ math_sup_8; $i
 ⁹ math_sup_9; $i
+ॱ math_sup_period; $i
 ⁱ math_sup_i; $i
 ⁿ math_sup_n; $i
 ⁺ math_sup_plus; $i
