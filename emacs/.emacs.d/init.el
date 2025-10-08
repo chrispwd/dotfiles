@@ -27,6 +27,7 @@
 (require 'default-config)
 ;; (require 'dired-config)
 (require 'completion)
+;; (set-face-background 'default "undefined")
 (require 'style-config)
 (when (eq system-type 'darwin)
   (require 'macos-config))

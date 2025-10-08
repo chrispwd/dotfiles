@@ -38,7 +38,6 @@ alias \
   iv="sxiv" \
   nf="neofetch" \
   v="vim" \
-  e="emacs -nw" \
   ec="emacsclient -nw" \
   el="emacslauncher" \
   ytm="ytfzf -m" \

@@ -44,3 +44,8 @@ include                     ./themes/atelier-cave-dark.conf
 
 # Emacs term-keys
 include                     ./emacs/kitty-for-term-keys.conf
+
+# BEGIN_KITTY_THEME
+# Solarized
+include current-theme.conf
+# END_KITTY_THEME

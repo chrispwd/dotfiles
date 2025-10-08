@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Assumes custom terminfo is present
+tic -x -o ~/.terminfo ~/.local/share/terminfo.src
