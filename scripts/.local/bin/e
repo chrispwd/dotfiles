@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-TERM=xterm-emacs emacs -nw
+cmd="TERM=xterm-emacs emacs -nw $*"
+
+eval "$cmd"
