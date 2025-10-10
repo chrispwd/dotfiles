@@ -58,7 +58,7 @@
           ,(plist-get my/base16-colors :base0F)))))
    `(font-lock-keyword-face
      ((t (:foreground
-          ,(plist-get my/base16-colors :base0D)))))
+          ,(plist-get my/base16-colors :base0E)))))
    `(font-lock-variable-name-face
      ((t (:foreground
           ,(plist-get my/base16-colors :base05)))))
@@ -73,7 +73,7 @@
           ,(plist-get my/base16-colors :base0D)))))
    `(font-lock-constant-face
      ((t (:foreground
-          ,(plist-get my/base16-colors :base0D)))))
+          ,(plist-get my/base16-colors :base0E)))))
    `(font-lock-type-face
      ((t (:foreground
           ,(plist-get my/base16-colors :base06)))))
