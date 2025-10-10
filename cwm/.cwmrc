@@ -3,7 +3,7 @@
 sticky      yes
 snapdist    4
 moveamount  35
-borderwidth 2
+borderwidth 1
 gap         40 15 15 15
 vtile       50
 htile       50
@@ -130,15 +130,15 @@ autogroup    0 "panel","trayer"
 # color urgencyborder   "#b95f44"
 
 # Tomorrow eighties (sanityinc)
-color menufg          "#a5a8a6"
-color menubg          "#282a2e"
-color font            "#a5a8a6"
-color selfont         "#282a2e"
-color activeborder    "#707880"
-color inactiveborder  "#282a2e"
-color groupborder     "#b5bd68"
-color ungroupborder   "#de935f"
-color urgencyborder   "#cc6666"
+# color menufg          "#a5a8a6"
+# color menubg          "#282a2e"
+# color font            "#a5a8a6"
+# color selfont         "#282a2e"
+# color activeborder    "#707880"
+# color inactiveborder  "#282a2e"
+# color groupborder     "#b5bd68"
+# color ungroupborder   "#de935f"
+# color urgencyborder   "#cc6666"
 
 # ayu-dark
 #color menufg         "#bfbdb6"
@@ -215,3 +215,14 @@ color urgencyborder   "#cc6666"
 # color groupborder     "#87af5f"
 # color ungroupborder   "#afaf87"
 # color urgencyborder   "#d75f5f"
+
+# CPL
+color menufg         "#777777"
+color menubg         "#191919"
+color font           "#777777"
+color selfont        "#191919"
+color activeborder   "#989898"
+color inactiveborder "#424242"
+color groupborder     "#007232"
+color ungroupborder   "#a05803"
+color urgencyborder   "#b10b00"
