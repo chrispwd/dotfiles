@@ -247,8 +247,10 @@
      ((t (:foreground ,(alist-get 'base1 palette) :weight bold))))
    `(denote-faces-delimiter
      ((t (:foreground ,(alist-get 'base02 palette)))))
-   `(denote-faces-date ((t (:inherit shadow)))))
-  )
+   `(denote-faces-date ((t (:inherit shadow))))
+   `(org-list-dt
+     ((t (:foreground ,(alist-get 'cyan palette) :weight normal :slant italic))))
+   `(org-code ((t (:foreground ,(alist-get 'green palette)))))))
 
 ;; (use-package doom-themes
 ;;   :ensure t
