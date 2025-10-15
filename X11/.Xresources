@@ -1,4 +1,4 @@
-#include "Xresources.d/themes/cpl"
+#include "Xresources.d/themes/solarized-black"
 
 Xft.antialias: 1
 Xft.hinting: 1
