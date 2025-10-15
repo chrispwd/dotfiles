@@ -25,11 +25,16 @@ else
     img_w="$(feh -L '%w' "$bgloc")"
     img_h="$(feh -L '%h' "$bgloc")"
 
-    if [ $img_w -eq $img_h ]; then
+    if [ $img_w -eq $img_h ] || [ $img_w -lt 800 ] || [ $img_h -lt 800 ]; then
+        
         feh --bg-tile "$bgloc"
+        
     elif [ $img_w -lt 1920 ] || [ $img_h -lt 1200 ]; then
+        
         feh --bg-fill "$bgloc"
+        
     else
+        
         feh --bg-center "$bgloc"
     fi
 fi
