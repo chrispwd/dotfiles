@@ -116,7 +116,7 @@
   (load custom-file 'noerror 'nomessage)
 
   ;; Set line-number-mode with relative numbering
-  (setq display-line-numbers-type 'relative)
+  (setq display-line-numbers-type t)
   (add-hook 'prog-mode-hook #'display-line-numbers-mode)
 
   ;; Highlight the current line
