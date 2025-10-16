@@ -292,6 +292,7 @@
      ((t (:foreground ,(alist-get 'yellow palette) :weight normal :underline t))))
    `(bold
      ((t (:foreground ,(alist-get 'base1 palette) :weight bold))))
+   `(vertical-border ((t (:foreground ,(alist-get 'base01 palette)))))
    `(denote-faces-delimiter
      ((t (:foreground ,(alist-get 'base02 palette)))))
    `(denote-faces-date ((t (:inherit shadow))))
