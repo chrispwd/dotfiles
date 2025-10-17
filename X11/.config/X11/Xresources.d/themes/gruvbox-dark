@@ -2,9 +2,9 @@
 ! Gruvbox Dark
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! hard
-! *background: #1d2021
+*.background: #1d2021
 ! medium
-*.background: #282828
+!*.background: #282828
 ! soft
 ! *background: #32302f
 *.foreground: #a89984

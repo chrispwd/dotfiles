@@ -1,4 +1,4 @@
-#include "Xresources.d/themes/solarized-black"
+#include "Xresources.d/themes/gruvbox-dark"
 
 Xft.antialias: 1
 Xft.hinting: 1
@@ -19,29 +19,29 @@ XTerm.vt100.translations: #override \
 XTerm.ttyModes: erase ^?
 XTerm.termName: xterm-256color
 XTerm*boldMode: true
-XClock*foreground: #a5a8a6
-XClock*background: #1d1f21
-XClock*geometry: 125x125-5+40
+XClock*foreground: #a89984
+XClock*background: #1d2021
+XClock*geometry: 125x125-5+5
 XClock*strftime:  %a %d, %H:%M
 XClock.Clock.analog: true
 XClock.Clock.update: 1
 XClock.Clock.face: monospace:style=Italic:size=10
-XClock.Clock.majorColor: #c5c8c6
-XClock.Clock.minorColor: #707880
-XClock.Clock.hourColor: #a5a8a6
-XClock.Clock.minuteColor: #a5a8a6
-XClock.Clock.secondColor: #707880
-xosview*geometry:125x70-6+170
+XClock.Clock.majorColor: #a89984
+XClock.Clock.minorColor: #7c6f64
+XClock.Clock.hourColor: #928374
+XClock.Clock.minuteColor: #928374
+XClock.Clock.secondColor: #7c6f64
+xosview*geometry: 125x70-6+40
 xosview*font: 6x13
 xosview*labels: false
-xosview*background: #1d1f21
-xosview*foreground: #a5a8a6
+xosview*background: #1d2021
+xosview*foreground: #a89984
 xosview*load: false
 xosview*cpu: true
 xosview*cpuFormat: single
-xosview*cpuFreeColor: #373b41
+xosview*cpuFreeColor: #32302f
 xosview*mem: true
-xosview*memFreeColor: #373b41
+xosview*memFreeColor: #32302f
 xosview*swap: false
 xosview*page: false
 xosview*gfx: false
@@ -51,5 +51,5 @@ xosview*wireless: false
 xosview*disk: false
 xosview*battery: false
 xosview*net: true
-xosview*netBackground: #373b41
+xosview*netBackground: #32302f
 

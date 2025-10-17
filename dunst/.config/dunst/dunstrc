@@ -293,17 +293,17 @@
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
     # gruvbox-material-soft
-    # background = "#282828"
-    # foreground = "#d4be98"
-    # frame_color = "#7daea3"
+    background = "#282828"
+    foreground = "#d4be98"
+    frame_color = "#7daea3"
     # Nord
     # background = "#2e3440"
     # foreground = "#d8dee9"
     # frame_color = "#d8dee9"
     # Tomorrow Night (sanityinc)
-    background = "#282a2e"
-    foreground = "#a5a8a6"
-    frame_color = "#707880"
+    # background = "#282a2e"
+    # foreground = "#a5a8a6"
+    # frame_color = "#707880"
     # Aquarium light
     # background = "#e6e6f1"
     # foreground = "#708190"
@@ -329,26 +329,26 @@
     # foreground = "#dcdccc"
     # frame_color = "#dcdccc"
     # Lucius
-    background = "#282828"
-    foreground = "#b2b2b2"
-    frame_color = "#6c6c6c"
+    # background = "#282828"
+    # foreground = "#b2b2b2"
+    # frame_color = "#6c6c6c"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
     [urgency_normal]
     # gruvbox-material-soft
-    # background = "#282828"
-    # foreground = "#d4be98"
-    # frame_color = "#a9b665"
+    background = "#282828"
+    foreground = "#d4be98"
+    frame_color = "#a9b665"
     # Nord
     # background = "#2e3440"
     # foreground = "#d8dee9"
     # frame_color = "#d8dee9"
     # Tomorrow Night (sanityinc)
-    background = "#282a2e"
-    foreground = "#a5a8a6"
-    frame_color = "#c5c8c6"
+    # background = "#282a2e"
+    # foreground = "#a5a8a6"
+    # frame_color = "#c5c8c6"
     # Aquarium light
     # background = "#e6e6f1"
     # foreground = "#708190"
@@ -383,17 +383,17 @@
 
     [urgency_critical]
     # gruvbox-material-soft
-    # background = "#3c1f1e"
-    # foreground = "#ddc7a1"
-    # frame_color = "#ea6962"
+    background = "#3c1f1e"
+    foreground = "#ddc7a1"
+    frame_color = "#ea6962"
     # Nord
     # background = "#2e3440"
     # foreground = "#d8dee9"
     # frame_color = "#d8dee9"
     # Tomorrow Night (sanityinc)
-    background = "#1d1f21"
-    foreground = "#c5c8c6"
-    frame_color = "#cc6666"
+    # background = "#1d1f21"
+    # foreground = "#c5c8c6"
+    # frame_color = "#cc6666"
     # Aquarium light
     # background = "#e6e6f1"
     # foreground = "#c34864"
