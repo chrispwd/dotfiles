@@ -292,10 +292,14 @@
     [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
+    # atelier-cave-dark
+    background = "#19171c"
+    foreground = "#8b8792"
+    frame_color = "#2a9292"
     # gruvbox-material-soft
-    background = "#282828"
-    foreground = "#d4be98"
-    frame_color = "#7daea3"
+    # background = "#282828"
+    # foreground = "#d4be98"
+    # frame_color = "#7daea3"
     # Nord
     # background = "#2e3440"
     # foreground = "#d8dee9"
@@ -338,9 +342,13 @@
 
     [urgency_normal]
     # gruvbox-material-soft
-    background = "#282828"
-    foreground = "#d4be98"
-    frame_color = "#a9b665"
+    # background = "#282828"
+    # foreground = "#d4be98"
+    # frame_color = "#a9b665"
+    # atelier-cave-dark
+    background = "#19171c"
+    foreground = "#8b8792"
+    frame_color = "#a06e3b"
     # Nord
     # background = "#2e3440"
     # foreground = "#d8dee9"
@@ -383,9 +391,13 @@
 
     [urgency_critical]
     # gruvbox-material-soft
-    background = "#3c1f1e"
-    foreground = "#ddc7a1"
-    frame_color = "#ea6962"
+    # background = "#3c1f1e"
+    # foreground = "#ddc7a1"
+    # frame_color = "#ea6962"
+    # atelier-cave-dark
+    background = "#26232a"
+    foreground = "#be4678"
+    frame_color = "#be4678"
     # Nord
     # background = "#2e3440"
     # foreground = "#d8dee9"
