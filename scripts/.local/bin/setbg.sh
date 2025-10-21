@@ -7,11 +7,11 @@ trueloc="$(readlink -f "$1")" &&
 case "$(file --mime-type -b "$trueloc")" in
     image/*)
         ln -sf "$(readlink -f "$1")" "$bgloc" &&
-            notify-send -i "$bgloc" "Setting wallpaper..."
+            notify-send -u low -i "$bgloc" "Setting wallpaper..."
         ;;
     inode/directory)
         ln -sf "$(find "$trueloc" -iregex '.*.\(jpg\|jpeg\|png\|gif\)' -type f | shuf -n 1)" "$bgloc" &&
-            notify-send -i "$bgloc" "Random Wallpaper chosen."
+            notify-send -u low -i "$bgloc" "Random Wallpaper chosen."
         ;;
     *)
        notify-send "Error" "Not a valid image." ; exit 1
