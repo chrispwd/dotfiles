@@ -10,7 +10,25 @@
   :config
   (setq base16-theme-256-color-source 'colors)
   (load-theme 'base16-atelier-cave t)
-  (defvar my/base16-colors base16-atelier-cave-theme-colors)
+  (defvar my/base16-colors
+    '(:base00 "#19171c"
+      :base01 "#26232a"
+      :base02 "#585260"
+      :base03 "#655f6d"
+      :base04 "#7e7887"
+      :base05 "#8b8792"
+      :base06 "#aca8b2"
+      :base07 "#e2dfe7"
+      :base08 "#be4678"
+      :base09 "#aa573c"
+      :base0A "#a06e3b"
+      :base0B "#2a9292"
+      :base0C "#398bc6"
+      :base0D "#576ddb"
+      :base0E "#955ae7"
+      :base0F "#bf40bf")
+    "All colors for Base16 Atelier Cave are defined here.")
+    ;; base16-atelier-cave-theme-colors)
   (custom-set-faces
    `(line-number
      ((t (:foreground
