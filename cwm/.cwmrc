@@ -4,7 +4,7 @@ sticky      yes
 snapdist    4
 moveamount  35
 borderwidth 1
-gap         40 15 15 15
+gap         8 40 8 8
 vtile       50
 htile       50
 unbind-key  all
