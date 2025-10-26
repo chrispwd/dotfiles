@@ -321,6 +321,45 @@
 ;;    `(org-code ((t (:foreground ,(alist-get 'orange palette))))))
 ;;   )
 
+;; (use-package solarized-theme
+;;   :ensure t
+;;   :config
+;;   (setq solarized-use-less-bold t)
+  ;; implementation of the belafonte-night theme
+  ;; Generated and slightly altered with this little ditty right here
+  ;; (solarized-create-theme-file-with-palette 'dark 'solarized-belafonte-night
+  ;; '("#20111a" "#d4ccb9"
+  ;;   "#e9a448" "#e9a448" "#bd100d" "#96522b" "#96522b" "#416978" "#98999c" "#858062")
+  ;; '((custom-theme-set-faces
+  ;;    theme-name
+  ;;  ;; `(font-lock-variable-name-face ((t (:foreground ,(alist-get 'base0 palette)))))
+  ;;  `(font-lock-keyword-face ((,class (:foreground ,magenta)))))
+  ;;  `(font-lock-builtin-face ((,class (:foreground ,cyan))))
+  ;;  `(font-lock-number-face ((,class (:foreground ,cyan))))
+  ;;  `(font-lock-string-face ((,class (:foreground ,green))))
+  ;;  `(font-lock-punctuation-face ((,class (:foreground ,magneta))))
+  ;;  `(font-lock-function-name-face ((,class (:foreground ,blue))))
+  ;;  `(font-lock-function-call-face ((,class (:foreground ,blue))))
+  ;;  `(font-lock-operator-face ((,class (:foreground ,magenta))))
+  ;;  `(font-lock-type-face ((,class (:foreground ,yellow))))
+  ;;  `(font-lock-constant-face
+  ;;    ((,class (:foreground ,violet :weight normal))))
+  ;;  `(flymake-error ((,class (:foreground ,red :underline t))))
+  ;;  `(link
+  ;;    ((,class (:foreground ,yellow :weight normal :underline t))))
+  ;;  `(bold
+  ;;    ((,class (:foreground ,base1 :weight bold))))
+  ;;  `(vertical-border ((,class (:foreground ,base01))))
+  ;;  `(denote-faces-delimiter
+  ;;    ((,class (:foreground ,base02))))
+  ;;  `(denote-faces-date ((,class (:inherit shadow))))
+  ;;  `(org-list-dt
+  ;;    ((,class (:foreground ,magenta :weight normal :slant italic))))
+  ;;  `(org-code ((,class (:foreground ,orange)))))
+  ;; t)
+
+  ;; (load-theme 'solarized-belafonte-night t))
+
 ;; (use-package doom-themes
 ;;   :ensure t
 ;;   ;; :config
