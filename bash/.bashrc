@@ -90,10 +90,8 @@ B=$(git branch --show-current 2>/dev/null)
 
 [[ $EXIT != 0 ]] && stat="$bg_base01_fg_red failed$clear$bg_base01_fg_dull code $bg_base01_fg_red$EXIT" || stat=""
 # PS1="$bg_base01_fg_cya\u$bg_base01_fg_dull from $bg_base01_fg_gre\h$bg_base01_fg_dull in $bg_base01_fg_mag\$(shorten_git_path)$B$bg_base01_fg_dull last command at $bg_base01_fg_fg\t$stat"
-PS1="${bg_base01_fg_dull}in $bg_base01_fg_mag\$(shorten_git_path)$B$bg_base01_fg_dull at $bg_base01_fg_fg\t$stat"
-PS1+="\033[K"
-PS1+="\n${clear}> "
-PS1+="\033[K"
+PS1="${bg_base01_fg_dull}in $bg_base01_fg_mag\w$B$bg_base01_fg_dull at $bg_base01_fg_fg\t$stat$clear"
+PS1+="\n> "
 
 }
 
