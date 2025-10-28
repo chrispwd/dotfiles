@@ -661,20 +661,20 @@
   (setopt eshell-prompt-function
           (lambda ()
 			(concat
-			 "┌─("
+			 "["
 			 (if (> eshell-last-command-status 0)
 				 "❌"
                "")
-			 " " (number-to-string eshell-last-command-status)
-			 ")──("
+			 "" (number-to-string eshell-last-command-status)
+			 "]──["
 			 "📁 "
 			 (concat (if (>= (length (eshell/pwd)) 40)
 						 (concat "..." (car (last (butlast (split-string (eshell/pwd) "/") 0))))
                        (abbreviate-file-name (eshell/pwd))))
-			 ")\n"
-			 "└─➜ ")))
+			 "]\n"
+			 "λ ")))
 
-  (setq eshell-prompt-regexp "└─➜ ")
+  (setq eshell-prompt-regexp "λ ")
   (setq eshell-visual-commands
         '("vi" "screen" "top"  "htop" "btm" "less" "more" "lynx" "ncftp" "pine" "tin" "trn"
           "elm" "irssi" "nmtui-connect" "nethack" "vim" "alsamixer" "nvim" "w3m"
