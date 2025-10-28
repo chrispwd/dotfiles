@@ -22,6 +22,30 @@ exit_status() {
     [ "$?" == 0 ] && printf "" || printf " ($?)"
 }
 
+# Function to shorten the path
+function shorten_git_path() {
+  local full_path="$PWD"
+  local git_root=$(git rev-parse --show-toplevel 2>/dev/null)
+
+  if [ -n "$git_root" ]; then
+    # If inside a Git repo, display path relative to the repo root
+    local relative_path="${full_path#$git_root}"
+    if [ -z "$relative_path" ]; then
+      # If at the root of the repo
+      # echo "$(basename "$git_root")"
+      echo "${full_path/#$HOME/~}" | sed 's:\([^/]\)[^/]*/:\1/:g'
+      # echo "$relative_path"
+    else
+      # Prepend with shortened repo name and then relative path
+      echo "$(basename "$git_root" | cut -c1-3)...${relative_path}"
+    fi
+  else
+    # If not in a Git repo, shorten the entire path
+    # You can customize this shortening logic further (e.g., using ~ for HOME)
+    echo "${full_path/#$HOME/~}" | sed 's:\([^/]\)[^/]*/:\1/:g'
+  fi
+}
+
 _ps1() {
 
 local EXIT="$?"
@@ -43,6 +67,7 @@ local brcya='\[\e[0;96m\]'
 local brwhi='\[\e[0;97m\]'
 local cr='\[\e[0m\]'
 local clear='\[\e[0m\]'
+local bg_base01_fg_red='\[\e[100;31m\]'
 local bg_base01_fg_gre='\[\e[100;32m\]'
 local bg_base01_fg_mag='\[\e[100;35m\]'
 local bg_base01_fg_cya='\[\e[100;36m\]'
@@ -52,20 +77,22 @@ local bg_base01_fg_dull='\[\e[100;92m\]'
 
 B=$(git branch --show-current 2>/dev/null)
 
+# old
 #[[ -n "$B" ]] && B="$wh($cr$y$B$cr$wh)$cr"
 #[[ -n "$B" ]] && B=" $y($B)$cr"
-[[ -n "$B" ]] && B="$clear$bg_base01_fg_fg on branch $clear$bg_base01_fg_yel$B"
-
 #PS1="$r\$(exit_status)$cr[$g\u$cr$wh@$cr$b\h$cr$wh:$cr$mg\W$cr$B] \\$ "
 # PS1="$g\u$cr at $b\h$cr$B in $mg\w$cr
 # $r\$(exit_status)$cr> \\$ "
 #PS1="$mg\w$cr$B$r\$(exit_status)$cr \\$ "
 #PS1="# $g@\h:$cr $mg\w$cr$B$r\$(exit_status)$cr"
-PS1="$bg_base01_fg_cya\u$bg_base01_fg_fg from $bg_base01_fg_gre\h$bg_base01_fg_fg in $bg_base01_fg_mag\w$B$bg_base01_fg_fg last command at $bg_base01_fg_dull\t"
-#PS1="$test\u@\h:$clear $bg_base01_fg_mag\w$clear"
+
+[[ -n "$B" ]] && B="$clear$bg_base01_fg_dull on $clear$bg_base01_fg_yel$B"
+
+[[ $EXIT != 0 ]] && stat="$bg_base01_fg_red failed$clear$bg_base01_fg_dull code $bg_base01_fg_red$EXIT" || stat=""
+# PS1="$bg_base01_fg_cya\u$bg_base01_fg_dull from $bg_base01_fg_gre\h$bg_base01_fg_dull in $bg_base01_fg_mag\$(shorten_git_path)$B$bg_base01_fg_dull last command at $bg_base01_fg_fg\t$stat"
+PS1="${bg_base01_fg_dull}in $bg_base01_fg_mag\$(shorten_git_path)$B$bg_base01_fg_dull at $bg_base01_fg_fg\t$stat"
 PS1+="\033[K"
-[[ $EXIT != 0 ]] && stat="($red$EXIT$clear)" || stat=""
-PS1+="\n$clear$stat > "
+PS1+="\n${clear}> "
 PS1+="\033[K"
 
 }

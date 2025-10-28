@@ -85,13 +85,6 @@ case $(uname -s) in
         openbsd_get_bat
         ;;
     "Darwin")
-        case $1 in
-            "Discharging")
-                ext="No";;
-            "Charging")
-                ext="Yes";;
-        esac
-
         ioreg -c AppleSmartBattery -w0 | \
         grep -o '"[^"]*" = [^ ]*' | \
         sed -e 's/= //g' -e 's/"//g' | \
@@ -103,12 +96,14 @@ case $(uname -s) in
                 "CurrentCapacity")
                     export curcap=$value;;
                 "ExternalConnected")
-                    if [ -n "$ext" ] && [ "$ext" != "$value" ]; then
+                    if [ "$value" = "Yes" ]; then
+                        echo "connected $curcap"
                         exit
                     fi
                 ;;
                 "FullyCharged")
                     if [ "$value" = "Yes" ]; then
+                        echo "$curcap"
                         exit
                     fi
                 ;;
