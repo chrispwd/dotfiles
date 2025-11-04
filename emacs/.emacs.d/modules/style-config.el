@@ -315,9 +315,9 @@
           ,(plist-get my/base16-colors :base0C)))))
    `(show-paren-match
      ((t (:foreground
-          ,(plist-get my/base16-colors :base05)
+          ,(plist-get my/base16-colors :base06)
           :background
-          ,(plist-get my/base16-colors :base09)))))
+          ,(plist-get my/base16-colors :base01)))))
    `(show-paren-mismatch
      ((t (:foreground
           ,(plist-get my/base16-colors :base08)
