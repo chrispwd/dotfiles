@@ -5,7 +5,7 @@ xset s off
 xset dpms 0 0 0
 xsetroot -cursor_name left_ptr &
 # xclock &
-xosview &
+# xosview &
 
 # startup apps
 dunst &

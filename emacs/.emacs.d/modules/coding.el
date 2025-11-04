@@ -8,7 +8,9 @@
 (use-package rainbow-delimiters
   :ensure t
   :hook
-  (prog-mode . rainbow-delimiters-mode))
+  (prog-mode . rainbow-delimiters-mode)
+  :config
+  (setq rainbow-delimiters-max-face-count 6))
 
 ;;; EMMET-MODE - helpful HTML templating
 (use-package emmet-mode

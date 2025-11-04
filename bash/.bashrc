@@ -51,7 +51,7 @@ _ps1() {
 local EXIT="$?"
 local bla='\[\e[0;30m\]'
 local red='\[\e[0;31m\]'
-local grn='\[\e[0;32m\]'
+local gre='\[\e[0;32m\]'
 local yel='\[\e[0;33m\]'
 local blu='\[\e[0;34m\]'
 local mag='\[\e[0;35m\]'
@@ -86,11 +86,11 @@ B=$(git branch --show-current 2>/dev/null)
 #PS1="$mg\w$cr$B$r\$(exit_status)$cr \\$ "
 #PS1="# $g@\h:$cr $mg\w$cr$B$r\$(exit_status)$cr"
 
-[[ -n "$B" ]] && B="$clear$bg_base01_fg_dull on $clear$bg_base01_fg_yel$B"
+[[ -n "$B" ]] && B="$clear${brgre} on $clear${yel}$B"
 
-[[ $EXIT != 0 ]] && stat="$bg_base01_fg_red failed$clear$bg_base01_fg_dull code $bg_base01_fg_red$EXIT" || stat=""
+[[ $EXIT != 0 ]] && stat="${red} failed$clear${brgre} code ${red}$EXIT" || stat=""
 # PS1="$bg_base01_fg_cya\u$bg_base01_fg_dull from $bg_base01_fg_gre\h$bg_base01_fg_dull in $bg_base01_fg_mag\$(shorten_git_path)$B$bg_base01_fg_dull last command at $bg_base01_fg_fg\t$stat"
-PS1="${bg_base01_fg_dull}in $bg_base01_fg_mag\w$B$bg_base01_fg_dull at $bg_base01_fg_fg\t$stat$clear"
+PS1="${brgre}[ in ${gre}\w$B${brgre} at ${brblu}\t$stat${brgre} ]$clear"
 PS1+="\n> "
 
 }
