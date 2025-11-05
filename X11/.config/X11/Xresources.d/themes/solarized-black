@@ -1,7 +1,7 @@
 ! Solarized-black (dark grey bg)
 ! ! special
 *.foreground:   #839496
-*.background:   #1c1c1c
+*.background:   #161b1d
 *.cursorColor:  #2aa198
 
 ! ! black

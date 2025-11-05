@@ -86,7 +86,7 @@ B=$(git branch --show-current 2>/dev/null)
 #PS1="$mg\w$cr$B$r\$(exit_status)$cr \\$ "
 #PS1="# $g@\h:$cr $mg\w$cr$B$r\$(exit_status)$cr"
 
-[[ -n "$B" ]] && B="$clear${brgre} on $clear${yel}$B"
+[[ -n "$B" ]] && B="$clear${brgre} on $clear${brred}$B"
 
 [[ $EXIT != 0 ]] && stat="${red} failed$clear${brgre} code ${red}$EXIT" || stat=""
 # PS1="$bg_base01_fg_cya\u$bg_base01_fg_dull from $bg_base01_fg_gre\h$bg_base01_fg_dull in $bg_base01_fg_mag\$(shorten_git_path)$B$bg_base01_fg_dull last command at $bg_base01_fg_fg\t$stat"
