@@ -544,12 +544,14 @@
    ;; `(font-lock-punctuation-face ((t (:foreground ,(alist-get 'orange palette)))))
    `(font-lock-type-face ((t (:foreground ,(alist-get 'yellow palette)))))
    `(font-lock-constant-face
-     ((t (:foreground ,(alist-get 'violet palette) :weight normal))))
+     ((t (:foreground ,(alist-get 'yellow palette) :weight normal))))
+   `(eglot-highlight-symbol-face
+     ((t (:foreground ,(alist-get 'base2 palette) :weight bold))))
    `(flymake-error ((t (:foreground ,(alist-get 'red palette) :underline t))))
    `(link
      ((t (:foreground ,(alist-get 'yellow palette) :weight normal :underline t))))
    `(bold
-     ((t (:foreground ,(alist-get 'base1 palette) :weight bold))))
+     ((t (:weight bold))))
    `(vertical-border ((t (:foreground ,(alist-get 'base01 palette)))))
    `(denote-faces-delimiter
      ((t (:foreground ,(alist-get 'base02 palette)))))
