@@ -17,26 +17,34 @@
 ;; be passed straight to the operating system.
 (defsrc
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  caps a    s    d    f    g    h    j    k    l    ;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet lalt           spc            ralt prtscr rctl
+  tab   q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps   a    s    d    f    g    h    j    k    l    ;    '       ret
+  lsft    z    x    c    v    b    n    m    ,    .    /          rsft
+  lctl lmet lalt           spc             ralt prtscr rctl
 )
 
 (deflayer qwerty
   grv 1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  @lshf @lshf @lmod @lalt @lctl g    h    @rctl @ralt @rmod @rshf  '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet @sym          @num            ralt rmet rctl
+  @lshf @lshf @lmod @lalt @lctl  g    h  @rctl @ralt @rmod @rshf ' ret
+  lsft   z    x    c    v    b    n    m    ,    .    /           rsft
+  lctl lmet @sym          @num            ralt  rmet  rctl
 )
 
 (deflayer num
-  grv 1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  @lshf @lshf @lmod @lalt @lctl g    h    @rctl @ralt @rmod @rshf  '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet @sym          @num            ralt rmet rctl
+  grv 1  2   3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w     e     r     t    [    7    8    9    ]    [    ]    \
+  @lshf @lshf @lmod @lalt @lctl  g    =   4   5   6 ' ret
+  lsft        z    x    c    v    b    \    1   2   3  grv  rsft
+  lctl lmet @sym          @num                   0   . rctl
+)
+
+(deflayer sym
+  grv 1  2   3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w     e     r     t    (    &    *    (    )   [    ]    \
+  @lshf @lshf @lmod @lalt @lctl  g    +   $   %   ^   " ret
+  lsft        z    x    c    v    b    |    !   @   #    ~    rsft
+  lctl lmet @sym          @num                   _   ( rctl
 )
 
 ;; defalias is used to declare a shortcut for a more complicated action to keep
