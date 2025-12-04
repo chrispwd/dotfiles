@@ -29,6 +29,11 @@
     :brown "#9b703f")
   "All colors for Base16 Twilight Darker are defined here.")
   (custom-set-faces
+   `(line-number
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base02)
+          :background
+          ,(plist-get my/base16-colors :base00)))))
    `(tab-bar-tab
      ((t (:foreground
           ,(plist-get my/base16-colors :base07)
@@ -52,10 +57,10 @@
           ,(plist-get my/base16-colors :base05)))))
    `(font-lock-function-name-face
      ((t (:foreground
-          ,(plist-get my/base16-colors :base05)))))
+          ,(plist-get my/base16-colors :blue)))))
    `(font-lock-function-call-face
      ((t (:foreground
-          ,(plist-get my/base16-colors :base05)))))
+          ,(plist-get my/base16-colors :blue)))))
    `(font-lock-builtin-face
      ((t (:foreground
           ,(plist-get my/base16-colors :violet)))))
@@ -70,7 +75,44 @@
    `(font-lock-operator-face
      ((t (:foreground
           ,(plist-get my/base16-colors :brown)))))
-
+   `(org-level-1
+     ((t (:foreground
+          ,(plist-get my/base16-colors :violet)))))
+   `(org-level-2
+     ((t (:foreground
+          ,(plist-get my/base16-colors :blue)))))
+   `(org-level-3
+     ((t (:foreground
+          ,(plist-get my/base16-colors :cyan)))))
+   `(org-level-4
+     ((t (:foreground
+          ,(plist-get my/base16-colors :green)))))
+   `(org-level-5
+     ((t (:foreground
+          ,(plist-get my/base16-colors :red)))))
+   `(org-level-6
+     ((t (:foreground
+          ,(plist-get my/base16-colors :orange)))))
+   `(org-level-7
+     ((t (:foreground
+          ,(plist-get my/base16-colors :yellow)))))
+   `(org-level-8
+     ((t (:foreground
+          ,(plist-get my/base16-colors :brown)))))
+   `(org-agenda-done
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base03)))))
+   `(org-headline-done
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base03)))))
+   `(org-drawer
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base03)))))
+   `(org-link
+     ((t (:inherit link))))
+   `(denote-faces-date
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base03)))))
    )
 )
 
