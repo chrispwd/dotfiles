@@ -4,4 +4,4 @@ font-size = 12
 
 theme = twilight
 
-window-decoration = none
+window-decoration = auto

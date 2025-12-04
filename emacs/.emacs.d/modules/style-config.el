@@ -5,6 +5,75 @@
 ;; Load themes directory and theme
 (add-to-list 'custom-theme-load-path (concat user-emacs-directory "themes"))
 
+(use-package base16-theme
+  :ensure t
+  :config
+  (setq base16-theme-256-color-source 'colors)
+  (load-theme 'base16-twilight-darker t)
+  (defvar my/base16-colors
+  '(:base00 "#1e1e1e"
+    :base01 "#323537"
+    :base02 "#464b50"
+    :base03 "#5f5a60"
+    :base04 "#838184"
+    :base05 "#919191"
+    :base06 "#c3c3c3"
+    :base07 "#ffffff"
+    :red "#cf6a4c"
+    :orange "#cda869"
+    :yellow "#d4cb81"
+    :green "#8f9d6a"
+    :cyan "#9fb3c7"
+    :blue "#7587a6"
+    :violet "#9b859d"
+    :brown "#9b703f")
+  "All colors for Base16 Twilight Darker are defined here.")
+  (custom-set-faces
+   `(tab-bar-tab
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base07)
+          :background
+          ,(plist-get my/base16-colors :base00)))))
+   `(tab-bar-tab-inactive
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base03)
+          :background
+          ,(plist-get my/base16-colors :base01)))))
+   `(eglot-highlight-symbol-face
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base06)
+          :weight
+          bold))))
+   `(font-lock-keyword-face
+     ((t (:foreground
+          ,(plist-get my/base16-colors :yellow)))))
+   `(font-lock-variable-name-face
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base05)))))
+   `(font-lock-function-name-face
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base05)))))
+   `(font-lock-function-call-face
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base05)))))
+   `(font-lock-builtin-face
+     ((t (:foreground
+          ,(plist-get my/base16-colors :violet)))))
+   `(font-lock-constant-face
+     ((t (:foreground
+          ,(plist-get my/base16-colors :orange)
+          :weight normal))))
+   `(font-lock-type-face
+     ((t (:foreground
+          ,(plist-get my/base16-colors :orange)
+          :weight normal))))
+   `(font-lock-operator-face
+     ((t (:foreground
+          ,(plist-get my/base16-colors :brown)))))
+
+   )
+)
+
 ;; (use-package base16-theme
 ;;   :ensure t
 ;;   :config
@@ -457,109 +526,109 @@
 
 ;; Swap commented palette and theme name in `load-theme' to switch
 ;; between solarized and gruvbox
-(use-package solarized-theme
-  :ensure t
-  :config
-  (setq solarized-use-less-bold t)
-  (defvar palette
-  '(;; solarized-dark palette
-    (base03      . "#002b36")
-    (base02      . "#073642")
-    (base01      . "#586e75")
-    (base00      . "#657b83")
-    (base0       . "#839496")
-    (base1       . "#93a1a1")
-    (base2       . "#eee8d5")
-    (base3       . "#fdf6e3")
-    (yellow      . "#b58900")
-    (orange      . "#cb4b16")
-    (red         . "#dc322f")
-    (magenta     . "#d33682")
-    (violet      . "#6c71c4")
-    (blue        . "#268bd2")
-    (cyan        . "#2aa198")
-    (green       . "#859900")
-    ;; palette end
-    )
-  "The solarized color palette alist.")
-  
+;; (use-package solarized-theme
+;;   :ensure t
+;;   :config
+;;   (setq solarized-use-less-bold t)
 ;;   (defvar palette
-;;     '(;; gruvbox-dark palette
-;;     (base03      . "#282828")
-;;     (base02      . "#32302f")
-;;     (base01      . "#7c6f64")
-;;     (base00      . "#928374")
-;;     (base0       . "#a89984")
-;;     (base1       . "#bdae93")
-;;     (base2       . "#a89984")
-;;     (base3       . "#fbf1c7")
-;;     (yellow      . "#d79921")
-;;     (orange      . "#d65d0e")
-;;     (red         . "#fb4933")
-;;     (magenta     . "#d3869b")
-;;     (violet      . "#b16286")
-;;     (blue        . "#458588")
-;;     (cyan        . "#689d6a")
-;;     (green       . "#98971a")
+;;   '(;; solarized-dark palette
+;;     (base03      . "#002b36")
+;;     (base02      . "#073642")
+;;     (base01      . "#586e75")
+;;     (base00      . "#657b83")
+;;     (base0       . "#839496")
+;;     (base1       . "#93a1a1")
+;;     (base2       . "#eee8d5")
+;;     (base3       . "#fdf6e3")
+;;     (yellow      . "#b58900")
+;;     (orange      . "#cb4b16")
+;;     (red         . "#dc322f")
+;;     (magenta     . "#d33682")
+;;     (violet      . "#6c71c4")
+;;     (blue        . "#268bd2")
+;;     (cyan        . "#2aa198")
+;;     (green       . "#859900")
 ;;     ;; palette end
 ;;     )
-;;     "The gruvbox color palette alist.")
-  
-  (load-theme 'solarized-dark t)
-  
-  ;; (custom-set-faces
-  ;;    `(font-lock-variable-name-face ((t (:foreground ,(alist-get 'base0 palette)))))
-  ;;  `(font-lock-keyword-face ((t (:foreground ,(alist-get 'red palette)))))
-  ;;  `(font-lock-builtin-face ((t (:foreground ,(alist-get 'violet palette)))))
-  ;;  `(font-lock-number-face ((t (:foreground ,(alist-get 'violet palette)))))
-  ;;  `(font-lock-string-face ((t (:foreground ,(alist-get 'green palette)))))
-  ;;  `(font-lock-punctuation-face ((t (:foreground ,(alist-get 'orange palette)))))
-  ;;  `(font-lock-function-name-face ((t (:foreground ,(alist-get 'blue palette)))))
-  ;;  `(font-lock-function-call-face ((t (:foreground ,(alist-get 'base0 palette)))))
-  ;;  `(font-lock-operator-face ((t (:foreground ,(alist-get 'orange palette)))))
-  ;;  `(font-lock-type-face ((t (:foreground ,(alist-get 'yellow palette)))))
-  ;;  `(font-lock-constant-face
-  ;;    ((t (:foreground ,(alist-get 'violet palette) :weight normal))))
-  ;;  `(flymake-error ((t (:foreground ,(alist-get 'red palette) :underline t))))
-  ;;  `(link
-  ;;    ((t (:foreground ,(alist-get 'yellow palette) :weight normal :underline t))))
-  ;;  `(bold
-  ;;    ((t (:foreground ,(alist-get 'base1 palette) :weight bold))))
-  ;;  `(vertical-border ((t (:foreground ,(alist-get 'base01 palette)))))
-  ;;  `(denote-faces-delimiter
-  ;;    ((t (:foreground ,(alist-get 'base02 palette)))))
-  ;;  `(denote-faces-date ((t (:inherit shadow))))
-  ;;  `(org-list-dt
-  ;;    ((t (:foreground ,(alist-get 'orange palette) :weight normal :slant italic))))
-  ;;  `(org-code ((t (:foreground ,(alist-get 'orange palette))))))
-  (custom-set-faces
-   `(font-lock-variable-name-face ((t (:foreground ,(alist-get 'base0 palette)))))
-   `(font-lock-keyword-face ((t (:foreground ,(alist-get 'green palette)))))
-   `(font-lock-builtin-face ((t (:foreground ,(alist-get 'violet palette)))))
-   ;; `(font-lock-number-face ((t (:foreground ,(alist-get 'violet palette)))))
-   `(font-lock-string-face ((t (:foreground ,(alist-get 'cyan palette)))))
-   `(font-lock-function-name-face ((t (:foreground ,(alist-get 'blue palette)))))
-   `(font-lock-function-call-face ((t (:foreground ,(alist-get 'blue palette)))))
-   ;; `(font-lock-operator-face ((t (:foreground ,(alist-get 'orange palette)))))
-   ;; `(font-lock-punctuation-face ((t (:foreground ,(alist-get 'orange palette)))))
-   `(font-lock-type-face ((t (:foreground ,(alist-get 'yellow palette)))))
-   `(font-lock-constant-face
-     ((t (:foreground ,(alist-get 'yellow palette) :weight normal))))
-   `(eglot-highlight-symbol-face
-     ((t (:foreground ,(alist-get 'base2 palette) :weight bold))))
-   `(flymake-error ((t (:foreground ,(alist-get 'red palette) :underline t))))
-   `(link
-     ((t (:foreground ,(alist-get 'yellow palette) :weight normal :underline t))))
-   `(bold
-     ((t (:weight bold))))
-   `(vertical-border ((t (:foreground ,(alist-get 'base01 palette)))))
-   `(denote-faces-delimiter
-     ((t (:foreground ,(alist-get 'base02 palette)))))
-   `(denote-faces-date ((t (:inherit shadow))))
-   `(org-list-dt
-     ((t (:foreground ,(alist-get 'orange palette) :weight normal :slant italic))))
-   `(org-code ((t (:foreground ,(alist-get 'orange palette))))))
-  )
+;;   "The solarized color palette alist.")
+;;  
+;; ;;   (defvar palette
+;; ;;     '(;; gruvbox-dark palette
+;; ;;     (base03      . "#282828")
+;; ;;     (base02      . "#32302f")
+;; ;;     (base01      . "#7c6f64")
+;; ;;     (base00      . "#928374")
+;; ;;     (base0       . "#a89984")
+;; ;;     (base1       . "#bdae93")
+;; ;;     (base2       . "#a89984")
+;; ;;     (base3       . "#fbf1c7")
+;; ;;     (yellow      . "#d79921")
+;; ;;     (orange      . "#d65d0e")
+;; ;;     (red         . "#fb4933")
+;; ;;     (magenta     . "#d3869b")
+;; ;;     (violet      . "#b16286")
+;; ;;     (blue        . "#458588")
+;; ;;     (cyan        . "#689d6a")
+;; ;;     (green       . "#98971a")
+;; ;;     ;; palette end
+;; ;;     )
+;; ;;     "The gruvbox color palette alist.")
+;;  
+;;   (load-theme 'solarized-dark t)
+;;  
+;;   ;; (custom-set-faces
+;;   ;;    `(font-lock-variable-name-face ((t (:foreground ,(alist-get 'base0 palette)))))
+;;   ;;  `(font-lock-keyword-face ((t (:foreground ,(alist-get 'red palette)))))
+;;   ;;  `(font-lock-builtin-face ((t (:foreground ,(alist-get 'violet palette)))))
+;;   ;;  `(font-lock-number-face ((t (:foreground ,(alist-get 'violet palette)))))
+;;   ;;  `(font-lock-string-face ((t (:foreground ,(alist-get 'green palette)))))
+;;   ;;  `(font-lock-punctuation-face ((t (:foreground ,(alist-get 'orange palette)))))
+;;   ;;  `(font-lock-function-name-face ((t (:foreground ,(alist-get 'blue palette)))))
+;;   ;;  `(font-lock-function-call-face ((t (:foreground ,(alist-get 'base0 palette)))))
+;;   ;;  `(font-lock-operator-face ((t (:foreground ,(alist-get 'orange palette)))))
+;;   ;;  `(font-lock-type-face ((t (:foreground ,(alist-get 'yellow palette)))))
+;;   ;;  `(font-lock-constant-face
+;;   ;;    ((t (:foreground ,(alist-get 'violet palette) :weight normal))))
+;;   ;;  `(flymake-error ((t (:foreground ,(alist-get 'red palette) :underline t))))
+;;   ;;  `(link
+;;   ;;    ((t (:foreground ,(alist-get 'yellow palette) :weight normal :underline t))))
+;;   ;;  `(bold
+;;   ;;    ((t (:foreground ,(alist-get 'base1 palette) :weight bold))))
+;;   ;;  `(vertical-border ((t (:foreground ,(alist-get 'base01 palette)))))
+;;   ;;  `(denote-faces-delimiter
+;;   ;;    ((t (:foreground ,(alist-get 'base02 palette)))))
+;;   ;;  `(denote-faces-date ((t (:inherit shadow))))
+;;   ;;  `(org-list-dt
+;;   ;;    ((t (:foreground ,(alist-get 'orange palette) :weight normal :slant italic))))
+;;   ;;  `(org-code ((t (:foreground ,(alist-get 'orange palette))))))
+;;   (custom-set-faces
+;;    `(font-lock-variable-name-face ((t (:foreground ,(alist-get 'base0 palette)))))
+;;    `(font-lock-keyword-face ((t (:foreground ,(alist-get 'green palette)))))
+;;    `(font-lock-builtin-face ((t (:foreground ,(alist-get 'violet palette)))))
+;;    ;; `(font-lock-number-face ((t (:foreground ,(alist-get 'violet palette)))))
+;;    `(font-lock-string-face ((t (:foreground ,(alist-get 'cyan palette)))))
+;;    `(font-lock-function-name-face ((t (:foreground ,(alist-get 'blue palette)))))
+;;    `(font-lock-function-call-face ((t (:foreground ,(alist-get 'blue palette)))))
+;;    ;; `(font-lock-operator-face ((t (:foreground ,(alist-get 'orange palette)))))
+;;    ;; `(font-lock-punctuation-face ((t (:foreground ,(alist-get 'orange palette)))))
+;;    `(font-lock-type-face ((t (:foreground ,(alist-get 'yellow palette)))))
+;;    `(font-lock-constant-face
+;;      ((t (:foreground ,(alist-get 'yellow palette) :weight normal))))
+;;    `(eglot-highlight-symbol-face
+;;      ((t (:foreground ,(alist-get 'base2 palette) :weight bold))))
+;;    `(flymake-error ((t (:foreground ,(alist-get 'red palette) :underline t))))
+;;    `(link
+;;      ((t (:foreground ,(alist-get 'yellow palette) :weight normal :underline t))))
+;;    `(bold
+;;      ((t (:weight bold))))
+;;    `(vertical-border ((t (:foreground ,(alist-get 'base01 palette)))))
+;;    `(denote-faces-delimiter
+;;      ((t (:foreground ,(alist-get 'base02 palette)))))
+;;    `(denote-faces-date ((t (:inherit shadow))))
+;;    `(org-list-dt
+;;      ((t (:foreground ,(alist-get 'orange palette) :weight normal :slant italic))))
+;;    `(org-code ((t (:foreground ,(alist-get 'orange palette))))))
+;;   )
 
 ;; Default face (gui only)
 (unless (not (display-graphic-p))

@@ -1,0 +1,37 @@
+! Base16 Twilight
+! special
+*.foreground:   #919191
+*.background:   #1e1e1e
+*.cursorColor:  #919191
+
+! black
+*.color0:       #1e1e1e
+*.color8:       #323537
+
+! red
+*.color1:       #cf6a4c
+*.color9:       #cda869
+
+! green
+*.color2:       #8f9d6a
+*.color10:      #5f5a60
+
+! yellow
+*.color3:       #d4cb81
+*.color11:      #838184
+
+! blue
+*.color4:       #7587a6
+*.color12:      #919191
+
+! magenta
+*.color5:       #dc8cc3
+*.color13:      #a7a7a7
+
+! cyan
+*.color6:       #9fb3c7
+*.color14:      #9b703f
+
+! white
+*.color7:       #a7a7a7
+*.color15:      #c3c3c3
