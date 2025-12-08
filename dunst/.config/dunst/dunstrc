@@ -323,13 +323,13 @@
     # foreground = "#d0d0d0"
     # frame_color = "#d0d0d0"
     # Twilight
-    background = "#1e1e1e"
-    foreground = "#a7a7a7"
-    frame_color = "#a7a7a7"
+    # background = "#1e1e1e"
+    # foreground = "#a7a7a7"
+    # frame_color = "#a7a7a7"
     # One Dark
-    # background = "#1e2127"
-    # foreground = "#abb2bf"
-    # frame_color = "#abb2bf"
+    background = "#1f2329"
+    foreground = "#abb2bf"
+    frame_color = "#abb2bf"
     # Solarized Dark
     # background = "#002b36"
     # foreground = "#839496"
@@ -380,13 +380,13 @@
     # foreground = "#d0d0d0"
     # frame_color = "#d0d0d0"
     # One Dark
-    # background = "#1e2127"
-    # foreground = "#abb2bf"
-    # frame_color = "#abb2bf"
+    background = "#1f2329"
+    foreground = "#abb2bf"
+    frame_color = "#abb2bf"
     # Twilight
-    background = "#1e1e1e"
-    foreground = "#a7a7a7"
-    frame_color = "#a7a7a7"
+    # background = "#1e1e1e"
+    # foreground = "#a7a7a7"
+    # frame_color = "#a7a7a7"
     # Solarized Dark
     # background = "#002b36"
     # foreground = "#839496"
@@ -433,13 +433,13 @@
     # foreground = "#c34864"
     # frame_color = "#708190"
     # One Dark
-    # background = "#1e2127"
-    # foreground = "#e06c75"
-    # frame_color = "#abb2bf"
+    background = "#1f2329"
+    foreground = "#e06c75"
+    frame_color = "#be5046"
     # Twilight
-    background = "#1e1e1e"
-    foreground = "#a7a7a7"
-    frame_color = "#a7a7a7"
+    # background = "#1e1e1e"
+    # foreground = "#a7a7a7"
+    # frame_color = "#a7a7a7"
     # Solarized Dark
     # background = "#002b36"
     # foreground = "#dc322f"
