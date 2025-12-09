@@ -1,4 +1,4 @@
-#include "Xresources.d/themes/twilight"
+#include "Xresources.d/themes/onedark"
 
 Xft.antialias: 1
 Xft.hinting: 1

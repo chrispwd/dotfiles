@@ -256,43 +256,92 @@
 #
 ###############################################################################
 
-set notification-error-bg       "#323537" # base01
-set notification-error-fg       "#cf6a4c" # red
-set notification-warning-bg     "#323537" # base01
-set notification-warning-fg     "#cda869" # orange
-set notification-bg             "#1e1e1e" # base00
-set notification-fg             "#8f9d6a" # green
+# set notification-error-bg       "#323537" # base01
+# set notification-error-fg       "#cf6a4c" # red
+# set notification-warning-bg     "#323537" # base01
+# set notification-warning-fg     "#cda869" # orange
+# set notification-bg             "#1e1e1e" # base00
+# set notification-fg             "#8f9d6a" # green
 
-set completion-bg               "#323537" # base01
-set completion-fg               "#919191" # fg
-set completion-group-bg         "#1e1e1e" # base00
-set completion-group-fg         "#5f5a60" # gray
-set completion-highlight-bg     "#dc8cc3" # magenta
-set completion-highlight-fg     "#a7a7a7" # white
+# set completion-bg               "#323537" # base01
+# set completion-fg               "#919191" # fg
+# set completion-group-bg         "#1e1e1e" # base00
+# set completion-group-fg         "#5f5a60" # gray
+# set completion-highlight-bg     "#dc8cc3" # magenta
+# set completion-highlight-fg     "#a7a7a7" # white
+
+# # Define the color in index mode
+# set index-bg                    "#323537" # base01
+# set index-fg                    "#919191" # fg
+# set index-active-bg             "#7587a6" # blue
+# set index-active-fg             "#a7a7a7" # white
+
+# set inputbar-bg                 "#323537" # base01
+# set inputbar-fg                 "#919191" # fg
+
+# set statusbar-bg                "#1e1e1e" # base00
+# set statusbar-fg                "#919191" # fg
+
+# set highlight-color             "#d4cb81" # yellow
+# set highlight-active-color      "#dc8cc3" # magenta
+
+# set default-bg                  "#1e1e1e" # bg
+# set default-fg                  "#919191" # fg
+# set render-loading              true
+# set render-loading-bg           "#1e1e1e" # bg
+# set render-loading-fg           "#919191" # fg
+
+# # Recolor book content's color
+# set recolor-lightcolor          "#1e1e1e" # bg
+# set recolor-darkcolor           "#919191" # fg
+# set recolor                     "true"
+# set recolor-keephue             true      # keep original color
+
+###############################################################################
+# Onedark
+#
+# Derived from the base16 framework for emacs - https://github.com/tinted-theming/base16-emacs
+#
+###############################################################################
+
+set notification-error-bg       "#353b45" # base01
+set notification-error-fg       "#e06c75" # red
+set notification-warning-bg     "#353b45" # base01
+set notification-warning-fg     "#d19a66" # orange
+set notification-bg             "#282c34" # base00
+set notification-fg             "#98c379" # green
+
+set completion-bg               "#353b45" # base01
+set completion-fg               "#abb2bf" # fg
+set completion-group-bg         "#353b45" # yellow
+set completion-group-fg         "#abb2bf" # fg
+set completion-highlight-bg     "#c678dd" # magenta
+set completion-highlight-fg     "#282c34" # bg
 
 # Define the color in index mode
-set index-bg                    "#323537" # base01
-set index-fg                    "#919191" # fg
-set index-active-bg             "#7587a6" # blue
-set index-active-fg             "#a7a7a7" # white
+set index-bg                    "#353b45" # base01
+set index-fg                    "#abb2bf" # fg
+set index-active-bg             "#61afef" # blue
+set index-active-fg             "#282c34" # base01
 
-set inputbar-bg                 "#323537" # base01
-set inputbar-fg                 "#919191" # fg
+set inputbar-bg                 "#353b45" # base01
+set inputbar-fg                 "#abb2bf" # fg
 
-set statusbar-bg                "#1e1e1e" # base00
-set statusbar-fg                "#919191" # fg
+set statusbar-bg                "#282c34" # base00
+set statusbar-fg                "#abb2bf" # fg
 
-set highlight-color             "#d4cb81" # yellow
-set highlight-active-color      "#dc8cc3" # magenta
+set highlight-fg                "#282c34" # bg
+set highlight-color             "rgba(229,192,123,0.5)" # yellow
+set highlight-active-color      "rgba(198,120,221,0.5)" # magenta
 
-set default-bg                  "#1e1e1e" # bg
-set default-fg                  "#919191" # fg
+set default-bg                  "#282c34" # bg
+set default-fg                  "#abb2bf" # fg
 set render-loading              true
-set render-loading-bg           "#1e1e1e" # bg
-set render-loading-fg           "#919191" # fg
+set render-loading-bg           "#282c34" # bg
+set render-loading-fg           "#abb2bf" # fg
 
 # Recolor book content's color
-set recolor-lightcolor          "#1e1e1e" # bg
-set recolor-darkcolor           "#919191" # fg
+set recolor-lightcolor          "#282c34" # bg
+set recolor-darkcolor           "#abb2bf" # fg
 set recolor                     "true"
 set recolor-keephue             true      # keep original color
