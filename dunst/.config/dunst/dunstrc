@@ -327,9 +327,13 @@
     # foreground = "#a7a7a7"
     # frame_color = "#a7a7a7"
     # One Dark
-    background = "#1f2329"
-    foreground = "#abb2bf"
-    frame_color = "#abb2bf"
+    # background = "#1f2329"
+    # foreground = "#abb2bf"
+    # frame_color = "#abb2bf"
+    # CPL
+    background = "#1d1d1d"
+    foreground = "#777777"
+    frame_color = "#777777"
     # Solarized Dark
     # background = "#002b36"
     # foreground = "#839496"
@@ -380,9 +384,13 @@
     # foreground = "#d0d0d0"
     # frame_color = "#d0d0d0"
     # One Dark
-    background = "#1f2329"
-    foreground = "#abb2bf"
-    frame_color = "#abb2bf"
+    # background = "#1f2329"
+    # foreground = "#abb2bf"
+    # frame_color = "#abb2bf"
+    # CPL
+    background = "#1d1d1d"
+    foreground = "#ababab"
+    frame_color = "#ababab"
     # Twilight
     # background = "#1e1e1e"
     # foreground = "#a7a7a7"
@@ -433,9 +441,13 @@
     # foreground = "#c34864"
     # frame_color = "#708190"
     # One Dark
-    background = "#1f2329"
-    foreground = "#e06c75"
-    frame_color = "#be5046"
+    # background = "#1f2329"
+    # foreground = "#e06c75"
+    # frame_color = "#be5046"
+    # CPL
+    background = "#7a2d00"
+    foreground = "#ababab"
+    frame_color = "#ababab"
     # Twilight
     # background = "#1e1e1e"
     # foreground = "#a7a7a7"

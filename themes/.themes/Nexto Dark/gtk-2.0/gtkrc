@@ -1,0 +1,119 @@
+gtk_color_scheme = "fg_color:#fff\nbg_color:#3f3f3f\nbase_color:#5e5e5e\ntext_color:#fff\nselected_bg_color:#555577\nselected_fg_color:#fff\ntooltip_bg_color:#3f3f3f\ntooltip_fg_color:#000\nborder_color:#afafaf"
+
+
+gtk-icon-sizes = "mini-commander-icon=32,32:print-manager=32,32:panel-button=32,32:gtk-dnd=32,32:gtk-menu=16,16:panel-menu=22,22:gtk-large-toolbar=16,16:gtk-small-toolbar=16,16:gtk-button=16,16:gtk-dialog=32,32"
+
+style "standard-default"
+{
+  GtkWidget::interior_focus = 2
+  GtkButton::default_border = { 1, 1, 1, 1 }
+  GtkButton::default_outside_border = { 0, 0, 0, 0 }
+  GtkOptionMenu::indicator_size = { 9, 5 }
+  GtkOptionMenu::indicator_spacing = { 7, 5, 2, 2 }
+  GtkComboBox::appears-as-list = 1
+  GtkNotebook::tab-overlap = 4
+
+  GtkButton::child_displacement_x = 1
+  GtkButton::child_displacement_y = 1
+
+  GtkMenu::horizontal-padding = 1
+  GtkMenu::vertical-padding = 1
+  GtkMenu::horizontal-offset = -6
+
+  GtkScrolledWindow::scrollbar-spacing = 0
+  GtkScrolledWindow::scrollbars-within-bevel = 1
+
+  fg[ACTIVE]        = @fg_color
+  fg[INSENSITIVE]   = mix(0.5, @fg_color,@bg_color)
+  fg[NORMAL]        = @fg_color
+  fg[PRELIGHT]      = @fg_color
+  fg[SELECTED]      = @selected_fg_color
+
+  bg[ACTIVE]        = @bg_color
+  bg[INSENSITIVE]   = @bg_color
+  bg[NORMAL]        = @bg_color
+  bg[PRELIGHT]      = @bg_color
+  bg[SELECTED]      = @selected_bg_color
+
+  base[ACTIVE]      = @selected_bg_color
+  base[INSENSITIVE] = @bg_color
+  base[NORMAL]      = @base_color
+  base[PRELIGHT]    = @selected_bg_color
+  base[SELECTED]    = @selected_bg_color
+
+  text[ACTIVE]      = @selected_fg_color
+  text[INSENSITIVE] = mix(0.5, @fg_color,@bg_color)
+  text[NORMAL]      = @fg_color
+  text[PRELIGHT]    = @selected_fg_color
+  text[SELECTED]    = @selected_fg_color
+
+  engine "redmond95" {}
+}
+
+class "GtkWidget" style "standard-default"
+
+style "standard-menu"
+{
+  bg[PRELIGHT] = @selected_bg_color
+  fg[PRELIGHT] = @selected_fg_color
+}
+
+widget_class "*MenuItem*" style "standard-menu"
+
+style "standard-menubar-item"
+{
+  bg[PRELIGHT] = @bg_color
+  fg[PRELIGHT] = @fg_color
+}
+
+class "*MenuBar.*MenuItem*" style "standard-menubar-item"
+widget_class "*MenuBar.*MenuItem*" style "standard-menubar-item"
+
+style "standard-list"
+{
+   bg[NORMAL] = { 0.9, 0.9, 0.9 }
+   bg[PRELIGHT] = @fg_color
+}
+
+class "GtkList" style "standard-list"
+
+style "standard-scrollbar"
+{
+  GtkRange::trough_border = 0
+  GtkRange::slider_width = 16
+  GtkRange::stepper_size = 16
+  GtkRange::stepper_spacing = 0
+}
+
+class "GtkScrollbar" style "standard-scrollbar"
+
+
+style "standard-scales"
+{
+  GtkRange::slider-width = 21
+  GtkScale::slider-length = 11
+}
+
+class "*Scale*" style "standard-scales"
+
+style "standard-option-menu"
+{
+  GtkOptionMenu::indicator_width = 7
+  GtkOptionMenu::indicator_left_spacing = 6
+  GtkOptionMenu::indicator_right_spacing = 4
+}
+
+class "GtkOptionMenu" style "standard-option-menu"
+
+style "standard-progressbar" {
+  fg[PRELIGHT] = @selected_fg_color
+} 
+class "GtkProgressBar" style "standard-progressbar"
+
+
+style "standard-entry"
+{
+  bg[SELECTED] = "#1C40A8"
+  fg[SELECTED] = @selected_fg_color
+}
+class "GtkEntry" style "standard-entry"

@@ -75,7 +75,7 @@
      (800 1000 1200 1400 1600 1800 2000)
      " ┄┄┄┄┄ " "┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄")
    org-agenda-current-time-string
-   "◀── now ─────────────────────────────────────────────────"
+   "───────────────>"
   org-agenda-deadline-leaders (quote ("Today: " "in%2d: " "over +%d!:"))
   org-agenda-scheduled-leaders (quote ("" "S%3d: "))
   org-agenda-prefix-format " %?-32b %?-12t% s")
