@@ -9,10 +9,9 @@
     flakey-profile.url = "github:lf-/flakey-profile";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
-    yt-x.url = "github:Benexl/yt-x";
   };
 
-  outputs = { self, nixpkgs, flake-utils, flakey-profile, yt-x }: #, yt-x
+  outputs = { self, nixpkgs, flake-utils, flakey-profile  }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         ncmpcppWithVisualizer = final: prev: {
@@ -45,10 +44,8 @@
 
             linuxOnly = if pkgs.stdenv.isLinux then
               [
-                pkgs.qbittorrent
                 pkgs.mpd
                 pkgs.ncmpcpp
-                pkgs.nicotine-plus
                 pkgs.nsxiv
               ]
             else
