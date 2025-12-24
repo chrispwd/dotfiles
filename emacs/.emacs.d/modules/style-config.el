@@ -150,6 +150,10 @@
           ,(plist-get my/base16-colors :base02)
           :background
           ,(plist-get my/base16-colors :base00)))))
+   `(link
+     ((t (:foreground
+          ,(plist-get my/base16-colors :cyan)
+          :underline t))))
    `(tab-bar-tab
      ((t (:foreground
           ,(plist-get my/base16-colors :base07)
@@ -239,8 +243,13 @@
    `(org-drawer
      ((t (:foreground
           ,(plist-get my/base16-colors :base03)))))
+   `(org-verbatim
+     ((t (:foreground
+          ,(plist-get my/base16-colors :green)))))
    `(org-link
-     ((t (:inherit link))))
+     ((t (:foreground
+          ,(plist-get my/base16-colors :cyan)
+          :underline t))))
    `(denote-faces-date
      ((t (:foreground
           ,(plist-get my/base16-colors :base03)))))
