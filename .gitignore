@@ -84,3 +84,12 @@ flycheck_*.el
 # Work files
 .bash_work
 .bash_private
+
+# local cache
+/scripts/.local/share/db.zo
+/scripts/.local/share/history
+/scripts/.local/state
+
+# linux compat with MacOS
+/scripts/.local/bin/pbcopy
+/scripts/.local/bin/pbpaste

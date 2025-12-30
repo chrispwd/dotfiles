@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set-monitors &
+
+{ setbg.sh "$HOME/.local/share/background" || \
+      setbg.sh "$HOME/.dotfiles/.local/share/dark-sunset.jpg"; } &
+
+if ! pgrep -x dunst > /dev/null; then
+    dunst &
+    sleep 3 && notify-send -u low "Welcome, $(whoami)."
+else
+    killall dunst && dunst &
+    sleep 2 && notify-send -u low "IceWM restarted."
+fi

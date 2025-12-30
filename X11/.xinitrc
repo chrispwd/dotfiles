@@ -2,12 +2,6 @@
 
 # xinitrc runs automatically when you run startx.
 
-# There are some small but important commands that need to be run when we start
-# the graphical environment. There is a link to this file in ~/.xprofile
-# because that file is run automatically if someone uses a display manager
-# (login screen) and so they are needed there. To prevent doubling up commands,
-# I source them here with the line below.
-
 if [ -d "${XDG_CONFIG_HOME:-$HOME/.config}/X11/Xresources.d" ]; then
     [ -f ~/.Xresources ] && xrdb -merge -I${HOME}/.config/X11 ~/.Xresources
 else
@@ -20,7 +14,6 @@ else
 	[ -f ~/.xprofile ] && . ~/.xprofile
 fi
 
-
 # wm
 #exec bspwm 2> /tmp/bspwm-log
 #exec icewm-session
@@ -31,5 +24,7 @@ fi
 #while type dwm >/dev/null ; do dwm && continue || break ;done
 #exec i3
 # exec fvwm3
-exec cwm
-#exec dwm
+# exec cwm
+# exec dwm
+# run icewm-session without icewmbg (prefer feh)
+exec icewm-session --nobg

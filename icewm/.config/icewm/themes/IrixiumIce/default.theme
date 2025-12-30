@@ -1,0 +1,133 @@
+
+#(x=close, m=max, i=min, h=hide, r=rollup/shade, s=sysmenu, d=depth/below)
+TitleButtonsLeft="s"
+TitleButtonsRight="xmi"
+TaskBarShowWindowIcons=0
+
+ThemeName="Irixium Ice"
+ThemeDescription="IceWM theme"
+ThemeAuthor="phob1an"
+License="CC BY 4.0"
+Look=flat
+HideBordersMaximized=1
+ShowMoveSizeStatus=0
+MenuMouseTracking=1 
+CenterTransientsOnOwner=1
+RolloverButtonsSupported=0
+MenuIconSize=16
+SmallIconSize=16
+LargeIconSize=32
+HugeIconSize=48
+TrayIconMaxHeight=16
+TrayIconMaxWidth=32
+SnapMove=1
+EdgeSwitch=1
+EdgeResistance=1
+ShowMenuButtonIcon=1
+TitleBarHeight=28
+TitleButtonsSupported="xmihrds"
+TitleBarCentered=0
+TitleBarJustify=1
+TaskBarGraphHeight=22
+
+BorderSizeX=7
+BorderSizeY=7
+CornerSizeX=16
+CornerSizeY=16
+DlgBorderSizeX=7
+DlgBorderSizeY=7
+
+ColorDialog="555555"
+ColorNormalBorder="#000000"
+ColorActiveBorder="#000000"
+ColorActiveTitleBar="#555555"
+ColorNormalTitleBar="#555555"
+ColorNormalTitleBarText="#f1f1f1"
+ColorActiveTitleBarText="#ffffff"
+#ColorNormalTitleBarShadow="#939393"
+#ColorActiveTitleBarShadow="#a59f80"
+
+ColorNormalMenu="#e8e8e8"
+ColorActiveMenuItem="#707070"
+ColorNormalMenuItemText="#303030"
+ColorActiveMenuItemText="#ffffff"
+ColorDisabledMenuItemText="#3f8bf2"
+
+ColorNormalButton="#141313"
+ColorNormalButtonText="#f3f3f3"
+ColorActiveButton="#555555"
+ColorActiveButtonText="#f3f3f3"
+
+ColorMoveSizeStatus="#424141"
+ColorMoveSizeStatusText="#f1f1f1"
+
+ColorDefaultTaskBar="#f323f3"
+ColorNormalTaskBarApp="#141313"
+ColorNormalTaskBarAppText="#000000"
+ColorActiveTaskBarApp="#7eae55"
+ColorActiveTaskBarAppText="#ffffff"
+ColorMinimizedTaskBarAppText="#464646"
+
+DesktopBackgroundCenter=0
+DesktopBackgroundScaled=1
+DesktopBackgroundColor="#4c719e"
+
+ColorToolTip="#454545"
+ColorToolTipText="#f3f3f3"
+ColorLabel="#555555"
+ColorLabelText="#212121"
+
+ColorListBox="#454545"
+ColorListBoxText="#f3f3f3"
+ColorListBoxSelection="#797979"
+ColorListBoxSelectionText="#ffffff"
+
+ColorScrollBar="#ffffff"
+ColorScrollBarSlider="#797979"
+ColorScrollBarButton="#ffffff"
+ColorScrollBarButtonArrow="#333333"
+
+ColorActiveWorkspaceButton="#1960ce"
+ColorNormalWorkspaceButton="#1960ce"
+ColorNormalWorkspaceButtonText="#4f5341"
+
+ColorClock=""
+ColorClockText="#000000"
+TimeFormat="%H"
+
+ColorMEMStatusFree="#00409f"
+ColorMEMStatusUser="#00c900"
+ColorMEMStatusCached="#c2c200"
+ColorMEMStatusBuffers="#d2e200"
+ColorCPUStatusUser="#3366cc"
+ColorCPUStatusSystem="#00d200"
+ColorCPUStatusNice="#ff6600"
+ColorCPUStatusIdle="#00409f"
+ColorNetSend="#fea03c"
+ColorNetReceive="#00d200"
+ColorNetIdle="#00409f"
+ColorApm="#ff0000"
+ColorQuickSwitch="#c1c1c1"
+ColorQuickSwitchText="#212121"
+ColorQuickSwitchActive="#161616"
+QuickSwitchVertical=0
+QuickSwitchSeparatorSize=8
+
+TitleFontNameXft="Liberation Sans:size=11:bold"
+MenuFontNameXft="Liberation Sans:size=10"
+StatusFontNameXft="Liberation Sans:size=10"
+QuickSwitchFontNameXft="Liberation Sans:size=10"
+NormalButtonFontNameXft="Liberation Sans:size=10"
+ActiveButtonFontNameXft="Liberation Sans:size=10"
+NormalTaskBarFontNameXft="Liberation Sans:size=10"
+ActiveTaskBarFontNameXft="Liberation Sans:size=10:bold"
+ToolButtonFontNameXft="Liberation Sans:size=10"
+NormalWorkspaceFontNameXft="Liberation Sans:size=10"
+ActiveWorkspaceFontNameXft="Liberation Sans:size=10:bold"
+MinimizedWindowFontNameXft="Liberation Sans:size=10"
+ListBoxFontNameXft="Liberation Sans:size=10"
+ToolTipFontNameXft="Liberation Sans:size=10"
+ClockFontNameXft="Liberation Sans:size=10:bold"
+ApmFontNameXft="Liberation Sans:size=10"
+InputFontNameXft="Liberation Sans:size=10"
+LabelFontNameXft="Liberation Sans:size=10"

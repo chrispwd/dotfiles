@@ -4,11 +4,7 @@ killall -q polybar
 
 #while pgrep -u $UID -x polybar >/dev/null; do sleep 0.5; done
 
-if [ "$(uname -n)" == "meep" ]; then
-    mount='/home'
-else
-    mount='/'
-fi
+mount='/'
 
 outputs=$(xrandr --query | grep " connected" | cut -d" " -f1)
 

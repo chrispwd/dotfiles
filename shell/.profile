@@ -28,7 +28,7 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 export GTK_THEME="Nexto Dark"
 export MY_MONO_FONT="Cascadia Code NF"
 export COLOR_FG="#777777"
-export COLOR_BG="#000000"
+export COLOR_BG="#1d1d1d"
 export LS_COLORS="di=34:ln=36:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
 export MYDMENUOPTS="-fn '${MY_MONO_FONT:-monospace}-12:Italic' -nb '${COLOR_BG}' -nf '${COLOR_FG}' -sf '${COLOR_BG}' -sb '${COLOR_FG}'"
 
@@ -39,7 +39,7 @@ export ALTERNATE_EDITOR="vim"
 if [ $(uname -o) = "GNU/Linux" ]; then
     export TERMINAL="st"
     # Net interfaces
-    export NETINTF="$(ls /sys/class/ieee80211/*/device/net/)"
+    # export NETINTF="$(ls /sys/class/ieee80211/*/device/net/)"
 else
     export TERMINAL="kitty"
 fi

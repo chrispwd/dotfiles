@@ -7,32 +7,50 @@ xsetroot -cursor_name left_ptr &
 # xclock &
 # xosview &
 
-# startup apps
-unclutter -b --timeout 3 &
-dunst &
-nm-applet &
+source_if() {
+    [ -r "$1" ] && . "$1"
+}
+
+# ensures program executed once on startup
+run_once() {
+    if ! pgrep -f "$*" > /dev/null; then
+        "$@" &
+    fi
+}
+
+# startup programs
+run_once syncthing
+run_once picom
+run_once sxhkd
+
+# sleep called on trayed programs
+sleep 1 && run_once nm-applet
+sleep 1 && run_once cbatticon BAT0
+sleep 1 && run_once volumeicon
+
+# source any machine-local configs
+source_if "$HOME/.xprofile_local"
+
+################################################################################
+# Old stuff for reference
+################################################################################
+# unclutter -b --timeout 3 &
+# multiload-ng-systray &
+# #dwmblocks &
+
+# if [ -d "/etc/X11/xinit/xinitrc.d" ]; then
+#     for f in /etc/X11/xinit/xinitrc.d/*.sh; do
+#         source "$f"
+#     done
+# fi
+
+# # startup script
+# startup
+
 #wmname LG3D
 #stalonetray &
 # trayer --edge top --align right \
 #        --margin 10 --widthtype request \
 #        --width 10 &
-keepassxc &
+# keepassxc &
 #megasync &
-syncthing &
-# multiload-ng-systray &
-cbatticon BAT0 &
-if [ $(uname -n) = "stinky" ]; then
-    blueman-applet &
-    cbatticon BAT1 &
-fi
-#volumeicon &
-#dwmblocks &
-
-if [ -d "/etc/X11/xinit/xinitrc.d" ]; then
-    for f in /etc/X11/xinit/xinitrc.d/*.sh; do
-        source "$f"
-    done
-fi
-
-# startup script
-startup

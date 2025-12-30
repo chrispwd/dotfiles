@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+while read file
+do
+    case "$1" in
+	"C-f")
+        setbg.sh "$file" --bg-fill
+	    ;;
+	"C-s")
+	    setbg.sh "$file" --bg-scale
+	    ;;
+	"C-c")
+	    setbg.sh "$file"
+	    ;;
+	"C-i")
+	    notify-send "File:" "$file"
+	    ;;
+	"C-t")
+        setbg.sh "$file" --bg-tile
+	    ;;
+	"C-r")
+	    name="$(dmenu -p "Rename file to: ")" 2> /dev/null
+	    if ! [ -z "$name" ] ; then
+		mv "$file" "$name"
+	    fi
+	    ;;
+    esac
+done
