@@ -138,6 +138,7 @@ Key w  A  4  Close
 
 # restart fvwm3
 Key r  A  4S  Restart
+Key q  A  4S  Quit
 
 # Functions ####################################################################
 
