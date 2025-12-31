@@ -22,11 +22,12 @@ run_once() {
 run_once syncthing
 run_once picom
 run_once sxhkd
+run_once dunst
 
-# sleep called on trayed programs
-sleep 1 && run_once nm-applet
-sleep 1 && run_once cbatticon BAT0
-sleep 1 && run_once volumeicon
+# trayed programs
+run_once nm-applet
+run_once cbatticon BAT0
+run_once volumeicon
 
 # source any machine-local configs
 source_if "$HOME/.xprofile_local"

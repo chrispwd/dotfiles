@@ -23,8 +23,8 @@ fi
 # done &
 #while type dwm >/dev/null ; do dwm && continue || break ;done
 #exec i3
-# exec fvwm3
+exec fvwm3
 # exec cwm
 # exec dwm
 # run icewm-session without icewmbg (prefer feh)
-exec icewm-session --nobg
+# exec icewm-session --nobg

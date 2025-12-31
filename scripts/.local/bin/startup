@@ -1,19 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-# apps
-pgrep -x sxhkd > /dev/null || sxhkd &
-
-if [ ! $(uname -n) = "meep" ]; then
-    pgrep -x picom > /dev/null || picom &
-# else
-#     pgrep -x picom > /dev/null || picom --config $XDG_CONFIG_HOME/picom/no-glx/picom.conf &
-fi
-
-# monitors
 set-monitors
 
-# launch after xrandr finishes
-setbg.sh "$HOME/.local/share/background" || setbg.sh "$HOME/.dotfiles/.local/share/dark-sunset.jpg" &
-
-#dwm -s "$(date)"
-$HOME/.config/polybar/launch.sh &
+setbg.sh "$HOME/.local/share/background" || \
+    setbg.sh "$HOME/.dotfiles/.local/share/dark-sunset.jpg"
