@@ -30,14 +30,13 @@ alias \
   lsdal="lsd -Al" \
   lsdt="lsd --tree" \
   pfetch="echo; PF_INFO='ascii title os host kernel shell uptime pkgs memory palette' pfetch" \
-  ffetch="fastfetch" \
   wp="sxiv ~/Sync/Pictures/wallpapers" \
   mkdir="mkdir -p" \
   scr="scrot '%Y%m%dT%H%M%S--screenshot.png' -e 'mv \$f \$\$SCROTS'" \
   scrs="scrot '%Y%m%dT%H%M%S--screenshot.png' -e 'mv \$f \$\$SCROTS' -s" \
   za="zathura" \
   iv="sxiv" \
-  nf="neofetch" \
+  ff="fastfetch" \
   v="vim" \
   ec="emacsclient -nw" \
   el="emacslauncher" \

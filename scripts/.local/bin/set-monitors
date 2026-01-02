@@ -3,6 +3,8 @@
 xrandr_data=$(xrandr --query)
 outputs=$(echo "$xrandr_data" | grep " connected" | cut -d" " -f1)
 disconnected_outputs=$(echo "$xrandr_data" | grep "disconnected" | cut -d" " -f1 | head -n -1)
+# debug
+echo "$outputs" > ~/unplug-debug.log
 
 for outp in $outputs ; do
     case $outp in

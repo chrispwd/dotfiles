@@ -15,6 +15,7 @@ _source_if() { [[ -r "$1" ]] && source "$1"; }
 shopt -s checkwinsize
 shopt -s expand_aliases
 set -o emacs
+export COLORTERM=truecolor
 
 ######################### Prompt #######################################
 

@@ -9,14 +9,14 @@
   :ensure t
   :config
   (setq base16-theme-256-color-source 'colors)
-  (load-theme 'base16-onedark t)
+  (load-theme 'base16-onedarker t)
   (defvar my/base16-colors
     '(:base00 "#282c34"
               :base01 "#353b45"
               :base02 "#3e4451"
               :base03 "#545862"
               :base04 "#565c64"
-              :base05 "#abb2bf"
+              :base05 "#a1a7b4"
               :base06 "#b6bdca"
               :base07 "#c8ccd4"
               :red "#e06c75"
