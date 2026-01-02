@@ -68,11 +68,13 @@ local brwhi='\[\e[0;97m\]'
 local cr='\[\e[0m\]'
 local clear='\[\e[0m\]'
 local bg_base01_fg_red='\[\e[100;31m\]'
+local bg_base01_fg_brred='\[\e[100;91m\]'
 local bg_base01_fg_gre='\[\e[100;32m\]'
 local bg_base01_fg_mag='\[\e[100;35m\]'
 local bg_base01_fg_cya='\[\e[100;36m\]'
 local bg_base01_fg_yel='\[\e[100;33m\]'
 local bg_base01_fg_fg='\[\e[100;37m\]'
+local bg_base01_fg_bg='\[\e[100;30m\]'
 local bg_base01_fg_dull='\[\e[100;92m\]'
 
 B=$(git branch --show-current 2>/dev/null)
@@ -86,13 +88,15 @@ B=$(git branch --show-current 2>/dev/null)
 #PS1="$mg\w$cr$B$r\$(exit_status)$cr \\$ "
 #PS1="# $g@\h:$cr $mg\w$cr$B$r\$(exit_status)$cr"
 
-[[ -n "$B" ]] && B="$clear${brgre} on $clear${brred}$B"
+#[[ -n "$B" ]] && B="$clear${brgre} on $clear${brred}$B"
+[[ -n "$B" ]] && B="${brred}$B${clear} "
 
-[[ $EXIT != 0 ]] && stat="${red} failed$clear${brgre} code ${red}$EXIT" || stat=""
+#[[ $EXIT != 0 ]] && stat="${red} failed$clear${brgre} code ${red}$EXIT" || stat=""
+[[ $EXIT != 0 ]] && stat="${red}$EXIT${clear}" || stat=""
 # PS1="$bg_base01_fg_cya\u$bg_base01_fg_dull from $bg_base01_fg_gre\h$bg_base01_fg_dull in $bg_base01_fg_mag\$(shorten_git_path)$B$bg_base01_fg_dull last command at $bg_base01_fg_fg\t$stat"
-PS1="${brgre}[ in ${gre}\w$B${brgre} at ${brblu}\t$stat${brgre} ]$clear"
-PS1+="\n> "
-
+# PS1="${brgre}[ in ${gre}\w$B${brgre} at ${brblu}\t$stat${brgre} ]$clear"
+# PS1+="\n> "
+PS1="$stat \t $B${gre}\w${clear} \\$ "
 }
 
 PROMPT_COMMAND="_ps1"
