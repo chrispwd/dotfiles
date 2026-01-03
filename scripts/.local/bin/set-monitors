@@ -30,18 +30,26 @@ done
 if [ -n "$external_monitor" ]; then
     case $laptop_output in
         *LVDS*)
-            # xrandr --output $laptop_output --auto --pos 400x1200 --output $external_monitor --mode $external_mode --pos 0x0 --primary
+            # Connect external output first before switching laptop off to prevent wm crash
+            xrandr --output $external_monitor --mode $external_mode --above $laptop_output
+            sleep 1
             xrandr --output $laptop_output --off --output $external_monitor --mode $external_mode --pos 0x0 --primary
+            # xrandr --output $laptop_output --auto --pos 400x1200 --output $external_monitor --mode $external_mode --pos 0x0 --primary
             ;;
         *eDP*)
-            # xrandr --output $laptop_output --auto --pos 0x600 --output $external_monitor --mode $external_mode --pos 1920x0 --primary
+            # Connect external output first before switching laptop off to prevent wm crash
+            xrandr --output $external_monitor --mode $external_mode --above $laptop_output
+            sleep 1
             xrandr --output $laptop_output --off --output $external_monitor --mode $external_mode --pos 0x0 --primary
+            # xrandr --output $laptop_output --auto --pos 0x600 --output $external_monitor --mode $external_mode --pos 1920x0 --primary
             ;;
     esac
 else
-    other_outputs_off=""
-    for doutp in $disconnected_outputs ; do
-        other_outputs_off="$other_outputs_off --output $doutp --off"
-    done
-    xrandr --output $laptop_output --auto --primary $other_outputs_off
+    # other_outputs_off=""
+    # for doutp in $disconnected_outputs ; do
+    #     other_outputs_off="$other_outputs_off --output $doutp --off"
+    # done
+    xrandr --output $laptop_output --auto --primary
+    # sleep 1
+    # xrandr --output $laptop_output --auto --primary $other_outputs_off
 fi

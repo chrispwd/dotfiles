@@ -23,6 +23,9 @@ fi
 # done &
 #while type dwm >/dev/null ; do dwm && continue || break ;done
 #exec i3
+
+# configures monitors via xrandr prior to starting the wm
+startup
 exec fvwm3
 # exec cwm
 # exec dwm

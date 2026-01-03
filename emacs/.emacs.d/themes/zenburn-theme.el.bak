@@ -95,9 +95,9 @@ defining them in this alist."
 (defvar zenburn-default-colors-alist
   '(("zenburn-fg-1"     . "#656555")
     ("zenburn-fg-05"    . "#989890")
-    ("zenburn-fg"       . "#BEBEB0")
-    ("zenburn-fg+1"     . "#C0C0B2")
-    ("zenburn-fg+2"     . "#DCDCCC")
+    ("zenburn-fg"       . "#DCDCCC")
+    ("zenburn-fg+1"     . "#FFFFEF")
+    ("zenburn-fg+2"     . "#FFFFFD")
     ("zenburn-bg-2"     . "#000000")
     ("zenburn-bg-1"     . "#2B2B2B")
     ("zenburn-bg-08"    . "#303030")
@@ -1283,8 +1283,6 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(org-formula ((t (:foreground ,zenburn-yellow-2))))
    `(org-headline-done ((t (:foreground ,zenburn-green+3))))
    `(org-hide ((t (:foreground ,zenburn-bg))))
-   `(org-verbatim ((t (:foreground ,zenburn-green+3))))
-   `(org-code ((t (:foreground ,zenburn-red :background ,zenburn-bg-05))))
    `(org-level-1 ((t (:inherit ,z-variable-pitch :foreground ,zenburn-orange
                                ,@(when zenburn-scale-org-headlines
                                    (list :height zenburn-height-plus-4))))))

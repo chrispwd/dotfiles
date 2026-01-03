@@ -18,20 +18,23 @@ DesktopConfiguration global
 
 # ColorSets ####################################################################
 
-# Color Scheme Charcoal + BeigeRose highlights
-Colorset 0 fg white, bg #767279, hi, sh, Plain, NoShape
-Colorset 1 fg white, bg #767279, hi, sh, Plain, NoShape
-Colorset 2 fg white, bg #618888, hi, sh, Plain, NoShape
-Colorset 3 fg white, bg #767279, hi, sh, Plain, NoShape
-Colorset 4 fg white, bg #618888, hi, sh, Plain, NoShape
-Colorset 5 fg white, bg #767279, hi, sh, Plain, NoShape
-Colorset 6 fg white, bg #696363, hi, sh, Plain, NoShape
-Colorset 7 fg white, bg #896d6d, hi, sh, Plain, NoShape
-Colorset 8 fg white, bg #767279, hi, sh, Plain, NoShape
+# Color Scheme Camouflage
+Colorset 0 fg white, bg #6e7d76, hi, sh, Plain, NoShape
+Colorset 1 fg white, bg #6e7d76, hi, sh, Plain, NoShape
+Colorset 2 fg black, bg #acbeb4, hi, sh, Plain, NoShape
+Colorset 3 fg white, bg #6e7d76, hi, sh, Plain, NoShape
+Colorset 4 fg white, bg #acbeb4, hi, sh, Plain, NoShape
+Colorset 5 fg white, bg #6e7d76, hi, sh, Plain, NoShape
+Colorset 6 fg white, bg #907b7b, hi, sh, Plain, NoShape
+Colorset 7 fg white, bg #82829b, hi, sh, Plain, NoShape
+Colorset 8 fg white, bg #6e7d76, hi, sh, Plain, NoShape
 
 # Style lines ##################################################################
 
 DesktopSize 1x1
+
+DefaultFont "xft:serif:size=11"
+
 # No pages, so no need for view port scrolling with mouse.
 EdgeScroll 0 0
 EdgeResistance -1
@@ -130,8 +133,8 @@ Key v  A  4M  Maximize 0 100
 Key g  A  4M  Maximize 100 0
 
 # grow/shrink window
-Key Down  A  4SM  ResizeMove w+5 w+5 w-5w w-5w Warp
-Key Up    A  4SM  ResizeMove w-5 w-5 w+5w w+5w Warp
+Key j  A  4SM  ResizeMove w+5 w+5 w-5w w-5w Warp
+Key k  A  4SM  ResizeMove w-5 w-5 w+5w w+5w Warp
 
 # close window
 Key w  A  4  Close
@@ -153,6 +156,7 @@ AddToFunc   SwitchDirection
 + I Test (EnvMatch infostore.TabDir Next) InfoStoreAdd TabDir Prev
 + I TestRc (NoMatch) InfoStoreAdd TabDir Next
 
+# Makes alt-tab keep window cycling direction if pressed within 700ms
 DestroyFunc SwitchWindow
 AddToFunc   SwitchWindow
 + I $[infostore.TabDir] (CurrentPage, !Iconic, !Sticky) FocusRaiseAndStuff
@@ -163,6 +167,5 @@ AddToFunc   SwitchWindow
 # === StartFunction ===
 DestroyFunc StartFunction
 AddToFunc   StartFunction
-+ I Test (Init) PipeRead 'startup && echo Echo Fvwm initialized `date`'
 + I Test (Init) Exec exec $[infostore.terminal] -T 'ChuddieTerm'
-+ I Test (Restart) PipeRead 'startup && echo Echo Fvwm restarted `date`'
+#+ I Test (Restart) Exec exec set-monitors

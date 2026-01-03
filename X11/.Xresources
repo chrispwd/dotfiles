@@ -1,4 +1,4 @@
-#include "Xresources.d/themes/cpl"
+#include "Xresources.d/themes/base16-zenburn"
 
 Xft.antialias: 1
 Xft.hinting: 1
@@ -19,8 +19,8 @@ XTerm.vt100.translations: #override \
 XTerm.ttyModes: erase ^?
 XTerm.termName: xterm-256color
 XTerm*boldMode: true
-XClock*foreground: #a89984
-XClock*background: #1d2021
+! XClock*foreground: #a89984
+! XClock*background: #1d2021
 XClock*geometry: 125x125-5+5
 XClock*strftime:  %a %d, %H:%M
 XClock.Clock.analog: true
