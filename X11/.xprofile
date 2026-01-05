@@ -24,9 +24,6 @@ run_once picom
 run_once sxhkd
 run_once dunst
 
-# sets background or default if none (with feh)
-setbg.sh
-
 # trayed programs
 run_once nm-applet
 run_once cbatticon BAT0

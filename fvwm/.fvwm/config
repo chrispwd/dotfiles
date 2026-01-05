@@ -31,7 +31,16 @@ Colorset 8 fg white, bg #6e7d76, hi, sh, Plain, NoShape
 
 # Style lines ##################################################################
 
+# No pages. I don't have an use case for pages.
 DesktopSize 1x1
+
+# 1-base indexed dekstops
+DesktopName 0 1
+DesktopName 1 2
+DesktopName 2 3
+DesktopName 3 4
+DesktopName 4 5
+DesktopName 5 6
 
 DefaultFont "xft:serif:size=11"
 
@@ -53,10 +62,32 @@ Style * Lenience
 # Must explicitly click a window to focus
 Style * ClickToFocus, MouseFocusClickRaises
 
+# use EWMH hints and respect EWMH hints which change the window layer
+Style * EWMHUseStackingOrderHints
+
+# Global decor color/styling
+Style * Colorset 1, HilightColorset 2, \
+        BorderColorset 3, HilightBorderColorset 4, \
+        BorderWidth 5, HandleWidth 5, \
+        MWMBorder, DepressableBorder, \
+        MWMButtons, UseDecor CDEDecor
+
 TitleStyle LeftJustified
 
 # Specific styles
-Style nsxiv           NoTitle
+Style nsxiv         NoTitle
+Style "xclock"      !Title, WindowListSkip, \
+                    StaysOnBottom, Sticky, NoHandles
+Style "xosview"     !Title, WindowListSkip, \
+                    StaysOnBottom, Sticky, NoHandles
+Style FB-SystemTray !Title, !Borders, WindowListSkip, \
+                    StaysOnBottom, Sticky, NoHandles, \
+                    NeverFocus
+Style FB-FvwmDock   !Title, !Borders, !Handles, WindowListSkip, \
+                    StaysOnBottom, Sticky, NoHandles, \
+                    NeverFocus
+Style FvwmPager     !Title, WindowListSkip, NoHandles, \
+                    StaysOnBottom, Sticky, NeverFocus
 
 # Root menu
 DestroyMenu MenuFvwmRoot
@@ -64,7 +95,7 @@ AddToMenu   MenuFvwmRoot "Fvwm" Title
 + "$[gt.&Restart]%icons/restart.png%" Restart
 + "$[gt.&Quit]%icons/quit.png%"       Module FvwmScript FvwmScript-ConfirmQuit
 
-EwmhBaseStruts screen $[monitor.primary] 20 20 20 20
+EwmhBaseStruts screen $[monitor.primary] 5 5 5 5
 
 # CDE Decor
 AddToDecor CDEDecor
@@ -86,17 +117,12 @@ AddToDecor CDEDecor
 
 + TitleStyle Height MinHeight 20
 
-# Define decor color/styling
-Style * Colorset 1, HilightColorset 2, \
-        BorderColorset 3, HilightBorderColorset 4, \
-        BorderWidth 5, HandleWidth 5, \
-        MWMBorder, DepressableBorder, \
-        MWMButtons, UseDecor CDEDecor
-
 # Bindings #####################################################################
 
+# Alt-tab
 Key Tab A M  SwitchWindow
 
+# Alt-F1 to open root menu
 Silent Key F1      A M Menu MenuFvwmRoot
 
 Mouse 3 R    A Menu MenuFvwmRoot
@@ -106,6 +132,8 @@ Mouse 1 R    A WindowList
 Mouse 1 4 A Iconify
 Mouse 1 2 A Maximize
 Mouse 1 1 A Nop
+
+## Window moves
 
 # move window 5% <dir>
 Key h  A  4  Move w-5 keep Warp
@@ -135,6 +163,29 @@ Key g  A  4M  Maximize 100 0
 # grow/shrink window
 Key j  A  4SM  ResizeMove w+5 w+5 w-5w w-5w Warp
 Key k  A  4SM  ResizeMove w-5 w-5 w+5w w+5w Warp
+
+## Desktop manipulation
+
+Silent Key 1       A 4 GotoDesk 0 0
+Silent Key 2       A 4 GotoDesk 0 1
+Silent Key 3       A 4 GotoDesk 0 2
+Silent Key 4       A 4 GotoDesk 0 3
+Silent Key 5       A 4 GotoDesk 0 4
+Silent Key 6       A 4 GotoDesk 0 5
+#Silent Key 7       A 4 GotoDesk 0 6
+#Silent Key 8       A 4 GotoDesk 1 2
+#Silent Key 9       A 4 GotoDesk 2 2
+Silent Key 1       A 4S MovetoDesk 0 0
+Silent Key 2       A 4S MovetoDesk 0 1
+Silent Key 3       A 4S MovetoDesk 0 2
+Silent Key 4       A 4S MovetoDesk 0 3
+Silent Key 5       A 4S MovetoDesk 0 4
+Silent Key 6       A 4S MovetoDesk 0 5
+# Silent Key 7       A 4S MovetoDesk 0 6
+# Silent Key 8       A 4S MovetoDesk 1 2
+# Silent Key 9       A 4S MovetoDesk 2 2
+
+## WM actions
 
 # close window
 Key w  A  4  Close
@@ -167,5 +218,50 @@ AddToFunc   SwitchWindow
 # === StartFunction ===
 DestroyFunc StartFunction
 AddToFunc   StartFunction
++ I Module FvwmPager 0 5
++ I Module FvwmButtons FB-FvwmDock
 + I Test (Init) Exec exec $[infostore.terminal] -T 'ChuddieTerm'
 #+ I Test (Restart) Exec exec set-monitors
+
+# Modules ####################################################################
+
+DestroyModuleConfig FvwmPager:*
+*FvwmPager: Geometry 64x384+0+0
+*FvwmPager: Rows 6
+*FvwmPager: Columns 1
+*FvwmPager: Colorset * 6
+*FvwmPager: HilightColorset * 7
+*FvwmPager: BalloonColorset * 6
+*FvwmPager: Font 6x13
+*FvwmPager: Balloons All
+*FvwmPager: BalloonFont 6x13
+*FvwmPager: BallonYOffset +2
+*FvwmPager: WindowColorsets 3 5
+*FvwmPager: Window3DBorders
+*FvwmPager: WindowBorderWidth 1
+*FvwmPager: WindowFont None
+*FvwmPager: Mouse 1 ChangePage
+*FvwmPager: Mouse 3 MoveWindow FlipFocus NoWarp
+*FvwmPager: SloppyFocus
+
+DestroyModuleConfig FB-SystemTray: *
+*FB-SystemTray: Geometry 64x64-0-0
+*FB-SystemTray: Colorset 1
+*FB-SystemTray: ReliefThickness 2
+*FB-SystemTray: Columns 64
+*FB-SystemTray: Rows 64
+*FB-SystemTray: (64x128, Swallow(NoClose,UseOld) "stalonetray" 'Exec exec stalonetray --config \
+             "$[FVWM_DATADIR]/.stalonetrayrc"', Frame 0)
+
+DestroyModuleConfig FB-FvwmDock: *
+*FB-FvwmDock: Geometry 96x64+0-0
+*FB-FvwmDock: Rows 1
+*FB-FvwmDock: Columns 1
+# *FB-FvwmDock: Frame 2
+# *FB-FvwmDock: Padding 2 2
+# *FB-FvwmDock: ReliefThickness 2
+*FB-FvwmDock: Colorset * 3
+*FB-FvwmDock: HighlightColorset * 4
+# *FB-FvwmDock: (64x64, Swallow(NoClose,UseOld) "xosview" 'Exec exec xosview', Frame 0)
+*FB-FvwmDock: (96x64, Swallow(NoClose,UseOld) "stalonetray" 'Exec exec stalonetray --config \
+             "$[FVWM_USERDIR]/.stalonetrayrc"', Frame 0)

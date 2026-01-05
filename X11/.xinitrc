@@ -24,10 +24,10 @@ fi
 #while type dwm >/dev/null ; do dwm && continue || break ;done
 #exec i3
 
-# configures monitors via xrandr prior to starting the wm
+# exec wmaker
+# exec fvwm3
 startup
-exec fvwm3
-# exec cwm
+exec cwm
 # exec dwm
 # run icewm-session without icewmbg (prefer feh)
 # exec icewm-session --nobg

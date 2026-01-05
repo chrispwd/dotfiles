@@ -1,0 +1,9 @@
+decorations none
+geometry 3x2
+icon_size 24
+kludges force_icons_size,use_icons_hints
+slot_size 32
+parent_bg true
+icon_gravity NW
+no_shrink true
+vertical false

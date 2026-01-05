@@ -5,22 +5,15 @@ outputs=$(echo "$xrandr_data" | grep " connected" | cut -d" " -f1)
 disconnected_outputs=$(echo "$xrandr_data" | grep "disconnected" | cut -d" " -f1 | head -n -1)
 # debug
 echo "$outputs" > ~/unplug-debug.log
+echo "$disconnected_outputs" > ~/unplug-debug-disconnected.log
 
 for outp in $outputs ; do
     case $outp in
-        # meep
-        *LVDS*)
+        *LVDS*|eDP*)
             laptop_output=$outp
+            laptop_mode=$(echo "$xrandr_data" | grep -A 1 "$outp connected" | tail -n 1 | awk '{print $1}')
             ;;
-        # stinky
-        eDP*)
-            laptop_output=$outp
-            ;;
-        DP*)
-            external_monitor=$outp
-            external_mode=$(echo "$xrandr_data" | grep -A 1 "$outp connected" | tail -n 1 | awk '{print $1}')
-            ;;
-        *HDMI*)
+        DP*|*HDMI)
             external_monitor=$outp
             external_mode=$(echo "$xrandr_data" | grep -A 1 "$outp connected" | tail -n 1 | awk '{print $1}')
             ;;
@@ -31,25 +24,26 @@ if [ -n "$external_monitor" ]; then
     case $laptop_output in
         *LVDS*)
             # Connect external output first before switching laptop off to prevent wm crash
-            xrandr --output $external_monitor --mode $external_mode --above $laptop_output
-            sleep 1
+            # xrandr --output $external_monitor --mode $external_mode --above $laptop_output
+            # sleep 1
             xrandr --output $laptop_output --off --output $external_monitor --mode $external_mode --pos 0x0 --primary
             # xrandr --output $laptop_output --auto --pos 400x1200 --output $external_monitor --mode $external_mode --pos 0x0 --primary
             ;;
         *eDP*)
             # Connect external output first before switching laptop off to prevent wm crash
-            xrandr --output $external_monitor --mode $external_mode --above $laptop_output
-            sleep 1
+            # xrandr --output $external_monitor --mode $external_mode --above $laptop_output
+            # sleep 1
             xrandr --output $laptop_output --off --output $external_monitor --mode $external_mode --pos 0x0 --primary
             # xrandr --output $laptop_output --auto --pos 0x600 --output $external_monitor --mode $external_mode --pos 1920x0 --primary
             ;;
     esac
 else
-    # other_outputs_off=""
-    # for doutp in $disconnected_outputs ; do
-    #     other_outputs_off="$other_outputs_off --output $doutp --off"
-    # done
-    xrandr --output $laptop_output --auto --primary
+    other_outputs_off=""
+    for doutp in $disconnected_outputs ; do
+        other_outputs_off="$other_outputs_off --output $doutp --off"
+    done
+    # xrandr --output $laptop_output --auto --primary
+    # echo "debug: made it here"
     # sleep 1
-    # xrandr --output $laptop_output --auto --primary $other_outputs_off
+    xrandr --output $laptop_output --auto --primary $other_outputs_off
 fi

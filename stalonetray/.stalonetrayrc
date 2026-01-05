@@ -1,9 +1,0 @@
-decorations all
-#geometry 120x48-5-5
-icon_size 24
-kludges force_icons_size
-# max_geometry 6x1
-parent_bg true
-transparent false
-icon_gravity NW
-no_shrink true

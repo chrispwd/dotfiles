@@ -2,8 +2,8 @@
 
 sticky      yes
 snapdist    4
-moveamount  35
-borderwidth 1
+moveamount  40
+borderwidth 3
 gap         8 40 8 8
 vtile       50
 htile       50
@@ -50,14 +50,14 @@ bind-key 4S-Tab   group-rcycle
 bind-key 4M-m     window-maximize
 bind-key 4MS-m    window-maximize
 bind-key 4M-v     window-vmaximize
-bind-key 4MS-v     window-vtile
+bind-key 4MS-v    window-vtile
 bind-key 4M-g     window-hmaximize
-bind-key 4MS-g     window-htile
+bind-key 4MS-g    window-htile
 bind-key 4M-f     window-fullscreen
 bind-key 4-w      window-close
 bind-key 4-s      window-stick
-bind-key 4S-z     window-hide
-bind-key 4S-f     window-freeze
+bind-key 4-z      window-hide
+bind-key 4SC-f    window-freeze
 bind-key 4-m      menu-window
 bind-key 4-z      menu-window-hidden
 bind-key 4-d      menu-cmd
@@ -101,6 +101,7 @@ ignore       MEGAsync
 ignore       trayer
 ignore       xclock
 ignore       xosview
+ignore       xeyes
 autogroup    4 "keepassxc","KeePassXC"
 autogroup    2 "Navigator","firefox"
 autogroup    3 "signal","Signal"
@@ -228,15 +229,15 @@ autogroup    0 "panel","trayer"
 # color urgencyborder   "#d75f5f"
 
 # CPL
-color menufg         "#989898"
-color menubg         "#1d1d1d"
-color font           "#777777"
-color selfont        "#1d1d1d"
-color activeborder   "#989898"
-color inactiveborder "#424242"
-color groupborder     "#007232"
-color ungroupborder   "#a05803"
-color urgencyborder   "#b10b00"
+# color menufg         "#989898"
+# color menubg         "#1d1d1d"
+# color font           "#777777"
+# color selfont        "#1d1d1d"
+# color activeborder   "#989898"
+# color inactiveborder "#424242"
+# color groupborder     "#007232"
+# color ungroupborder   "#a05803"
+# color urgencyborder   "#b10b00"
 
 # Solarized black
 # color menufg         "#839496"
@@ -281,3 +282,14 @@ color urgencyborder   "#b10b00"
 # color groupborder     "#98c379"
 # color ungroupborder   "#d19a66"
 # color urgencyborder   "#e06c75"
+
+# Windowmaker
+color menufg          "#000000"
+color menubg          "#666666"
+color font            "#000000"
+color selfont         "#666666"
+color activeborder    "#000000"
+color inactiveborder  "#666666"
+color groupborder     "#5f7f5f"
+color ungroupborder   "#dfaf8f"
+color urgencyborder   "#dca3a3"
