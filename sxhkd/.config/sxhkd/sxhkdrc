@@ -38,6 +38,16 @@ ctrl + alt + mod4 + t
 ctrl + alt + mod4 + r
      startup
 
+# xdotool window management
+mod4 + alt + shift + {j,k}
+     xdoresize {bigger,smaller}
+
+mod4 + ctrl + {h,j,k,l}
+     xdomove snap{left,down,up,right}
+
+mod4 + {h,j,k,l}
+     xdomove {left,down,up,right}
+
 #
 ## bspwm
 #

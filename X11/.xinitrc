@@ -24,10 +24,11 @@ fi
 #while type dwm >/dev/null ; do dwm && continue || break ;done
 #exec i3
 
-# exec wmaker
+set-monitors
+exec wmaker
 # exec fvwm3
-startup
-exec cwm
+# startup
+# exec cwm
 # exec dwm
 # run icewm-session without icewmbg (prefer feh)
 # exec icewm-session --nobg

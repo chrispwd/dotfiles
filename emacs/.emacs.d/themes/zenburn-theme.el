@@ -226,7 +226,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(custom-group-tag ((t (:foreground ,zenburn-blue :weight bold :height 1.2))))
    `(custom-state ((t (:foreground ,zenburn-green+4))))
 ;;;;; display-fill-column-indicator
-   `(fill-column-indicator ((,class :foreground ,zenburn-bg-05 :weight semilight)))
+   `(fill-column-indicator ((,class :foreground ,zenburn-bg-08 :weight semilight)))
 ;;;;; eww
    '(eww-invalid-certificate ((t (:inherit error))))
    '(eww-valid-certificate   ((t (:inherit success))))
@@ -1743,7 +1743,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(company-quickhelp-color-background ,zenburn-bg+1)
    `(company-quickhelp-color-foreground ,zenburn-fg)
 ;;;;; fill-column-indicator
-   `(fci-rule-color ,zenburn-bg-05)
+   `(fci-rule-color ,zenburn-bg-08)
 ;;;;; nrepl-client
    `(nrepl-message-colors
      '(,zenburn-red ,zenburn-orange ,zenburn-yellow ,zenburn-green ,zenburn-green+4

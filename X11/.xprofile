@@ -23,6 +23,7 @@ run_once syncthing
 run_once picom
 run_once sxhkd
 run_once dunst
+# run_once xosview -geometry 64x64-1-34
 
 # trayed programs
 run_once nm-applet

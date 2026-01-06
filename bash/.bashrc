@@ -49,55 +49,55 @@ function shorten_git_path() {
 
 _ps1() {
 
-local EXIT="$?"
-local bla='\[\e[0;30m\]'
-local red='\[\e[0;31m\]'
-local gre='\[\e[0;32m\]'
-local yel='\[\e[0;33m\]'
-local blu='\[\e[0;34m\]'
-local mag='\[\e[0;35m\]'
-local cya='\[\e[0;36m\]'
-local whi='\[\e[0;37m\]'
-local brbla='\[\e[0;90m\]'
-local brred='\[\e[0;91m\]'
-local brgre='\[\e[0;92m\]'
-local bryel='\[\e[0;93m\]'
-local brblu='\[\e[0;94m\]'
-local brmag='\[\e[0;95m\]'
-local brcya='\[\e[0;96m\]'
-local brwhi='\[\e[0;97m\]'
-local cr='\[\e[0m\]'
-local clear='\[\e[0m\]'
-local bg_base01_fg_red='\[\e[100;31m\]'
-local bg_base01_fg_brred='\[\e[100;91m\]'
-local bg_base01_fg_gre='\[\e[100;32m\]'
-local bg_base01_fg_mag='\[\e[100;35m\]'
-local bg_base01_fg_cya='\[\e[100;36m\]'
-local bg_base01_fg_yel='\[\e[100;33m\]'
-local bg_base01_fg_fg='\[\e[100;37m\]'
-local bg_base01_fg_bg='\[\e[100;30m\]'
-local bg_base01_fg_dull='\[\e[100;92m\]'
+    local EXIT="$?"
+    local bla='\[\e[0;30m\]'
+    local red='\[\e[0;31m\]'
+    local gre='\[\e[0;32m\]'
+    local yel='\[\e[0;33m\]'
+    local blu='\[\e[0;34m\]'
+    local mag='\[\e[0;35m\]'
+    local cya='\[\e[0;36m\]'
+    local whi='\[\e[0;37m\]'
+    local brbla='\[\e[0;90m\]'
+    local brred='\[\e[0;91m\]'
+    local brgre='\[\e[0;92m\]'
+    local bryel='\[\e[0;93m\]'
+    local brblu='\[\e[0;94m\]'
+    local brmag='\[\e[0;95m\]'
+    local brcya='\[\e[0;96m\]'
+    local brwhi='\[\e[0;97m\]'
+    local cr='\[\e[0m\]'
+    local clear='\[\e[0m\]'
+    local bg_base01_fg_red='\[\e[100;31m\]'
+    local bg_base01_fg_brred='\[\e[100;91m\]'
+    local bg_base01_fg_gre='\[\e[100;32m\]'
+    local bg_base01_fg_mag='\[\e[100;35m\]'
+    local bg_base01_fg_cya='\[\e[100;36m\]'
+    local bg_base01_fg_yel='\[\e[100;33m\]'
+    local bg_base01_fg_fg='\[\e[100;37m\]'
+    local bg_base01_fg_bg='\[\e[100;30m\]'
+    local bg_base01_fg_dull='\[\e[100;92m\]'
 
-B=$(git branch --show-current 2>/dev/null)
+    B=$(git branch --show-current 2>/dev/null)
 
-# old
-#[[ -n "$B" ]] && B="$wh($cr$y$B$cr$wh)$cr"
-#[[ -n "$B" ]] && B=" $y($B)$cr"
-#PS1="$r\$(exit_status)$cr[$g\u$cr$wh@$cr$b\h$cr$wh:$cr$mg\W$cr$B] \\$ "
-# PS1="$g\u$cr at $b\h$cr$B in $mg\w$cr
-# $r\$(exit_status)$cr> \\$ "
-#PS1="$mg\w$cr$B$r\$(exit_status)$cr \\$ "
-#PS1="# $g@\h:$cr $mg\w$cr$B$r\$(exit_status)$cr"
+    # old
+    #[[ -n "$B" ]] && B="$wh($cr$y$B$cr$wh)$cr"
+    #[[ -n "$B" ]] && B=" $y($B)$cr"
+    #PS1="$r\$(exit_status)$cr[$g\u$cr$wh@$cr$b\h$cr$wh:$cr$mg\W$cr$B] \\$ "
+    # PS1="$g\u$cr at $b\h$cr$B in $mg\w$cr
+    # $r\$(exit_status)$cr> \\$ "
+    #PS1="$mg\w$cr$B$r\$(exit_status)$cr \\$ "
+    #PS1="# $g@\h:$cr $mg\w$cr$B$r\$(exit_status)$cr"
 
-#[[ -n "$B" ]] && B="$clear${brgre} on $clear${brred}$B"
-[[ -n "$B" ]] && B="${brred}$B${clear} "
+    #[[ -n "$B" ]] && B="$clear${brgre} on $clear${brred}$B"
+    [[ -n "$B" ]] && B="${brred}$B${clear} "
 
-#[[ $EXIT != 0 ]] && stat="${red} failed$clear${brgre} code ${red}$EXIT" || stat=""
-[[ $EXIT != 0 ]] && stat="${red}$EXIT${clear}" || stat=""
-# PS1="$bg_base01_fg_cya\u$bg_base01_fg_dull from $bg_base01_fg_gre\h$bg_base01_fg_dull in $bg_base01_fg_mag\$(shorten_git_path)$B$bg_base01_fg_dull last command at $bg_base01_fg_fg\t$stat"
-# PS1="${brgre}[ in ${gre}\w$B${brgre} at ${brblu}\t$stat${brgre} ]$clear"
-# PS1+="\n> "
-PS1="$stat \t $B${gre}\w${clear} \\$ "
+    #[[ $EXIT != 0 ]] && stat="${red} failed$clear${brgre} code ${red}$EXIT" || stat=""
+    [[ $EXIT != 0 ]] && stat="${red}$EXIT${clear} " || stat=""
+    # PS1="$bg_base01_fg_cya\u$bg_base01_fg_dull from $bg_base01_fg_gre\h$bg_base01_fg_dull in $bg_base01_fg_mag\$(shorten_git_path)$B$bg_base01_fg_dull last command at $bg_base01_fg_fg\t$stat"
+    # PS1="${brgre}[ in ${gre}\w$B${brgre} at ${brblu}\t$stat${brgre} ]$clear"
+    # PS1+="\n> "
+    PS1="${stat}\t $B${gre}\w${clear} \\$ "
 }
 
 PROMPT_COMMAND="_ps1"

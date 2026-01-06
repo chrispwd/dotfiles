@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+[ -z "$1" ] && echo "Missing resize type. Options are 'bigger' or 'smaller'" && exit 1
+
+eval "$(xdotool getactivewindow -- getwindowgeometry --shell %@)"
+
+if [ "$1" == "bigger" ]; then
+   new_x=$(( WIDTH + 60 ))
+   new_y=$(( HEIGHT + 60 ))
+else
+   new_x=$(( WIDTH - 60 ))
+   new_y=$(( HEIGHT - 60 ))
+fi
+
+xdotool windowsize $WINDOW $new_x $new_y

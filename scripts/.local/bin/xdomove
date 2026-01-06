@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+
+[ -z "$1" ] && echo "Missing move direction. Options are 'up', 'down', 'left', 'right', 'snapup', 'snapdown', 'snapleft' or 'snapright'" && exit 1
+
+screen_wh="$(xdpyinfo | grep -oP 'dimensions:\s+\K\S+')"
+screen_w=$(echo $screen_wh | cut -d'x' -f1)
+screen_h=$(echo $screen_wh | cut -d'x' -f2)
+
+eval "$(xdotool getactivewindow -- getwindowgeometry --shell %@)"
+
+#xdotool bug: offset due to window decor in various wms
+x_offset=1
+y_offset_titlebar=26
+y_offset_resizebar=10
+
+case "$1" in
+    up)
+        new_x=$(( $X - $x_offset ))
+        new_y=$(( $Y - 60 ))
+        xdotool getactivewindow windowmove -- $new_x $new_y
+        ;;
+    down)
+        new_x=$(( $X - $x_offset ))
+        new_y=$(( $Y + 60 ))
+        xdotool getactivewindow windowmove -- $new_x $new_y
+        ;;
+    left)
+        new_x=$(( $X - 60 - $x_offset ))
+        new_y=$(( $Y - $y_offset_titlebar ))
+        xdotool getactivewindow windowmove -- $new_x $new_y
+        # echo "$(xdotool getactivewindow -- getwindowgeometry --shell)"
+        ;;
+    right)
+        new_x=$(( $X + 60  ))
+        new_y=$(( $Y - $y_offset_titlebar ))
+        xdotool getactivewindow windowmove -- $new_x $new_y
+        ;;
+    snapup)
+        new_x=$(( $X - $x_offset ))
+        xdotool getactivewindow windowmove -- $new_x 0
+        ;;
+    snapdown)
+        new_y=$(( $screen_h - $HEIGHT - $y_offset_titlebar - $y_offset_resizebar ))
+        new_x=$(( $X - $x_offset ))
+        xdotool getactivewindow windowmove -- $new_x $new_y
+        echo "SCREEN_H=${screen_h}"
+        echo "$(xdotool getactivewindow -- getwindowgeometry --shell)"
+        ;;
+    snapleft)
+        new_y=$(( $Y - $y_offset_titlebar ))
+        xdotool getactivewindow windowmove -- $x_offset $new_y
+        ;;
+    snapright)
+        new_x=$(( $screen_w - $WIDTH - $x_offset ))
+        new_y=$(( $Y - $y_offset_titlebar ))
+        xdotool getactivewindow windowmove -- $new_x $new_y
+        ;;
+    *)
+        echo "invalid direction"
+        exit 1
+        ;;
+esac
