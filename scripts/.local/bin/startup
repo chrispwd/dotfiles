@@ -4,5 +4,3 @@ set-monitors
 
 setbg.sh "$HOME/.local/share/background" || \
     setbg.sh "$HOME/.dotfiles/.local/share/dark-sunset.jpg"
-
-launch-polybar.sh

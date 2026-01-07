@@ -1,0 +1,26 @@
+{
+  Firefox.Firefox = {
+    Icon = Firefox.Firefox.xpm;
+  };
+  nsxiv.Nsxiv = {
+    NoTitlebar = Yes;
+    AlwaysUserIcon = No;
+    NoResizebar = Yes;
+  };
+  "st-256color.st-256color" = {
+    AlwaysUserIcon = No;
+    EmulateAppIcon = Yes;
+    Icon = linuxterm.tiff;
+  };
+  keepassxc.KeePassXC = {
+    Icon = keepassxc.KeePassXC.xpm;
+  };
+  signal.Signal = {
+    AlwaysUserIcon = No;
+    EmulateAppIcon = Yes;
+    Icon = signal.Signal.xpm;
+  };
+  groupLeader.WPrefs = {
+    Icon = groupLeader.WPrefs.xpm;
+  };
+}

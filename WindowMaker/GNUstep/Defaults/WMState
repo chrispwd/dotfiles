@@ -1,0 +1,322 @@
+{
+  Dock = {
+    Applications800 = (
+      {
+        Forced = No;
+        Name = Logo.WMDock;
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,0";
+        Lock = No;
+        Command = "-";
+      },
+      {
+        Forced = No;
+        Name = Firefox.Firefox;
+        DropCommand = "firefox %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,7";
+        Lock = No;
+        PasteCommand = "firefox %s";
+        Command = firefox;
+      },
+      {
+        Forced = No;
+        Name = wmsystemtray0.wmsystemtray;
+        DropCommand = "wmsystemtray %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,2";
+        Lock = Yes;
+        PasteCommand = "wmsystemtray %s";
+        Command = wmsystemtray;
+      },
+      {
+        Forced = No;
+        Name = groupLeader.WPrefs;
+        DropCommand = "WPrefs %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,6";
+        Lock = No;
+        PasteCommand = "WPrefs %s";
+        Command = WPrefs;
+      },
+      {
+        Forced = No;
+        Name = wmclock.WMClock;
+        DropCommand = "wmclock %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,1";
+        Lock = Yes;
+        PasteCommand = "wmclock %s";
+        Command = wmclock;
+      },
+      {
+        Forced = No;
+        Name = wmnd.wmnd;
+        DropCommand = "wmnd %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,5";
+        Lock = Yes;
+        PasteCommand = "wmnd %s";
+        Command = "wmnd -i wls1 -w wmwave";
+      },
+      {
+        Forced = No;
+        Name = wmbubble.wmbubble;
+        DropCommand = "wmbubble %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,3";
+        Lock = Yes;
+        PasteCommand = "wmbubble %s";
+        Command = wmbubble;
+      },
+      {
+        Forced = No;
+        Name = "st-256color.st-256color";
+        DropCommand = "st %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,8";
+        Lock = Yes;
+        PasteCommand = "st %s";
+        Command = st;
+      },
+      {
+        Forced = No;
+        Name = wmmon.wmmon;
+        DropCommand = "wmmon -s %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,4";
+        Lock = Yes;
+        PasteCommand = "wmmon -s %s";
+        Command = "wmmon -s";
+      }
+    );
+    AutoRaiseLower = No;
+    Applications = (
+      {
+        Forced = No;
+        Name = Logo.WMDock;
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,0";
+        Lock = No;
+        Command = "-";
+      },
+      {
+        Forced = No;
+        Name = Firefox.Firefox;
+        DropCommand = "firefox %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,7";
+        Lock = No;
+        PasteCommand = "firefox %s";
+        Command = firefox;
+      },
+      {
+        Forced = No;
+        Name = wmsystemtray0.wmsystemtray;
+        DropCommand = "wmsystemtray %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,2";
+        Lock = Yes;
+        PasteCommand = "wmsystemtray %s";
+        Command = wmsystemtray;
+      },
+      {
+        Forced = No;
+        Name = groupLeader.WPrefs;
+        DropCommand = "WPrefs %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,6";
+        Lock = No;
+        PasteCommand = "WPrefs %s";
+        Command = WPrefs;
+      },
+      {
+        Forced = No;
+        Name = wmclock.WMClock;
+        DropCommand = "wmclock %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,1";
+        Lock = Yes;
+        PasteCommand = "wmclock %s";
+        Command = wmclock;
+      },
+      {
+        Forced = No;
+        Name = wmnd.wmnd;
+        DropCommand = "wmnd %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,5";
+        Lock = Yes;
+        PasteCommand = "wmnd %s";
+        Command = "wmnd -i wls1 -w wmwave";
+      },
+      {
+        Forced = No;
+        Name = wmbubble.wmbubble;
+        DropCommand = "wmbubble %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,3";
+        Lock = Yes;
+        PasteCommand = "wmbubble %s";
+        Command = wmbubble;
+      },
+      {
+        Forced = No;
+        Name = "st-256color.st-256color";
+        DropCommand = "st %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,8";
+        Lock = Yes;
+        PasteCommand = "st %s";
+        Command = st;
+      },
+      {
+        Forced = No;
+        Name = wmmon.wmmon;
+        DropCommand = "wmmon -s %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,4";
+        Lock = Yes;
+        PasteCommand = "wmmon -s %s";
+        Command = "wmmon -s";
+      }
+    );
+    Lowered = Yes;
+    Position = "1216,0";
+  };
+  Clip = {
+    Forced = No;
+    Name = Logo.WMClip;
+    BuggyApplication = No;
+    AutoLaunch = No;
+    Position = "0,0";
+    Lock = No;
+    Command = "-";
+  };
+  Applications = (
+    {
+      Maximized = 0x0000;
+      Name = polybar.Polybar;
+      Shaded = No;
+      Miniaturized = No;
+      Command = "polybar mybar";
+      Geometry = "576x34+991+782";
+      Hidden = No;
+      Workspace = "Workspace 2";
+      ShortcutMask = 0;
+    },
+    {
+      Dock = Dock;
+      Maximized = 0x0000;
+      Name = "st-256color.st-256color";
+      Shaded = No;
+      Miniaturized = No;
+      Command = st;
+      Geometry = "788x441+280+108";
+      Hidden = No;
+      Workspace = "Workspace 2";
+      ShortcutMask = 0;
+    }
+  );
+  Drawers = ();
+  Workspaces = (
+    {
+      Clip = {
+        AutoRaiseLower = No;
+        AutoCollapse = No;
+        Applications = ();
+        Collapsed = No;
+        AutoAttractIcons = No;
+        Lowered = Yes;
+      };
+      Name = "Workspace 1";
+    },
+    {
+      Clip = {
+        AutoRaiseLower = No;
+        AutoCollapse = No;
+        Applications = ();
+        Collapsed = No;
+        AutoAttractIcons = No;
+        Lowered = Yes;
+      };
+      Name = "Workspace 2";
+    },
+    {
+      Clip = {
+        AutoRaiseLower = No;
+        AutoCollapse = No;
+        Applications = (
+          {
+            Forced = No;
+            Name = signal.Signal;
+            DropCommand = "signal-desktop %d";
+            BuggyApplication = No;
+            AutoLaunch = No;
+            Position = "0,1";
+            Lock = No;
+            PasteCommand = "signal-desktop %s";
+            Command = "signal-desktop";
+            Omnipresent = No;
+          }
+        );
+        Collapsed = No;
+        AutoAttractIcons = No;
+        Lowered = Yes;
+      };
+      Name = "Workspace 3";
+    },
+    {
+      Clip = {
+        AutoRaiseLower = No;
+        AutoCollapse = No;
+        Applications = ();
+        Collapsed = No;
+        AutoAttractIcons = No;
+        Lowered = Yes;
+      };
+      Name = "Workspace 4";
+    },
+    {
+      Clip = {
+        AutoRaiseLower = No;
+        AutoCollapse = No;
+        Applications = ();
+        Collapsed = No;
+        AutoAttractIcons = No;
+        Lowered = Yes;
+      };
+      Name = "Workspace 5";
+    },
+    {
+      Clip = {
+        AutoRaiseLower = No;
+        AutoCollapse = No;
+        Applications = ();
+        Collapsed = No;
+        AutoAttractIcons = No;
+        Lowered = Yes;
+      };
+      Name = "Workspace 6";
+    }
+  );
+  Workspace = "Workspace 2";
+}
