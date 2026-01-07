@@ -285,7 +285,7 @@
 ;;   :ensure t
 ;;   :config
 ;;   (setq base16-theme-256-color-source 'colors)
-;;   (load-theme 'base16-atelier-cave t)
+;;   (load-theme 'base16-atelier-cavemoss t)
 ;;   (defvar my/base16-colors
 ;;     '(:base00 "#19171c"
 ;;       :base01 "#26232a"
@@ -298,7 +298,7 @@
 ;;       :base08 "#be4678"
 ;;       :base09 "#aa573c"
 ;;       :base0A "#a06e3b"
-;;       :base0B "#2a9292"
+;;       :base0B "#2a9271"
 ;;       :base0C "#398bc6"
 ;;       :base0D "#576ddb"
 ;;       :base0E "#955ae7"
