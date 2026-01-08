@@ -1,4 +1,4 @@
-#include "Xresources.d/themes/base16-zenburn"
+#include "Xresources.d/themes/cpl"
 
 Xft.antialias: 1
 Xft.hinting: 1
