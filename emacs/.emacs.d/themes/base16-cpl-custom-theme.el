@@ -21,14 +21,14 @@
     :base05 "#777777"
     :base06 "#989898"
     :base07 "#ababab"
-    :base08 "#b12b22"
-    :base09 "#a05803"
-    :base0A "#a27f00"
-    :base0B "#297200"
-    :base0C "#00808f"
-    :base0D "#006dbd"
-    :base0E "#ae3aab"
-    :base0F "#7a2d00")
+    :base08 "#b12b22" ; red
+    :base09 "#a05803" ; orange
+    :base0A "#a27f00" ; yellow
+    :base0B "#297200" ; green
+    :base0C "#00808f" ; cyan
+    :base0D "#006dbd" ; blue
+    :base0E "#ae3aab" ; magenta
+    :base0F "#7a2d00") ; brown
   "All colors for Base16 CPL are defined here.")
 
 ;; Define the theme
