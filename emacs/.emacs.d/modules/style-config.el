@@ -141,7 +141,7 @@
           :weight normal))))
    `(font-lock-type-face
      ((t (:foreground
-          ,(plist-get my/base16-colors :yellow)
+          ,(plist-get my/base16-colors :red)
           :weight normal))))
    `(font-lock-string-face
      ((t (:foreground
@@ -279,6 +279,10 @@
      ((t (:foreground
           ,(plist-get my/base16-colors :base03)
           :weight bold))))
+   `(org-todo
+     ((t (:foreground
+          ,(plist-get my/base16-colors :red)
+          :weight bold))))
    `(org-time-grid
      ((t (:foreground
           ,(plist-get my/base16-colors :base04)))))
@@ -304,6 +308,27 @@
    `(org-code
      ((t (:foreground
           ,(plist-get my/base16-colors :orange)))))
+   `(org-quote
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base05)
+          :background
+          ,(plist-get my/base16-colors :base01)
+          :slant italic))))
+   `(org-block
+     ((t (:background
+          ,(plist-get my/base16-colors :base00)
+          :foreground
+          ,(plist-get my/base16-colors :base05)
+          :extend t))))
+   `(org-table
+     ((t :foreground
+          ,(plist-get my/base16-colors :violet))))
+   `(org-checkbox
+     ((t (:background
+          ,(plist-get my/base16-colors :base00)
+          :foreground
+          ,(plist-get my/base16-colors :base05)
+          :weight bold))))
    `(denote-faces-date
      ((t (:foreground
           ,(plist-get my/base16-colors :base03)))))

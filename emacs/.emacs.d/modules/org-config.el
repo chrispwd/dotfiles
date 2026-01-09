@@ -27,6 +27,7 @@
    ;; Org styling, hide markup etc.
    org-hide-emphasis-markers t
    org-pretty-entities t
+   org-fontify-quote-and-verse-blocks t
 
    ;; Agenda Config
    org-agenda-files
