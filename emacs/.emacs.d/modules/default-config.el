@@ -859,7 +859,8 @@ and restart Flymake to apply the changes."
   :mode "Rakefile\\'"
   :mode "Gemfile\\'"
   :custom
-  (add-to-list 'treesit-language-source-alist '(ruby "https://github.com/tree-sitter/tree-sitter-ruby" "master" "src"))
+  (add-to-list 'treesit-language-source-alist
+               '(ruby "https://github.com/tree-sitter/tree-sitter-ruby" "master" "src"))
   (ruby-indent-level 4)
   (ruby-indent-tabs-mode nil))
 
@@ -871,8 +872,10 @@ and restart Flymake to apply the changes."
   :custom
   (js-indent-level 4)
   :config
-  (add-to-list 'treesit-language-source-alist '(javascript "https://github.com/tree-sitter/tree-sitter-javascript" "master" "src"))
-  (add-to-list 'treesit-language-source-alist '(jsdoc "https://github.com/tree-sitter/tree-sitter-jsdoc" "master" "src")))
+  (add-to-list 'treesit-language-source-alist
+               '(javascript "https://github.com/tree-sitter/tree-sitter-javascript" "master" "src"))
+  (add-to-list 'treesit-language-source-alist
+               '(jsdoc "https://github.com/tree-sitter/tree-sitter-jsdoc" "master" "src")))
 
 ;;; TYPESCRIPT-TS-MODE
 (use-package typescript-ts-mode
@@ -881,7 +884,8 @@ and restart Flymake to apply the changes."
   :custom
   (typescript-indent-level 4)
   :config
-  (add-to-list 'treesit-language-source-alist '(typescript "https://github.com/tree-sitter/tree-sitter-typescript" "master" "typescript/src"))
+  (add-to-list 'treesit-language-source-alist
+               '(typescript "https://github.com/tree-sitter/tree-sitter-typescript" "master" "typescript/src"))
   (unbind-key "M-." typescript-ts-base-mode-map))
 
 ;;; TYPESCRIPT-TS-MODE
@@ -891,7 +895,8 @@ and restart Flymake to apply the changes."
   :custom
   (typescript-indent-level 4)
   :config
-  (add-to-list 'treesit-language-source-alist '(tsx "https://github.com/tree-sitter/tree-sitter-typescript" "master" "tsx/src"))
+  (add-to-list 'treesit-language-source-alist
+               '(tsx "https://github.com/tree-sitter/tree-sitter-typescript" "master" "tsx/src"))
   (unbind-key "M-." typescript-ts-base-mode-map))
 
 ;;; RUST-TS-MODE
@@ -902,7 +907,8 @@ and restart Flymake to apply the changes."
   :custom
   (rust-indent-level 4)
   :config
-  (add-to-list 'treesit-language-source-alist '(rust "https://github.com/tree-sitter/tree-sitter-rust" "master" "src")))
+  (add-to-list 'treesit-language-source-alist
+               '(rust "https://github.com/tree-sitter/tree-sitter-rust" "master" "src")))
 
 ;;; TOML-TS-MODE
 (use-package toml-ts-mode
@@ -910,7 +916,8 @@ and restart Flymake to apply the changes."
   :mode "\\.toml\\'"
   :defer 't
   :config
-  (add-to-list 'treesit-language-source-alist '(toml "https://github.com/ikatyang/tree-sitter-toml" "master" "src")))
+  (add-to-list 'treesit-language-source-alist
+               '(toml "https://github.com/ikatyang/tree-sitter-toml" "master" "src")))
 
 ;;; MARKDOWN-TS-MODE - Emacs 31
 ;;  As I first proposed here:
@@ -921,8 +928,10 @@ and restart Flymake to apply the changes."
   :defer 't
   :config
   (add-to-list 'major-mode-remap-alist '(markdown-mode . markdown-ts-mode))
-  (add-to-list 'treesit-language-source-alist '(markdown "https://github.com/tree-sitter-grammars/tree-sitter-markdown" "split_parser" "tree-sitter-markdown/src"))
-  (add-to-list 'treesit-language-source-alist '(markdown-inline "https://github.com/tree-sitter-grammars/tree-sitter-markdown" "split_parser" "tree-sitter-markdown-inline/src")))
+  (add-to-list 'treesit-language-source-alist
+               '(markdown "https://github.com/tree-sitter-grammars/tree-sitter-markdown" "split_parser" "tree-sitter-markdown/src"))
+  (add-to-list 'treesit-language-source-alist
+               '(markdown-inline "https://github.com/tree-sitter-grammars/tree-sitter-markdown" "split_parser" "tree-sitter-markdown-inline/src")))
 
 ;;; YAML-TS-MODE
 (use-package yaml-ts-mode
@@ -930,7 +939,8 @@ and restart Flymake to apply the changes."
   :mode "\\.ya?ml\\'"
   :defer 't
   :config
-  (add-to-list 'treesit-language-source-alist '(yaml "https://github.com/tree-sitter-grammars/tree-sitter-yaml" "master" "src")))
+  (add-to-list 'treesit-language-source-alist
+               '(yaml "https://github.com/tree-sitter-grammars/tree-sitter-yaml" "master" "src")))
 
 ;;; DOCKERFILE-TS-MODE
 (use-package dockerfile-ts-mode
@@ -938,7 +948,8 @@ and restart Flymake to apply the changes."
   :mode "\\Dockerfile.*\\'"
   :defer 't
   :config
-  (add-to-list 'treesit-language-source-alist '(dockerfile "https://github.com/camdencheek/tree-sitter-dockerfile" "main" "src")))
+  (add-to-list 'treesit-language-source-alist
+               '(dockerfile "https://github.com/camdencheek/tree-sitter-dockerfile" "main" "src")))
 
 ;;; GO-TS-MODE
 (use-package go-ts-mode
@@ -948,7 +959,8 @@ and restart Flymake to apply the changes."
   :custom
   (go-indent-level 4)
   :config
-  (add-to-list 'treesit-language-source-alist '(go "https://github.com/tree-sitter/tree-sitter-go" "master" "src")))
+  (add-to-list 'treesit-language-source-alist
+               '(go "https://github.com/tree-sitter/tree-sitter-go" "master" "src")))
 
 ;;; GO-MOD-TS-MODE
 (use-package go-mod-ts-mode
@@ -956,7 +968,17 @@ and restart Flymake to apply the changes."
   :mode "\\go.mod\\'"
   :defer 't
   :config
-  (add-to-list 'treesit-language-source-alist '(gomod "https://github.com/camdencheek/tree-sitter-go-mod" "main" "src")))
+  (add-to-list 'treesit-language-source-alist
+               '(gomod "https://github.com/camdencheek/tree-sitter-go-mod" "main" "src")))
+
+;;; PHP-TS-MODE
+(use-package php-ts-mode
+  :ensure nil
+  :mode "\\.php\\'"
+  :defer 't
+  :config
+  (add-to-list 'treesit-language-source-alist
+             '(php "https://github.com/tree-sitter/tree-sitter-php" "master" "php/src")))
 
 ;;; ------------------- EMACS-SOLO CUSTOMS
 ;;; EMACS-SOLO-HOOKS
