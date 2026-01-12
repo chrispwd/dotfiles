@@ -332,6 +332,9 @@
    `(denote-faces-date
      ((t (:foreground
           ,(plist-get my/base16-colors :base03)))))
+   `(denote-faces-delimiter
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base00)))))
    `(doom-modeline-project-dir
      ((t (:foreground
           ,(plist-get my/base16-colors :cyan)

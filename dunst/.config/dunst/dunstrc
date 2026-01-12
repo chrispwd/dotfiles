@@ -323,9 +323,13 @@
     # foreground = "#abb2bf"
     # frame_color = "#abb2bf"
     # CPL
-    background = "#1d1d1d"
-    foreground = "#777777"
-    frame_color = "#777777"
+    # background = "#1d1d1d"
+    # foreground = "#777777"
+    # frame_color = "#777777"
+    # Penumbra dark
+    background = "#24272b"
+    foreground = "#8f8f8f"
+    frame_color = "#636363"
     # Solarized Dark
     # background = "#002b36"
     # foreground = "#839496"
@@ -380,9 +384,13 @@
     # foreground = "#abb2bf"
     # frame_color = "#abb2bf"
     # CPL
-    background = "#1d1d1d"
-    foreground = "#ababab"
-    frame_color = "#ababab"
+    # background = "#1d1d1d"
+    # foreground = "#ababab"
+    # frame_color = "#ababab"
+    # Penumbra dark
+    background = "#24272b"
+    foreground = "#8f8f8f"
+    frame_color = "#8f8f8f"
     # Twilight
     # background = "#1e1e1e"
     # foreground = "#a7a7a7"
@@ -437,9 +445,13 @@
     # foreground = "#e06c75"
     # frame_color = "#be5046"
     # CPL
-    background = "#7a2d00"
-    foreground = "#ababab"
-    frame_color = "#ababab"
+    # background = "#7a2d00"
+    # foreground = "#ababab"
+    # frame_color = "#ababab"
+    # Penumbra dark
+    background = "#ca736c"
+    foreground = "#fff7ed"
+    frame_color = "#fff7ed"
     # Twilight
     # background = "#1e1e1e"
     # foreground = "#a7a7a7"
