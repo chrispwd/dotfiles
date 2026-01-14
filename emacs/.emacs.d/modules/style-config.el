@@ -115,6 +115,21 @@
           ,(plist-get my/base16-colors :base00)
           :background
           ,(plist-get my/base16-colors :red)))))
+   `(success
+     ((t (:foreground
+          ,(plist-get my/base16-colors :green)
+          :weight
+          bold))))
+   `(error
+     ((t (:foreground
+          ,(plist-get my/base16-colors :red)
+          :weight
+          bold))))
+   `(warning
+     ((t (:foreground
+          ,(plist-get my/base16-colors :orange)
+          :weight
+          bold))))
    `(eglot-highlight-symbol-face
      ((t (:foreground
           ,(plist-get my/base16-colors :base06)
@@ -202,6 +217,26 @@
           ,(plist-get my/base16-colors :base00)
           :background
           ,(plist-get my/base16-colors :yellow)))))
+   `(orderless-match-face-0
+     ((t (:foreground
+          ,(plist-get my/base16-colors :blue)
+          :weight
+          bold))))
+   `(orderless-match-face-1
+     ((t (:foreground
+          ,(plist-get my/base16-colors :magenta)
+          :weight
+          bold))))
+   `(orderless-match-face-2
+     ((t (:foreground
+          ,(plist-get my/base16-colors :green)
+          :weight
+          bold))))
+   `(orderless-match-face-3
+     ((t (:foreground
+          ,(plist-get my/base16-colors :yellow)
+          :weight
+          bold))))
    `(org-level-1
      ((t (:foreground
           ,(plist-get my/base16-colors :violet)))))

@@ -52,10 +52,22 @@
 --     end
 -- end
 
+-- function moveFocusedWindowToSpace(spaceNumber)
+--     local win = hs.window.focusedWindow() -- current window
+--     local current_screen_id = hs.spaces.focusedSpace() -- current space ID
+--     local current_screen_uuid = win:screen():getUUID() -- current focused window space UUID
+--     local all_spaces = hs.spaces.allSpaces()           -- all spaces
+--     local targetSpaceID = all_spaces[current_screen_uuid][spaceNumber] -- the target space ID
+--     -- FIXME: the ‘moveWindowToSpace’ not actually moving window to space.
+--     hs.spaces.moveWindowToSpace(win:id(), targetSpaceID)
+--     hs.spaces.gotoSpace(targetSpaceID)
+--     win:focus()
+-- end
+
 -- -- Bind keys cmd + shift + 1-6
 -- for i = 1, 9 do
 --     hs.hotkey.bind({"cmd", "shift"}, tostring(i), function()
---         log.i("Hotkey pressed: cmd + shift + " .. i)
+--         -- log.i("Hotkey pressed: cmd + shift + " .. i)
 --         moveFocusedWindowToSpace(i)
 --     end)
 -- end
