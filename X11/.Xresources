@@ -1,12 +1,13 @@
-#include "Xresources.d/themes/cpl"
+#include "Xresources.d/themes/penumbra-dark"
 
-Xft.antialias: 1
-Xft.hinting: 1
+Xft.antialias: false
+Xft.hinting: false
 Xft.rgba: rgb
-Xft.hintstyle: hintslight
+Xft.hintstyle: hintnone
 Xft.lcdfilter: lcddefault
-xterm*utf8: 1
-XTerm.vt100.font: fixed
+Xterm*utf8: true
+XTerm.vt100.font: 7x13
+XTerm.vt100.faceName: xft:Terminus:pixelsize=16:style=Regular
 XTerm.vt100.metaSendsEscape: true
 XTerm.vt100.backarrowKey: false
 XTerm.vt100.selectToClipboard: true
@@ -15,7 +16,7 @@ XTerm.vt100.translations: #override \
     Shift Ctrl <Key> V: insert-selection(CLIPBOARD) \n\
     Shift<Btn1Down>: select-start() \n\
     Shift<Btn1Motion>: select-extend() \n\
-    Shift<Btn1Up>: select-end(CLIPBOARD) \n\
+    Shift<Btn1Up>: select-end(CLIPBOARD)
 XTerm.ttyModes: erase ^?
 XTerm.termName: xterm-256color
 XTerm*boldMode: true
