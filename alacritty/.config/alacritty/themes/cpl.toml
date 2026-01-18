@@ -1,0 +1,43 @@
+#: The basic 16 colors
+[colors.normal]
+black =   "#1d1d1d"
+red =     "#93241c"
+green =   "#007232"
+yellow =  "#745b00"
+blue =    "#005A9C"
+magenta = "#8f308d"
+cyan =    "#006a78"
+white =   "#777777"
+
+[colors.bright]
+black =   "#232323"
+red =     "#7a3b00"
+green =   "#424242"
+yellow =  "#585858"
+blue =    "#777777"
+magenta = "#989898"
+cyan =    "#7a2d00"
+white =   "#ababab"
+
+[colors.primary]
+background = "#000000"
+foreground = "#777777"
+
+[colors.cursor]
+cursor = "#006a78"
+
+# color8 #464646
+# color9 #ff3d2b
+# color10 #00ae50
+# color11 #b18c00
+# color12 #6786ff
+# color13 #eb00e4
+# color14 #00a3b7
+# color15 #ababab
+
+# color2 #007232
+# color3 #745b00
+# color4 #3123ff
+# color5 #9b0097
+# color6 #006a78
+# color7 #777777

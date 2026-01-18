@@ -21,13 +21,13 @@
     :base05 "#777777"
     :base06 "#989898"
     :base07 "#ababab"
-    :base08 "#b12b22" ; red
-    :base09 "#a05803" ; orange
-    :base0A "#a27f00" ; yellow
-    :base0B "#297200" ; green
-    :base0C "#00808f" ; cyan
-    :base0D "#006dbd" ; blue
-    :base0E "#ae3aab" ; magenta
+    :base08 "#93241c" ; red
+    :base09 "#7a3b00" ; orange
+    :base0A "#745b00" ; yellow
+    :base0B "#007232" ; green
+    :base0C "#006a78" ; cyan
+    :base0D "#005a9c" ; blue
+    :base0E "#8f308d" ; magenta
     :base0F "#7a2d00") ; brown
   "All colors for Base16 CPL are defined here.")
 

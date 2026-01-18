@@ -90,14 +90,15 @@ _ps1() {
     #PS1="# $g@\h:$cr $mg\w$cr$B$r\$(exit_status)$cr"
 
     #[[ -n "$B" ]] && B="$clear${brgre} on $clear${brred}$B"
-    [[ -n "$B" ]] && B="${brred}$B${clear} "
+    [[ -n "$B" ]] && B="[${mag}$B${clear}]"
 
     #[[ $EXIT != 0 ]] && stat="${red} failed$clear${brgre} code ${red}$EXIT" || stat=""
-    [[ $EXIT != 0 ]] && stat="${red}$EXIT${clear} " || stat=""
+    [[ $EXIT != 0 ]] && stat="[${red}$EXIT${clear}]" || stat=""
     # PS1="$bg_base01_fg_cya\u$bg_base01_fg_dull from $bg_base01_fg_gre\h$bg_base01_fg_dull in $bg_base01_fg_mag\$(shorten_git_path)$B$bg_base01_fg_dull last command at $bg_base01_fg_fg\t$stat"
     # PS1="${brgre}[ in ${gre}\w$B${brgre} at ${brblu}\t$stat${brgre} ]$clear"
     # PS1+="\n> "
-    PS1="${stat}\t $B${gre}\w${clear} \\$ "
+    PS1="╔[${gre}\w${clear}]$B[${brgre}\t${clear}]${stat}
+╚\\$ "
 }
 
 PROMPT_COMMAND="_ps1"

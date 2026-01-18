@@ -1,19 +1,15 @@
-! Constant Perceptual Luminosity (dark)
-! Scheme author Aaron Hall <https://github.com/aaronchall>
-! Adapted by chrispwd <https://github.com/chrispwd>
-! 
 ! special
 *.foreground:   #777777
 *.background:   #000000
-*.cursorColor:  #00808f
+*.cursorColor:  #006a78
 
 ! black
 *.color0:       #1d1d1d
 *.color8:       #232323
 
 ! red
-*.color1:       #b12b22
-*.color9:       #a05803
+*.color1:       #93241c
+*.color9:       #7a3b00
 
 ! green
 *.color2:       #297200
@@ -24,15 +20,15 @@
 *.color11:      #585858
 
 ! blue
-*.color4:       #006dbd
+*.color4:       #005a9c
 *.color12:      #777777
 
 ! magenta
-*.color5:       #ae3aab
+*.color5:       #8f308d
 *.color13:      #888888
 
 ! cyan
-*.color6:       #00808f
+*.color6:       #006a78
 *.color14:      #7a2d00
 
 ! white

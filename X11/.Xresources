@@ -1,9 +1,9 @@
-#include "Xresources.d/themes/penumbra-dark"
+#include "Xresources.d/themes/cpl"
 
-Xft.antialias: false
-Xft.hinting: false
+Xft.antialias: true
+Xft.hinting: true
 Xft.rgba: rgb
-Xft.hintstyle: hintnone
+Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 Xterm*utf8: true
 XTerm.vt100.font: 7x13
