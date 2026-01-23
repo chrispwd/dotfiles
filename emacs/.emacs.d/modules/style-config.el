@@ -11,37 +11,35 @@
   :ensure t
   :config
   (setq base16-theme-256-color-source 'colors)
-  (load-theme 'base16-penumbra-dark t)
+  (load-theme 'base16-homerun t)
   (defvar my/base16-colors
-  '(:base00 "#24272b"
-    :base01 "#303338"
-    :base02 "#3e4044"
-    :base03 "#636363"
-    :base04 "#7a7a7a"
-    :base05 "#8f8f8f"
-    :base06 "#bebebe"
-    :base07 "#fff7ed"
-    :red "#ca736c" ; red
-    :orange "#ba823a" ; orange
-    :yellow "#A38F2D" ; yellow
-    :green "#47a477" ; green
-    :cyan "#00a2af" ; cyan
-    :blue "#5794d0" ; blue
-    :violet "#9481cc" ; purple
-    :magenta "#bd72a8") ; magenta
-  "All colors for Base16 Penumbra Dark are defined here.")
+  '(:base00 "#000000"
+    :base01 "#191919"
+    :base02 "#2d2d2d"
+    :base03 "#424242"
+    :base04 "#585858"
+    :base05 "#777777"
+    :base06 "#989898"
+    :base07 "#ababab"
+    :red "#944649"     ; red
+    :orange "#915d1e"  ; orange
+    :yellow "#848c21"  ; yellow
+    :green "#007659"   ; green
+    :cyan "#00778a"    ; cyan
+    :blue "#005a9c"    ; blue
+    :magenta "#786ba3" ; magenta
+    :extra "#00778a")  ; extra
+  "All colors for homerun are defined here.")
   
   (custom-set-faces
    `(default
      ((t (:foreground
-          ,(plist-get my/base16-colors :base05)
-          :background
-          ,(plist-get my/base16-colors :base01)))))
+          ,(plist-get my/base16-colors :base05)))))
    `(mode-line
      ((t (:foreground
           ,(plist-get my/base16-colors :base04)
           :background
-          ,(plist-get my/base16-colors :base00)))))
+          ,(plist-get my/base16-colors :base01)))))
    `(line-number
      ((t (:foreground
           ,(plist-get my/base16-colors :base03)
@@ -52,10 +50,10 @@
           ,(plist-get my/base16-colors :base06)))))
    `(hl-line
      ((t (:background
-          ,(plist-get my/base16-colors :base00)))))
+          ,(plist-get my/base16-colors :base01)))))
    `(highlight
      ((t (:background
-          ,(plist-get my/base16-colors :base00)))))
+          ,(plist-get my/base16-colors :base01)))))
    `(link
      ((t (:foreground
           ,(plist-get my/base16-colors :cyan)
@@ -64,17 +62,17 @@
      ((t (:foreground
           ,(plist-get my/base16-colors :base06)
           :background
-          ,(plist-get my/base16-colors :base01)))))
+          ,(plist-get my/base16-colors :base00)))))
    `(tab-bar
      ((t (:foreground
           ,(plist-get my/base16-colors :base03)
           :background
-          ,(plist-get my/base16-colors :base00)))))
+          ,(plist-get my/base16-colors :base01)))))
    `(tab-bar-tab-inactive
      ((t (:foreground
           ,(plist-get my/base16-colors :base03)
           :background
-          ,(plist-get my/base16-colors :base00)))))
+          ,(plist-get my/base16-colors :base01)))))
    `(region
      ((t (:foreground
           ,(plist-get my/base16-colors :base00)
@@ -132,12 +130,12 @@
           bold))))
    `(eglot-highlight-symbol-face
      ((t (:foreground
-          ,(plist-get my/base16-colors :base06)
+          ,(plist-get my/base16-colors :base07)
           :weight
           bold))))
    `(font-lock-keyword-face
      ((t (:foreground
-          ,(plist-get my/base16-colors :violet)))))
+          ,(plist-get my/base16-colors :magenta)))))
    `(font-lock-variable-name-face
      ((t (:foreground
           ,(plist-get my/base16-colors :base05)))))
@@ -170,7 +168,7 @@
           ,(plist-get my/base16-colors :cyan)))))
    `(rainbow-delimiters-depth-1-face
      ((t (:foreground
-          ,(plist-get my/base16-colors :violet)))))
+          ,(plist-get my/base16-colors :magenta)))))
    `(rainbow-delimiters-depth-2-face
      ((t (:foreground
           ,(plist-get my/base16-colors :blue)))))
@@ -239,7 +237,7 @@
           bold))))
    `(org-level-1
      ((t (:foreground
-          ,(plist-get my/base16-colors :violet)))))
+          ,(plist-get my/base16-colors :magenta)))))
    `(org-level-2
      ((t (:foreground
           ,(plist-get my/base16-colors :blue)))))
@@ -263,7 +261,7 @@
           ,(plist-get my/base16-colors :magenta)))))
    `(org-document-title
      ((t (:foreground
-          ,(plist-get my/base16-colors :orange)))))
+          ,(plist-get my/base16-colors :cyan)))))
    `(org-date
      ((t (:foreground
           ,(plist-get my/base16-colors :green)))))
@@ -272,7 +270,7 @@
           ,(plist-get my/base16-colors :base03)))))
    `(org-agenda-structure
      ((t (:foreground
-          ,(plist-get my/base16-colors :violet)))))
+          ,(plist-get my/base16-colors :magenta)))))
    `(org-agenda-clocking
      ((t (:foreground
           ,(plist-get my/base16-colors :base05)
@@ -360,16 +358,16 @@
           ,(plist-get my/base16-colors :violet))))
    `(org-checkbox
      ((t (:background
-          ,(plist-get my/base16-colors :base00)
+          ,(plist-get my/base16-colors :base01)
           :foreground
-          ,(plist-get my/base16-colors :base05)
+          ,(plist-get my/base16-colors :base06)
           :weight bold))))
    `(denote-faces-date
      ((t (:foreground
           ,(plist-get my/base16-colors :base03)))))
    `(denote-faces-delimiter
      ((t (:foreground
-          ,(plist-get my/base16-colors :base00)))))
+          ,(plist-get my/base16-colors :base01)))))
    `(doom-modeline-project-dir
      ((t (:foreground
           ,(plist-get my/base16-colors :cyan)
