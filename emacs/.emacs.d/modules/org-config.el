@@ -104,6 +104,7 @@
 (use-package ob-go
   :ensure t
   :config
+  (add-to-list 'org-src-lang-modes '("go" . go-ts))
   (org-babel-do-load-languages 'org-babel-load-languages
                                (append org-babel-load-languages
                                        '((go     . t)))))
@@ -122,7 +123,8 @@
   (add-to-list 'org-structure-template-alist '("sq" . "src sql"))
   (add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))
   (add-to-list 'org-structure-template-alist '("js" . "src js"))
-  (add-to-list 'org-structure-template-alist '("py" . "src python")))
+  (add-to-list 'org-structure-template-alist '("py" . "src python"))
+  (add-to-list 'org-structure-template-alist '("go" . "src go")))
 
 ;;; VISUAL-FILL-COLUMN - centers text and sets width to 80
 (use-package visual-fill-column
