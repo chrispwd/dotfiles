@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-tmux new-session -d -s 'tui' -n 'mus'
-tmux send-keys      -t tui:1 'yt-x'
+tmux new-session -d -s 'misc' -n 'mus'
+tmux send-keys      -t misc:1 'yt-x'
+tmux new-window  -d -t misc:2 -n 'scratch'
 
 tmux new-session -d -s 'notes' -n 'notes'
 tmux send-keys      -t notes:1 'z deno' C-m

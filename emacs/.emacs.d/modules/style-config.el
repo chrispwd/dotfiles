@@ -77,7 +77,7 @@
      ((t (:foreground
           ,(plist-get my/base16-colors :base00)
           :background
-          ,(plist-get my/base16-colors :base03)))))
+          ,(plist-get my/base16-colors :blue)))))
    `(ansi-color-red
      ((t (:foreground
           ,(plist-get my/base16-colors :red)

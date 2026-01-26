@@ -1,4 +1,4 @@
-#include "Xresources.d/themes/cpl"
+#include "Xresources.d/themes/homerun"
 
 Xft.antialias: true
 Xft.hinting: true
