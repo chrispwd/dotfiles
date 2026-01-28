@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# ensures program executed once on startup
+run_once() {
+    if ! pgrep -f "$*" > /dev/null; then
+        "$@" &
+    fi
+}
+
+run_once cbatticon BAT1

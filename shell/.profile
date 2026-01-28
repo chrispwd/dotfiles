@@ -9,6 +9,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 ########################## DEFAULTS ####################################
 
 export XINITRC="$HOME/.xinitrc"
+export XPROFILE_LOCAL="$HOME/.xprofile_$(hostname)"
 export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
 export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
 export HISTCONTROL=ignoreboth
@@ -27,8 +28,8 @@ export SCROTS="$HOME/Sync/Pictures/scrots"
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export GTK_THEME="Nexto Dark"
 export MY_MONO_FONT="Agave Nerd Font"
-export COLOR_FG="#8f8f8f"
-export COLOR_BG="#303338"
+export COLOR_FG="#777777"
+export COLOR_BG="#000000"
 export LS_COLORS="di=34:ln=36:so=32:pi=33:ex=32:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
 export MYDMENUOPTS="-fn '${MY_MONO_FONT:-monospace}-12' -nb '${COLOR_BG}' -nf '${COLOR_FG}' -sf '${COLOR_BG}' -sb '${COLOR_FG}'"
 
@@ -39,7 +40,7 @@ export ALTERNATE_EDITOR="vim"
 if [ $(uname -o) = "GNU/Linux" ]; then
     export TERMINAL="st"
     # Net interfaces
-    # export NETINTF="$(ls /sys/class/ieee80211/*/device/net/)"
+    export NETINTF="$(ls /sys/class/ieee80211/*/device/net/)"
 else
     export TERMINAL="kitty"
 fi

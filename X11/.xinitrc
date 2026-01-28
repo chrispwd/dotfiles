@@ -24,8 +24,10 @@ fi
 #while type dwm >/dev/null ; do dwm && continue || break ;done
 #exec i3
 
-set-monitors
-exec wmaker
+# set-monitors
+startup
+exec i3
+# exec wmaker
 # exec fvwm3
 # startup
 # exec cwm

@@ -2,13 +2,14 @@
 # It will not be overwritten, so edit it as you like.
 #
 
-## Set
+## Defaults
 
 # Mod
 set $mod Mod4
+set $Alt Mod1
 floating_modifier $mod
 
-# Workspace
+# Workspaces
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -21,67 +22,66 @@ set $ws9 "9"
 set $ws10 "10"
 
 # Font
-#font pango:Gohu GohuFont 14px
-font pango:MesloLGSDZ Nerd Font 16px
-
-# Bar
-set $refresh_i3status killall -SIGUSR1 i3status
-bar {
-    # output all
-    tray_output primary
-    status_command i3status
-    position bottom
-    colors {
-       background $black
-       separator #757575
-       #                  border             background         text
-       focused_workspace  $black8            $black8            $foreground
-       active_workspace   $black0            $black0            $white7
-       inactive_workspace $black0            $black0            $white7
-       urgent_workspace   $red1              $red1              $foreground
-    }
-}
+set $sysfont "pango:Agave Nerd Font 16px"
+font $sysfont
 
 # Window
 tiling_drag modifier titlebar
 #gaps inner 10px
 #gaps outer 10px
-default_border pixel 1
+default_border normal 1
+default_floating_border normal 1
 #hide_edge_borders smart
 #smart_borders on
 #for_window [all] title_window_icon on
 #for_window [all] title_window_icon padding 5px
-for_window [class=".*"] title_format "%class"
-assign [class="^Emacs$"]         $ws1
-assign [class="^(?i)alacritty$"] $ws1
-assign [class="^(?i)termite$"]   $ws1
-assign [class="(?i)firefox"]     $ws2
+for_window [class=".*"] title_format "%title"
+gaps inner 10px
+gaps outer 64px
+
+# Mouse
+focus_follows_mouse no
+mouse_warping none
+
+# App-specific
+# assign [class="^Emacs$"]         $ws1
+# assign [class="^(?i)alacritty$"] $ws1
+# assign [class="^st-256color$"]   $ws1
+# assign [class="^(?i)termite$"]   $ws1
+# assign [class="(?i)firefox"]     $ws2
 assign [class="(?i)signal beta"] $ws3
 
+
 # Color
-set $black                #000000
-set $foreground           #bfbdb6
-set $background           #0d1017
-set $black0               #0b0e14
-set $red1                 #f07178
-set $green2               #aad94c
-set $yellow3              #ffb454
-set $blue4                #39bae6
-set $magenta5             #d2a6ff
-set $cyan6                #95e6cb
-set $white7               #636a72
-set $black8               #444b55
+set_from_resource $foreground i3wm.foreground  #bfbdb6
+set_from_resource $background i3wm.background  #0d1017
+set_from_resource $black0     i3wm.color0      #000000
+set_from_resource $black8     i3wm.color8      #0b0e14
+set_from_resource $red1       i3wm.color1      #f07178
+set_from_resource $red9       i3wm.color9      #f07178
+set_from_resource $green2     i3wm.color2      #aad94c
+set_from_resource $green10    i3wm.color10     #aad94c
+set_from_resource $yellow3    i3wm.color3      #ffb454
+set_from_resource $yellow11   i3wm.color11     #ffb454
+set_from_resource $blue4      i3wm.color4      #39bae6
+set_from_resource $blue12     i3wm.color12     #39bae6
+set_from_resource $magenta5   i3wm.color5      #d2a6ff
+set_from_resource $magenta13  i3wm.color13     #d2a6ff
+set_from_resource $cyan6      i3wm.color6      #95e6cb
+set_from_resource $cyan14     i3wm.color14     #95e6cb
+set_from_resource $white7     i3wm.color7      #636a72
+set_from_resource $white15    i3wm.color15     #636a72
 
-#                       border              background         text                 indicator
-client.focused          $blue4              $black0            $foreground          $green2
-client.unfocused        $black0             $black0            $white7              $green2
-client.focused_inactive $black0             $black0            $white7              $green2
-client.urgent           $black0             $black0            $white7              $green2
+#                       border        background      text              indicator
+client.focused          $blue4        $blue4          $white15          $green2
+client.unfocused        $green10      $black8         $yellow10         $green2
+client.focused_inactive $black8       $green10        $white15          $green2
+client.urgent           $red1         $red1           $white15          $green2
 
-## Bind
+## Binds
 
 # Apps
-#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec i3-sensible-terminal
 
 # Focus
 bindsym $mod+h      focus left
@@ -92,30 +92,34 @@ bindsym $mod+Left   focus left
 bindsym $mod+Down   focus down
 bindsym $mod+Up     focus up
 bindsym $mod+Right  focus right
+bindsym $Alt+Tab    focus right
+bindsym $Alt+Shift+Tab focus left
+bindsym $mod+$Alt+s focus mode_toggle
+bindsym $mod+$Alt+p focus parent
+bindsym $mod+$Alt+c focus child
 
 # Movement
-bindsym $mod+Shift+h      move left
-bindsym $mod+Shift+j      move down
-bindsym $mod+Shift+k      move up
-bindsym $mod+Shift+l      move right
-bindsym $mod+Shift+Left   move left
-bindsym $mod+Shift+Down   move down
-bindsym $mod+Shift+Up     move up
-bindsym $mod+Shift+Right  move right
+bindsym $mod+Control+h      move left
+bindsym $mod+Control+j      move down
+bindsym $mod+Control+k      move up
+bindsym $mod+Control+l      move right
+bindsym $mod+Control+Left   move left
+bindsym $mod+Control+Down   move down
+bindsym $mod+Control+Up     move up
+bindsym $mod+Control+Right  move right
 
+# Window state
+bindsym $mod+$Alt+g split h
+bindsym $mod+$Alt+v split v
+bindsym $mod+$Alt+f fullscreen toggle
+# bindsym $mod+$Alt+h layout stacking
+bindsym $mod+$Alt+t layout tabbed
+bindsym $mod+$Alt+e layout toggle split
+# bindsym $mod+Shift+space floating toggle
+bindsym $mod+$Alt+space floating toggle
+
+# Window action
 bindsym $mod+w kill
-
-# Orient
-bindsym $mod+g split h
-bindsym $mod+v split v
-bindsym $mod+f fullscreen toggle
-bindsym $mod+c layout stacking
-bindsym $mod+t layout tabbed
-bindsym $mod+e layout toggle split
-bindsym $mod+Shift+space floating toggle
-bindsym $mod+s focus mode_toggle
-bindsym $mod+a focus parent
-bindsym $mod+d focus child
 
 # Workspace
 bindsym $mod+1 workspace number $ws1
@@ -170,8 +174,30 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+# Bar
+# set $refresh_i3status killall -SIGUSR1 i3status
+# bar {
+#     # output all
+#     font $sysfont
+#     tray_output primary
+#     tray_padding 2px
+#     position top
+#     separator_symbol " | "
+#     status_command i3blocks
+#     # colors {
+#     #    background $black0
+#     #    separator $black8
+#     #    #                  border             background         text
+#     #    focused_workspace  $cyan6             $blue4             $white15
+#     #    active_workspace   $green10           $black8            $white7
+#     #    inactive_workspace $green10           $black8            $green10
+#     #    urgent_workspace   $white15           $red1              $white15
+#     # }
+# }
 
 # Exec
-exec sleep 1 && startup
-exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# exec sleep 1 && startup
+# exec --no-startup-id dex --autostart --environment i3
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec_always --no-startup-id launch-polybar.sh
+exec --no-startup-id st -T 'ChuddieTerm'

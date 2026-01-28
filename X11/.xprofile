@@ -28,10 +28,11 @@ run_once dunst
 # trayed programs
 run_once nm-applet
 run_once cbatticon BAT0
-run_once volumeicon
+# run_once volumeicon
+run_once keepassxc
 
 # source any machine-local configs
-source_if "$HOME/.xprofile_local"
+source_if "$XPROFILE_LOCAL"
 
 ################################################################################
 # Old stuff for reference
