@@ -24,13 +24,13 @@ fi
 #while type dwm >/dev/null ; do dwm && continue || break ;done
 #exec i3
 
-# set-monitors
-startup
-exec i3
+# Pass wm name as arg to script to specify wm-specific programs
+startup cwm
+# exec i3
 # exec wmaker
 # exec fvwm3
 # startup
-# exec cwm
+exec cwm
 # exec dwm
 # run icewm-session without icewmbg (prefer feh)
 # exec icewm-session --nobg

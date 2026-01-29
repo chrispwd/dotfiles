@@ -58,6 +58,9 @@
      ((t (:foreground
           ,(plist-get my/base16-colors :cyan)
           :underline t))))
+   `(cursor
+     ((t (:background
+          ,(plist-get my/base16-colors :cyan)))))
    `(tab-bar-tab
      ((t (:foreground
           ,(plist-get my/base16-colors :base06)
@@ -386,8 +389,8 @@
 ;; Default face (gui only)
 (unless (not (display-graphic-p))
   (if (eq system-type 'darwin)
-      (set-face-attribute 'default nil :family (getenv "MY_MONO_FONT") :height 145)
-	(set-face-attribute 'default nil :family (getenv "MY_MONO_FONT") :height 125)))
+      (set-face-attribute 'default nil :family (getenv "MY_MONO_FONT") :height 140)
+	(set-face-attribute 'default nil :family (getenv "MY_MONO_FONT") :height 120)))
 
 ;;; ICON ASSETS
 (use-package all-the-icons

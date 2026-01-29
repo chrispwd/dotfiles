@@ -3,7 +3,7 @@
 #
 
 # terminal emulator
-mod4 + alt + Return
+mod4 + Return
 	$TERMINAL
 
 # program launcher
@@ -36,7 +36,7 @@ ctrl + alt + mod4 + f
 ctrl + alt + mod4 + t
      timestamp
 ctrl + alt + mod4 + r
-     startup
+     startup "$WMNAME"
 
 # # xdotool window management
 # mod4 + alt + shift + {j,k}

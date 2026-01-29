@@ -8,3 +8,4 @@ run_once() {
 }
 
 run_once cbatticon BAT1
+run_once blueman-applet

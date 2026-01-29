@@ -1,15 +1,56 @@
 # chrispwd's .cwmrc
 
+## Settings
+
+# defaults
 sticky      yes
 snapdist    4
-moveamount  40
-borderwidth 3
-gap         8 40 8 8
+moveamount  32
+borderwidth 2
+gap         64 64 64 64
 vtile       50
 htile       50
 unbind-key  all
+fontname    "monospace:size=12"
 
-fontname "monospace:style=Italic:size=12"
+# app menu
+command terminal     "st"
+command firefox      "firefox"
+command emacs        "emacs"
+command htop         "st -T htop -e htop"
+command filebrowser  "Thunar"
+command signal       "signal-desktop"
+command telegram     "Telegram"
+
+# app-specific
+ignore       polybar
+ignore       tint
+ignore       MEGAsync
+ignore       trayer
+ignore       xclock
+ignore       xosview
+ignore       xeyes
+ignore       xlogo
+autogroup    4 "keepassxc","KeePassXC"
+autogroup    2 "Navigator","firefox"
+autogroup    3 "signal","Signal"
+autogroup    0 "megasync","MEGAsync"
+autogroup    0 "xclock", "XClock"
+autogroup    0 "xosview", "XOsview"
+autogroup    0 "panel","trayer"
+
+## Keybinds
+
+# wm
+bind-key 4S-a menu-cmd
+bind-key 4S-e menu-exec
+bind-key 4S-g menu-group
+bind-key 4S-m menu-exec-wm
+bind-key 4S-s menu-ssh
+bind-key 4S-w menu-window
+bind-key 4S-z menu-window-hidden
+bind-key 4S-r restart
+bind-key 4S-q quit
 
 # groups
 bind-key 4-1   group-only-1
@@ -40,29 +81,25 @@ bind-key 4S-7  window-movetogroup-7
 bind-key 4S-8  window-movetogroup-8
 bind-key 4S-9  window-movetogroup-9
 
-# keybinds
+# window focus
 bind-key M-Tab    window-cycle
 bind-key MS-Tab   window-rcycle
 bind-key M-grave  window-cycle-inclass
 bind-key MS-grave window-rcycle-inclass
 bind-key 4-Tab    group-cycle
 bind-key 4S-Tab   group-rcycle
+
+# window state
 bind-key 4M-m     window-maximize
-bind-key 4MS-m    window-maximize
 bind-key 4M-v     window-vmaximize
-bind-key 4MS-v    window-vtile
 bind-key 4M-g     window-hmaximize
+bind-key 4MS-v    window-vtile
 bind-key 4MS-g    window-htile
 bind-key 4M-f     window-fullscreen
-bind-key 4-w      window-close
-bind-key 4-s      window-stick
-bind-key 4-z      window-hide
+bind-key 4M-s     window-stick
+bind-key 4M-z     window-hide
 bind-key 4SC-f    window-freeze
-bind-key 4-m      menu-window
-bind-key 4-z      menu-window-hidden
-bind-key 4-d      menu-cmd
-bind-key 4S-r     restart
-bind-key 4S-q     quit
+bind-key 4-w      window-close
 
 # window movement
 bind-key 4-h    window-move-left
@@ -92,26 +129,10 @@ bind-key 4M-l    window-resize-right
 unbind-mouse all
 bind-mouse 4-3  window-resize
 bind-mouse 4-1  window-move
-bind-mouse 4S-1 window-lower
+bind-mouse 4M-1 window-lower
 
-# other
-ignore       polybar
-ignore       tint
-ignore       MEGAsync
-ignore       trayer
-ignore       xclock
-ignore       xosview
-ignore       xeyes
-ignore       xlogo
-autogroup    4 "keepassxc","KeePassXC"
-autogroup    2 "Navigator","firefox"
-autogroup    3 "signal","Signal"
-autogroup    0 "megasync","MEGAsync"
-autogroup    0 "xclock", "XClock"
-autogroup    0 "xosview", "XOsview"
-autogroup    0 "panel","trayer"
+## Colors
 
-# colors
 # Palenight
 # color menufg         "#d0d0d0"
 # color menubg         "#292d3e"
@@ -285,12 +306,23 @@ autogroup    0 "panel","trayer"
 # color urgencyborder   "#e06c75"
 
 # Windowmaker
-color menufg          "#000000"
-color menubg          "#666666"
-color font            "#000000"
-color selfont         "#666666"
-color activeborder    "#000000"
-color inactiveborder  "#666666"
-color groupborder     "#5f7f5f"
-color ungroupborder   "#dfaf8f"
-color urgencyborder   "#dca3a3"
+# color menufg          "#000000"
+# color menubg          "#666666"
+# color font            "#000000"
+# color selfont         "#666666"
+# color activeborder    "#000000"
+# color inactiveborder  "#666666"
+# color groupborder     "#5f7f5f"
+# color ungroupborder   "#dfaf8f"
+# color urgencyborder   "#dca3a3"
+
+# homerun
+color menufg          "#005a9c"
+color menubg          "#000000"
+color font            "#777777"
+color selfont         "#ababab"
+color activeborder    "#005a9c"
+color inactiveborder  "#424242"
+color groupborder     "#007659"
+color ungroupborder   "#848c21"
+color urgencyborder   "#944649"
