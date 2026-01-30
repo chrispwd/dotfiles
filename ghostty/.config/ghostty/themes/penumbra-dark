@@ -1,0 +1,36 @@
+foreground =
+background =
+cursor-color =
+
+# black
+palette = 0=#24272b
+palette = 8=#3e4044
+
+# red
+palette = 
+palette = 
+
+# green
+palette = 
+palette = 
+
+# yellow
+palette = 
+palette = 
+
+# blue
+palette = 
+palette = 
+
+# magenta
+palette = 
+palette = 
+
+# cyan
+palette = 
+palette = 
+
+# white
+palette = 
+palette = 
+

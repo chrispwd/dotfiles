@@ -133,7 +133,7 @@ bind-mouse 4M-1 window-lower
 
 ## Colors
 
-# Palenight
+## Palenight
 # color menufg         "#d0d0d0"
 # color menubg         "#292d3e"
 # color font           "#d0d0d0"
@@ -141,7 +141,7 @@ bind-mouse 4M-1 window-lower
 # color activeborder   "#c792ea"
 # color inactiveborder "#292d3e"
 
-# Twilight
+## Twilight
 # color menufg          "#919191"
 # color menubg          "#1e1e1e"
 # color font            "#919191"
@@ -152,7 +152,7 @@ bind-mouse 4M-1 window-lower
 # color ungroupborder   "#cda869"
 # color urgencyborder   "#cf6a4c"
 
-# Tomorrow night
+## Tomorrow night
 # color menufg          "#a5a8a6"
 # color menubg          "#1d1f21"
 # color font            "#a5a8a6"
@@ -163,7 +163,7 @@ bind-mouse 4M-1 window-lower
 # color ungroupborder   "#de935f"
 # color urgencyborder   "#cc6666"
 
-# gruvbox-dark
+## gruvbox-dark
 # color menufg          "#d5c4a1"
 # color menubg          "#1d2021"
 # color font            "#a89984"
@@ -174,7 +174,7 @@ bind-mouse 4M-1 window-lower
 # color ungroupborder   "#7c6f64"
 # color urgencyborder   "#fb4933"
 
-# ayu-dark
+## ayu-dark
 # color menufg         "#bfbdb6"
 # color menubg         "#0d1017"
 # color font           "#bfbdb6"
@@ -182,7 +182,7 @@ bind-mouse 4M-1 window-lower
 # color activeborder   "#39bae6"
 # color inactiveborder "#636a72"
 
-# Modus-vivendi
+## Modus-vivendi
 # color menufg          "#ffffff"
 # color menubg          "#000000"
 # color font            "#ffffff"
@@ -190,7 +190,7 @@ bind-mouse 4M-1 window-lower
 # color activeborder    "#aeeeee"
 # color inactiveborder  "#000000"
 
-# Solarized Dark
+## Solarized Dark
 # color menufg           "#fdf6e3"
 # color menubg           "#657b83"
 # color font             "#fdf6e3"
@@ -198,7 +198,7 @@ bind-mouse 4M-1 window-lower
 # color activeborder     "#93a1a1"
 # color inactiveborder   "#586e75"
 
-# Solarized Light
+## Solarized Light
 # color menufg           "#657b83"
 # color menubg           "#fdf6e3"
 # color font             "#657b83"
@@ -206,7 +206,7 @@ bind-mouse 4M-1 window-lower
 # color activeborder     "#586e75"
 # color inactiveborder   "#93a1a1"
 
-# Zenburn
+## Zenburn
 # color menufg          "#dcdccc"
 # color menubg          "#3f3f3f"
 # color font            "#dcdccc"
@@ -217,7 +217,7 @@ bind-mouse 4M-1 window-lower
 # color ungroupborder   "#f0dfaf"
 # color urgencyborder   "#cc9393"
 
-# gruvbox-material soft
+## gruvbox-material soft
 # color menufg          "#d4be98"
 # color menubg          "#32302f"
 # color font            "#d4be98"
@@ -228,7 +228,7 @@ bind-mouse 4M-1 window-lower
 # color ungroupborder   "#ea6962"
 # color urgencyborder   "#ef938e"
 
-# 3024
+## 3024
 # color menufg          "#a5a2a2"
 # color menubg          "#090300"
 # color font            "#a5a2a2"
@@ -239,7 +239,7 @@ bind-mouse 4M-1 window-lower
 # color ungroupborder   "#cdab53"
 # color urgencyborder   "#db2d20"
 
-# lucius
+## lucius
 # color menufg          "#b2b2b2"
 # color menubg          "#303030"
 # color font            "#b2b2b2"
@@ -250,7 +250,7 @@ bind-mouse 4M-1 window-lower
 # color ungroupborder   "#afaf87"
 # color urgencyborder   "#d75f5f"
 
-# CPL
+## CPL
 # color menufg         "#989898"
 # color menubg         "#1d1d1d"
 # color font           "#777777"
@@ -261,7 +261,7 @@ bind-mouse 4M-1 window-lower
 # color ungroupborder   "#a05803"
 # color urgencyborder   "#b10b00"
 
-# Solarized black
+## Solarized black
 # color menufg         "#839496"
 # color menubg         "#161b1d"
 # color font           "#839496"
@@ -272,7 +272,7 @@ bind-mouse 4M-1 window-lower
 # color ungroupborder   "#cb4b16"
 # color urgencyborder   "#dc322f"
 
-# Atelier cave dark
+## Atelier cave dark
 # color menufg         "#8b8792"
 # color menubg         "#19171c"
 # color font           "#8b8792"
@@ -283,7 +283,7 @@ bind-mouse 4M-1 window-lower
 # color ungroupborder   "#585260"
 # color urgencyborder   "#be4678"
 
-# Atelier seaside dark
+## Atelier seaside dark
 # color menufg         "#8ca68c"
 # color menubg         "#131513"
 # color font           "#8ca68c"
@@ -294,7 +294,7 @@ bind-mouse 4M-1 window-lower
 # color ungroupborder   "#5e6e5e"
 # color urgencyborder   "#e6193c"
 
-# Onedark
+## Onedark
 # color menufg          "#abb2bf"
 # color menubg          "#1f2329"
 # color font            "#abb2bf"
@@ -305,7 +305,7 @@ bind-mouse 4M-1 window-lower
 # color ungroupborder   "#d19a66"
 # color urgencyborder   "#e06c75"
 
-# Windowmaker
+## Windowmaker
 # color menufg          "#000000"
 # color menubg          "#666666"
 # color font            "#000000"
@@ -316,13 +316,24 @@ bind-mouse 4M-1 window-lower
 # color ungroupborder   "#dfaf8f"
 # color urgencyborder   "#dca3a3"
 
-# homerun
-color menufg          "#005a9c"
-color menubg          "#000000"
-color font            "#777777"
-color selfont         "#ababab"
-color activeborder    "#005a9c"
-color inactiveborder  "#424242"
-color groupborder     "#007659"
-color ungroupborder   "#848c21"
-color urgencyborder   "#944649"
+## homerun
+# color menufg          "#005a9c"
+# color menubg          "#000000"
+# color font            "#777777"
+# color selfont         "#ababab"
+# color activeborder    "#005a9c"
+# color inactiveborder  "#424242"
+# color groupborder     "#007659"
+# color ungroupborder   "#848c21"
+# color urgencyborder   "#944649"
+
+## Penumbra Dark
+color menufg          "#5794d0"
+color menubg          "#24272b"
+color font            "#8f8f8f"
+color selfont         "#fff7ed"
+color activeborder    "#5794d0"
+color inactiveborder  "#3e4044"
+color groupborder     "#47a477"
+color ungroupborder   "#a38f2d"
+color urgencyborder   "#ca736c"
