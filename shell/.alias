@@ -24,6 +24,7 @@ alias \
 
 # Common commands
 alias \
+  e="TERM=xterm-emacs emacs -nw" \
   ka="killall" \
   shutdown="shutdown -h now" \
   lsda="lsd -A" \
