@@ -31,7 +31,7 @@ ignore       xclock
 ignore       xosview
 ignore       xeyes
 ignore       xlogo
-autogroup    4 "keepassxc","KeePassXC"
+# autogroup    4 "keepassxc","KeePassXC"
 autogroup    2 "Navigator","firefox"
 autogroup    3 "signal","Signal"
 autogroup    0 "megasync","MEGAsync"

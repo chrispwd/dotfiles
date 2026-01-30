@@ -326,10 +326,6 @@
     # background = "#1d1d1d"
     # foreground = "#777777"
     # frame_color = "#777777"
-    # Penumbra dark
-    # background = "#24272b"
-    # foreground = "#8f8f8f"
-    # frame_color = "#636363"
     # Solarized Dark
     # background = "#002b36"
     # foreground = "#839496"
@@ -347,9 +343,13 @@
     # foreground = "#b2b2b2"
     # frame_color = "#6c6c6c"
     # homerun
-    background = "#000000"
-    foreground = "#777777"
-    frame_color = "#777777"
+    # background = "#000000"
+    # foreground = "#777777"
+    # frame_color = "#777777"
+    # Penumbra dark
+    background = "#24272b"
+    foreground = "#8f8f8f"
+    frame_color = "#636363"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
@@ -391,10 +391,6 @@
     # background = "#1d1d1d"
     # foreground = "#ababab"
     # frame_color = "#ababab"
-    # Penumbra dark
-    # background = "#24272b"
-    # foreground = "#8f8f8f"
-    # frame_color = "#8f8f8f"
     # Twilight
     # background = "#1e1e1e"
     # foreground = "#a7a7a7"
@@ -415,10 +411,14 @@
     # background = "#282828"
     # foreground = "#b2b2b2"
     # frame_color = "#5fafd7"
+    # Penumbra dark
+    background = "#24272b"
+    foreground = "#8f8f8f"
+    frame_color = "#8f8f8f"
     # homerun
-    background = "#000000"
-    foreground = "#ababab"
-    frame_color = "#ababab"
+    # background = "#000000"
+    # foreground = "#ababab"
+    # frame_color = "#ababab"
     timeout = 7
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
@@ -456,10 +456,6 @@
     # background = "#7a2d00"
     # foreground = "#ababab"
     # frame_color = "#ababab"
-    # Penumbra dark
-    # background = "#ca736c"
-    # foreground = "#fff7ed"
-    # frame_color = "#fff7ed"
     # Twilight
     # background = "#1e1e1e"
     # foreground = "#a7a7a7"
@@ -481,9 +477,13 @@
     # foreground = "#d75f5f"
     # frame_color = "#afaf87"
     # homerun
-    background = "#944649"
-    foreground = "#ababab"
-    frame_color = "#ababab"
+    # background = "#944649"
+    # foreground = "#ababab"
+    # frame_color = "#ababab"
+    # Penumbra dark
+    background = "#ca736c"
+    foreground = "#fff7ed"
+    frame_color = "#fff7ed"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     # icon = $HOME/.icons/CDE-Reborn/32x32/status/important.png
