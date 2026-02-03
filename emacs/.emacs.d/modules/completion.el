@@ -2,7 +2,7 @@
 ;;
 ;;; Commentary:
 ;;
-;; Code:
+;;; Code:
 ;;
 ;;; VERTICO
 (use-package vertico

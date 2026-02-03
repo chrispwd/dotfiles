@@ -40,6 +40,11 @@
           ,(plist-get my/base16-colors :base04)
           :background
           ,(plist-get my/base16-colors :base00)))))
+   `(mode-line-inactive
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base03)
+          :background
+          ,(plist-get my/base16-colors :base00)))))
    `(line-number
      ((t (:foreground
           ,(plist-get my/base16-colors :base03)
