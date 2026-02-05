@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
 
-tmux new-session -d -s 'misc' -n 'mus'
-tmux send-keys      -t misc:1 'yt-x'
-tmux new-window  -d -t misc:2 -n 'scratch'
-
 tmux new-session -d -s 'notes' -n 'notes'
 tmux send-keys      -t notes:1 'z deno' C-m
-tmux send-keys      -t notes:1 'e .'
+
+tmux new-session -d -s 'main' -n 'main'
+tmux send-keys      -t main:1 'cd ~/Documents' C-m
 
 tmux new-session -d -s 'dots' -n 'dot'
 tmux send-keys      -t dots:1 'z dot' C-m
-tmux send-keys      -t dots:1 'e .'
 tmux new-window  -d -t dots:2 -n 'st'
 tmux send-keys      -t dots:2 'z cpwdst' C-m
-tmux send-keys      -t dots:2 'e .'
+
+tmux new-session -d -s 'misc' -n 'mus'
+tmux send-keys      -t misc:1 'yt-x'
+tmux new-window  -d -t misc:2 -n 'scratch'
 
 tmux attach         -t notes
