@@ -122,5 +122,14 @@ BATTERY_STATUS=`battery_status $1`
 if [ -n "$CUTE_BATTERY_INDICATOR" ]; then
     cutinate $BATTERY_STATUS
 else
-    echo ${BATTERY_STATUS}%
+    per="$(echo $BATTERY_STATUS | grep -o -E '[0-9]+')"
+    if [ "$per" -ge "80" ]; then
+        echo "  ${BATTERY_STATUS}%"
+    elif [ "$per" -ge "60" ]; then
+        echo "  ${BATTERY_STATUS}%"
+    elif [ "$per" -ge "40" ]; then
+        echo "  ${BATTERY_STATUS}%"
+    else
+        echo "  ${BATTERY_STATUS}%"
+    fi
 fi
