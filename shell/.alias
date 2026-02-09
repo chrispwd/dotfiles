@@ -39,8 +39,15 @@ alias \
   iv="sxiv" \
   ff="fastfetch" \
   v="vim" \
-  ec="emacsclient -nw" \
-  el="emacslauncher" \
   ytm="ytfzf -m" \
   mpv="mpv --hwdec=auto-safe --profile=fast" \
   tks="tmux kill-server"
+
+# terminal Emacs and daemons
+alias lsemacs="ps -xo command= | grep -E '^emacs --daemon=.*'"
+alias lse="ps -xo command= | grep -E '^emacs --daemon=.*'"
+alias emcs="emacsclient -nw -s"
+alias ecs="emacsclient -nw -s"
+alias emc="emacsclient -nw"
+alias ec="emacsclient -nw"
+alias emdot="emacsclient -nw -s dotfiles"
