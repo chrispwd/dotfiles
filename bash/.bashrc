@@ -10,6 +10,28 @@
 _have() { type "$1" > /dev/null 2>&1; }
 _source_if() { [[ -r "$1" ]] && source "$1"; }
 
+################### External utility functions #########################
+
+emd () {
+    if [[ -n "$1" ]]; then
+        eval "emacs --daemon=${1}"
+    else
+        emacs --daemon
+    fi
+}
+
+ems () {
+    if [[ -n "$1" ]]; then
+        if [[ -n "$2" ]]; then
+            eval "emacsclient -s $1 $2"
+        else
+            eval "emacsclient -s $1 ."
+        fi
+    else
+        echo "Error: no daemon specified" && exit 1
+    fi
+}
+
 ######################### Bash options #################################
 
 shopt -s checkwinsize
@@ -106,8 +128,7 @@ fi
 
 ######################### Private / Work Configs #######################
 
-_source_if "$HOME/.bash_work"
-_source_if "$HOME/.bash_private"
+_source_if "$HOME/.bash_$(hostname)"
 
 # Automatically added by the Guix install script.
 if [ -n "$GUIX_ENVIRONMENT" ]; then
