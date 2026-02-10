@@ -28,7 +28,7 @@ export SCROTS="$HOME/Sync/Pictures/scrots"
 # export BROWSER="firefox"
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export GTK_THEME="Nexto Dark"
-export MY_MONO_FONT="Agave Nerd Font"
+export MY_MONO_FONT="UbuntuMono Nerd Font"
 export COLOR_FG="#8f8f8f"
 export COLOR_BG="#24272b"
 export COLOR_SEL_FG="#fff7ed"
@@ -40,13 +40,10 @@ export MYDMENUOPTS="-fn '${MY_MONO_FONT:-monospace}-12' -nb '${COLOR_BG}' -nf '$
 export EDITOR="emacs -nw"
 export ALTERNATE_EDITOR="vim"
 
-if [ $(uname -o) = "GNU/Linux" ]; then
-    export TERMINAL="st"
-    # Net interfaces
-    export NETINTF="$(ls /sys/class/ieee80211/*/device/net/)"
-else
-    export TERMINAL="kitty"
-fi
+# machine-specific profiles
+local_profile="$HOME/.profile_$(hostname)"
+
+[ -f "$local_profile" ] && . $local_profile
 
 ########################## PATH ########################################
 
