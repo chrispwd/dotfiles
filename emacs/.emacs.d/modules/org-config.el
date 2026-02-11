@@ -79,7 +79,7 @@
    "───────────────>"
   org-agenda-deadline-leaders (quote ("Today: " "in%2d: " "over +%d!:"))
   org-agenda-scheduled-leaders (quote ("" "S%3d: "))
-  org-agenda-prefix-format " %?-32b %?-12t% s")
+  org-agenda-prefix-format " %?-32b %?3e %?-12t% s")
   
   ;; Ellipsis styling
   (setq org-ellipsis "...")
@@ -95,7 +95,8 @@
   (org-mode . cpwd/org-mode-setup))
 
 ;;; ORG-BABEL
-(use-package ox-md
+(use-package ox-gfm
+  :ensure t
   :config
   (org-babel-do-load-languages 'org-babel-load-languages
                                (append org-babel-load-languages
