@@ -91,6 +91,9 @@ _ps1() {
     local cr='\[\e[0m\]'
     local x='\[\e[0m\]'
     local bold='\[\e[1m\]'
+    local bold_b='\[\e[34;1m\]'
+    local bold_l='\[\e[37;1m\]'
+    local bold_ll='\[\e[97;1m\]'
     local clear='\[\e[0m\]'
 
     B=$(git branch --show-current 2>/dev/null)
@@ -112,7 +115,7 @@ _ps1() {
     # PS1="$bg_base01_fg_cya\u$bg_base01_fg_dull from $bg_base01_fg_gre\h$bg_base01_fg_dull in $bg_base01_fg_mag\$(shorten_git_path)$B$bg_base01_fg_dull last command at $bg_base01_fg_fg\t$stat"
     # PS1="${brgre}[ in ${gre}\w$B${brgre} at ${brblu}\t$stat${brgre} ]$clear"
     # PS1+="\n> "
-    PS1="${stat}as ${c}\u${x} ${B}in ${g}\w${x}:\n${bold}\\$ ${x}"
+    PS1="${stat}as ${c}\u${x} ${B}in ${g}\w${x}:\n${bold_l}\\$ ${x}"
 }
 
 PROMPT_COMMAND="_ps1"
