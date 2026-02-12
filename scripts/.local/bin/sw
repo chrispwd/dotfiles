@@ -1,0 +1,13 @@
+#!/bin/sh
+
+fatal() {
+    echo "[fatal] $0 : $1"
+    exit 1
+}
+
+[ -z "$1" ] && fatal "Missing key name"
+
+# swap out current key on keyring with another
+cmd="ssh-add -D && ssha $1"
+
+eval $cmd
