@@ -80,7 +80,7 @@
           ,(plist-get my/base16-colors :base00)))))
    `(region
      ((t (:foreground
-          ,(plist-get my/base16-colors :base00)
+          ,(plist-get my/base16-colors :base07)
           :background
           ,(plist-get my/base16-colors :base03)))))
    `(ansi-color-red
@@ -110,9 +110,9 @@
           ,(plist-get my/base16-colors :green)))))
    `(show-paren-match
      ((t (:foreground
-          ,(plist-get my/base16-colors :base00)
+          ,(plist-get my/base16-colors :base06)
           :background
-          ,(plist-get my/base16-colors :green)))))
+          ,(plist-get my/base16-colors :base02)))))
    `(show-paren-mismatch
      ((t (:foreground
           ,(plist-get my/base16-colors :base00)

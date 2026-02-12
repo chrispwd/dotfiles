@@ -1,0 +1,103 @@
+;;; cemant-theme.el --- cemant colors for emacs (.emacs.d/cemant-theme.el)
+;;; Commentary:
+;;; Author: agaric <agaric@pm.me>
+;;; Code:
+
+(deftheme cemant "Grayish lightish color scheme for Emacs.")
+
+(let* ((c-d  "#16161d")
+       (c-r  "#a32c2d")
+       (c-g  "#4b7d08")
+       (c-y  "#916814")
+       (c-b  "#3c56aa")
+       (c-m  "#91328c")
+       (c-c  "#237e6f")
+       (c-l  "#92959d")
+       (c-dd "#575a61")
+       (c-rr "#cf554d")
+       (c-gg "#72a336")
+       (c-yy "#ba8d3b")
+       (c-bb "#667ad3")
+       (c-mm "#ba59b3")
+       (c-cc "#4ea494")
+       (c-ll "#d2d6de")
+       (c-1  c-d)
+       (c-2  c-b)
+       (c-3  c-c)
+       (c-4  c-g)
+       (c-5  c-y)
+       (c-6  c-r)
+       (c-7  c-m)
+       (c-8  c-dd)
+       (c-9  c-bb)
+       (c-10 c-cc)
+       (c-11 c-gg)
+       (c-12 c-yy)
+       (c-13 c-rr)
+       (c-14 c-mm)
+       (c-15 "#aaadb5")
+       (c-16 "#b0b3bb")
+       (c-bg "#b9bdc5")
+       (c-fg "#36383f"))
+
+  (custom-theme-set-faces
+   'cemant
+
+   `(default              ((t (:background ,c-bg :foreground ,c-fg))))
+   `(button               ((t (:foreground ,c-m  :underline t))))
+   `(cursor               ((t (:background ,c-d))))
+   `(fringe               ((t (:background ,c-ll))))
+   `(header-line          ((t (:background ,c-b  :foreground ,c-fg))))
+   `(highlight            ((t (:background ,c-15))))
+   `(highlight-face       ((t (:background ,c-15))))
+   `(hl-line              ((t (:background ,c-15))))
+   `(info-xref            ((t (:foreground ,c-g  :underline t))))
+   `(linum                ((t (:background ,c-16 :foreground ,c-dd))))
+   `(linum-highlight-face ((t (:background ,c-ll :foreground ,c-d :weight bold))))
+   `(mode-line            ((t (:background ,c-dd :foreground ,c-ll))))
+   `(mode-line-inactive   ((t (:background ,c-l :foreground ,c-dd))))
+   `(region               ((t (:background ,c-l))))
+   `(vertical-border      ((t (:foreground ,c-l))))
+
+   `(font-lock-builtin-face           ((t (:foreground ,c-y))))
+   `(font-lock-comment-face           ((t (:foreground ,c-bb :bold t))))
+   `(font-lock-comment-delimiter-face ((t (:foreground ,c-bb :bold t))))
+   `(font-lock-constant-face          ((t (:foreground ,c-r))))
+   `(font-lock-doc-face               ((t (:foreground ,c-dd))))
+   `(font-lock-doc-string-face        ((t (:foreground ,c-dd))))
+   `(font-lock-function-name-face     ((t (:foreground ,c-b :bold t))))
+   `(font-lock-keyword-face           ((t (:foreground ,c-y))))
+   `(font-lock-negation-char-face     ((t (:foreground ,c-mm))))
+   `(font-lock-number-face            ((t (:foreground ,c-r))))
+   `(font-lock-preprocessor-face      ((t (:foreground ,c-m))))
+   `(font-lock-reference-face         ((t (:foreground ,c-cc))))
+   `(font-lock-regexp-grouping-backslash ((t (:foreground ,c-rr))))
+   `(font-lock-regexp-grouping-construct ((t (:foreground ,c-rr))))
+   `(font-lock-string-face            ((t (:foreground ,c-r))))
+   `(font-lock-type-face              ((t (:foreground ,c-g))))
+   `(font-lock-variable-name-face     ((t (:foreground ,c-c))))
+   `(font-lock-warning-face           ((t (:background ,c-r :foreground ,c-ll))))
+
+   `(org-agenda-structure ((t (:background ,c-bg :foreground ,c-fg :box (:line-width 2 :color ,c-ll)))))
+   `(org-document-title   ((t (:foreground ,c-dd))))
+
+   `(rainbow-delimiters-depth-1-face ((t (:foreground ,c-1))))
+   `(rainbow-delimiters-depth-2-face ((t (:foreground ,c-2))))
+   `(rainbow-delimiters-depth-3-face ((t (:foreground ,c-3))))
+   `(rainbow-delimiters-depth-4-face ((t (:foreground ,c-4))))
+   `(rainbow-delimiters-depth-5-face ((t (:foreground ,c-5))))
+   `(rainbow-delimiters-depth-6-face ((t (:foreground ,c-6))))
+   `(rainbow-delimiters-depth-7-face ((t (:foreground ,c-7))))
+   `(rainbow-delimiters-depth-8-face ((t (:foreground ,c-8))))
+
+   ))
+
+;;;###autoload
+(and load-file-name
+     (boundp 'custom-theme-load-path)
+     (add-to-list 'custom-theme-load-path
+                  (file-name-as-directory
+                   (file-name-directory load-file-name))))
+
+(provide-theme 'cemant)
+;;; cemant-theme.el ends here
