@@ -36,6 +36,7 @@ ems () {
 
 shopt -s checkwinsize
 shopt -s expand_aliases
+shopt -s histappend
 set -o emacs
 export COLORTERM=truecolor
 
@@ -88,6 +89,20 @@ _ps1() {
     local mm='\[\e[0;95m\]'
     local cc='\[\e[0;96m\]'
     local ll='\[\e[0;97m\]'
+    local r_bd='\[\e[100;31m\]'
+    local g_bd='\[\e[100;32m\]'
+    local y_bd='\[\e[100;33m\]'
+    local b_bd='\[\e[100;34m\]'
+    local m_bd='\[\e[100;35m\]'
+    local c_bd='\[\e[100;36m\]'
+    local l_bd='\[\e[100;37m\]'
+    local rr_bd='\[\e[100;91m\]'
+    local gg_bd='\[\e[100;92m\]'
+    local yy_bd='\[\e[100;93m\]'
+    local bb_bd='\[\e[100;94m\]'
+    local mm_bd='\[\e[100;95m\]'
+    local cc_bd='\[\e[100;96m\]'
+    local ll_bd='\[\e[100;97m\]'
     local cr='\[\e[0m\]'
     local x='\[\e[0m\]'
     local bold='\[\e[1m\]'
@@ -108,14 +123,15 @@ _ps1() {
     #PS1="# $g@\h:$cr $mg\w$cr$B$r\$(exit_status)$cr"
 
     #[[ -n "$B" ]] && B="$clear${brgre} on $clear${brred}$B"
-    [[ -n "$B" ]] && B="on ${m}$B${x} "
+    [[ -n "$B" ]] && B="${gg}on${x} ${y}$B${x} "
 
     #[[ $EXIT != 0 ]] && stat="${red} failed$clear${brgre} code ${red}$EXIT" || stat=""
-    [[ $EXIT != 0 ]] && stat="exit ${r}$EXIT${x} " || stat=""
+    [[ $EXIT != 0 ]] && stat="${gg}exit${x} ${r}$EXIT${x} " || stat=""
     # PS1="$bg_base01_fg_cya\u$bg_base01_fg_dull from $bg_base01_fg_gre\h$bg_base01_fg_dull in $bg_base01_fg_mag\$(shorten_git_path)$B$bg_base01_fg_dull last command at $bg_base01_fg_fg\t$stat"
     # PS1="${brgre}[ in ${gre}\w$B${brgre} at ${brblu}\t$stat${brgre} ]$clear"
     # PS1+="\n> "
-    PS1="${stat}as ${c}\u${x} ${B}in ${g}\w${x}:\n${bold_l}\\$ ${x}"
+    PS1="${stat}${gg}as${x} ${m}\u${x} ${B}${gg}in${x} ${g}\w${x}${gg}:${x}"
+    PS1+="\n${bold_l}\\$ ${x}"
 }
 
 PROMPT_COMMAND="_ps1"
