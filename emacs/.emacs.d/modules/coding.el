@@ -41,5 +41,9 @@
 (add-hook 'go-ts-mode-hook #'eglot-format-buffer-on-save)
 (add-hook 'go-ts-mode-hook #'eglot-format-imports-on-save)
 
+(use-package nix-ts-mode
+  :ensure t
+  :mode "\\.nix\\'")
+
 (provide 'coding)
 ;;; coding.el ends here
