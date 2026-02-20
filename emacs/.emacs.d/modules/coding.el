@@ -23,7 +23,9 @@
 (use-package restclient
   :ensure t
   :init
-  (add-to-list 'auto-mode-alist '("\\.http\\'" . restclient-mode)))
+  (add-to-list 'auto-mode-alist '("\\.http\\'" . restclient-mode))
+  :config
+  (setq restclient-enable-eval t))
 
 ;;; CUSTOM CONFIG
 (defun eglot-format-buffer-on-save ()

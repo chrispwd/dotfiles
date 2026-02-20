@@ -761,10 +761,10 @@
   (add-hook 'prog-mode-hook #'emacs-solo/eglot-setup)
 
   (with-eval-after-load 'eglot
-    (add-to-list 'eglot-server-programs '((ruby-mode . "ruby-lsp")
-                                          (ruby-ts-mode . "ruby-lsp")
-                                          (php-ts-mode . "phpactor")
-                                          (php-mode . "phpactor"))))
+    (add-to-list 'eglot-server-programs '((ruby-mode . ("ruby-lsp"))
+                                          (ruby-ts-mode . ("ruby-lsp"))
+                                          (php-ts-mode . ("phpactor"))
+                                          (php-mode . ("phpactor")))))
 
   :bind (:map
          eglot-mode-map
