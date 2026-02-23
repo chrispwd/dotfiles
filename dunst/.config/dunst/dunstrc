@@ -326,7 +326,7 @@
     background = "#232326"
     foreground = "#818387"
     frame_color = "#818387"
-    CPL
+    # CPL
     # background = "#1d1d1d"
     # foreground = "#777777"
     # frame_color = "#777777"
