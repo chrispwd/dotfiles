@@ -1,4 +1,4 @@
-#include "Xresources.d/themes/penumbra-dark"
+#include "Xresources.d/themes/onedark-warmer"
 
 Xft.antialias: true
 Xft.hinting: true

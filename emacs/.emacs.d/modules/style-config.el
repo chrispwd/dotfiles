@@ -9,25 +9,25 @@
   :ensure t
   :config
   (setq base16-theme-256-color-source 'colors)
-  (load-theme 'base16-penumbra-dark t)
+  (load-theme 'base16-onedark-warmer t)
   (defvar my/base16-colors
-  '(:base00 "#24272b"
-    :base01 "#303338"
-    :base02 "#3e4044"
-    :base03 "#636363"
-    :base04 "#7a7a7a"
-    :base05 "#8f8f8f"
-    :base06 "#bebebe"
-    :base07 "#fff7ed"
-    :red "#ca736c" ; red
-    :orange "#ba823a" ; orange
-    :yellow "#A38F2D" ; yellow
-    :green "#47a477" ; green
-    :cyan "#00a2af" ; cyan
-    :blue "#5794d0" ; blue
-    :violet "#9481cc" ; purple
-    :magenta "#bd72a8") ; magenta
-  "All colors for Base16 Penumbra Dark are defined here.")
+  '(:base00   "#232326"
+    :base01   "#2c2d31"
+    :base02   "#35363b"
+    :base03   "#5a5b5e"
+    :base04   "#818387"
+    :base05   "#a7aab0"
+    :base06   "#b1b4b9"
+    :base07   "#dce0e6"
+    :red      "#de5d68" ; red
+    :orange   "#c49060" ; orange
+    :yellow   "#dbb671" ; yellow
+    :green    "#8fb573" ; green
+    :cyan     "#00a2af" ; cyan
+    :blue     "#57a5e5" ; blue
+    :magenta  "#bb70d2" ; magenta
+    :brown    "#7c5c20") ; brown
+  "All colors for Base16 Onedark Warmer are defined here.")
   
   (custom-set-faces
    `(default
@@ -140,7 +140,7 @@
           bold))))
    `(font-lock-keyword-face
      ((t (:foreground
-          ,(plist-get my/base16-colors :violet)))))
+          ,(plist-get my/base16-colors :magenta)))))
    `(font-lock-variable-name-face
      ((t (:foreground
           ,(plist-get my/base16-colors :base05)))))
@@ -173,7 +173,7 @@
           ,(plist-get my/base16-colors :cyan)))))
    `(rainbow-delimiters-depth-1-face
      ((t (:foreground
-          ,(plist-get my/base16-colors :violet)))))
+          ,(plist-get my/base16-colors :magenta)))))
    `(rainbow-delimiters-depth-2-face
      ((t (:foreground
           ,(plist-get my/base16-colors :blue)))))
@@ -242,7 +242,7 @@
           bold))))
    `(org-level-1
      ((t (:foreground
-          ,(plist-get my/base16-colors :violet)))))
+          ,(plist-get my/base16-colors :magenta)))))
    `(org-level-2
      ((t (:foreground
           ,(plist-get my/base16-colors :blue)))))
@@ -275,7 +275,7 @@
           ,(plist-get my/base16-colors :base03)))))
    `(org-agenda-structure
      ((t (:foreground
-          ,(plist-get my/base16-colors :violet)))))
+          ,(plist-get my/base16-colors :magenta)))))
    `(org-agenda-clocking
      ((t (:foreground
           ,(plist-get my/base16-colors :base05)
@@ -360,7 +360,7 @@
           :extend t))))
    `(org-table
      ((t :foreground
-          ,(plist-get my/base16-colors :violet))))
+          ,(plist-get my/base16-colors :magenta))))
    `(org-checkbox
      ((t (:background
           ,(plist-get my/base16-colors :base00)

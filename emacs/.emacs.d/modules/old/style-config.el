@@ -1271,7 +1271,7 @@
 ;;     :magenta "#bd72a8") ; magenta
 ;;   "All colors for Base16 Penumbra Dark are defined here.")
   
-;;   (custom-set-faces
+;; (custom-set-faces
 ;;    `(default
 ;;      ((t (:foreground
 ;;           ,(plist-get my/base16-colors :base05)
@@ -1280,6 +1280,11 @@
 ;;    `(mode-line
 ;;      ((t (:foreground
 ;;           ,(plist-get my/base16-colors :base04)
+;;           :background
+;;           ,(plist-get my/base16-colors :base00)))))
+;;    `(mode-line-inactive
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base03)
 ;;           :background
 ;;           ,(plist-get my/base16-colors :base00)))))
 ;;    `(line-number
@@ -1317,7 +1322,7 @@
 ;;           ,(plist-get my/base16-colors :base00)))))
 ;;    `(region
 ;;      ((t (:foreground
-;;           ,(plist-get my/base16-colors :base00)
+;;           ,(plist-get my/base16-colors :base07)
 ;;           :background
 ;;           ,(plist-get my/base16-colors :base03)))))
 ;;    `(ansi-color-red
@@ -1347,9 +1352,9 @@
 ;;           ,(plist-get my/base16-colors :green)))))
 ;;    `(show-paren-match
 ;;      ((t (:foreground
-;;           ,(plist-get my/base16-colors :base00)
+;;           ,(plist-get my/base16-colors :base06)
 ;;           :background
-;;           ,(plist-get my/base16-colors :green)))))
+;;           ,(plist-get my/base16-colors :base02)))))
 ;;    `(show-paren-mismatch
 ;;      ((t (:foreground
 ;;           ,(plist-get my/base16-colors :base00)
@@ -1623,7 +1628,6 @@
 ;;           :weight
 ;;           bold))))
 ;;    )
-;; )
 
 ;; (use-package base16-theme
 ;;   :ensure t
