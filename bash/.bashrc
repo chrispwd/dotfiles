@@ -111,7 +111,7 @@ _ps1() {
     local bold_ll='\[\e[97;1m\]'
     local clear='\[\e[0m\]'
 
-    B=$(git branch --show-current 2>/dev/null)
+    B=$(git branch >/dev/null 2>&1 && git branch | grep '\*' | cut -c 3-)
 
     # old
     #[[ -n "$B" ]] && B="$wh($cr$y$B$cr$wh)$cr"
