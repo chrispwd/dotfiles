@@ -43,7 +43,7 @@ export COLORTERM=truecolor
 ######################### Prompt #######################################
 
 exit_status() {
-    [ "$?" == 0 ] && printf "" || printf " ($?)"
+    [ "$?" == 0 ] && printf "" || printf " (%s)" "$?"
 }
 
 # Function to shorten the path
@@ -53,7 +53,7 @@ function shorten_git_path() {
 
   if [ -n "$git_root" ]; then
     # If inside a Git repo, display path relative to the repo root
-    local relative_path="${full_path#$git_root}"
+    local relative_path="${full_path#"$git_root"}"
     if [ -z "$relative_path" ]; then
       # If at the root of the repo
       # echo "$(basename "$git_root")"

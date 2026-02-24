@@ -23,36 +23,60 @@
           overlays = [ ncmpcppWithVisualizer ];
         };
 
-        deps = system:
-          let
-            # for both linux and darwin
-            basePkgs = [
-              pkgs.asciiquarium
-              pkgs.pipes
-              pkgs.stow
-              pkgs.tmux
-              pkgs.tmux-xpanes
-              pkgs.zoxide
-              pkgs.neofetch
-              pkgs.fzf
-            ];
+        # for all machines
+        basePkgs = [
+          pkgs.asciiquarium
+          pkgs.pipes
+          pkgs.stow
+          pkgs.tmux
+          pkgs.tmux-xpanes
+          pkgs.zoxide
+          pkgs.fastfetch
+          pkgs.fzf
+          pkgs.git
+          pkgs.emacs
+          pkgs.vim
+          pkgs.fnm
+          pkgs.phpactor
+          pkgs.php85Packages.composer
+          pkgs.pass
+          pkgs.ripgrep
+          pkgs.figlet
+          pkgs.ffmpeg
+          pkgs.nixd
+        ];
 
-            darwinOnly = if pkgs.stdenv.isDarwin then
-              []
-            else
-              [];
+        # macOS only
+        darwinPkgs = [
+          pkgs.lavat
+          pkgs.k9s
+        ];
 
-            linuxOnly = if pkgs.stdenv.isLinux then
-              [
-                pkgs.mpd
-                pkgs.ncmpcpp
-                pkgs.nsxiv
-              ]
-            else
-              [];
+        # linux only
+        linuxPkgs = [
+          pkgs.mpd
+          pkgs.ncmpcpp
+          pkgs.nsxiv
+          pkgs.dmenu
+          pkgs.zathura
+          pkgs.yt-dlp
+          pkgs.mpv
+        ];
 
-          in basePkgs ++ darwinOnly ++ linuxOnly;
+        # pkgs for specific systems
+        # TODO: package my st by hand
+        meepPkgs = [];
+        
+        stinkyPkgs = [
+          pkgs.kitty
+          pkgs.bash-language-server
+        ];
 
+        macPkgs = [
+          pkgs.kitty
+          pkgs.bash-language-server
+        ];
+        
       in
       {
         # Any extra arguments to mkProfile are forwarded directly to pkgs.buildEnv.
@@ -68,11 +92,29 @@
         # `nix run nixpkgs#hello` and `nix-shell -p hello --run hello` will
         # resolve to the same hello as below [should probably be run as root, see README caveats]:
         #   sudo nix run .#profile.pin
-        packages.profile = flakey-profile.lib.mkProfile {
+        packages.meepProfile = flakey-profile.lib.mkProfile {
           inherit pkgs;
+          name = "meep-profile";
           # Specifies things to pin in the flake registry and in NIX_PATH.
           pinned = { nixpkgs = toString nixpkgs; };
-          paths = deps system;
+          paths = basePkgs ++ linuxPkgs ++ meepPkgs;
         };
+
+        packages.stinkyProfile = flakey-profile.lib.mkProfile {
+          inherit pkgs;
+          name = "stinky-profile";
+          # Specifies things to pin in the flake registry and in NIX_PATH.
+          pinned = { nixpkgs = toString nixpkgs; };
+          paths = basePkgs ++ linuxPkgs ++ stinkyPkgs;
+        };
+
+        packages.macProfile = flakey-profile.lib.mkProfile {
+          inherit pkgs;
+          name = "mac-profile";
+          # Specifies things to pin in the flake registry and in NIX_PATH.
+          pinned = { nixpkgs = toString nixpkgs; };
+          paths = basePkgs ++ darwinPkgs ++ macPkgs;
+        };
+
       });
 }
