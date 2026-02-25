@@ -9,18 +9,25 @@
     flakey-profile.url = "github:lf-/flakey-profile";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
+    nixgl.url = "github:nix-community/nixGL";
   };
 
-  outputs = { self, nixpkgs, flake-utils, flakey-profile  }:
+  outputs = { self, nixgl, nixpkgs, flake-utils, flakey-profile  }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         ncmpcppWithVisualizer = final: prev: {
-          ncmpcpp = prev.ncmpcpp.override { visualizerSupport = true; };
+          ncmpcpp = prev.ncmpcpp.override {
+            visualizerSupport = true;
+            boost = pkgs.boost187;
+          };
         };
-
+        
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [ ncmpcppWithVisualizer ];
+          overlays = [
+            ncmpcppWithVisualizer
+            nixgl.overlay
+          ];
         };
 
         # for all machines
@@ -70,6 +77,7 @@
         stinkyPkgs = [
           pkgs.kitty
           pkgs.bash-language-server
+          pkgs.nixgl.nixGLIntel
         ];
 
         macPkgs = [
