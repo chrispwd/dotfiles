@@ -45,7 +45,11 @@
 
 (use-package nix-ts-mode
   :ensure t
-  :mode "\\.nix\\'")
+  :defer 't
+  :mode "\\.nix\\'"
+  :config
+  (add-to-list 'treesit-language-source-alist
+               '(nix "https://github.com/nix-community/tree-sitter-nix" "master" "src")))
 
 (provide 'coding)
 ;;; coding.el ends here
