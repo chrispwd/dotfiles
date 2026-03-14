@@ -37,11 +37,17 @@
    org-scheduled-past-days 0
    org-agenda-entry-text-maxlines 50
    org-todo-keywords '((sequence
-                        "TODO(t)" "BACKLOG(b)" "WAITING(w)" "REMINDER" "|" "DONE(d)" "CXLD(x)"))
+                        "TODO(t)" "IN PROGRESS(i)" "BACKLOG(b)" "WAITING(w)" "REMINDER(r)" "RECURRING(c)" "|" "DONE(d)" "CXLD(x)"))
    org-agenda-custom-commands
    '(("w" "Work Todos" ;; agenda with only work items
 	  ((agenda "" ((org-agenda-ndays 8)
 				   (org-deadline-warning-days 7)))
+	   (todo "IN PROGRESS"
+			 ((org-agenda-overriding-header "In Progress")
+              (org-agenda-sorting-strategy '(priority-down))))
+	   (todo "TODO"
+			 ((org-agenda-overriding-header "Todos")
+              (org-agenda-sorting-strategy '(priority-down))))
 	   (todo "WAITING"
 			 ((org-agenda-overriding-header "Waiting")
               (org-agenda-sorting-strategy '(priority-down))))
@@ -56,6 +62,12 @@
 	 ("h" "Home Todos" ;; agenda with only Home items
 	  ((agenda "" ((org-agenda-ndays 8)
 				   (org-deadline-warning-days 7)))
+	   (todo "IN PROGRESS"
+			 ((org-agenda-overriding-header "In Progress")
+              (org-agenda-sorting-strategy '(priority-down))))
+	   (todo "TODO"
+			 ((org-agenda-overriding-header "Todos")
+              (org-agenda-sorting-strategy '(priority-down))))
 	   (todo "WAITING"
 			 ((org-agenda-overriding-header "Waiting")
               (org-agenda-sorting-strategy '(priority-down))))
