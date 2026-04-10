@@ -339,11 +339,11 @@ bind-mouse 4M-1 window-lower
 # color urgencyborder   "#ca736c"
 
 ## Onedark warmer
-color menufg          "#57a5e5"
+color menufg          "#268bd2"
 color menubg          "#232326"
 color font            "#a7aab0"
 color selfont         "#dce0e6"
-color activeborder    "#57a5e5"
+color activeborder    "#268bd2"
 color inactiveborder  "#2c2d31"
 color groupborder     "#8fb573"
 color ungroupborder   "#dbb671"

@@ -15,22 +15,22 @@ WINIT_X11_SCALE_FACTOR = "1.0"
 size = 12.0
 
 [font.bold]
-family = "Agave Nerd Font"
+family = "BlexMono Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "Agave Nerd Font"
+family = "BlexMono Nerd Font"
 style = "Bold Italic"
 
 [font.italic]
-family = "Agave Nerd Font"
+family = "BlexMono Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "Agave Nerd Font"
+family = "BlexMono Nerd Font"
 style = "Regular"
 
 [general]
 import = [
-  "~/.config/alacritty/themes/rose-pine-dimmed.toml"
+  "~/.config/alacritty/themes/solarized-dark.toml"
 ]

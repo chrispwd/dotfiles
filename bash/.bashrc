@@ -131,7 +131,7 @@ _ps1() {
     # PS1="${brgre}[ in ${gre}\w$B${brgre} at ${brblu}\t$stat${brgre} ]$clear"
     # PS1+="\n> "
     PS1="${stat}${gg}as${x} ${m}\u${x} ${B}${gg}in${x} ${g}\w${x}${gg}:${x}"
-    PS1+="\n${bold_l}\\$ ${x}"
+    PS1+="\n${l}\\$ ${x}"
 }
 
 PROMPT_COMMAND="_ps1"
