@@ -1,4 +1,4 @@
-#include "Xresources.d/themes/onedark-warmer"
+#include "Xresources.d/themes/tomorrow-custom"
 
 Xft.antialias: true
 Xft.hinting: true
