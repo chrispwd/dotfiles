@@ -398,44 +398,88 @@
 # by chrispwd
 ###############################################################################
 
-set notification-error-bg       "#24272b"  # base00
-set notification-error-fg       "#cf6a4c"  # red
-set notification-warning-bg     "#24272b"  # base00
-set notification-warning-fg     "#a38f2d"  # yellow
-set notification-bg             "#303338"  # base01:bg
-set notification-fg             "#8f9d6a"  # green
+# set notification-error-bg       "#24272b"  # base00
+# set notification-error-fg       "#cf6a4c"  # red
+# set notification-warning-bg     "#24272b"  # base00
+# set notification-warning-fg     "#a38f2d"  # yellow
+# set notification-bg             "#303338"  # base01:bg
+# set notification-fg             "#8f9d6a"  # green
 
-set completion-bg               "#3e4044"  # base02
-set completion-fg               "#8f8f8f"  # base05:fg
-set completion-group-bg         "#24272b"  # base00
-set completion-group-fg         "#636363"  # base03
+# set completion-bg               "#3e4044"  # base02
+# set completion-fg               "#8f8f8f"  # base05:fg
+# set completion-group-bg         "#24272b"  # base00
+# set completion-group-fg         "#636363"  # base03
+# set completion-highlight-bg     "#9fb3c7"  # cyan
+# set completion-highlight-fg     "#3e4044"  # base02
+
+# # Define the color in index mode
+# set index-bg                    "#3e4044"  # base02
+# set index-fg                    "#8f8f8f"  # base05:fg
+# set index-active-bg             "#7587a6"  # blue
+# set index-active-fg             "#3e4044"  # base02
+
+# set inputbar-bg                 "#303338"  # base01:bg
+# set inputbar-fg                 "#8f8f8f"  # base05:fg
+
+# set statusbar-bg                "#3e4044"  # base02
+# set statusbar-fg                "#8f8f8f"  # base05:fg
+
+# set highlight-color             "rgba(163,143,45,0.5)"  # yellow
+# set highlight-active-color      "rgba(205,168,105,0.5)" # orange
+
+# set default-bg                  "#303338"  # base01:bg
+# set default-fg                  "#8f8f8f"  # base05:fg
+# set render-loading              true
+# set render-loading-bg           "#303338"  # base01:bg
+# set render-loading-fg           "#8f8f8f"  # base05:fg
+
+# # Recolor book content's color
+# set recolor-lightcolor          "#303338"  # base01:bg
+# set recolor-darkcolor           "#8f8f8f"  # base05:fg
+# set recolor                     "true"
+# set recolor-keephue             "true"     # keep original color
+
+###############################################################################
+# Tomorrow-night
+###############################################################################
+
+set notification-error-bg       "#1d1f21"  # base00
+set notification-error-fg       "#cc6666"  # red
+set notification-warning-bg     "#1d1f21"  # base00
+set notification-warning-fg     "#f0c674"  # yellow
+set notification-bg             "#282a2e"  # base01
+set notification-fg             "#b5bd68"  # green
+
+set completion-bg               "#373b41"  # base02
+set completion-fg               "#969896"  # base05:fg
+set completion-group-bg         "#1d1f21"  # base00
+set completion-group-fg         "#4c4d4c"  # base03
 set completion-highlight-bg     "#9fb3c7"  # cyan
-set completion-highlight-fg     "#3e4044"  # base02
+set completion-highlight-fg     "#373b41"  # base02
 
 # Define the color in index mode
-set index-bg                    "#3e4044"  # base02
-set index-fg                    "#8f8f8f"  # base05:fg
-set index-active-bg             "#7587a6"  # blue
-set index-active-fg             "#3e4044"  # base02
+set index-bg                    "#373b41"  # base02
+set index-fg                    "#969896"  # base05:fg
+set index-active-bg             "#81a2be"  # blue
+set index-active-fg             "#373b41"  # base02
 
-set inputbar-bg                 "#303338"  # base01:bg
-set inputbar-fg                 "#8f8f8f"  # base05:fg
+set inputbar-bg                 "#1d1f21"  # base00
+set inputbar-fg                 "#969896"  # base05:fg
 
-set statusbar-bg                "#3e4044"  # base02
-set statusbar-fg                "#8f8f8f"  # base05:fg
+set statusbar-bg                "#373b41"  # base02
+set statusbar-fg                "#969896"  # base05:fg
 
-set highlight-color             "rgba(163,143,45,0.5)"  # yellow
-set highlight-active-color      "rgba(205,168,105,0.5)" # orange
+set highlight-color             "rgba(240,198,116,0.5)"  # yellow
+set highlight-active-color      "rgba(222,147,95,0.5)" # orange
 
-set default-bg                  "#303338"  # base01:bg
-set default-fg                  "#8f8f8f"  # base05:fg
+set default-bg                  "#1d1f21"  # base00
+set default-fg                  "#969896"  # base05:fg
 set render-loading              true
-set render-loading-bg           "#303338"  # base01:bg
-set render-loading-fg           "#8f8f8f"  # base05:fg
+set render-loading-bg           "#1d1f21"  # base00
+set render-loading-fg           "#969896"  # base05:fg
 
 # Recolor book content's color
-set recolor-lightcolor          "#303338"  # base01:bg
-set recolor-darkcolor           "#8f8f8f"  # base05:fg
+set recolor-lightcolor          "#1d1f21"  # base00
+set recolor-darkcolor           "#969896"  # base05:fg
 set recolor                     "true"
 set recolor-keephue             "true"     # keep original color
-
