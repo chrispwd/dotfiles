@@ -1,15 +1,18 @@
 [alias]
-  p="pull"
-  ps="push"
-  o="origin"
-  st=status
-  cm="commit -m"
-  co=checkout
-  ll="log --oneline"
-  lg="log --oneline --graph"
-  pom="push origin master"
-  po="push origin"
-  wt="worktree"
-  br="branch"
-  pr="pull --rebase"
-  A="add -A"
+p="pull"
+ps="push"
+o="origin"
+st=status
+cm="commit -m"
+co=checkout
+ll="log --oneline"
+lg="log --oneline --graph"
+pom="push origin master"
+po="push origin"
+wt="worktree"
+br="branch"
+pr="pull --rebase"
+A="add -A"
+
+[push]
+default = current

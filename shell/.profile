@@ -52,7 +52,7 @@ export GOPATH="$HOME/go"
 export GOBIN="$HOME/go/bin"
 
 # PATH 
-export PATH="$GOBIN:/opt/homebrew/bin:/bin:/sbin:/usr/local/sbin/:/usr/local/bin:/usr/bin:$HOME/.local/bin:$HOME/.emacs.d/bin:$HOME/.local/bin/fnm:$HOME/.cargo/bin:$PYENV_ROOT/bin:$PATH"
+export PATH="$HOME/.nix-profile/bin:$GOBIN:/opt/homebrew/bin:/bin:/sbin:/usr/local/sbin/:/usr/local/bin:/usr/bin:$HOME/.local/bin:$HOME/.emacs.d/bin:$HOME/.local/bin/fnm:$HOME/.cargo/bin:$PYENV_ROOT/bin:$PATH"
 
 # zoxide
 export _ZO_DATA_DIR=${XDG_DATA_HOME:-$HOME/.local/share}
