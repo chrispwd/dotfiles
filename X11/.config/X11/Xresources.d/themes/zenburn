@@ -1,36 +1,36 @@
-! Zenburn
-*.foreground:   #DCDCCC
-*.background:   #3F3F3F
-*.cursorColor:  #BFBFBF
+! special
+*.foreground:   #bebeb0
+*.background:   #3f3f3f
+*.cursorColor:  #bebeb0
 
 ! black
-*.color0:       #2B2B2B
-*.color8:       #6F6F6F
+*.color0:       #2b2b2b
+*.color8:       #303030
 
 ! red
-*.color1:       #DFAF8F
-*.color9:       #9C6363
+*.color1:       #cc9393
+*.color9:       #dfaf8f
 
 ! green
-*.color2:       #7F9F7F
-*.color10:      #BFEBBF
+*.color2:       #7f9f7f
+*.color10:      #4f4f4f
 
 ! yellow
-*.color3:       #F0DFAF
-*.color11:      #D0BF8F
+*.color3:       #f0dfaf
+*.color11:      #989890
 
 ! blue
-*.color4:       #8CD0D3
-*.color12:      #94BFF3
+*.color4:       #8cd0d3
+*.color12:      #bebeb0
 
 ! magenta
-*.color5:       #DC8CC3
-*.color13:      #DC8CC3
+*.color5:       #dc8cc3
+*.color13:      #c0c0b2
 
-! cyan          
-*.color6:       #93E0E3
-*.color14:      #93E0E3
+! cyan
+*.color6:       #93e0e3
+*.color14:      #000000
 
 ! white
-*.color7:       #989890
-*.color15:      #FFFFEF
+*.color7:       #c0c0b2
+*.color15:      #dcdccc

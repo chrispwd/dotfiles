@@ -123,14 +123,17 @@ _ps1() {
     #PS1="# $g@\h:$cr $mg\w$cr$B$r\$(exit_status)$cr"
 
     #[[ -n "$B" ]] && B="$clear${brgre} on $clear${brred}$B"
-    [[ -n "$B" ]] && B="${gg}on${x} ${y}$B${x} "
+    # [[ -n "$B" ]] && B="${gg}on${x} ${y}$B${x} "
+    [[ -n "$B" ]] && B="(${y}$B${x})"
 
     #[[ $EXIT != 0 ]] && stat="${red} failed$clear${brgre} code ${red}$EXIT" || stat=""
-    [[ $EXIT != 0 ]] && stat="${gg}exit${x} ${r}$EXIT${x} " || stat=""
+    # [[ $EXIT != 0 ]] && stat="${gg}exit${x} ${r}$EXIT${x} " || stat=""
+    [[ $EXIT != 0 ]] && stat=" ${r}${EXIT}${x} " || stat=""
     # PS1="$bg_base01_fg_cya\u$bg_base01_fg_dull from $bg_base01_fg_gre\h$bg_base01_fg_dull in $bg_base01_fg_mag\$(shorten_git_path)$B$bg_base01_fg_dull last command at $bg_base01_fg_fg\t$stat"
     # PS1="${brgre}[ in ${gre}\w$B${brgre} at ${brblu}\t$stat${brgre} ]$clear"
     # PS1+="\n> "
-    PS1="${stat}${gg}as${x} ${m}\u${x} ${B}${gg}in${x} ${g}\w${x}${gg}:${x}"
+    # PS1="${stat}${gg}as${x} ${m}\u${x} ${B}${gg}in${x} ${g}\w${x}${gg}:${x}"
+    PS1="${stat}${m}\u${x}@${g}\h${x} ${b}\w${x}${B}:"
     PS1+="\n${l}\\$ ${x}"
 }
 
