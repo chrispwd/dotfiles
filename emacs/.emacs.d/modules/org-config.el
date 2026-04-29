@@ -180,7 +180,7 @@
               ("C-c n f" . denote-open-or-create)
               ("C-c n g" . denote-grep)
               ("C-c n i" . denote-link-or-create)
-              ("C-c n I" . denote-link-add-links)
+              ("C-c n I" . denote-add-links)
               ("C-c n l" . denote-link-find-file)
               ("C-c n b" . denote-backlinks)
               ("C-c n r" . denote-rename-file)
