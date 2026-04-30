@@ -9,6 +9,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixgl.url = "github:nix-community/nixGL";
 
     # TODO: figure out nix-darwin once others are set up
     # darwin.url = "github:lnl7/nix-darwin";
