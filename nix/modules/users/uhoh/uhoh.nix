@@ -1,6 +1,6 @@
 { self, ... }: {
   
-  flake.modules.homeManager."uhoh" = {
+  flake.modules.homeManager."uhoh" = {pkgs, ... }: {
     
     imports = with self.modules.homeManager; [
       system-default
@@ -9,6 +9,10 @@
 
     home.username = "uhoh";
     home.homeDirectory = "/home/uhoh";
+
+    home.packages = with pkgs; [
+      nixgl.nixGLIntel
+    ];
   };
     
 }
