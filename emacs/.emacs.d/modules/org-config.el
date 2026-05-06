@@ -77,7 +77,26 @@
        (todo "BACKLOG"
 			 ((org-agenda-overriding-header "Backlog")
               (org-agenda-sorting-strategy '(priority-down)))))
-	  ((org-agenda-tag-filter-preset '("+home")))))
+	  ((org-agenda-tag-filter-preset '("+home"))))
+
+     ("a" "All Todos" ;; agenda with all items
+	  ((agenda "" ((org-agenda-ndays 8)
+				   (org-deadline-warning-days 7)))
+	   (todo "IN PROGRESS"
+			 ((org-agenda-overriding-header "In Progress")
+              (org-agenda-sorting-strategy '(priority-down))))
+	   (todo "TODO"
+			 ((org-agenda-overriding-header "Todos")
+              (org-agenda-sorting-strategy '(priority-down))))
+	   (todo "WAITING"
+			 ((org-agenda-overriding-header "Waiting")
+              (org-agenda-sorting-strategy '(priority-down))))
+       (todo "REMINDER"
+			 ((org-agenda-overriding-header "Reminders")
+              (org-agenda-sorting-strategy '(priority-down))))
+       (todo "BACKLOG"
+			 ((org-agenda-overriding-header "Backlog")
+              (org-agenda-sorting-strategy '(priority-down)))))))
 	 
    ;; Agenda styling
    ;; org-agenda-tags-column 0
