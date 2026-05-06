@@ -7,8 +7,6 @@
       dmenu
       dunst
       feh
-      mpd
-      ncmpcpp
       nsxiv
       picom
       polybar

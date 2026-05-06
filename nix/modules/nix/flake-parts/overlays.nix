@@ -1,26 +1,27 @@
 { inputs, ... }: {
   
-  perSystem = { pkgs, system, ...}: {
+  perSystem = { system, ...}: {
 
-    # _module.args.pkgs = import inputs.nixpkgs {
-    #   inherit system;
-    #   overlays = [
-    #     inputs.nixgl.overlay
-    #     (final: prev: {
-    #       ncmpcpp = prev.ncmpcpp.override {
-    #         visualizerSupport = true;
-    #       };
-    #     })
-    #   ];
-    # };
-
-    overlayAttrs = {
-      
-      ncmpcpp = pkgs.ncmpcpp.override {
-        visualizerSupport = true;
+    _module.args.pkgs = import inputs.nixpkgs {
+      inherit system;
+      overlays = [
+        inputs.nixgl.overlay
+        (final: prev: {
+          ncmpcpp = prev.ncmpcpp.override {
+            visualizerSupport = true;
+          };
+        })
+      ];
+      config = {
+        allowUnfree = true;
       };
-
-      nixgl = inputs.nixgl.overlay;
     };
+
+    # overlayAttrs = {
+      
+    #   ncmpcpp = pkgs.ncmpcpp.override {
+    #     visualizerSupport = true;
+    #   };
+    # };
   };
 }

@@ -5,6 +5,7 @@
     imports = with self.modules.homeManager; [
       system-default
       opengl-pkgs
+      music-pkgs
       # add more here
     ];
 

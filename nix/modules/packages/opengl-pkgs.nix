@@ -3,7 +3,7 @@
   flake.modules.homeManager.opengl-pkgs = { pkgs, ... }: {
     
     home.packages = with pkgs; [
-      nixgl
+      nixgl.nixGLDefault
       mpv
       ffmpeg
       kitty
