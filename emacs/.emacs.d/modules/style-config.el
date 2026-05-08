@@ -11,8 +11,8 @@
   (setq base16-theme-256-color-source 'colors)
   (load-theme 'base16-penumbra-dark t)
   (defvar my/base16-colors
-  '(:base00 "#24272b"
-    :base01 "#303338"
+  '(:base00 "#0d0f13"
+    :base01 "#24272b"
     :base02 "#3e4044"
     :base03 "#636363"
     :base04 "#7a7a7a"
