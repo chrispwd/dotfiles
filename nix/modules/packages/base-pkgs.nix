@@ -10,6 +10,7 @@
       gnupg
       htop-vim
       jq
+      lsd
       pass
       ripgrep
       stow
