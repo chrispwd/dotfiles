@@ -1,19 +1,19 @@
 { self, ... }: {
   
-  flake.modules.homeManager."uhoh" = {
+  flake.modules.homeManager."chrisperez" = {
     
     imports = with self.modules.homeManager; [
       system-default
       terminals
-      opengl-support
+      # opengl-support
       fonts
-      programming-pkgs
+      work
       # music-pkgs
       # add more here
     ];
 
-    home.username = "uhoh";
-    home.homeDirectory = "/home/uhoh";
+    home.username = "chrisperez";
+    home.homeDirectory = "/Users/chrisperez";
   };
     
 }

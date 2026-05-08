@@ -1,24 +1,18 @@
-{ inputs, withSystem, ... }: {
-  
-  flake.homeConfigurations = {
-    
-    uhoh =
-      let
-      
-        pkgs = { config, ... }: {
-          nixpkgs.pkgs = withSystem config.nixpkgs.hostPlatform.system (
-            { pkgs, ... }: pkgs
-          );
-        };
+{ inputs, ... }: {
 
-      in
-      
-        inputs.home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;      
-          modules = [
-            inputs.self.modules.homeManager.uhoh
-          ];
-      
-        };
+  flake.homeConfigurations."uhoh" = inputs.home-manager.lib.homeManagerConfiguration {
+    
+    pkgs = import inputs.nixpkgs { hostPlatform = "x86_64-linux"; };
+    # pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
+    modules = [
+      {
+        nixpkgs.overlays = [
+          inputs.nixgl.overlays.default
+        ];
+        nixpkgs.config.allowUnfree = true;
+      }
+      inputs.self.modules.homeManager.uhoh
+    ];
+
   };
 }

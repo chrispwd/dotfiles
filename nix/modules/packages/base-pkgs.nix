@@ -7,6 +7,7 @@
       fastfetch
       fzf
       git
+      gnupg
       htop-vim
       jq
       pass

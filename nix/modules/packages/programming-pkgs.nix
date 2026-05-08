@@ -6,8 +6,6 @@
       bash-language-server
       fnm
       nixd
-      php85Packages.composer
-      phpactor
     ];
   };
 }
