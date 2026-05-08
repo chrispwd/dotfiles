@@ -34,31 +34,31 @@
      ((t (:foreground
           ,(plist-get my/base16-colors :base05)
           :background
-          ,(plist-get my/base16-colors :base01)))))
+          ,(plist-get my/base16-colors :base00)))))
    `(mode-line
      ((t (:foreground
           ,(plist-get my/base16-colors :base04)
           :background
-          ,(plist-get my/base16-colors :base00)))))
+          ,(plist-get my/base16-colors :base01)))))
    `(mode-line-inactive
      ((t (:foreground
           ,(plist-get my/base16-colors :base03)
           :background
-          ,(plist-get my/base16-colors :base00)))))
+          ,(plist-get my/base16-colors :base01)))))
    `(line-number
      ((t (:foreground
           ,(plist-get my/base16-colors :base03)
           :background
-          ,(plist-get my/base16-colors :base01)))))
+          ,(plist-get my/base16-colors :base00)))))
    `(line-number-current-line
      ((t (:foreground
           ,(plist-get my/base16-colors :base06)))))
    `(hl-line
      ((t (:background
-          ,(plist-get my/base16-colors :base00)))))
+          ,(plist-get my/base16-colors :base01)))))
    `(highlight
      ((t (:background
-          ,(plist-get my/base16-colors :base00)))))
+          ,(plist-get my/base16-colors :base01)))))
    `(link
      ((t (:foreground
           ,(plist-get my/base16-colors :cyan)
@@ -67,17 +67,17 @@
      ((t (:foreground
           ,(plist-get my/base16-colors :base06)
           :background
-          ,(plist-get my/base16-colors :base01)))))
+          ,(plist-get my/base16-colors :base00)))))
    `(tab-bar
      ((t (:foreground
           ,(plist-get my/base16-colors :base03)
           :background
-          ,(plist-get my/base16-colors :base00)))))
+          ,(plist-get my/base16-colors :base01)))))
    `(tab-bar-tab-inactive
      ((t (:foreground
           ,(plist-get my/base16-colors :base03)
           :background
-          ,(plist-get my/base16-colors :base00)))))
+          ,(plist-get my/base16-colors :base01)))))
    `(region
      ((t (:foreground
           ,(plist-get my/base16-colors :base07)
@@ -280,7 +280,7 @@
      ((t (:foreground
           ,(plist-get my/base16-colors :base05)
           :background
-          ,(plist-get my/base16-colors :base00)
+          ,(plist-get my/base16-colors :base01)
           :slant italic))))
    `(org-agenda-current-time
      ((t (:foreground
@@ -363,7 +363,7 @@
           ,(plist-get my/base16-colors :violet))))
    `(org-checkbox
      ((t (:background
-          ,(plist-get my/base16-colors :base00)
+          ,(plist-get my/base16-colors :base01)
           :foreground
           ,(plist-get my/base16-colors :base05)
           :weight bold))))
@@ -372,7 +372,7 @@
           ,(plist-get my/base16-colors :base03)))))
    `(denote-faces-delimiter
      ((t (:foreground
-          ,(plist-get my/base16-colors :base00)))))
+          ,(plist-get my/base16-colors :base01)))))
    `(doom-modeline-project-dir
      ((t (:foreground
           ,(plist-get my/base16-colors :cyan)
