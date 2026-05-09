@@ -328,12 +328,23 @@ bind-mouse 4M-1 window-lower
 # color urgencyborder   "#944649"
 
 ## Penumbra Dark
-color menufg          "#5794d0"
-color menubg          "#24272b"
+# color menufg          "#5794d0"
+# color menubg          "#24272b"
+# color font            "#8f8f8f"
+# color selfont         "#fff7ed"
+# color activeborder    "#5794d0"
+# color inactiveborder  "#3e4044"
+# color groupborder     "#47a477"
+# color ungroupborder   "#a38f2d"
+# color urgencyborder   "#ca736c"
+
+## Penumbra Dark Plus
+color menufg          "#0d0f13"
+color menubg          "#303338"
 color font            "#8f8f8f"
-color selfont         "#fff7ed"
-color activeborder    "#5794d0"
-color inactiveborder  "#3e4044"
+color selfont         "#bebebe"
+color activeborder    "#0d0f13"
+color inactiveborder  "#303338"
 color groupborder     "#47a477"
 color ungroupborder   "#a38f2d"
 color urgencyborder   "#ca736c"

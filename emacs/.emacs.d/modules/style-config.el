@@ -266,7 +266,7 @@
           ,(plist-get my/base16-colors :magenta)))))
    `(org-document-title
      ((t (:foreground
-          ,(plist-get my/base16-colors :orange)))))
+          ,(plist-get my/base16-colors :cyan)))))
    `(org-date
      ((t (:foreground
           ,(plist-get my/base16-colors :green)))))
@@ -316,10 +316,14 @@
    `(org-done
      ((t (:foreground
           ,(plist-get my/base16-colors :base03)
+          :background
+          ,(plist-get my/base16-colors :base00)
           :weight bold))))
    `(org-todo
      ((t (:foreground
           ,(plist-get my/base16-colors :red)
+          :background
+          ,(plist-get my/base16-colors :base00)
           :weight bold))))
    `(org-time-grid
      ((t (:foreground
@@ -345,7 +349,7 @@
           :underline t))))
    `(org-code
      ((t (:foreground
-          ,(plist-get my/base16-colors :orange)))))
+          ,(plist-get my/base16-colors :yellow)))))
    `(org-quote
      ((t (:foreground
           ,(plist-get my/base16-colors :base05)
@@ -358,6 +362,20 @@
           :foreground
           ,(plist-get my/base16-colors :base05)
           :extend t))))
+   `(org-block-begin-line
+     ((t (:background
+          ,(plist-get my/base16-colors :base00)
+          :foreground
+          ,(plist-get my/base16-colors :base03)
+          :extend t
+          :underline t))))
+   `(org-block-end-line
+     ((t (:background
+          ,(plist-get my/base16-colors :base00)
+          :foreground
+          ,(plist-get my/base16-colors :base03)
+          :extend t
+          :overline t))))
    `(org-table
      ((t :foreground
           ,(plist-get my/base16-colors :violet))))
