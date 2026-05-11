@@ -93,3 +93,6 @@ flycheck_*.el
 # linux compat with MacOS
 /scripts/.local/bin/pbcopy
 /scripts/.local/bin/pbpaste
+
+# fontconfig files from home-manager
+/fontconfig/.config/fontconfig/conf.d/
