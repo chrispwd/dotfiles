@@ -12,8 +12,8 @@
   (load-theme 'base16-penumbra-dark t)
   (defvar my/base16-colors
   '(:base00 "#0d0f13"
-    :base01 "#24272b"
-    :base02 "#3e4044"
+    :base01 "#181b1f"
+    :base02 "#303338"
     :base03 "#636363"
     :base04 "#7a7a7a"
     :base05 "#8f8f8f"
@@ -403,7 +403,16 @@
           italic
           :weight
           bold))))
-   ;; simulate merge conflict for testing colors
+   `(diff-refine-added
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base06)
+          :background
+          ,(plist-get my/base16-colors :green)))))
+  `(diff-refine-changed
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base06)
+          :background
+          ,(plist-get my/base16-colors :yellow)))))
    )
 )
 
