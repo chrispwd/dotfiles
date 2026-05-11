@@ -403,6 +403,7 @@
           italic
           :weight
           bold))))
+   ;; simulate merge conflict for testing colors
    )
 )
 
