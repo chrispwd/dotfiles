@@ -403,16 +403,47 @@
           italic
           :weight
           bold))))
+   `(diff-added
+     ((t (:foreground
+          ,(plist-get my/base16-colors :green)))))
+   `(diff-indicator-added
+     ((t (:foreground
+          ,(plist-get my/base16-colors :green)))))
    `(diff-refine-added
      ((t (:foreground
           ,(plist-get my/base16-colors :base06)
           :background
           ,(plist-get my/base16-colors :green)))))
+   `(diff-changed
+     ((t (:foreground
+          ,(plist-get my/base16-colors :yellow)))))
+   `(diff-indicator-changed
+     ((t (:foreground
+          ,(plist-get my/base16-colors :yellow)))))
   `(diff-refine-changed
      ((t (:foreground
           ,(plist-get my/base16-colors :base06)
           :background
           ,(plist-get my/base16-colors :yellow)))))
+   `(diff-removed
+     ((t (:foreground
+          ,(plist-get my/base16-colors :red)))))
+   `(diff-indicator-removed
+     ((t (:foreground
+          ,(plist-get my/base16-colors :red)))))
+  `(diff-refine-removed
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base06)
+          :background
+          ,(plist-get my/base16-colors :red)))))
+  `(diff-error
+     ((t (:foreground
+          ,(plist-get my/base16-colors :orange)
+          :underline t))))
+  `(diff-hunk-header
+     ((t (:foreground
+          ,(plist-get my/base16-colors :violet)
+          :underline t))))
    )
 )
 
