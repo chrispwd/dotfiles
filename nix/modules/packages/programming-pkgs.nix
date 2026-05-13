@@ -4,6 +4,7 @@
       
     home.packages = with pkgs; [
       bash-language-server
+      cmake
       fnm
       nixd
       typescript-language-server
