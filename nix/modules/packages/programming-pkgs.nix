@@ -6,6 +6,7 @@
       bash-language-server
       fnm
       nixd
+      typescript-language-server
     ];
   };
 }
