@@ -1,4 +1,4 @@
-;;; coding.el --- Configuration for code -*- lexical-binding: t; -*-
+;;; programming-config.el --- Configuration for code -*- lexical-binding: t; -*-
 ;;
 ;;; Commentary: Configuration for code-related functionality
 ;;
@@ -51,5 +51,5 @@
   (add-to-list 'treesit-language-source-alist
                '(nix "https://github.com/nix-community/tree-sitter-nix" "master" "src")))
 
-(provide 'coding)
+(provide 'programming-config)
 ;;; coding.el ends here

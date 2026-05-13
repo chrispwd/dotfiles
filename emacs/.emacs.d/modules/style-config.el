@@ -444,14 +444,64 @@
      ((t (:foreground
           ,(plist-get my/base16-colors :violet)
           :underline t))))
+  `(cursor
+     ((t (:background
+          ,(plist-get my/base16-colors :cyan)))))
+  `(term-color-black
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base01)))))
+  `(term-color-bright-black
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base02)))))
+  `(term-color-red
+     ((t (:foreground
+          ,(plist-get my/base16-colors :red)))))
+  `(term-color-bright-red
+     ((t (:foreground
+          ,(plist-get my/base16-colors :orange)))))
+  `(term-color-yellow
+     ((t (:foreground
+          ,(plist-get my/base16-colors :yellow)))))
+  `(term-color-bright-yellow
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base04)))))
+  `(term-color-green
+     ((t (:foreground
+          ,(plist-get my/base16-colors :green)))))
+  `(term-color-bright-green
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base03)))))
+  `(term-color-blue
+     ((t (:foreground
+          ,(plist-get my/base16-colors :blue)))))
+  `(term-color-bright-blue
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base05)))))
+  `(term-color-magenta
+     ((t (:foreground
+          ,(plist-get my/base16-colors :violet)))))
+  `(term-color-bright-magenta
+     ((t (:foreground
+          ,(plist-get my/base16-colors :magenta)))))
+  `(term-color-cyan
+     ((t (:foreground
+          ,(plist-get my/base16-colors :cyan)))))
+  `(term-color-bright-cyan
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base06)))))
+  `(term-color-white
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base06)))))
+  `(term-color-bright-white
+     ((t (:foreground
+          ,(plist-get my/base16-colors :base07)))))
+  
    )
 )
 
-;; Default face (gui only)
-(unless (not (display-graphic-p))
-  (if (eq system-type 'darwin)
-      (set-face-attribute 'default nil :family (getenv "MY_MONO_FONT") :height 140)
-	(set-face-attribute 'default nil :family (getenv "MY_MONO_FONT") :height 120)))
+(when (memq window-system '(x))
+  ;; Default face (gui only)
+  (set-face-attribute 'default nil :family (getenv "MY_MONO_FONT") :height 150))
 
 ;;; ICON ASSETS
 (use-package all-the-icons
