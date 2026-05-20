@@ -242,10 +242,12 @@
           bold))))
    `(org-level-1
      ((t (:foreground
-          ,(plist-get my/base16-colors :violet)))))
+          ,(plist-get my/base16-colors :violet)
+          :height 1.3))))
    `(org-level-2
      ((t (:foreground
-          ,(plist-get my/base16-colors :blue)))))
+          ,(plist-get my/base16-colors :blue)
+          :height 1.1))))
    `(org-level-3
      ((t (:foreground
           ,(plist-get my/base16-colors :cyan)))))
@@ -379,6 +381,9 @@
    `(org-table
      ((t :foreground
           ,(plist-get my/base16-colors :violet))))
+   `(org-hide
+     ((t :foreground
+          ,(plist-get my/base16-colors :base00))))
    `(org-checkbox
      ((t (:background
           ,(plist-get my/base16-colors :base01)
@@ -449,53 +454,84 @@
           ,(plist-get my/base16-colors :cyan)))))
   `(term-color-black
      ((t (:foreground
+          ,(plist-get my/base16-colors :base01)
+          :background
           ,(plist-get my/base16-colors :base01)))))
   `(term-color-bright-black
      ((t (:foreground
+          ,(plist-get my/base16-colors :base02)
+          :background
           ,(plist-get my/base16-colors :base02)))))
   `(term-color-red
      ((t (:foreground
+          ,(plist-get my/base16-colors :red)
+          :background
           ,(plist-get my/base16-colors :red)))))
   `(term-color-bright-red
      ((t (:foreground
+          ,(plist-get my/base16-colors :orange)
+          :background
           ,(plist-get my/base16-colors :orange)))))
   `(term-color-yellow
      ((t (:foreground
+          ,(plist-get my/base16-colors :yellow)
+          :background
           ,(plist-get my/base16-colors :yellow)))))
   `(term-color-bright-yellow
      ((t (:foreground
+          ,(plist-get my/base16-colors :base04)
+          :background
           ,(plist-get my/base16-colors :base04)))))
   `(term-color-green
      ((t (:foreground
+          ,(plist-get my/base16-colors :green)
+          :background
           ,(plist-get my/base16-colors :green)))))
   `(term-color-bright-green
      ((t (:foreground
+          ,(plist-get my/base16-colors :base03)
+          :background
           ,(plist-get my/base16-colors :base03)))))
   `(term-color-blue
      ((t (:foreground
+          ,(plist-get my/base16-colors :blue)
+          :background
           ,(plist-get my/base16-colors :blue)))))
   `(term-color-bright-blue
      ((t (:foreground
+          ,(plist-get my/base16-colors :base05)
+          :background
           ,(plist-get my/base16-colors :base05)))))
   `(term-color-magenta
      ((t (:foreground
+          ,(plist-get my/base16-colors :violet)
+          :background
           ,(plist-get my/base16-colors :violet)))))
   `(term-color-bright-magenta
      ((t (:foreground
+          ,(plist-get my/base16-colors :magenta)
+          :background
           ,(plist-get my/base16-colors :magenta)))))
   `(term-color-cyan
      ((t (:foreground
+          ,(plist-get my/base16-colors :cyan)
+          :background
           ,(plist-get my/base16-colors :cyan)))))
   `(term-color-bright-cyan
      ((t (:foreground
+          ,(plist-get my/base16-colors :base06)
+          :background
           ,(plist-get my/base16-colors :base06)))))
   `(term-color-white
      ((t (:foreground
+          ,(plist-get my/base16-colors :base06)
+          :background
           ,(plist-get my/base16-colors :base06)))))
   `(term-color-bright-white
      ((t (:foreground
+          ,(plist-get my/base16-colors :base07)
+          :background
           ,(plist-get my/base16-colors :base07)))))
-  
    )
 )
 

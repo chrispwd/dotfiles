@@ -1,7 +1,7 @@
 ;;; macos-config.el ---- MacOS-specific config -*- lexical-binding: t; -*-
 
 (use-package exec-path-from-shell
-  :if (eq system-type 'darwin)
+  :if (and (eq system-type 'darwin) (display-graphic-p))
   :ensure t
   :config
   (setq exec-path-from-shell-arguments '("-l"))
