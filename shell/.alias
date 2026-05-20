@@ -15,7 +15,7 @@ alias \
   cls="clear" \
   ls="ls --color=auto" \
   la="ls -A" \
-  ll="ls -Al" \
+  ll="ls -Alh" \
   lsd="lsd -h --color auto --group-dirs first" \
   grep="grep --color=auto" \
   diff="diff --color=auto" \
