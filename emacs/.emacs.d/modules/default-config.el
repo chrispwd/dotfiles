@@ -25,7 +25,9 @@
    ("C-z" . nil)
    ("C-<backtab>" . tab-previous)
    ;; ("C-x C-z" . nil)
-   ("C-x C-k RET" . nil))
+   ("C-x C-k RET" . nil)
+   ("C-<left>" . winner-undo)
+   ("C-<right>" . winner-redo))
 
   :custom
   (ad-redefinition-action 'accept)

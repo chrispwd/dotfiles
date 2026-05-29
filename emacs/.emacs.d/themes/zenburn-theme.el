@@ -202,6 +202,22 @@ Also bind `class' to ((class color) (min-colors 89))."
                                       :background ,zenburn-blue))))
    `(ansi-color-white ((t (:foreground ,zenburn-fg
                                        :background ,zenburn-fg-1))))
+   `(ansi-color-bright-black ((t (:foreground ,zenburn-bg
+                                       :background ,zenburn-bg-08))))
+   `(ansi-color-bright-red ((t (:foreground ,zenburn-red-2
+                                     :background ,zenburn-orange))))
+   `(ansi-color-bright-green ((t (:foreground ,zenburn-green
+                                       :background ,zenburn-bg+2))))
+   `(ansi-color-bright-yellow ((t (:foreground ,zenburn-orange
+                                        :background ,zenburn-bg+3))))
+   `(ansi-color-bright-blue ((t (:foreground ,zenburn-blue-1
+                                      :background ,zenburn-fg))))
+   `(ansi-color-bright-magenta ((t (:foreground ,zenburn-magenta
+                                         :background ,zenburn-fg+1))))
+   `(ansi-color-bright-cyan ((t (:foreground ,zenburn-cyan
+                                      :background ,zenburn-bg-1))))
+   `(ansi-color-bright-white ((t (:foreground ,zenburn-fg
+                                       :background ,zenburn-fg+2))))
 ;;;;; compilation
    `(compilation-column-face ((t (:foreground ,zenburn-yellow))))
    `(compilation-enter-directory-face ((t (:foreground ,zenburn-green))))

@@ -28,6 +28,7 @@
    org-hide-emphasis-markers t
    org-pretty-entities t
    org-fontify-quote-and-verse-blocks t
+   org-use-sub-superscripts '{}
 
    ;; Agenda Config
    org-agenda-files

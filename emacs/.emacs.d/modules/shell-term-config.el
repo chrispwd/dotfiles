@@ -13,9 +13,14 @@
 (when (memq window-system '(mac ns x))
   (use-package multi-vterm
     :ensure t
-    :config
-    (with-eval-after-load 'vterm
-      (define-key vterm-mode-map (kbd "C-c v r") #'multi-vterm-rename-buffer))))
+    :bind (("C-c v v" . multi-vterm)
+           ("C-c v p" . multi-vterm-project)
+           ("C-x p t" . multi-vterm-project)
+           :map vterm-mode-map
+           ("C-c v r" . multi-vterm-rename-buffer))))
+    ;; :config
+    ;; (with-eval-after-load 'vterm
+    ;;   (define-key vterm-mode-map (kbd "C-c v r") #'multi-vterm-rename-buffer))))
 
 (provide 'shell-term-config)
 ;;; shell-term-config.el ends here
