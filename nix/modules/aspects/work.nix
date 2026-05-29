@@ -10,6 +10,7 @@
       php85Packages.composer
       phpactor
       k9s
+      mysql84
     ];
 
   };

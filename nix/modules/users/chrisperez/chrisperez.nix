@@ -8,6 +8,7 @@
       # opengl-support
       fonts
       work
+      macos
       # music-pkgs
       # add more here
     ];
