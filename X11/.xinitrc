@@ -25,12 +25,12 @@ fi
 #exec i3
 
 # Pass wm name as arg to script to specify wm-specific programs
-startup cwm
+startup wmaker
 # exec i3
 # exec wmaker
 # exec fvwm3
 # startup
-exec cwm
+exec wmaker
 # exec dwm
 # run icewm-session without icewmbg (prefer feh)
 # exec icewm-session --nobg
