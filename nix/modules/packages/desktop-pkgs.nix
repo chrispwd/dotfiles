@@ -3,19 +3,34 @@
   flake.modules.homeManager.desktop-pkgs = { pkgs, ... }: {
     
     home.packages = with pkgs; [
-      cwm
+      # cwm
+      windowmaker
+      cbatticon
+      dockapps.cputnik
+      dockapps.wmCalClock
+      dockapps.wmsystemtray
       dmenu
       dunst
       feh
+      keepassxc
       nsxiv
+      pasystray
+      pavucontrol
       picom
       polybar
+      setxkbmap
       sxhkd
-      thunar
+      pcmanfm
       xbacklight
+      xclip
+      xdotool
+      xdpyinfo
       xev
+      xinit
       xmodmap
-      yt-dlp
+      xset
+      xsetroot
+      xrandr
       zathura
     ];
   };
