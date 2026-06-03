@@ -7,14 +7,16 @@ Usage: get-monitors [-c|-d][-h]
 
     Reads monitor query from \`xrandr'
 
+    With no arguments, returns connected display names
+
     Options:
     -c, --connected    Show connected monitors
     -d, --disconnected Show disconnected monitors
     -h, -?, --help     Show this help text
 "
 }
-
-connected_outputs=$(xrandr --query | grep " connected" | cut -d" " -f1)
+xrandr_data="$(xrandr --query)"
+connected_outputs=$(echo "$xrandr_data" | grep " connected" | cut -d" " -f1)
 disconnected_outputs=$(echo "$xrandr_data" | grep "disconnected" | cut -d" " -f1 | head -n -1)
 output=$connected_outputs
 
@@ -67,4 +69,4 @@ while :; do
     shift
 done
 
-echo $output
+echo "$output"

@@ -96,3 +96,6 @@ flycheck_*.el
 
 # fontconfig files from home-manager
 /fontconfig/.config/fontconfig/conf.d/
+
+# WindowMaker
+/WindowMaker/GNUstep/Defaults/WMState

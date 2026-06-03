@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+cmd="${NIXGL} ~/.nix-profile/bin/mpv --hwdec=auto-safe --profile=fast $@"
+
+eval "$cmd"

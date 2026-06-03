@@ -3,10 +3,9 @@
 set-monitors
 
 if [ -n "$1" ]; then
-    case $1 in
+    case "$1" in
         "cwm"|"i3"|"bspwm")
             launch-polybar.sh
-            break
             ;;
     esac
 fi
