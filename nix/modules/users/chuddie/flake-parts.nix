@@ -1,10 +1,9 @@
 { inputs, withSystem, ... }: {
 
-  flake.homeConfigurations."uhoh" = withSystem "x86_64-linux" ({ pkgs, ... }:
+  flake.homeConfigurations."chuddie" = withSystem "x86_64-linux" ({ pkgs, ... }:
     inputs.home-manager.lib.homeManagerConfiguration {
     
       inherit pkgs;
-      # pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
       modules = [
         {
           nixpkgs.overlays = [
@@ -13,13 +12,11 @@
                 visualizerSupport = true;
               };
             })
-            inputs.nixgl.overlays.default
           ];
           nixpkgs.config.allowUnfree = true;
         }
-        inputs.self.modules.homeManager.uhoh
+        inputs.self.modules.homeManager.chuddie
       ];
-
     }
   );
 }

@@ -1,9 +1,12 @@
 { self, ... }: {
   
   flake.modules.homeManager.opengl-support = { pkgs, ... }: {
-    
-    home.packages = with pkgs; [
-      nixgl.auto.nixGLDefault
-    ];
+
+    # only needed if unable to have sudo access on host system
+    # home.packages = with pkgs; [
+    #   nixgl.auto.nixGLDefault
+    # ];
+
+    targets.genericLinux.gpu.enable = true;
   };
 }
