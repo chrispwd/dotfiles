@@ -90,6 +90,15 @@
    `(rainbow-delimiters-depth-7-face ((t (:foreground ,c-7))))
    `(rainbow-delimiters-depth-8-face ((t (:foreground ,c-8))))
 
+   `(tab-bar ((t (:background ,c-15))))
+   `(tab-bar-tab ((t (:foreground ,c-fg
+                                  :background ,c-bg
+                                  :weight bold
+                                  :box (:line-width -1 :style released-button)))))
+   `(tab-bar-tab-inactive ((t (:foreground ,c-fg
+                                           :background ,c-15
+                                           :box (:line-width -1 :style released-button)))))
+
    ))
 
 ;;;###autoload
