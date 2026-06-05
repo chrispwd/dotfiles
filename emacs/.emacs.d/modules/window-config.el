@@ -2,9 +2,9 @@
 
 (use-package popper
   :ensure t
-  :bind (("C-`"   . popper-toggle)
-         ("M-~"   . popper-cycle)
-         ("C-M-`" . popper-toggle-type))
+  :bind (("C-c p p"   . popper-toggle)
+         ("C-c p c"   . popper-cycle)
+         ("C-c p t" . popper-toggle-type))
   :init
   (setq popper-reference-buffers
         '("\\*Messages\\*"
