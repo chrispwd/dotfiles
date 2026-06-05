@@ -7,7 +7,7 @@ mod4 + Return
 	eval "$TERMINAL"
 
 # program launcher
-mod4 + @space
+alt + @space
 	mydmenu_run -l 12
 
 # char search
