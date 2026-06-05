@@ -6,8 +6,8 @@
 sticky      yes
 snapdist    4
 moveamount  32
-borderwidth 1
-gap         64 64 64 64
+borderwidth 2
+gap         48 32 32 32
 vtile       50
 htile       50
 unbind-key  all
@@ -332,8 +332,8 @@ color menufg          "#5794d0"
 color menubg          "#24272b"
 color font            "#8f8f8f"
 color selfont         "#fff7ed"
-color activeborder    "#5794d0"
-color inactiveborder  "#3e4044"
+color activeborder    "#24272b"
+color inactiveborder  "#636363"
 color groupborder     "#47a477"
 color ungroupborder   "#a38f2d"
 color urgencyborder   "#ca736c"
