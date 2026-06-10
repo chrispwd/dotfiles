@@ -9,27 +9,27 @@
   :ensure t
   :config
   (setq base16-theme-256-color-source 'colors)
-  (load-theme 'base16-penumbra-dark t)
+  (load-theme 'base16-gruvbox-material-dark-soft t)
   (defvar my/base16-colors
-  '(:base00 "#24272b"
-    :base01 "#303338"
-    :base02 "#3e4044"
-    :base03 "#636363"
-    :base04 "#7a7a7a"
-    :base05 "#8f8f8f"
-    :base06 "#bebebe"
-    :base07 "#fff7ed"
-    :red "#ca736c" ; red
-    :orange "#ba823a" ; orange
-    :yellow "#A38F2D" ; yellow
-    :green "#47a477" ; green
-    :cyan "#00a2af" ; cyan
-    :blue "#5794d0" ; blue
-    :violet "#9481cc" ; purple
-    :magenta "#bd72a8") ; magenta
-  "All colors for Base16 Penumbra Dark are defined here.")
+    '(:base00 "#32302f"
+    :base01 "#3c3836"
+    :base02 "#5a524c"
+    :base03 "#7c6f64"
+    :base04 "#bdae93"
+    :base05 "#a89984"
+    :base06 "#ebdbb2"
+    :base07 "#fbf1c7"
+    :red    "#ea6962" ; base08
+    :orange "#e78a4e" ; base09
+    :yellow "#d8a657" ; base0A
+    :green  "#a9b665" ; base0B
+    :cyan   "#89b482" ; base0C
+    :blue   "#7daea3" ; base0D
+    :violet "#d3869b" ; base0E
+    :base0F "#bd6f3e") ; base0F (brown)
+    "All colors for Base16 Penumbra Dark are defined here.")
   
-(custom-set-faces
+  (custom-set-faces
    `(default
      ((t (:foreground
           ,(plist-get my/base16-colors :base05)
@@ -53,6 +53,9 @@
    `(line-number-current-line
      ((t (:foreground
           ,(plist-get my/base16-colors :base06)))))
+   `(dired-directory
+     ((t (:foreground
+          ,(plist-get my/base16-colors :blue)))))
    `(hl-line
      ((t (:background
           ,(plist-get my/base16-colors :base00)))))
@@ -100,9 +103,9 @@
           ,(plist-get my/base16-colors :cyan)))))
    `(ansi-color-magenta
      ((t (:foreground
-          ,(plist-get my/base16-colors :magenta)
+          ,(plist-get my/base16-colors :base0F)
           :background
-          ,(plist-get my/base16-colors :magenta)))))
+          ,(plist-get my/base16-colors :base0F)))))
    `(ansi-color-green
      ((t (:foreground
           ,(plist-get my/base16-colors :green)
@@ -140,22 +143,22 @@
           bold))))
    `(font-lock-keyword-face
      ((t (:foreground
-          ,(plist-get my/base16-colors :violet)))))
+          ,(plist-get my/base16-colors :red)))))
    `(font-lock-variable-name-face
      ((t (:foreground
           ,(plist-get my/base16-colors :base05)))))
    `(font-lock-function-name-face
      ((t (:foreground
-          ,(plist-get my/base16-colors :blue)))))
+          ,(plist-get my/base16-colors :violet)))))
    `(font-lock-function-call-face
      ((t (:foreground
-          ,(plist-get my/base16-colors :blue)))))
+          ,(plist-get my/base16-colors :violet)))))
    `(font-lock-builtin-face
      ((t (:foreground
-          ,(plist-get my/base16-colors :magenta)))))
+          ,(plist-get my/base16-colors :blue)))))
    `(font-lock-constant-face
      ((t (:foreground
-          ,(plist-get my/base16-colors :orange)
+          ,(plist-get my/base16-colors :cyan)
           :weight normal))))
    `(font-lock-number-face
      ((t (:foreground
@@ -163,7 +166,7 @@
           :weight normal))))
    `(font-lock-type-face
      ((t (:foreground
-          ,(plist-get my/base16-colors :red)
+          ,(plist-get my/base16-colors :orange)
           :weight normal))))
    `(font-lock-string-face
      ((t (:foreground
@@ -171,7 +174,7 @@
           :weight normal))))
    `(font-lock-operator-face
      ((t (:foreground
-          ,(plist-get my/base16-colors :cyan)))))
+          ,(plist-get my/base16-colors :base0F)))))
    `(font-lock-preprocessor-face
      ((t (:foreground
           ,(plist-get my/base16-colors :cyan)))))
@@ -198,7 +201,7 @@
           ,(plist-get my/base16-colors :yellow)))))
    `(rainbow-delimiters-depth-8-face
      ((t (:foreground
-          ,(plist-get my/base16-colors :magenta)))))
+          ,(plist-get my/base16-colors :base0F)))))
    `(rainbow-delimiters-base-error-face
      ((t (:foreground
           ,(plist-get my/base16-colors :base00)
@@ -218,7 +221,7 @@
      ((t (:foreground
           ,(plist-get my/base16-colors :base00)
           :background
-          ,(plist-get my/base16-colors :magenta)))))
+          ,(plist-get my/base16-colors :base0F)))))
    `(avy-lead-face-2
      ((t (:foreground
           ,(plist-get my/base16-colors :base00)
@@ -231,7 +234,7 @@
           bold))))
    `(orderless-match-face-1
      ((t (:foreground
-          ,(plist-get my/base16-colors :magenta)
+          ,(plist-get my/base16-colors :base0F)
           :weight
           bold))))
    `(orderless-match-face-2
@@ -267,7 +270,7 @@
           ,(plist-get my/base16-colors :yellow)))))
    `(org-level-8
      ((t (:foreground
-          ,(plist-get my/base16-colors :magenta)))))
+          ,(plist-get my/base16-colors :base0F)))))
    `(org-document-title
      ((t (:foreground
           ,(plist-get my/base16-colors :orange)))))
@@ -294,7 +297,7 @@
           ,(plist-get my/base16-colors :orange)))))
    `(org-agenda-date
      ((t (:foreground
-          ,(plist-get my/base16-colors :blue)))))
+          ,(plist-get my/base16-colors :cyan)))))
    `(org-scheduled-previously
      ((t (:foreground
           ,(plist-get my/base16-colors :yellow)))))
@@ -364,7 +367,7 @@
           :extend t))))
    `(org-table
      ((t :foreground
-          ,(plist-get my/base16-colors :violet))))
+         ,(plist-get my/base16-colors :violet))))
    `(org-checkbox
      ((t (:background
           ,(plist-get my/base16-colors :base00)
@@ -374,6 +377,13 @@
    `(denote-faces-date
      ((t (:foreground
           ,(plist-get my/base16-colors :base03)))))
+   `(denote-faces-link
+     ((t (:foreground
+          ,(plist-get my/base16-colors :blue)
+          :underline t))))
+   `(denote-faces-keywords
+     ((t (:foreground
+          ,(plist-get my/base16-colors :orange)))))
    `(denote-faces-delimiter
      ((t (:foreground
           ,(plist-get my/base16-colors :base00)))))
@@ -389,52 +399,52 @@
           italic
           :weight
           bold))))
-  `(term-color-black
+   `(term-color-black
      ((t (:foreground
           ,(plist-get my/base16-colors :base01)))))
-  `(term-color-bright-black
+   `(term-color-bright-black
      ((t (:foreground
           ,(plist-get my/base16-colors :base02)))))
-  `(term-color-red
+   `(term-color-red
      ((t (:foreground
           ,(plist-get my/base16-colors :red)))))
-  `(term-color-bright-red
+   `(term-color-bright-red
      ((t (:foreground
           ,(plist-get my/base16-colors :orange)))))
-  `(term-color-yellow
+   `(term-color-yellow
      ((t (:foreground
           ,(plist-get my/base16-colors :yellow)))))
-  `(term-color-bright-yellow
+   `(term-color-bright-yellow
      ((t (:foreground
           ,(plist-get my/base16-colors :base04)))))
-  `(term-color-green
+   `(term-color-green
      ((t (:foreground
           ,(plist-get my/base16-colors :green)))))
-  `(term-color-bright-green
+   `(term-color-bright-green
      ((t (:foreground
           ,(plist-get my/base16-colors :base03)))))
-  `(term-color-blue
+   `(term-color-blue
      ((t (:foreground
           ,(plist-get my/base16-colors :blue)))))
-  `(term-color-bright-blue
+   `(term-color-bright-blue
      ((t (:foreground
           ,(plist-get my/base16-colors :base05)))))
-  `(term-color-magenta
+   `(term-color-magenta
      ((t (:foreground
           ,(plist-get my/base16-colors :violet)))))
-  `(term-color-bright-magenta
+   `(term-color-bright-magenta
      ((t (:foreground
-          ,(plist-get my/base16-colors :magenta)))))
-  `(term-color-cyan
+          ,(plist-get my/base16-colors :base0F)))))
+   `(term-color-cyan
      ((t (:foreground
           ,(plist-get my/base16-colors :cyan)))))
-  `(term-color-bright-cyan
+   `(term-color-bright-cyan
      ((t (:foreground
           ,(plist-get my/base16-colors :base06)))))
-  `(term-color-white
+   `(term-color-white
      ((t (:foreground
           ,(plist-get my/base16-colors :base06)))))
-  `(term-color-bright-white
+   `(term-color-bright-white
      ((t (:foreground
           ,(plist-get my/base16-colors :base07)))))))
 

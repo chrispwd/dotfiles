@@ -7,7 +7,7 @@ sticky      yes
 snapdist    4
 moveamount  32
 borderwidth 2
-gap         48 32 32 32
+gap         40 32 32 32
 vtile       50
 htile       50
 unbind-key  all
@@ -18,16 +18,17 @@ command terminal     "st"
 command firefox      "firefox"
 command emacs        "emacs"
 command htop         "st -T htop -e htop"
-command filebrowser  "Thunar"
+command filebrowser  "pcmanfm"
 command signal       "signal-desktop"
 command telegram     "Telegram"
 
 # app-specific
 ignore       polybar
-ignore       tint
+ignore       tint2
 ignore       MEGAsync
 ignore       trayer
 ignore       xclock
+ignore       xload
 ignore       xosview
 ignore       xeyes
 ignore       xlogo
@@ -36,6 +37,7 @@ autogroup    2 "Navigator","firefox"
 autogroup    3 "signal","Signal"
 autogroup    0 "megasync","MEGAsync"
 autogroup    0 "xclock", "XClock"
+autogroup    0 "xload", "XLoad"
 autogroup    0 "xosview", "XOsview"
 autogroup    0 "panel","trayer"
 
@@ -47,6 +49,7 @@ bind-key 4S-e menu-exec
 bind-key 4S-g menu-group
 bind-key 4S-m menu-exec-wm
 bind-key 4S-s menu-ssh
+bind-key 4S-t window-menu-label
 bind-key 4S-w menu-window
 bind-key 4S-z menu-window-hidden
 bind-key 4S-r restart
@@ -130,6 +133,9 @@ unbind-mouse all
 bind-mouse 4-3  window-resize
 bind-mouse 4-1  window-move
 bind-mouse 4M-1 window-lower
+bind-mouse 1    menu-window
+bind-mouse 2    menu-window-hidden
+bind-mouse 3    menu-cmd
 
 ## Colors
 
@@ -217,16 +223,16 @@ bind-mouse 4M-1 window-lower
 # color ungroupborder   "#f0dfaf"
 # color urgencyborder   "#cc9393"
 
-## gruvbox-material soft
-# color menufg          "#d4be98"
-# color menubg          "#32302f"
-# color font            "#d4be98"
-# color selfont         "#32302f"
-# color activeborder    "#a7c7a2"
-# color inactiveborder  "#928374"
-# color groupborder     "#a9b665"
-# color ungroupborder   "#ea6962"
-# color urgencyborder   "#ef938e"
+# gruvbox-material soft
+color menufg          "#a89984"
+color menubg          "#32302f"
+color font            "#a89984"
+color selfont         "#32302f"
+color activeborder    "#a89984"
+color inactiveborder  "#5a524c"
+color groupborder     "#a9b665"
+color ungroupborder   "#d8a657"
+color urgencyborder   "#ea6962"
 
 ## 3024
 # color menufg          "#a5a2a2"
@@ -328,16 +334,16 @@ bind-mouse 4M-1 window-lower
 # color urgencyborder   "#944649"
 
 ## Penumbra Dark
-color menufg          "#5794d0"
-color menubg          "#24272b"
-color font            "#8f8f8f"
-color selfont         "#fff7ed"
-color activeborder    "#24272b"
-# color activeborder    "#5794d0"
-color inactiveborder  "#636363"
-color groupborder     "#47a477"
-color ungroupborder   "#a38f2d"
-color urgencyborder   "#ca736c"
+# color menufg          "#5794d0"
+# color menubg          "#24272b"
+# color font            "#8f8f8f"
+# color selfont         "#fff7ed"
+# color activeborder    "#24272b"
+# # color activeborder    "#5794d0"
+# color inactiveborder  "#636363"
+# color groupborder     "#47a477"
+# color ungroupborder   "#a38f2d"
+# color urgencyborder   "#ca736c"
 
 ## Zenburn darker
 # color menufg          "#0d0f13"
