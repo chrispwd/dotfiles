@@ -7,6 +7,7 @@
     home.packages = with pkgs; [
       nerd-fonts.inconsolata-go
       nerd-fonts.iosevka
+      nerd-fonts.caskaydia-cove
       ibm-plex
     ];
   };
