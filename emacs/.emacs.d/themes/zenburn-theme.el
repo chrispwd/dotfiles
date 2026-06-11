@@ -170,9 +170,9 @@ Also bind `class' to ((class color) (min-colors 89))."
 ;;;;; basic coloring
    '(button ((t (:underline t))))
    ;; `(link ((t (:foreground ,zenburn-yellow :underline t :weight bold))))
-   `(link ((t (:foreground ,zenburn-yellow :underline t))))
+   `(link ((t (:foreground ,zenburn-yellow-1 :underline t))))
    `(link-visited ((t (:foreground ,zenburn-yellow-2 :underline t :weight normal))))
-   `(default ((t (:foreground ,zenburn-fg :background ,zenburn-bg))))
+   `(default ((t (:foreground ,zenburn-fg-1 :background ,zenburn-bg))))
    `(cursor ((t (:foreground ,zenburn-fg :background ,zenburn-fg+1))))
    `(widget-field ((t (:foreground ,zenburn-fg :background ,zenburn-bg+3))))
    `(escape-glyph ((t (:foreground ,zenburn-yellow :weight bold))))
