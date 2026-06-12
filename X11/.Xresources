@@ -1,4 +1,4 @@
-#include "Xresources.d/themes/gruvbox-material-dark-soft"
+#include "Xresources.d/themes/penumbra-dark"
 
 Xft.antialias: true
 Xft.hinting: true

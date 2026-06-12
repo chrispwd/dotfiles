@@ -351,13 +351,13 @@
     # foreground = "#777777"
     # frame_color = "#777777"
     # Penumbra dark
-    # background = "#24272b"
-    # foreground = "#8f8f8f"
-    # frame_color = "#636363"
+    background = "#24272b"
+    foreground = "#8f8f8f"
+    frame_color = "#636363"
     # gruvbox-material dark soft
-    background = "#32302f"
-    foreground = "#7c6f64"
-    frame_color = "#7c6f64"
+    # background = "#32302f"
+    # foreground = "#7c6f64"
+    # frame_color = "#7c6f64"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
@@ -424,13 +424,13 @@
     # foreground = "#b2b2b2"
     # frame_color = "#5fafd7"
     # Penumbra dark
-    # background = "#24272b"
-    # foreground = "#8f8f8f"
-    # frame_color = "#8f8f8f"
+    background = "#24272b"
+    foreground = "#8f8f8f"
+    frame_color = "#8f8f8f"
     # gruvbox-material dark soft
-    background = "#32302f"
-    foreground = "#a89984"
-    frame_color = "#a89984"
+    # background = "#32302f"
+    # foreground = "#a89984"
+    # frame_color = "#a89984"
     # homerun
     # background = "#000000"
     # foreground = "#ababab"
@@ -501,13 +501,13 @@
     # foreground = "#ababab"
     # frame_color = "#ababab"
     # Penumbra dark
-    # background = "#ca736c"
-    # foreground = "#fff7ed"
-    # frame_color = "#fff7ed"
+    background = "#ca736c"
+    foreground = "#fff7ed"
+    frame_color = "#fff7ed"
     # gruvbox-material dark soft
-    background = "#ea6962"
-    foreground = "#fbf1c7"
-    frame_color = "#fbf1c7"
+    # background = "#ea6962"
+    # foreground = "#fbf1c7"
+    # frame_color = "#fbf1c7"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     # icon = $HOME/.icons/CDE-Reborn/32x32/status/important.png
