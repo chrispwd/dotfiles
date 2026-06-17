@@ -7,5 +7,5 @@ run_once() {
     fi
 }
 
-run_once cbatticon BAT1
+# run_once cbatticon BAT1
 run_once blueman-applet

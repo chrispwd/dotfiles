@@ -29,9 +29,9 @@ xeyes.ignoreNoFocusHint: 1
 XClock.ignoreNoFocusHint: 1
 Vim.icon: vim
 
-gkrellm.Gkrellm.allWorkspaces: 1
-gkrellm.Gkrellm.ignoreTaskBar: 1
-gkrellm.Gkrellm.layer: Below
+# gkrellm.Gkrellm.allWorkspaces: 1
+# gkrellm.Gkrellm.ignoreTaskBar: 1
+# gkrellm.Gkrellm.layer: Below
 #gkrellm.Gkrellm.doNotCover: 1
 
 MainWindow.licq.allWorkspaces: 1

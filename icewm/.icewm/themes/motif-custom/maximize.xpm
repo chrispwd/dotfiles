@@ -1,9 +1,9 @@
 /* XPM */
 static char *maximize_xpm[] = {
 "16 16 3 1",
-"  c #c0c0c0",
-"W c #FFFFFF",
-"D c #808080",
+"  c #8c8c8c",
+"W c #bebebe",
+"D c #636363",
 "                ",
 "                ",
 "  WWWWWWWWWWW   ",

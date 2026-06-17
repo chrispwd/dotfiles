@@ -27,7 +27,7 @@ run_once dunst
 
 # trayed programs
 run_once nm-applet
-run_once cbatticon BAT0
+# run_once cbatticon BAT0
 run_once pasystray
 run_once keepassxc
 

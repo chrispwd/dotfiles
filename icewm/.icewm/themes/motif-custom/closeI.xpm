@@ -1,9 +1,9 @@
 /* XPM */
-static char *maximize_xpm[] = {
+static char *closeI_xpm[] = {
 "16 16 3 1",
-"F c #FFFFFF",
-"B c #808080",
-"  c #C0C0C0",
+"F c #bebebe",
+"B c #636363",
+"  c #8c8c8c",
 "                ",
 "                ",
 "   FF      FF   ",
@@ -19,5 +19,5 @@ static char *maximize_xpm[] = {
 "  F  B    B  B  ",
 "   BB      BB   ",
 "                ",
-"                ",
+"                "
 };
