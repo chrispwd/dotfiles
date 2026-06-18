@@ -172,7 +172,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    ;; `(link ((t (:foreground ,zenburn-yellow :underline t :weight bold))))
    `(link ((t (:foreground ,zenburn-yellow-1 :underline t))))
    `(link-visited ((t (:foreground ,zenburn-yellow-2 :underline t :weight normal))))
-   `(default ((t (:foreground ,zenburn-fg-1 :background ,zenburn-bg))))
+   `(default ((t (:foreground ,zenburn-fg :background ,zenburn-bg))))
    `(cursor ((t (:foreground ,zenburn-fg :background ,zenburn-fg+1))))
    `(widget-field ((t (:foreground ,zenburn-fg :background ,zenburn-bg+3))))
    `(escape-glyph ((t (:foreground ,zenburn-yellow :weight bold))))
@@ -1317,7 +1317,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(org-level-6 ((t (:inherit ,z-variable-pitch :foreground ,zenburn-green+2))))
    `(org-level-7 ((t (:inherit ,z-variable-pitch :foreground ,zenburn-red+2))))
    `(org-level-8 ((t (:inherit ,z-variable-pitch :foreground ,zenburn-magenta))))
-   `(org-link ((t (:foreground ,zenburn-yellow-2 :underline t))))
+   `(org-link ((t (:foreground ,zenburn-green+2 :underline t))))
    `(org-quote ((t (:background ,zenburn-bg+05 :extend t))))
    `(org-scheduled ((t (:foreground ,zenburn-green+4))))
    `(org-scheduled-previously ((t (:foreground ,zenburn-red))))
@@ -1355,6 +1355,8 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(org-ref-cite-face ((t :underline t)))
    `(org-ref-glossary-face ((t :underline t)))
    `(org-ref-acronym-face ((t :underline t)))
+;;;;; denote
+   `(denote-faces-link ((t :inherit link)))
 ;;;;; outline
    `(outline-1 ((t (:inherit ,z-variable-pitch :foreground ,zenburn-orange
                              ,@(when zenburn-scale-outline-headlines

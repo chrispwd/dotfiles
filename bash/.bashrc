@@ -113,28 +113,16 @@ _ps1() {
 
     B=$(git branch >/dev/null 2>&1 && git branch | grep '\*' | cut -c 3-)
 
-    # old
-    #[[ -n "$B" ]] && B="$wh($cr$y$B$cr$wh)$cr"
-    #[[ -n "$B" ]] && B=" $y($B)$cr"
-    #PS1="$r\$(exit_status)$cr[$g\u$cr$wh@$cr$b\h$cr$wh:$cr$mg\W$cr$B] \\$ "
-    # PS1="$g\u$cr at $b\h$cr$B in $mg\w$cr
-    # $r\$(exit_status)$cr> \\$ "
-    #PS1="$mg\w$cr$B$r\$(exit_status)$cr \\$ "
-    #PS1="# $g@\h:$cr $mg\w$cr$B$r\$(exit_status)$cr"
-
-    #[[ -n "$B" ]] && B="$clear${brgre} on $clear${brred}$B"
-    # [[ -n "$B" ]] && B="${gg}on${x} ${y}$B${x} "
-    [[ -n "$B" ]] && B="(${y}$B${x})"
-
-    #[[ $EXIT != 0 ]] && stat="${red} failed$clear${brgre} code ${red}$EXIT" || stat=""
     # [[ $EXIT != 0 ]] && stat="${gg}exit${x} ${r}$EXIT${x} " || stat=""
-    [[ $EXIT != 0 ]] && stat=" ${r}${EXIT}${x} " || stat=""
-    # PS1="$bg_base01_fg_cya\u$bg_base01_fg_dull from $bg_base01_fg_gre\h$bg_base01_fg_dull in $bg_base01_fg_mag\$(shorten_git_path)$B$bg_base01_fg_dull last command at $bg_base01_fg_fg\t$stat"
-    # PS1="${brgre}[ in ${gre}\w$B${brgre} at ${brblu}\t$stat${brgre} ]$clear"
-    # PS1+="\n> "
+    # [[ -n "$B" ]] && B="${gg}on${x} ${y}$B${x} "
     # PS1="${stat}${gg}as${x} ${m}\u${x} ${B}${gg}in${x} ${g}\w${x}${gg}:${x}"
+    # PS1+="\n${l}\\$ ${x}"
+    
+    [[ $EXIT != 0 ]] && stat=" ${r}${EXIT}${x} " || stat=""
+    [[ -n "$B" ]] && B="(${y}$B${x})"
     PS1="${stat}${m}\u${x}@${g}\h${x} ${b}\w${x}${B}:"
     PS1+="\n${l}\\$ ${x}"
+    
 }
 
 PROMPT_COMMAND="_ps1"

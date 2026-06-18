@@ -1842,7 +1842,7 @@
 ;;           ,(plist-get my/base16-colors :green)))))
 ;;    `(org-link
 ;;      ((t (:foreground
-;;           ,(plist-get my/base16-colors :cyan)
+;;           ,(plist-get my/base16-colors :green)
 ;;           :underline t))))
 ;;    `(org-code
 ;;      ((t (:foreground
