@@ -99,3 +99,7 @@ flycheck_*.el
 
 # WindowMaker
 /WindowMaker/GNUstep/Defaults/WMState
+
+# mpd
+/mpd/.config/mpd/**
+!/mpd/.config/mpd/mpd.conf
