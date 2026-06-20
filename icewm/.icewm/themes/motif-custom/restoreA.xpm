@@ -1,7 +1,7 @@
 /* XPM */
-static char * restoreI_xpm[] = {
+static char * restoreA_xpm[] = {
 "16 16 3 1",
-" 	c #555861",
+" 	c #898C92",
 ".	c #303338",
 "+	c #BEBEBE",
 "                ",

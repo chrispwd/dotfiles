@@ -1,9 +1,9 @@
 /* XPM */
-static char * restoreI_xpm[] = {
+static char * maximizeA_xpm[] = {
 "16 16 3 1",
-" 	c #555861",
-".	c #303338",
-"+	c #BEBEBE",
+" 	c #898C92",
+".	c #BEBEBE",
+"+	c #303338",
 "                ",
 "                ",
 "  ...........   ",

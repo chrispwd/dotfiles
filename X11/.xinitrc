@@ -2,6 +2,15 @@
 
 # xinitrc runs automatically when you run startx.
 
+# load the presence of any default scripts
+xinitdir="/etc/X11/xinit"
+if [ -d "$xinitdir"/xinitrc.d ] ; then
+	for f in "$xinitdir/xinitrc.d"/?*.sh ; do
+		[ -x "$f" ] && . "$f"
+	done
+	unset f
+fi
+
 if [ -d "${XDG_CONFIG_HOME:-$HOME/.config}/X11/Xresources.d" ]; then
     [ -f ~/.Xresources ] && xrdb -merge -I${HOME}/.config/X11 ~/.Xresources
 else
