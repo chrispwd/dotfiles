@@ -81,7 +81,7 @@
   (shr-use-colors nil)
   (switch-to-buffer-obey-display-actions t)
   (tab-always-indent 'complete)
-  (tab-width 4)
+  (tab-width 2)
   (tab-bar-close-button-show nil)
   (tab-bar-new-button-show nil)
   (tab-bar-tab-hints t)
