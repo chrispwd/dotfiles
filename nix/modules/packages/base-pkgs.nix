@@ -3,6 +3,7 @@
   flake.modules.homeManager.base-pkgs = { pkgs, ... }: {
     
     home.packages = with pkgs; [
+      bash-completion
       emacs
       fastfetch
       fzf
