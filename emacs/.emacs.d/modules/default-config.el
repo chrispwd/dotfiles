@@ -117,7 +117,7 @@
   (setq custom-file (locate-user-emacs-file "custom-vars.el"))
   (load custom-file 'noerror 'nomessage)
 
-  ;; Set line-number-mode with relative numbering
+  ;; Set line-number-mode with absolute numbering
   (setq display-line-numbers-type t)
   (add-hook 'prog-mode-hook #'display-line-numbers-mode)
 
@@ -943,6 +943,7 @@ and restart Flymake to apply the changes."
   :ensure yaml-ts-mode
   :mode "\\.ya?ml\\'"
   :defer 't
+  :hook (yaml-ts-mode . display-line-numbers-mode)
   :config
   (add-to-list 'treesit-language-source-alist
                '(yaml "https://github.com/tree-sitter-grammars/tree-sitter-yaml" "master" "src")))
@@ -962,7 +963,7 @@ and restart Flymake to apply the changes."
   :mode "\\.go\\'"
   :defer 't
   :custom
-  (go-indent-level 4)
+  (go-ts-mode-indent-offset 2)
   :config
   (add-to-list 'major-mode-remap-alist '(go-mode . go-ts-mode))
   (add-to-list 'treesit-language-source-alist
@@ -985,6 +986,26 @@ and restart Flymake to apply the changes."
   :config
   (add-to-list 'treesit-language-source-alist
              '(php "https://github.com/tree-sitter/tree-sitter-php" "master" "php/src")))
+
+;;; CPP-TS-MODE
+(use-package c-ts-mode
+  :ensure nil
+  :mode "\\.\\(c\\|h\\)\\'"
+  :defer 't
+  :config
+  (add-to-list 'major-mode-remap-alist '(c-mode . c-ts-mode))
+  (add-to-list 'treesit-language-source-alist
+             '(c "https://github.com/tree-sitter/tree-sitter-c" "master" "src")))
+
+;;; CPP-TS-MODE
+(use-package c++-ts-mode
+  :ensure nil
+  :mode "\\.\\(cpp\\|cc\\|cxx\\)\\'"
+  :defer 't
+  :config
+  (add-to-list 'major-mode-remap-alist '(c++-mode . c++-ts-mode))
+  (add-to-list 'treesit-language-source-alist
+             '(cpp "https://github.com/tree-sitter/tree-sitter-cpp" "master" "src")))
 
 ;;; ------------------- EMACS-SOLO CUSTOMS
 ;;; EMACS-SOLO-HOOKS

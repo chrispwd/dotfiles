@@ -51,5 +51,16 @@
   (add-to-list 'treesit-language-source-alist
                '(nix "https://github.com/nix-community/tree-sitter-nix" "master" "src")))
 
+(use-package indent-bars
+  :ensure t
+  :custom
+  (indent-bars-treesit-support t)
+  (indent-bars-treesit-wrap '((c argument_list parameter_list init_declarator parenthesized_expression)
+                              (rust arguments parameters)
+                              (toml table array comment)
+                              (yaml comment)))
+  :hook
+  ((python-mode yaml-ts-mode go-ts-mode toml-ts-mode js-ts-mode typescript-ts-mode tsx-ts-mode php-ts-mode c-ts-mode c++-ts-mode) . indent-bars-mode))
+
 (provide 'programming-config)
 ;;; coding.el ends here

@@ -62,11 +62,15 @@ NetworkStatusDevice="[w]*"
 QuickSwitchToHidden=0 # 0/1
 SnapDistance=8 # [0-64]
 TaskBarAtTop=0 # 0/1
-TaskBarShowAPMGraph=1 # 0/1
+TaskBarShowAPMAuto=0 # 0/1
+TaskBarShowAPMStatus=0 # 0/1
+TaskBarShowAPMGraph=0 # 0/1
+TaskBarShowAPMTime=0 # 0/1
 TaskBarShowMailboxStatus=0 # 0/1
 TaskBarShowTransientWindows=0
 TaskBarShowWindowListMenu=0
 TaskBarShowShowDesktopButton=0
+
 FocusRequestFlashInterval=0
 WorkspaceNames=" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 "
 TimeFormat="%a, %b %d %H:%M"

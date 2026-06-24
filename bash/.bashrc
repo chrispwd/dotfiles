@@ -118,9 +118,9 @@ _ps1() {
     # PS1="${stat}${gg}as${x} ${m}\u${x} ${B}${gg}in${x} ${g}\w${x}${gg}:${x}"
     # PS1+="\n${l}\\$ ${x}"
     
-    [[ $EXIT != 0 ]] && stat=" ${r}${EXIT}${x} " || stat=""
-    [[ -n "$B" ]] && B="(${y}$B${x})"
-    PS1="${stat}${m}\u${x}@${g}\h${x} ${b}\w${x}${B}:"
+    [[ $EXIT != 0 ]] && stat="${r}${EXIT}${x}\n" || stat=""
+    [[ -n "$B" ]] && B="${y}$B${x}"
+    PS1="${stat}${g}\u@\h${x} ${b}\w${x} ${B}"
     PS1+="\n${l}\\$ ${x}"
     
 }

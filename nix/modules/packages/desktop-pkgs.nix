@@ -3,6 +3,7 @@
   flake.modules.homeManager.desktop-pkgs = { pkgs, ... }: {
     
     home.packages = with pkgs; [
+      cbatticon
       icewm
       dmenu
       dunst
