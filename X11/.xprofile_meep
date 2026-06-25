@@ -7,6 +7,7 @@ run_once() {
     fi
 }
 
-run_once cbatticon BAT1
+# manually run pulse
+run_once pulseaudio --daemonize=no --exit-idle-time=-1
+
 run_once pasystray
-run_once blueman-applet
