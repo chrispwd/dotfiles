@@ -4,6 +4,7 @@
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_DATA_DIRS="$HOME/.nix-profile/share:$XDG_DATA_DIRS"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 ########################## DEFAULTS ####################################
@@ -17,7 +18,7 @@ export HISTSIZE=10000
 export SAVEHIST=10000
 #export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 export CWMRC="$HOME/.cwmrc"
-export WMNAME="icewm"
+export WMNAME="cwm"
 export DESKTOP="$HOME/Desktop"
 export DOCUMENTS="$HOME/Documents"
 export DOWNLOADS="$HOME/Downloads"
@@ -33,7 +34,7 @@ export COLOR_FG="#8f8f8f"
 export COLOR_BG="#2b2b2b"
 export COLOR_SEL_FG="#000000"
 export COLOR_SEL_BG="#bebeb0"
-export LS_COLORS="di=34:ln=36:so=32:pi=33:ex=32:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
+export LS_COLORS="di=34:ln=35:so=32:pi=33:ex=32:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
 export MYDMENUOPTS="-fn '${MY_MONO_FONT:-monospace}-14' -nb '${COLOR_BG}' -nf '${COLOR_FG}' -sf '${COLOR_SEL_FG}' -sb '${COLOR_SEL_BG}'"
 
 # Default programs
@@ -44,6 +45,15 @@ export ALTERNATE_EDITOR="vim"
 local_profile="$HOME/.profile_$(hostname)"
 
 [ -f "$local_profile" ] && . $local_profile
+
+# load the presence of any default scripts sourced in nix
+nix_profile_dir="${HOME}/.nix-profile/etc/profile.d"
+if [ -d "$nix_profile_dir" ] ; then
+	for f in "$nix_profile_dir"/?*.sh ; do
+		[ -x "$f" ] && . "$f"
+	done
+	unset f
+fi
 
 ########################## PATH ########################################
 

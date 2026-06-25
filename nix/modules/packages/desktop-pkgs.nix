@@ -4,7 +4,8 @@
     
     home.packages = with pkgs; [
       cbatticon
-      icewm
+      cwm
+      # icewm
       dmenu
       dunst
       feh

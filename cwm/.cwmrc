@@ -7,11 +7,12 @@ sticky      yes
 snapdist    4
 moveamount  32
 borderwidth 1
-gap         40 32 32 32
+#           t  b  l  r
+gap         16 40 16 16
 vtile       50
 htile       50
 unbind-key  all
-fontname    "monospace:size=12"
+fontname    "monospace:size=14"
 
 # app menu
 command terminal     "st"
@@ -335,27 +336,27 @@ bind-mouse 3    menu-cmd
 # color urgencyborder   "#944649"
 
 ## Penumbra Dark
-color menufg          "#24272b"
-color menubg          "#303338"
-color font            "#bebebe"
-color selfont         "#fff7ed"
-color activeborder    "#0d0f13"
+# color menufg          "#24272b"
+# color menubg          "#303338"
+# color font            "#bebebe"
+# color selfont         "#fff7ed"
+# color activeborder    "#0d0f13"
 # color activeborder    "#5794d0"
-color inactiveborder  "#24272b"
-color groupborder     "#47a477"
-color ungroupborder   "#a38f2d"
-color urgencyborder   "#ca736c"
+# color inactiveborder  "#24272b"
+# color groupborder     "#47a477"
+# color ungroupborder   "#a38f2d"
+# color urgencyborder   "#ca736c"
 
 ## Zenburn darker
-# color menufg          "#0d0f13"
-# color menubg          "#2b2b2b"
-# color font            "#8f8f8f"
-# color selfont         "#bebeb0"
-# color activeborder    "#0d0f13"
-# color inactiveborder  "#494949"
-# color groupborder     "#8fb28f"
-# color ungroupborder   "#e0cf9f"
-# color urgencyborder   "#cc9393"
+color menufg          "#0d0f13"
+color menubg          "#2b2b2b"
+color font            "#8f8f8f"
+color selfont         "#bebeb0"
+color activeborder    "#0d0f13"
+color inactiveborder  "#494949"
+color groupborder     "#8fb28f"
+color ungroupborder   "#e0cf9f"
+color urgencyborder   "#cc9393"
 
 ## Onedark warmer
 # color menufg          "#268bd2"

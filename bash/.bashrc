@@ -147,9 +147,3 @@ if [ -n "$GUIX_ENVIRONMENT" ]; then
         PS1="${BASH_REMATCH[1]} [env]\\\$ "
     fi
 fi
-
-# Use bash-completion, if available, and avoid double-sourcing
-[[ $PS1 &&
-  ! ${BASH_COMPLETION_VERSINFO:-} &&
-  -f ${HOME}/.nix-profile/share/bash-completion/bash_completion ]] &&
-    . ${HOME}/.nix-profile/share/bash-completion/bash_completion
