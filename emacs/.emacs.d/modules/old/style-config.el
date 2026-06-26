@@ -2728,3 +2728,30 @@
 ;;      ((t (:foreground
 ;;           ,(plist-get my/base16-colors :base07)))))  
 ;;    )
+
+;; (use-package solarized-theme
+;;   :ensure t
+;;   :config
+;;   (setq solarized-use-less-bold t)
+;;   ;; oksolar palette with custom face overrides
+;;   (solarized-create-theme-file-with-palette 'dark 'solarized-oksolar-dark
+;;     '("#002d38" "#fbf7ef"
+;;       ;; yellow,  orange,      red,  magenta,   violet,     blue,     cyan,    green
+;;       "#ac8300" "#d56500" "#f23749" "#dd459d" "#7d80d1" "#2b90d9" "#259d94" "#819500")
+;;     '((custom-theme-set-faces
+;;        theme-name
+;;        `(highlight ((,class (:background ,base00))))
+;;        `(default ((,class (:foreground "#839396" :background ,base03))))
+;;        `(hl-line ((,class (:background "#093946" :extend t))))
+;;        ;; `(font-lock-builtin-face ((,class (:foreground ,magenta))))
+;;        ;; `(font-lock-constant-face ((,class (:foreground ,blue))))
+;;        `(font-lock-comment-face ((,class (:foreground "#5b7279"))))
+;;        `(font-lock-punctuation-face ((,class (:foreground ,violet))))
+;;        `(font-lock-operator-face ((,class (:foreground ,violet))))
+;;        `(font-lock-function-name-face ((,class (:foreground ,blue))))
+;;        `(font-lock-function-call-face ((,class (:foreground ,blue))))
+;;        `(font-lock-variable-name-face ((,class (:foreground ,blue))))
+;;        `(font-lock-variable-call-face ((,class (:foreground ,blue))))
+;;        `(denote-faces-link ((,class (:foreground ,blue)))))))
+
+;;   (load-theme 'solarized-oksolar-dark t))
