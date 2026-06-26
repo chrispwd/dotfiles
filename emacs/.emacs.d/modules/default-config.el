@@ -856,6 +856,13 @@ and restart Flymake to apply the changes."
   :mode "\\.sass\\'"
   :defer t)
 
+(use-package sh-script
+  :ensure nil
+  :init
+  (add-to-list 'major-mode-remap-alist '(sh-mode . bash-ts-mode))
+  :custom
+  (sh-basic-offset 2))
+
 ;;; -------------------- TREESITTER AREA
 ;;; RUBY-TS-MODE
 (use-package ruby-ts-mode
