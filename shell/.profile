@@ -50,7 +50,7 @@ local_profile="$HOME/.profile_$(hostname)"
 nix_profile_dir="${HOME}/.nix-profile/etc/profile.d"
 if [ -d "$nix_profile_dir" ] ; then
 	for f in "$nix_profile_dir"/?*.sh ; do
-		[ -x "$f" ] && . "$f"
+		. "$f"
 	done
 	unset f
 fi
