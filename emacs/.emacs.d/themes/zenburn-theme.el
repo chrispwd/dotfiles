@@ -1357,6 +1357,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(org-ref-acronym-face ((t :underline t)))
 ;;;;; denote
    `(denote-faces-link ((t :inherit link)))
+   `(denote-faces-keywords ((t :foreground ,zenburn-green)))
 ;;;;; outline
    `(outline-1 ((t (:inherit ,z-variable-pitch :foreground ,zenburn-orange
                              ,@(when zenburn-scale-outline-headlines
