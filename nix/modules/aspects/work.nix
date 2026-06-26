@@ -9,6 +9,7 @@
     home.packages = with pkgs; [
       php85Packages.composer
       phpactor
+      pre-commit
       k9s
       mysql84
     ];
