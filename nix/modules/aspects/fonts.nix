@@ -8,6 +8,7 @@
       nerd-fonts.inconsolata-go
       nerd-fonts.iosevka
       nerd-fonts.caskaydia-cove
+      aporetic
       ibm-plex
     ];
   };
