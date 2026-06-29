@@ -2,9 +2,9 @@
 (deftheme solarized-oksolar-dark
   "The solarized-oksolar-dark colour theme of Solarized colour theme flavor.")
 (solarized-with-color-variables 'dark 'solarized-oksolar-dark
-  '((base03 . "#002d38") (base02 . "#09323d") (base01 . "#586d73")
-    (base00 . "#64777c") (base0 . "#818f92") (base1 . "#8f9c9d")
-    (base2 . "#ebe9e3") (base3 . "#fbf7ef") (yellow . "#ac8300")
+  '((base03 . "#002d38") (base02 . "#093946") (base01 . "#5b7279")
+    (base00 . "#657377") (base0 . "#839496") (base1 . "#8faaab")
+    (base2 . "#f1e9d2") (base3 . "#fbf7ef") (yellow . "#ac8300")
     (orange . "#d56500") (red . "#f23749") (magenta . "#dd459d")
     (violet . "#7d80d1") (blue . "#2b90d9") (cyan . "#259d94")
     (green . "#819500") (yellow-d . "#323d35") (yellow-l . "#efdfc2")
@@ -26,25 +26,33 @@
     (green-2fg . "#bbc078"))
   '((custom-theme-set-faces theme-name
                             `(highlight ((,class (:background ,base00))))
-                            `(default
-                              ((,class
-                                (:foreground "#839396" :background ,base03))))
-                            `(hl-line
-                              ((,class (:background "#093946" :extend t))))
+                            `(hl-line ((,class (:background ,base02 :extend t))))
                             `(font-lock-comment-face
-                              ((,class (:foreground "#5b7279"))))
-                            `(font-lock-punctuation-face
-                              ((,class (:foreground ,violet))))
-                            `(font-lock-operator-face
-                              ((,class (:foreground ,violet))))
+                              ((,class (:foreground ,base01))))
                             `(font-lock-function-name-face
                               ((,class (:foreground ,blue))))
                             `(font-lock-function-call-face
                               ((,class (:foreground ,blue))))
                             `(font-lock-variable-name-face
-                              ((,class (:foreground ,blue))))
+                              ((,class (:foreground ,base0))))
                             `(font-lock-variable-call-face
-                              ((,class (:foreground ,blue))))
-                            `(denote-faces-link ((,class (:foreground ,blue)))))))
+                              ((,class (:foreground ,violet))))
+                            `(denote-faces-link
+                              ((,class (:foreground ,blue :underline t))))
+                            `(denote-faces-date ((,class (:foreground ,blue))))
+                            `(denote-faces-keywords
+                              ((,class (:foreground ,violet))))
+                            `(org-link
+                              ((,class (:foreground ,cyan :underline t))))
+                            `(org-done ((,class (:foreground ,base01 :bold t))))
+                            `(org-headline-done ((,class (:foreground ,base01))))
+                            `(org-level-1 ((,class (:foreground ,green))))
+                            `(org-level-2 ((,class (:foreground ,yellow))))
+                            `(org-level-3 ((,class (:foreground ,blue))))
+                            `(org-level-4 ((,class (:foreground ,violet))))
+                            `(org-level-5 ((,class (:foreground ,cyan))))
+                            `(org-level-6 ((,class (:foreground ,magenta))))
+                            `(org-level-7 ((,class (:foreground ,orange))))
+                            `(org-level-8 ((,class (:foreground ,red)))))))
 (provide-theme 'solarized-oksolar-dark)
 (provide 'solarized-oksolar-dark-theme)
