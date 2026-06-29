@@ -25,8 +25,14 @@
     (violet-2fg . "#b8b4df") (blue-2fg . "#9dbde4") (cyan-2fg . "#93c6bc")
     (green-2fg . "#bbc078"))
   '((custom-theme-set-faces theme-name
+                            `(highlight ((,class (:background ,base00))))
+                            `(default
+                              ((,class
+                                (:foreground "#839396" :background ,base03))))
+                            `(hl-line
+                              ((,class (:background "#093946" :extend t))))
                             `(font-lock-comment-face
-                              ((,class (:foreground ,base01))))
+                              ((,class (:foreground "#5b7279"))))
                             `(font-lock-punctuation-face
                               ((,class (:foreground ,violet))))
                             `(font-lock-operator-face

@@ -14,7 +14,7 @@
   :config
   (setq
    ;; Start collapsed for speed
-   org-startup-folded t
+   org-startup-folded nil
 
    ;; Edit settings
    org-auto-align-tags nil

@@ -2755,3 +2755,503 @@
 ;;        `(denote-faces-link ((,class (:foreground ,blue)))))))
 
 ;;   (load-theme 'solarized-oksolar-dark t))
+
+;; (use-package base16-theme
+;;   :ensure t
+;;   :config
+;;   (setq base16-theme-256-color-source 'colors)
+;;   (setq base16-distinct-fringe-background nil)
+;;   (defvar my/base16-colors
+;;     '(:base00 "#282828"
+;;               :base01 "#373737"
+;;               :base02 "#464b50"
+;;               :base03 "#5f5a60"
+;;               :base04 "#838184"
+;;               :base05 "#9e9e9e"
+;;               :base06 "#c3c3c3"
+;;               :base07 "#dedede"
+;;               :red "#cf6a4c"  ; base08
+;;               :orange "#c09b5c"  ; base09
+;;               :yellow "#aca14c"  ; base0A
+;;               :green "#98a672"  ; base0B
+;;               :cyan "#8ca1b7"  ; base0C
+;;               :blue "#7587a6"  ; base0D
+;;               :violet "#9b859d"  ; base0E
+;;               :brown "#9b703f") ; base0F
+;;     "All colors for Base16 OKTwilight are defined here.")
+  
+;;   (custom-set-faces
+;;    `(default
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base05)
+;;           :background
+;;           ,(plist-get my/base16-colors :base00)))))
+;;    `(mode-line
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base04)
+;;           :background
+;;           ,(plist-get my/base16-colors :base01)))))
+;;    `(mode-line-inactive
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base03)
+;;           :background
+;;           ,(plist-get my/base16-colors :base01)))))
+;;    `(line-number
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base03)
+;;           :background
+;;           ,(plist-get my/base16-colors :base00)))))
+;;    `(line-number-current-line
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base06)))))
+;;    `(hl-line
+;;      ((t (:background
+;;           ,(plist-get my/base16-colors :base01)))))
+;;    `(highlight
+;;      ((t (:background
+;;           ,(plist-get my/base16-colors :base01)))))
+;;    `(link
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :cyan)
+;;           :underline t))))
+;;    `(tab-bar-tab
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base06)
+;;           :background
+;;           ,(plist-get my/base16-colors :base00)))))
+;;    `(tab-bar
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base03)
+;;           :background
+;;           ,(plist-get my/base16-colors :base01)))))
+;;    `(tab-bar-tab-inactive
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base03)
+;;           :background
+;;           ,(plist-get my/base16-colors :base01)))))
+;;    `(region
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base07)
+;;           :background
+;;           ,(plist-get my/base16-colors :base03)))))
+;;    `(ansi-color-red
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :red)
+;;           :background
+;;           ,(plist-get my/base16-colors :red)))))
+;;    `(ansi-color-blue
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :blue)
+;;           :background
+;;           ,(plist-get my/base16-colors :blue)))))
+;;    `(ansi-color-cyan
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :cyan)
+;;           :background
+;;           ,(plist-get my/base16-colors :cyan)))))
+;;    `(ansi-color-magenta
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :brown)
+;;           :background
+;;           ,(plist-get my/base16-colors :brown)))))
+;;    `(ansi-color-green
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :green)
+;;           :background
+;;           ,(plist-get my/base16-colors :green)))))
+;;    `(show-paren-match
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base06)
+;;           :background
+;;           ,(plist-get my/base16-colors :base02)))))
+;;    `(show-paren-mismatch
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base00)
+;;           :background
+;;           ,(plist-get my/base16-colors :red)))))
+;;    `(success
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :green)
+;;           :weight
+;;           bold))))
+;;    `(error
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :red)
+;;           :weight
+;;           bold))))
+;;    `(warning
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :orange)
+;;           :weight
+;;           bold))))
+;;    `(eglot-highlight-symbol-face
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base06)
+;;           :weight
+;;           bold))))
+;;    `(font-lock-keyword-face
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :red)))))
+;;    `(font-lock-variable-name-face
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base05)))))
+;;    `(font-lock-function-name-face
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :blue)))))
+;;    `(font-lock-function-call-face
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :blue)))))
+;;    `(font-lock-builtin-face
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :cyan)))))
+;;    `(font-lock-constant-face
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :yellow)
+;;           :weight normal))))
+;;    `(font-lock-type-face
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :violet)
+;;           :weight normal))))
+;;    `(font-lock-string-face
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :green)
+;;           :weight normal))))
+;;    `(font-lock-operator-face
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base05)))))
+;;    `(font-lock-preprocessor-face
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :violet)))))
+;;    `(font-lock-escape-face
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :brown)))))
+;;    `(rainbow-delimiters-depth-1-face
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :violet)))))
+;;    `(rainbow-delimiters-depth-2-face
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :blue)))))
+;;    `(rainbow-delimiters-depth-3-face
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :cyan)))))
+;;    `(rainbow-delimiters-depth-4-face
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :green)))))
+;;    `(rainbow-delimiters-depth-5-face
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :red)))))
+;;    `(rainbow-delimiters-depth-6-face
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :orange)))))
+;;    `(rainbow-delimiters-depth-7-face
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :yellow)))))
+;;    `(rainbow-delimiters-depth-8-face
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :brown)))))
+;;    `(rainbow-delimiters-base-error-face
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base00)
+;;           :background
+;;           ,(plist-get my/base16-colors :red)))))
+;;    `(avy-lead-face
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base00)
+;;           :background
+;;           ,(plist-get my/base16-colors :cyan)))))
+;;    `(avy-lead-face-0
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base00)
+;;           :background
+;;           ,(plist-get my/base16-colors :violet)))))
+;;    `(avy-lead-face-1
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base00)
+;;           :background
+;;           ,(plist-get my/base16-colors :yellow)))))
+;;    `(avy-lead-face-2
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base00)
+;;           :background
+;;           ,(plist-get my/base16-colors :green)))))
+;;    `(orderless-match-face-0
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :blue)
+;;           :weight
+;;           bold))))
+;;    `(orderless-match-face-1
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :violet)
+;;           :weight
+;;           bold))))
+;;    `(orderless-match-face-2
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :green)
+;;           :weight
+;;           bold))))
+;;    `(orderless-match-face-3
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :yellow)
+;;           :weight
+;;           bold))))
+;;    `(org-level-1
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :violet)))))
+;;    `(org-level-2
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :blue)))))
+;;    `(org-level-3
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :cyan)))))
+;;    `(org-level-4
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :green)))))
+;;    `(org-level-5
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :red)))))
+;;    `(org-level-6
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :orange)))))
+;;    `(org-level-7
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :yellow)))))
+;;    `(org-level-8
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :brown)))))
+;;    `(org-document-title
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :cyan)))))
+;;    `(org-date
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :green)))))
+;;    `(org-agenda-done
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base03)))))
+;;    `(org-agenda-structure
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :violet)))))
+;;    `(org-agenda-clocking
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base05)
+;;           :background
+;;           ,(plist-get my/base16-colors :base01)
+;;           :slant italic))))
+;;    `(org-agenda-current-time
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base06)))))
+;;    `(org-special-keyword
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :orange)))))
+;;    `(org-agenda-date
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :blue)))))
+;;    `(org-scheduled-previously
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :yellow)))))
+;;    `(org-imminent-deadline
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :red)
+;;           :weight bold))))
+;;    `(org-upcoming-distant-deadline
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :orange)))))
+;;    `(org-scheduled
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :green)))))
+;;    `(org-scheduled-today
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base06)))))
+;;    `(org-agenda-date-today
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :blue)
+;;           :weight bold
+;;           :slant italic
+;;           :underline t))))
+;;    `(org-done
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base03)
+;;           :background
+;;           ,(plist-get my/base16-colors :base00)
+;;           :weight bold))))
+;;    `(org-todo
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :red)
+;;           :background
+;;           ,(plist-get my/base16-colors :base00)
+;;           :weight bold))))
+;;    `(org-priority
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :yellow)))))
+;;    `(org-time-grid
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base04)))))
+;;    `(org-headline-done
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base03)))))
+;;    `(org-drawer
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base03)))))
+;;    `(org-document-info
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base04)))))
+;;    `(org-document-info-keyword
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base04)))))
+;;    `(org-verbatim
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :green)))))
+;;    `(org-link
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :green)
+;;           :underline t))))
+;;    `(org-code
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :yellow)))))
+;;    `(org-quote
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base05)
+;;           :background
+;;           ,(plist-get my/base16-colors :base01)
+;;           :slant italic))))
+;;    `(org-block
+;;      ((t (:background
+;;           ,(plist-get my/base16-colors :base00)
+;;           :foreground
+;;           ,(plist-get my/base16-colors :base05)
+;;           :extend t))))
+;;    `(org-block-begin-line
+;;      ((t (:background
+;;           ,(plist-get my/base16-colors :base00)
+;;           :foreground
+;;           ,(plist-get my/base16-colors :base03)
+;;           :extend t
+;;           :underline t))))
+;;    `(org-block-end-line
+;;      ((t (:background
+;;           ,(plist-get my/base16-colors :base00)
+;;           :foreground
+;;           ,(plist-get my/base16-colors :base03)
+;;           :extend t
+;;           :overline t))))
+;;    `(org-table
+;;      ((t :foreground
+;;          ,(plist-get my/base16-colors :violet))))
+;;    `(org-checkbox
+;;      ((t (:background
+;;           ,(plist-get my/base16-colors :base01)
+;;           :foreground
+;;           ,(plist-get my/base16-colors :base05)
+;;           :weight bold))))
+;;    `(denote-faces-date
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base03)))))
+;;    `(denote-faces-delimiter
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base01)))))
+;;    `(doom-modeline-project-dir
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :cyan)
+;;           :slant
+;;           italic))))
+;;    `(doom-modeline-buffer-file
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base06)
+;;           :slant
+;;           italic
+;;           :weight
+;;           bold))))
+;;    `(diff-added
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :green)))))
+;;    `(diff-indicator-added
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :green)))))
+;;    `(diff-refine-added
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base06)
+;;           :background
+;;           ,(plist-get my/base16-colors :green)))))
+;;    `(diff-changed
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :yellow)))))
+;;    `(diff-indicator-changed
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :yellow)))))
+;;    `(diff-refine-changed
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base06)
+;;           :background
+;;           ,(plist-get my/base16-colors :yellow)))))
+;;    `(diff-removed
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :red)))))
+;;    `(diff-indicator-removed
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :red)))))
+;;    `(diff-refine-removed
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base06)
+;;           :background
+;;           ,(plist-get my/base16-colors :red)))))
+;;    `(diff-error
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :orange)
+;;           :underline t))))
+;;    `(diff-hunk-header
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :violet)
+;;           :underline t))))
+;;    `(cursor
+;;      ((t (:background
+;;           ,(plist-get my/base16-colors :cyan)))))
+;;    `(term-color-black
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base01)))))
+;;    `(term-color-bright-black
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base02)))))
+;;    `(term-color-red
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :red)))))
+;;    `(term-color-bright-red
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :orange)))))
+;;    `(term-color-yellow
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :yellow)))))
+;;    `(term-color-bright-yellow
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :yellow)))))
+;;    `(term-color-green
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :green)))))
+;;    `(term-color-bright-green
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :green)))))
+;;    `(term-color-blue
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :blue)))))
+;;    `(term-color-bright-blue
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :blue)))))
+;;    `(term-color-magenta
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :violet)))))
+;;    `(term-color-bright-magenta
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :violet)))))
+;;    `(term-color-cyan
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :cyan)))))
+;;    `(term-color-bright-cyan
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :cyan)))))
+;;    `(term-color-white
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base06)))))
+;;    `(term-color-bright-white
+;;      ((t (:foreground
+;;           ,(plist-get my/base16-colors :base07)))))  
+;;    )
+
+;;   (load-theme 'base16-twilight t))
