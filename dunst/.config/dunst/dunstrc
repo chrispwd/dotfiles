@@ -78,7 +78,7 @@
 
     ### Text ###
 
-    font = Noto Sans Regular 12
+    font = IBM Plex Sans Regular 12
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -314,10 +314,10 @@
     # background = "#000000"
     # foreground = "#d0d0d0"
     # frame_color = "#d0d0d0"
-    # Twilight
-    # background = "#1e1e1e"
-    # foreground = "#a7a7a7"
-    # frame_color = "#a7a7a7"
+    # OKTwilight
+    background = "#2b2b2b"
+    foreground = "#9e9e9e"
+    frame_color = "#5f5a60"
     # One Dark
     # background = "#1f2329"
     # foreground = "#abb2bf"
@@ -351,9 +351,9 @@
     # foreground = "#777777"
     # frame_color = "#777777"
     # Penumbra dark
-    background = "#24272b"
-    foreground = "#8f8f8f"
-    frame_color = "#636363"
+    # background = "#24272b"
+    # foreground = "#8f8f8f"
+    # frame_color = "#636363"
     # gruvbox-material dark soft
     # background = "#32302f"
     # foreground = "#7c6f64"
@@ -403,10 +403,10 @@
     # background = "#1d1d1d"
     # foreground = "#ababab"
     # frame_color = "#ababab"
-    # Twilight
-    # background = "#1e1e1e"
-    # foreground = "#a7a7a7"
-    # frame_color = "#a7a7a7"
+    # OKTwilight
+    background = "#2b2b2b"
+    foreground = "#9e9e9e"
+    frame_color = "#9e9e9e"
     # Solarized Dark
     # background = "#002b36"
     # foreground = "#839496"
@@ -424,9 +424,9 @@
     # foreground = "#b2b2b2"
     # frame_color = "#5fafd7"
     # Penumbra dark
-    background = "#24272b"
-    foreground = "#8f8f8f"
-    frame_color = "#8f8f8f"
+    # background = "#24272b"
+    # foreground = "#8f8f8f"
+    # frame_color = "#8f8f8f"
     # gruvbox-material dark soft
     # background = "#32302f"
     # foreground = "#a89984"
@@ -476,10 +476,10 @@
     # background = "#7a2d00"
     # foreground = "#ababab"
     # frame_color = "#ababab"
-    # Twilight
-    # background = "#1e1e1e"
-    # foreground = "#a7a7a7"
-    # frame_color = "#a7a7a7"
+    # OKTwilight
+    background = "#2b2b2b"
+    foreground = "#cf6a4c"
+    frame_color = "#cf6a4c"
     # Solarized Dark
     # background = "#002b36"
     # foreground = "#dc322f"
@@ -501,9 +501,9 @@
     # foreground = "#ababab"
     # frame_color = "#ababab"
     # Penumbra dark
-    background = "#ca736c"
-    foreground = "#fff7ed"
-    frame_color = "#fff7ed"
+    # background = "#ca736c"
+    # foreground = "#fff7ed"
+    # frame_color = "#fff7ed"
     # gruvbox-material dark soft
     # background = "#ea6962"
     # foreground = "#fbf1c7"

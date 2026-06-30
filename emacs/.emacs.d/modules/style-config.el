@@ -64,6 +64,7 @@
        `(org-level-6 ((,class (:foreground ,magenta))))
        `(org-level-7 ((,class (:foreground ,orange))))
        `(org-level-8 ((,class (:foreground ,red))))
+       `(vertico-current ((,class (:background ,base02 :underline t))))
        ))
     ;; prevents theme file overwrite
     );; nil)
