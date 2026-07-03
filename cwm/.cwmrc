@@ -358,13 +358,13 @@ bind-mouse 3    menu-cmd
 # color ungroupborder   "#e0cf9f"
 # color urgencyborder   "#cc9393"
 
-## OKTwilight
-color menufg          "#464b50"
-color menubg          "#282828"
-color font            "#9e9e9e"
-color selfont         "#dedede"
-color activeborder    "#282828"
-color inactiveborder  "#464b50"
-color groupborder     "#98a672"
-color ungroupborder   "#aca14c"
-color urgencyborder   "#cf6a4c"
+## OKTomorrow
+color menufg          "#373b41"
+color menubg          "#1d1f21"
+color font            "#848785"
+color selfont         "#c5c8c6"
+color activeborder    "#373b41"
+color inactiveborder  "#1d1f21"
+color groupborder     "#7f8732"
+color ungroupborder   "#987e0c"
+color urgencyborder   "#c25d5a"

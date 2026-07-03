@@ -1,4 +1,4 @@
-#include "Xresources.d/themes/oktwilight"
+#include "Xresources.d/themes/ok-tomorrow-night"
 
 Xft.antialias: true
 Xft.hinting: true
