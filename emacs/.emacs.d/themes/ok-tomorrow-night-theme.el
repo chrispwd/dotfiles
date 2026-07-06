@@ -60,6 +60,8 @@
                               ((,class (:foreground ,cyan :underline t))))
                             `(org-done
                               ((,class (:foreground ,base01 :weight bold))))
+                            `(org-headline-done
+                              ((,class (:inherit unspecified))))
                             `(org-code
                               ((,class (:foreground ,red :background ,base02))))
                             `(org-upcoming-deadline
