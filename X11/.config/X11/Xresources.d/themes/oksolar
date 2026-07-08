@@ -1,37 +1,37 @@
-! solarized adapted to OKLab colorspace
+! solarized, dimmed and adapted to OKLab colorspace
 ! special
-*.foreground:   #98a8a8
-*.background:   #002d38
-*.cursorColor:  #98a8a8
+*.foreground:   #748587
+*.background:   #002b36
+*.cursorColor:  #748587
 
 ! black
 *.color0:       #093946
-*.color8:       #002d38
+*.color8:       #002b36
 
 ! red
-*.color1:       #f23749
-*.color9:       #d56500
+*.color1:       #d7474e
+*.color9:       #c16424
 
 ! green
-*.color2:       #819500
-*.color10:      #5b7279
+*.color2:       #798b04
+*.color10:      #536970
 
 ! yellow
-*.color3:       #ac8300
+*.color3:       #a07b0d
 *.color11:      #657377
 
 ! blue
-*.color4:       #2b90d8
-*.color12:      #98a8a8
+*.color4:       #1d87ce
+*.color12:      #748587
 
 ! magenta
-*.color5:       #7d80d1
-*.color13:      #dd459d
+*.color5:       #c74d90
+*.color13:      #7477c7
 
 ! cyan
-*.color6:       #259d94
-*.color14:      #8faaab
+*.color6:       #13948b
+*.color14:      #93a1a1
 
 ! white
-*.color7:       #f1e9d2
-*.color15:      #fbf7ef
+*.color7:       #d4cfc1
+*.color15:      #e4e0d8
