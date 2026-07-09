@@ -34,6 +34,7 @@
 (require 'programming-config)
 (require 'navigation)
 (require 'window-config)
+(require 'editing-config)
 (when (not (display-graphic-p))
   (require 'tty-config))
 ;;; init.el ends here
