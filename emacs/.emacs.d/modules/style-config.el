@@ -111,6 +111,8 @@
        `(highlight ((,class (:background ,base00))))
        `(hl-line
          ((,class (:background ,base02 :extend t))))
+       `(region
+         ((,class (:foreground ,base2 :background ,base01 :extend t))))
        `(font-lock-comment-face
          ((,class (:foreground ,base01))))
        `(font-lock-function-name-face
@@ -120,6 +122,10 @@
        `(font-lock-variable-name-face
          ((,class (:foreground ,base0))))
        `(font-lock-variable-call-face
+         ((,class (:foreground ,violet))))
+       `(font-lock-constant-face
+         ((,class (:foreground ,violet))))
+       `(font-lock-preprocessor-face
          ((,class (:foreground ,violet))))
        `(denote-faces-link ((,class (:foreground ,blue :underline t))))
        `(denote-faces-date ((,class (:foreground ,blue))))
