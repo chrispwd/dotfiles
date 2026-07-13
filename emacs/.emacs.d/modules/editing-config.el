@@ -94,8 +94,7 @@
    '("'" . repeat)
    '("<escape>" . ignore)))
   :config
-  (meow-setup)
-  (meow-global-mode 1))
+  (meow-setup))
 
 (provide 'editing-config)
 ;;; editing-config.el ends here
