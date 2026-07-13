@@ -12,7 +12,7 @@ gap         16 40 16 16
 vtile       50
 htile       50
 unbind-key  all
-fontname    "monospace:size=14"
+fontname    "monospace:size=12"
 
 # app menu
 command terminal     "st"
