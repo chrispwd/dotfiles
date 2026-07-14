@@ -14,6 +14,7 @@
       pasystray
       pavucontrol
       picom
+      pinentry-curses
       polybar
       setxkbmap
       sxhkd
