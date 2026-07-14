@@ -11,3 +11,7 @@ run_once() {
 run_once pulseaudio --daemonize=no --exit-idle-time=-1
 
 run_once pasystray
+
+gpgconf --kill gpg-agent
+
+eval "$(gpg-agent --homedir /home/chuddie/.gnupg --pinentry-program "$(which pinentry)" --daemon)"
