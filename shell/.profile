@@ -4,7 +4,7 @@
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_DATA_DIRS="$HOME/.nix-profile/share:$XDG_DATA_DIRS"
+# export XDG_DATA_DIRS="$XDG_DATA_DIRS"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 ########################## DEFAULTS ####################################
@@ -29,11 +29,11 @@ export SCROTS="$HOME/Sync/Pictures/scrots"
 # export BROWSER="firefox"
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export GTK_THEME="Gnome-Professional-Dark"
-export MY_MONO_FONT="CaskaydiaCove Nerd Font"
-export COLOR_FG="#848785"
-export COLOR_BG="#1d1f21"
-export COLOR_SEL_FG="#c5c8c6"
-export COLOR_SEL_BG="#373b41"
+export MY_MONO_FONT="CaskaydiaCove Nerd Font Mono"
+export COLOR_FG="#938e8a"
+export COLOR_BG="#2b2b2b"
+export COLOR_SEL_FG="#e0deda"
+export COLOR_SEL_BG="#41475c"
 export LS_COLORS="di=34:ln=35:so=32:pi=33:ex=32:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
 export MYDMENUOPTS="-fn '${MY_MONO_FONT:-monospace}-14' -nb '${COLOR_BG}' -nf '${COLOR_FG}' -sf '${COLOR_SEL_FG}' -sb '${COLOR_SEL_BG}'"
 

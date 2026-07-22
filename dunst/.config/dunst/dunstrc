@@ -314,10 +314,14 @@
     # background = "#000000"
     # foreground = "#d0d0d0"
     # frame_color = "#d0d0d0"
-    # OKTomorrow
-    background = "#1d1f21"
-    foreground = "#848785"
-    frame_color = "#848785"
+    # # OKTomorrow
+    # background = "#1d1f21"
+    # foreground = "#848785"
+    # frame_color = "#848785"
+    # OK-Railscasts
+    background = "#2b2b2b"
+    foreground = "#817c78"
+    frame_color = "#817c78"
     # One Dark
     # background = "#1f2329"
     # foreground = "#abb2bf"
@@ -403,10 +407,14 @@
     # background = "#1d1d1d"
     # foreground = "#ababab"
     # frame_color = "#ababab"
-    # OKTomorrow
-    background = "#1d1f21"
-    foreground = "#9ea19e"
-    frame_color = "#9ea19e"
+    # # OKTomorrow
+    # background = "#1d1f21"
+    # foreground = "#9ea19e"
+    # frame_color = "#9ea19e"
+    # OK-Railscasts
+    background = "#2b2b2b"
+    foreground = "#938e8a"
+    frame_color = "#938e8a"
     # Solarized Dark
     # background = "#002b36"
     # foreground = "#839496"
@@ -476,10 +484,14 @@
     # background = "#7a2d00"
     # foreground = "#ababab"
     # frame_color = "#ababab"
-    # OKTwilight
-    background = "#1d1f21"
-    foreground = "#c25d5a"
-    frame_color = "#c25d5a"
+    # # OKTwilight
+    # background = "#1d1f21"
+    # foreground = "#c25d5a"
+    # frame_color = "#c25d5a"
+    # OK-Railscasts
+    background = "#2b2b2b"
+    foreground = "#e06252"
+    frame_color = "#e06252"
     # Solarized Dark
     # background = "#002b36"
     # foreground = "#dc322f"

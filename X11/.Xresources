@@ -1,4 +1,4 @@
-#include "Xresources.d/themes/ok-tomorrow-night"
+#include "Xresources.d/themes/ok-railscasts"
 
 Xft.antialias: true
 Xft.hinting: true
