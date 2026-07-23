@@ -2,40 +2,44 @@
 (deftheme solarized-oktwilight-dark
   "The solarized-oktwilight-dark colour theme of Solarized colour theme flavor.")
 (solarized-with-color-variables 'dark 'solarized-oktwilight-dark
-  '((base03 . "#282828") (base02 . "#323537") (base01 . "#5f5a60")
-    (base00 . "#676269") (base0 . "#9e9e9e") (base1 . "#c0c0c0")
-    (base2 . "#dedede") (base3 . "#dedede") (yellow . "#aca14c")
-    (orange . "#bd985a") (red . "#cf6a4c") (magenta . "#9b859d")
-    (violet . "#9b859d") (blue . "#7587a6") (cyan . "#aca1b7")
-    (green . "#98a672") (yellow-d . "#434032") (yellow-l . "#d6d1c0")
-    (orange-d . "#463f34") (orange-l . "#d9d0c3") (red-d . "#4b3832")
-    (red-l . "#e0c7bf") (magenta-d . "#3f3c40") (magenta-l . "#d0ccd1")
-    (violet-d . "#3f3c40") (violet-l . "#d0ccd1") (blue-d . "#393c41")
-    (blue-l . "#c9ccd3") (cyan-d . "#424044") (cyan-l . "#d4d2d6")
-    (green-d . "#3f4138") (green-l . "#d0d3c8") (yellow-1bg . "#3d3b31")
-    (orange-1bg . "#3f3a32") (red-1bg . "#433430") (magenta-1bg . "#3a373a")
-    (blue-1bg . "#36383c") (cyan-1bg . "#3c3b3e") (green-1bg . "#3a3c35")
-    (violet-1bg . "#3a373a") (yellow-1fg . "#bdb378") (orange-1fg . "#c9ac81")
-    (red-1fg . "#d98d76") (magenta-1fg . "#af9fb0") (violet-1fg . "#af9fb0")
-    (blue-1fg . "#94a0b7") (cyan-1fg . "#bbb3c3") (green-1fg . "#adb792")
-    (yellow-2bg . "#5c5739") (orange-2bg . "#62543e") (red-2bg . "#6a4438")
-    (magenta-2bg . "#554d56") (violet-2bg . "#554d56") (blue-2bg . "#484e59")
-    (cyan-2bg . "#5b575f") (green-2bg . "#545946") (yellow-2fg . "#c5bc8d")
-    (orange-2fg . "#cfb794") (red-2fg . "#dc9e8b") (magenta-2fg . "#b9acba")
-    (violet-2fg . "#b9acba") (blue-2fg . "#a4adbf") (cyan-2fg . "#c2bcc8")
-    (green-2fg . "#b8bfa2"))
+  '((base03 . "#1e1e1e") (base02 . "#323537") (base01 . "#5f5a60")
+    (base00 . "#7b797c") (base0 . "#878787") (base1 . "#b2b2b2")
+    (base2 . "#d2d2d2") (base3 . "#dedede") (yellow . "#9d923c")
+    (orange . "#b2883a") (red . "#cf6a4c") (magenta . "#9b703f")
+    (violet . "#9b859d") (blue . "#7587a6") (cyan . "#73969d")
+    (green . "#8b9965") (yellow-d . "#3e3b2d") (yellow-l . "#d3cebd")
+    (orange-d . "#423a2d") (orange-l . "#d8ccbc") (red-d . "#48352f")
+    (red-l . "#e0c7bf") (magenta-d . "#3e352d") (magenta-l . "#d3c7bc")
+    (violet-d . "#3d393d") (violet-l . "#d0ccd1") (blue-d . "#37393f")
+    (blue-l . "#c9ccd3") (cyan-d . "#363c3d") (cyan-l . "#c8cfd1")
+    (green-d . "#3a3d34") (green-l . "#cdd0c5") (yellow-1bg . "#39362c")
+    (orange-1bg . "#3c352c") (red-1bg . "#40322d") (magenta-1bg . "#39322c")
+    (blue-1bg . "#333539") (cyan-1bg . "#333738") (green-1bg . "#363731")
+    (violet-1bg . "#383538") (yellow-1fg . "#b3a86d") (orange-1fg . "#c3a16b")
+    (red-1fg . "#d98d76") (magenta-1fg . "#b2906d") (violet-1fg . "#af9fb0")
+    (blue-1fg . "#94a0b7") (cyan-1fg . "#93abb0") (green-1fg . "#a4ad88")
+    (yellow-2bg . "#555032") (orange-2bg . "#5d4c31") (red-2bg . "#684236")
+    (magenta-2bg . "#554332") (violet-2bg . "#534b54") (blue-2bg . "#464c57")
+    (cyan-2bg . "#455154") (green-2bg . "#4e5240") (yellow-2fg . "#bdb384")
+    (orange-2fg . "#caae83") (red-2fg . "#dc9e8b") (magenta-2fg . "#bca084")
+    (violet-2fg . "#b9acba") (blue-2fg . "#a4adbf") (cyan-2fg . "#a3b6ba")
+    (green-2fg . "#b0b89a"))
   '((custom-theme-set-faces theme-name
                             `(highlight ((,class (:background ,base00))))
-                            `(vertical-border ((,class (:foreground ,base02))))
                             `(hl-line ((,class (:background ,base02 :extend t))))
                             `(region
                               ((,class
-                                (:foreground ,base1 :background ,base01 :extend
+                                (:foreground ,base2 :background ,base01 :extend
                                              t))))
-                            `(font-lock-keyword-face
-                              ((,class (:foreground ,red))))
+                            `(vertical-border ((,class (:foreground ,base02))))
                             `(font-lock-comment-face
                               ((,class (:foreground ,base01))))
+                            `(font-lock-string-face
+                              ((,class (:foreground ,green))))
+                            `(font-lock-keyword-face
+                              ((,class (:foreground ,red))))
+                            `(font-lock-type-face
+                              ((,class (:foreground ,yellow))))
                             `(font-lock-function-name-face
                               ((,class (:foreground ,blue))))
                             `(font-lock-function-call-face
@@ -44,12 +48,18 @@
                               ((,class (:foreground ,base0))))
                             `(font-lock-variable-call-face
                               ((,class (:foreground ,base0))))
-                            `(font-lock-string-face
-                              ((,class (:foreground ,green))))
-                            `(font-lock-escape-face
-                              ((,class (:foreground ,yellow))))
                             `(font-lock-constant-face
-                              ((,class (:foreground ,orange))))
+                              ((,class (:foreground ,violet))))
+                            `(font-lock-preprocessor-face
+                              ((,class (:foreground ,magenta))))
+                            `(font-lock-operator-face
+                              ((,class (:foreground ,violet))))
+                            `(font-lock-number-face
+                              ((,class (:foreground ,violet))))
+                            `(font-lock-escape-face
+                              ((,class (:foreground ,magenta))))
+                            `(font-lock-builtin-face
+                              ((,class (:foreground ,cyan))))
                             `(denote-faces-link
                               ((,class (:foreground ,blue :underline t))))
                             `(denote-faces-date ((,class (:foreground ,blue))))
@@ -58,14 +68,28 @@
                             `(org-link
                               ((,class (:foreground ,cyan :underline t))))
                             `(org-done ((,class (:foreground ,base01 :bold t))))
-                            `(org-headline-done ((,class (:foreground ,base01))))
-                            `(org-level-1 ((,class (:foreground ,green))))
-                            `(org-level-2 ((,class (:foreground ,yellow))))
-                            `(org-level-3 ((,class (:foreground ,blue))))
-                            `(org-level-4 ((,class (:foreground ,violet))))
+                            `(org-todo ((,class (:foreground ,red :bold t))))
+                            `(org-priority
+                              ((,class (:foreground ,yellow :bold t))))
+                            `(org-verbatim
+                              ((,class (:foreground ,blue :background ,base02))))
+                            `(org-code
+                              ((,class (:foreground ,green :background ,base02))))
+                            `(org-checkbox
+                              ((,class (:foreground ,base0 :background ,base02))))
+                            `(org-document-title
+                              ((,class (:foreground ,blue :bold t))))
+                            `(org-headline-done
+                              ((,class (:foreground unspecified))))
+                            `(org-level-1 ((,class (:foreground ,blue))))
+                            `(org-level-2 ((,class (:foreground ,violet))))
+                            `(org-level-3 ((,class (:foreground ,green))))
+                            `(org-level-4 ((,class (:foreground ,yellow))))
                             `(org-level-5 ((,class (:foreground ,cyan))))
-                            `(org-level-6 ((,class (:foreground ,magenta))))
-                            `(org-level-7 ((,class (:foreground ,orange))))
-                            `(org-level-8 ((,class (:foreground ,red)))))))
+                            `(org-level-6 ((,class (:foreground ,orange))))
+                            `(org-level-7 ((,class (:foreground ,red))))
+                            `(org-level-8 ((,class (:foreground ,magenta))))
+                            `(vertico-current
+                              ((,class (:background ,base02 :underline t)))))))
 (provide-theme 'solarized-oktwilight-dark)
 (provide 'solarized-oktwilight-dark-theme)

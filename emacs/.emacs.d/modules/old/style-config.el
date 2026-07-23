@@ -3302,20 +3302,44 @@
 ;;     '("#002d38" "#fbf7ef"
 ;;       ;; yellow,  orange,      red,  magenta,   violet,     blue,     cyan,    green
 ;;       "#ac8300" "#d56500" "#f23749" "#dd459d" "#7d80d1" "#2b90d9" "#259d94" "#819500")
-;;     '((custom-theme-set-faces
-;;        theme-name
-;;        `(highlight ((,class (:background ,base00))))
-;;        `(default ((,class (:foreground "#839396" :background ,base03))))
-;;        `(hl-line ((,class (:background "#093946" :extend t))))
-;;        ;; `(font-lock-builtin-face ((,class (:foreground ,magenta))))
-;;        ;; `(font-lock-constant-face ((,class (:foreground ,blue))))
-;;        `(font-lock-comment-face ((,class (:foreground "#5b7279"))))
-;;        `(font-lock-punctuation-face ((,class (:foreground ,violet))))
-;;        `(font-lock-operator-face ((,class (:foreground ,violet))))
-;;        `(font-lock-function-name-face ((,class (:foreground ,blue))))
-;;        `(font-lock-function-call-face ((,class (:foreground ,blue))))
-;;        `(font-lock-variable-name-face ((,class (:foreground ,blue))))
-;;        `(font-lock-variable-call-face ((,class (:foreground ,blue))))
-;;        `(denote-faces-link ((,class (:foreground ,blue)))))))
+  ;;   '((custom-theme-set-faces
+  ;;      theme-name
+  ;;      `(highlight ((,class (:background ,base00))))
+  ;;      `(hl-line
+  ;;        ((,class (:background ,base02 :extend t))))
+  ;;      `(region
+  ;;        ((,class (:foreground ,base2 :background ,base01 :extend t))))
+  ;;      `(font-lock-comment-face
+  ;;        ((,class (:foreground ,base01))))
+  ;;      `(font-lock-function-name-face
+  ;;        ((,class (:foreground ,blue))))
+  ;;      `(font-lock-function-call-face
+  ;;        ((,class (:foreground ,blue))))
+  ;;      `(font-lock-variable-name-face
+  ;;        ((,class (:foreground ,base0))))
+  ;;      `(font-lock-variable-call-face
+  ;;        ((,class (:foreground ,violet))))
+  ;;      `(font-lock-constant-face
+  ;;        ((,class (:foreground ,violet))))
+  ;;      `(font-lock-preprocessor-face
+  ;;        ((,class (:foreground ,violet))))
+  ;;      `(denote-faces-link ((,class (:foreground ,blue :underline t))))
+  ;;      `(denote-faces-date ((,class (:foreground ,blue))))
+  ;;      `(denote-faces-keywords ((,class (:foreground ,violet))))
+  ;;      `(org-link ((,class (:foreground ,cyan :underline t))))
+  ;;      `(org-done ((,class (:foreground ,base01 :bold t))))
+  ;;      `(org-verbatim ((,class (:foreground ,blue :background ,base02))))
+  ;;      `(org-code ((,class (:foreground ,green :background ,base02))))
+  ;;      `(org-checkbox ((,class (:foreground ,base0 :background ,base02))))
+  ;;      `(org-headline-done ((,class (:foreground unspecified))))
+  ;;      `(org-level-1 ((,class (:foreground ,green))))
+  ;;      `(org-level-2 ((,class (:foreground ,yellow))))
+  ;;      `(org-level-3 ((,class (:foreground ,blue))))
+  ;;      `(org-level-4 ((,class (:foreground ,violet))))
+  ;;      `(org-level-5 ((,class (:foreground ,cyan))))
+  ;;      `(org-level-6 ((,class (:foreground ,magenta))))
+  ;;      `(org-level-7 ((,class (:foreground ,orange))))
+  ;;      `(org-level-8 ((,class (:foreground ,red))))
+  ;;      `(vertico-current ((,class (:background ,base02 :underline t)))))))
 
-;;   (load-theme 'solarized-oksolar-dark t))
+  ;; (load-theme 'solarized-oksolar-dark t))
