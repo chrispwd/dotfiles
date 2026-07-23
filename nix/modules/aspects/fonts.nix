@@ -6,9 +6,8 @@
     
     home.packages = with pkgs; [
       nerd-fonts.caskaydia-cove
-      nerd-fonts.iosevka
       nerd-fonts.symbols-only
-      aporetic
+      nerd-fonts.jetbrains-mono
       ibm-plex
     ];
   };
