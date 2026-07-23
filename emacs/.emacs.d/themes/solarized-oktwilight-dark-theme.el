@@ -72,9 +72,9 @@
                             `(org-priority
                               ((,class (:foreground ,yellow :bold t))))
                             `(org-verbatim
-                              ((,class (:foreground ,blue :background ,base02))))
-                            `(org-code
                               ((,class (:foreground ,green :background ,base02))))
+                            `(org-code
+                              ((,class (:foreground ,yellow :background ,base02))))
                             `(org-checkbox
                               ((,class (:foreground ,base0 :background ,base02))))
                             `(org-document-title
