@@ -8,6 +8,7 @@
       fnm
       nixd
       typescript-language-server
+      jdt-language-server
     ];
   };
 }

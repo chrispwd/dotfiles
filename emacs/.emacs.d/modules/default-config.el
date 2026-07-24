@@ -880,7 +880,7 @@ and restart Flymake to apply the changes."
 (use-package js-ts-mode
   :ensure js ;; I care about js-base-mode but it is locked behind the feature "js"
   :mode "\\.jsx?\\'"
-  :defer 't
+  :defer t
   :custom
   (js-indent-level 4)
   :config
@@ -892,7 +892,7 @@ and restart Flymake to apply the changes."
 ;;; TYPESCRIPT-TS-MODE
 (use-package typescript-ts-mode
   :mode "\\.ts\\'"
-  :defer 't
+  :defer t
   :custom
   (typescript-indent-level 4)
   :config
@@ -903,7 +903,7 @@ and restart Flymake to apply the changes."
 ;;; TYPESCRIPT-TS-MODE
 (use-package tsx-ts-mode
   :mode "\\.tsx\\'"
-  :defer 't
+  :defer t
   :custom
   (typescript-indent-level 4)
   :config
@@ -915,7 +915,7 @@ and restart Flymake to apply the changes."
 (use-package rust-ts-mode
   :ensure rust-ts-mode
   :mode "\\.rs\\'"
-  :defer 't
+  :defer t
   :custom
   (rust-indent-level 4)
   :config
@@ -926,7 +926,7 @@ and restart Flymake to apply the changes."
 (use-package toml-ts-mode
   :ensure toml-ts-mode
   :mode "\\.toml\\'"
-  :defer 't
+  :defer t
   :config
   (add-to-list 'treesit-language-source-alist
                '(toml "https://github.com/ikatyang/tree-sitter-toml" "master" "src")))
@@ -937,7 +937,7 @@ and restart Flymake to apply the changes."
 (use-package markdown-ts-mode
   :ensure nil
   :mode "\\.md\\'"
-  :defer 't
+  :defer t
   :config
   (add-to-list 'major-mode-remap-alist '(markdown-mode . markdown-ts-mode))
   (add-to-list 'treesit-language-source-alist
@@ -949,7 +949,7 @@ and restart Flymake to apply the changes."
 (use-package yaml-ts-mode
   :ensure yaml-ts-mode
   :mode "\\.ya?ml\\'"
-  :defer 't
+  :defer t
   :hook (yaml-ts-mode . display-line-numbers-mode)
   :config
   (add-to-list 'treesit-language-source-alist
@@ -959,7 +959,7 @@ and restart Flymake to apply the changes."
 (use-package dockerfile-ts-mode
   :ensure dockerfile-ts-mode
   :mode "\\Dockerfile.*\\'"
-  :defer 't
+  :defer t
   :config
   (add-to-list 'treesit-language-source-alist
                '(dockerfile "https://github.com/camdencheek/tree-sitter-dockerfile" "main" "src")))
@@ -968,7 +968,7 @@ and restart Flymake to apply the changes."
 (use-package go-ts-mode
   :ensure go-ts-mode
   :mode "\\.go\\'"
-  :defer 't
+  :defer t
   :custom
   (go-ts-mode-indent-offset 2)
   :config
@@ -980,7 +980,7 @@ and restart Flymake to apply the changes."
 (use-package go-mod-ts-mode
   :ensure nil
   :mode "\\go.mod\\'"
-  :defer 't
+  :defer t
   :config
   (add-to-list 'treesit-language-source-alist
                '(gomod "https://github.com/camdencheek/tree-sitter-go-mod" "main" "src")))
@@ -989,17 +989,28 @@ and restart Flymake to apply the changes."
 (use-package php-ts-mode
   :ensure nil
   :mode "\\.php\\'"
-  :defer 't
+  :defer t
   :config
   (add-to-list 'treesit-language-source-alist
              '(php "https://github.com/tree-sitter/tree-sitter-php" "master" "php/src")))
+
+;;; JAVA-TS-MODE
+(use-package java-ts-mode
+  :ensure nil
+  :mode "\\.java\\'"
+  :defer t
+  :custom
+  (java-ts-mode-indent-offset 2)
+  :config
+  (add-to-list 'treesit-language-source-alist
+             '(java "https://github.com/tree-sitter/tree-sitter-java" "master" "src")))
 
 ;;; CPP-TS-MODE
 (use-package c-ts-mode
   :ensure nil
   :mode "\\.c\\'"
-  :mode "\\.h\\'" 
-  :defer 't
+  :mode "\\.h\\'"
+  :defer t
   :config
   (add-to-list 'major-mode-remap-alist '(c-mode . c-ts-mode))
   (add-to-list 'treesit-language-source-alist
@@ -1009,7 +1020,7 @@ and restart Flymake to apply the changes."
 (use-package c++-ts-mode
   :ensure nil
   :mode "\\.\\(cpp\\|cc\\|cxx\\)\\'"
-  :defer 't
+  :defer t
   :config
   (add-to-list 'major-mode-remap-alist '(c++-mode . c++-ts-mode))
   (add-to-list 'treesit-language-source-alist
@@ -1019,7 +1030,7 @@ and restart Flymake to apply the changes."
 (use-package c-or-c++-ts-mode
   :ensure nil
   :mode "\\.h\\'"
-  :defer 't
+  :defer t
   :config
   (add-to-list 'major-mode-remap-alist '(c-or-c++-mode . c-or-c++-ts-mode)))
 
