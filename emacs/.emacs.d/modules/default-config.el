@@ -663,17 +663,14 @@
   (setopt eshell-prompt-function
           (lambda ()
 			(concat
-			 "["
 			 (if (> eshell-last-command-status 0)
-				 "❌"
-               "")
-			 "" (number-to-string eshell-last-command-status)
-			 "]──["
-			 "📁 "
+				 (concat "❌" (number-to-string eshell-last-command-status) "\n")
+         "")
+			 "in "
 			 (concat (if (>= (length (eshell/pwd)) 40)
 						 (concat "..." (car (last (butlast (split-string (eshell/pwd) "/") 0))))
                        (abbreviate-file-name (eshell/pwd))))
-			 "]\n"
+			 "\n"
 			 "λ ")))
 
   (setq eshell-prompt-regexp "λ ")
