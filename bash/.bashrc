@@ -120,8 +120,8 @@ _ps1() {
     
     [[ $EXIT != 0 ]] && stat="exit ${r}${EXIT}${x}\n" || stat=""
     [[ -n "$B" ]] && B=" on ${y}$B${x}"
-    PS1="${stat}${c}\u${x} at ${g}\h${x} in ${b}\w${x}${B}"
-    PS1+="\n\A ${bb}\\$ ${x}"
+    PS1="${stat}as ${c}\u${x} at ${g}\h${x} around ${mm}\A${x} in ${b}\w${x}${B}"
+    PS1+="\n${bb}\\$ ${x}"
     
 }
 

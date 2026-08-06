@@ -34,7 +34,7 @@
                             `(font-lock-keyword-face
                               ((,class (:foreground ,green))))
                             `(font-lock-comment-face
-                              ((,class (:foreground ,base01))))
+                              ((,class (:foreground ,base01 :slant italic))))
                             `(font-lock-function-name-face
                               ((,class (:foreground ,blue))))
                             `(font-lock-function-call-face
