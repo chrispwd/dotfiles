@@ -78,10 +78,10 @@ UseMouseWheel=1 # 0/1
 Win95Keys=0 # 0/1
 ActiveButtonFontNameXft="IBM Plex Sans:style=Bold Italic:size=12"
 ActiveTaskBarFontNameXft="IBM Plex Sans:size=12:style=Italic"
-LabelFontNameXft="Noto Sans:italic:size=12,Sans:size=12"
-MenuFontNameXft="Noto Sans:size=10:style=Bold Italic,Sans:size=10:bold,Sans:size=10"
-NormalTaskBarFontNameXft="Noto Sans:italic:size=12,Sans:size=12"
-NormalWorkspaceFontNameXft="Noto Sans:italic:size=12,Sans:size=12"
-QuickSwitchFontNameXft="Noto Sans:size=12:italic,Sans Mono:monospace:size=12,DejaVu Sans:size=12,Sans:size=12:bold,Sans Mono:monospace:size=12"
+LabelFontNameXft="IBM Plex Sans:italic:size=12,Sans:size=12"
+MenuFontNameXft="IBM Plex Sans:size=10:style=Bold Italic,Sans:size=10:bold,Sans:size=10"
+NormalTaskBarFontNameXft="IBM Plex Sans:italic:size=12,Sans:size=12"
+NormalWorkspaceFontNameXft="IBM Plex Sans:italic:size=12,Sans:size=12"
+QuickSwitchFontNameXft="IBM Plex Sans:size=12:italic,Sans Mono:monospace:size=12,DejaVu Sans:size=12,Sans:size=12:bold,Sans Mono:monospace:size=12"
 TitleBarJustify=50 # [0-100]
-TitleFontNameXft="Noto Sans:italic:size=12,Sans:size=12"
+TitleFontNameXft="IBM Plex Sans:italic:size=12,Sans:size=12"

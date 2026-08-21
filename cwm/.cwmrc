@@ -8,7 +8,7 @@ snapdist    4
 moveamount  32
 borderwidth 1
 #           t  b  l  r
-gap         16 40 16 16
+gap         16 48 16 16
 vtile       50
 htile       50
 unbind-key  all
