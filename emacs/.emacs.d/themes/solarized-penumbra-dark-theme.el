@@ -64,6 +64,8 @@
                             `(org-link
                               ((,class (:foreground ,green :underline t))))
                             `(org-done ((,class (:foreground ,base01 :bold t))))
+                            `(org-todo ((,class (:foreground ,orange :bold t))))
+                            `(org-priority ((,class (:foreground ,red :bold t))))
                             `(org-verbatim
                               ((,class (:foreground ,blue :background ,base02))))
                             `(org-code
