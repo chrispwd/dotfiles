@@ -12,25 +12,26 @@ TERM = "xterm-256color"
 WINIT_X11_SCALE_FACTOR = "1.0"
 
 [font]
-size = 12.0
+size = 14.0
 
 [font.bold]
-family = "BlexMono Nerd Font"
+family = "UbuntuMono Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "BlexMono Nerd Font"
+family = "UbuntuMono Nerd Font"
 style = "Bold Italic"
 
 [font.italic]
-family = "BlexMono Nerd Font"
+family = "UbuntuMono Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "BlexMono Nerd Font"
+family = "UbuntuMono Nerd Font"
 style = "Regular"
 
 [general]
 import = [
-  "~/.config/alacritty/themes/solarized-dark.toml"
+  "~/.config/alacritty/themes/oksolar.toml",
+  "~/.config/alacritty/emacs/alacritty-for-term-keys.toml",
 ]
