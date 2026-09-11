@@ -7,8 +7,8 @@ if [ -n "$1" ]; then
         "cwm"|"i3"|"bspwm")
             launch-polybar.sh
             ;;
-        "icewm")
-            sleep 3 && notify-send -u low "Welcome, $(whoami)."
+        "icewm"|"windowmaker")
+            sleep 2 && notify-send -u low "Welcome, $(whoami)."
     esac
 fi
 
