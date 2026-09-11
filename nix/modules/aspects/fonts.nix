@@ -7,8 +7,9 @@
     home.packages = with pkgs; [
       # nerd-fonts.caskaydia-cove
       # nerd-fonts.jetbrains-mono
+      # nerd-fonts.blex-mono
       nerd-fonts.symbols-only
-      nerd-fonts.blex-mono
+      nerd-fonts.ubuntu-mono
       ibm-plex
     ];
   };
