@@ -103,3 +103,7 @@ flycheck_*.el
 # mpd
 /mpd/.config/mpd/**
 !/mpd/.config/mpd/mpd.conf
+
+# icewm
+
+/icewm/.icewm/ahistory
