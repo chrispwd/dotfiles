@@ -47,21 +47,21 @@ exit_status() {
 }
 
 # Function to shorten the path
-function shorten_git_path() {
-  local full_path="$PWD"
-  local git_root
+# function shorten_git_path() {
+#   local full_path="$PWD"
+#   local git_root
   
-  git_root=$(git rev-parse --show-toplevel 2>/dev/null)
+#   git_root=$(git rev-parse --show-toplevel 2>/dev/null)
 
-  if [ -n "$git_root" ]; then
-    # If inside a Git repo, display path relative to the repo root
-    local relative_path="${full_path#"$git_root"}"
-    echo "$(basename "$git_root")${relative_path}"
-  else
-    # If not in a Git repo, do normal full path
-    echo "${full_path/$HOME/\~}"
-  fi
-}
+#   if [ -n "$git_root" ]; then
+#     # If inside a Git repo, display path relative to the repo root
+#     local relative_path="${full_path#"$git_root"}"
+#     echo "$(basename "$git_root")${relative_path}"
+#   else
+#     # If not in a Git repo, do normal full path
+#     echo "${full_path/$HOME/\~}"
+#   fi
+# }
 
 _ps1() {
 
@@ -111,12 +111,16 @@ _ps1() {
     # PS1="${stat}${gg}as${x} ${m}\u${x} ${B}${gg}in${x} ${g}\w${x}${gg}:${x}"
     # PS1+="\n${l}\\$ ${x}"
 
-    path=$(shorten_git_path)
+    # path=$(shorten_git_path)
     
-    [[ $EXIT != 0 ]] && stat="exit ${r}${EXIT}${x}\n" || stat=""
-    [[ -n "$B" ]] && B=" on ${y}$B${x}"
-    PS1="${stat}as ${c}\u${x} at ${g}\h${x} in ${b}${path}${x}${B}"
-    PS1+="\n${bb}\\$ ${x}"
+    # [[ $EXIT != 0 ]] && stat="exit ${r}${EXIT}${x}\n" || stat=""
+    # [[ -n "$B" ]] && B=" on ${y}$B${x}"
+    # PS1="${stat}as ${c}\u${x} at ${g}\h${x} in ${b}${path}${x}${B}"
+    # PS1+="\n${bb}\\$ ${x}"
+    [[ $EXIT != 0 ]] && stat="${r}${EXIT}${x} " || stat=""
+    [[ -n "$B" ]] && B="${y}$B${x} "
+    PS1="${stat}${B}${b}\w${x} ${bold}\\$ ${x}"
+    # PS1+="\n\\$ "
     
 }
 
