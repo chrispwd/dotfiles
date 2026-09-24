@@ -1,0 +1,12 @@
+
+* MacOS Font rendering issues
+
+By default, the MacOS font rendering for Alacritty is scuffed. It makes the font super bold for some reason.
+
+* Workaround
+
+As of at least 2026-09-11, the following command works:
+
+#+begin_src shell
+defaults write org.alacritty AppleFontSmoothing -int 0
+#+end_src
