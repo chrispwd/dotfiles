@@ -39,6 +39,7 @@ shopt -s expand_aliases
 shopt -s histappend
 set -o emacs
 export COLORTERM=truecolor
+export PROMPT_DIRTRIM=3
 
 ######################### Prompt #######################################
 
@@ -62,6 +63,14 @@ exit_status() {
 #     echo "${full_path/$HOME/\~}"
 #   fi
 # }
+
+is_git_dirty() {
+    if git status --porcelain 2>/dev/null | grep -q '.*'; then
+        echo "yes"
+    else
+        echo "no"
+    fi
+}
 
 _ps1() {
 
@@ -118,7 +127,14 @@ _ps1() {
     # PS1="${stat}as ${c}\u${x} at ${g}\h${x} in ${b}${path}${x}${B}"
     # PS1+="\n${bb}\\$ ${x}"
     [[ $EXIT != 0 ]] && stat="${r}${EXIT}${x} " || stat=""
-    [[ -n "$B" ]] && B="${y}$B${x} "
+    
+    if [[ -n "$B" ]]; then
+      if [[ "$(is_git_dirty)" == "yes" ]]; then
+        B="${y}$B${x} " # yellow
+      else
+        B="${g}$B${x} " # green
+      fi
+    fi
     PS1="${stat}${B}${b}\w${x} ${bold}\\$ ${x}"
     # PS1+="\n\\$ "
     
