@@ -4,10 +4,10 @@
     
     home.packages = with pkgs; [
       cbatticon
-      # cwm
-      windowmaker
-      dockapps.cputnik
-      icewm
+      cwm
+      # windowmaker
+      # dockapps.cputnik
+      # icewm
       dmenu
       dunst
       feh

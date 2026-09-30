@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 (require 'solarized)
 (deftheme solarized-oksolar-dark
   "The solarized-oksolar-dark colour theme of Solarized colour theme flavor.")

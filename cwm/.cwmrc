@@ -5,21 +5,21 @@
 # defaults
 sticky      yes
 snapdist    4
-moveamount  32
+moveamount  16
 borderwidth 1
 #           t  b  l  r
 gap         16 48 16 16
 vtile       50
 htile       50
 unbind-key  all
-fontname    "monospace:size=12"
+fontname    "monospace:size=14"
 
 # app menu
 command terminal     "st"
 command firefox      "firefox"
 command emacs        "emacs"
 command htop         "st -T htop -e htop"
-command filebrowser  "pcmanfm"
+command filebrowser  "Thunar"
 command signal       "signal-desktop"
 command telegram     "Telegram"
 command scrot        "scrot '%Y%m%dT%H%M%S--screenshot.png' -d 3 -e 'mv $f $$SCROTS'"
@@ -107,18 +107,23 @@ bind-key 4SC-f    window-freeze
 bind-key 4-w      window-close
 
 # window movement
-bind-key 4-h    window-move-left
-bind-key 4-j    window-move-down
-bind-key 4-k    window-move-up
-bind-key 4-l    window-move-right
-bind-key 4S-h   window-move-left-big
-bind-key 4S-j   window-move-down-big
-bind-key 4S-k   window-move-up-big
-bind-key 4S-l   window-move-right-big
-bind-key 4C-h   window-snap-left
-bind-key 4C-j   window-snap-down
-bind-key 4C-k   window-snap-up
-bind-key 4C-l   window-snap-right
+bind-key 4-h        window-move-left
+bind-key 4-j        window-move-down
+bind-key 4-k        window-move-up
+bind-key 4-l        window-move-right
+bind-key 4S-h       window-move-left-big
+bind-key 4S-j       window-move-down-big
+bind-key 4S-k       window-move-up-big
+bind-key 4S-l       window-move-right-big
+bind-key 4C-h       window-snap-left
+bind-key 4C-j       window-snap-down
+bind-key 4C-k       window-snap-up
+bind-key 4C-l       window-snap-right
+bind-key 4C-y       window-snap-up-left
+bind-key 4C-p       window-snap-up-right
+bind-key 4C-n       window-snap-down-left
+bind-key 4C-slash   window-snap-down-right
+bind-key 4C-c       window-snap-center
 
 # window resize
 bind-key 4MS-h   window-resize-left-big
@@ -132,8 +137,8 @@ bind-key 4M-l    window-resize-right
 
 # mousebinds
 unbind-mouse all
-bind-mouse 4-3  window-resize
-bind-mouse 4-1  window-move
+bind-mouse M-3  window-resize
+bind-mouse M-1  window-move
 bind-mouse 4M-1 window-lower
 bind-mouse 1    menu-window
 bind-mouse 2    menu-window-hidden

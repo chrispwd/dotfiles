@@ -39,7 +39,7 @@ startup "$WMNAME"
 # exec wmaker
 # exec fvwm3
 # startup
-# exec cwm
+exec cwm
 # exec dwm
 # run icewm-session without icewmbg (prefer feh)
-exec icewm-session --nobg
+# exec icewm-session --nobg
