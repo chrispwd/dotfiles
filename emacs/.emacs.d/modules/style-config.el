@@ -85,7 +85,7 @@
   ;;      ))
   ;;   ;; prevents theme file overwrite
   ;;   nil)
-  (load-theme 'solarized-oksolar-dark t))
+  (load-theme 'solarized-oktwilight-dark t))
 
 (when (memq window-system '(x))
   ;; Default face (gui only)

@@ -1,8 +1,9 @@
+;; -*- lexical-binding: t; -*-
 (require 'solarized)
 (deftheme solarized-oktwilight-dark
   "The solarized-oktwilight-dark colour theme of Solarized colour theme flavor.")
 (solarized-with-color-variables 'dark 'solarized-oktwilight-dark
-  '((base03 . "#1e1e1e") (base02 . "#323537") (base01 . "#5f5a60")
+  '((base03 . "#282828") (base02 . "#323537") (base01 . "#5f5a60")
     (base00 . "#7b797c") (base0 . "#878787") (base1 . "#b2b2b2")
     (base2 . "#d2d2d2") (base3 . "#dedede") (yellow . "#9d923c")
     (orange . "#b2883a") (red . "#cf6a4c") (magenta . "#9b703f")
