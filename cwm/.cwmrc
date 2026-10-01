@@ -6,7 +6,7 @@
 sticky      yes
 snapdist    4
 moveamount  16
-borderwidth 1
+borderwidth 3
 #           t  b  l  r
 gap         16 48 16 16
 vtile       50
