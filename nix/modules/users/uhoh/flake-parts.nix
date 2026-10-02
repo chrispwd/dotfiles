@@ -15,7 +15,7 @@
             })
             inputs.nixgl.overlays.default
           ];
-          nixpkgs.config.allowUnfree = true;
+          # nixpkgs.config.allowUnfree = true;
         }
         inputs.self.modules.homeManager.uhoh
       ];

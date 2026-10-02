@@ -71,11 +71,11 @@
   (corfu-popupinfo-mode)) ; Popup completion info
 
 ;; Use corfu-terminal on non-GUI (this will not be necessary in version 31+)
-;; (when (not (display-graphic-p))
-;;   (use-package corfu-terminal
-;;     :ensure t
-;;     :config
-;;     (corfu-terminal-mode +1)))
+(when (not (display-graphic-p))
+  (use-package corfu-terminal
+    :ensure t
+    :config
+    (corfu-terminal-mode +1)))
 
 ;;; CAPE
 (use-package cape
