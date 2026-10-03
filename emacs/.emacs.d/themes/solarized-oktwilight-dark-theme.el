@@ -40,7 +40,7 @@
                             `(font-lock-keyword-face
                               ((,class (:foreground ,red))))
                             `(font-lock-type-face
-                              ((,class (:foreground ,yellow))))
+                              ((,class (:foreground ,violet))))
                             `(font-lock-function-name-face
                               ((,class (:foreground ,blue))))
                             `(font-lock-function-call-face
@@ -50,13 +50,15 @@
                             `(font-lock-variable-call-face
                               ((,class (:foreground ,base0))))
                             `(font-lock-constant-face
-                              ((,class (:foreground ,violet))))
+                              ((,class (:foreground ,cyan))))
                             `(font-lock-preprocessor-face
                               ((,class (:foreground ,magenta))))
+                            `(font-lock-punctuation-face
+                              ((,class (:foreground ,base0))))
                             `(font-lock-operator-face
-                              ((,class (:foreground ,violet))))
+                              ((,class (:foreground ,base0))))
                             `(font-lock-number-face
-                              ((,class (:foreground ,violet))))
+                              ((,class (:foreground ,yellow))))
                             `(font-lock-escape-face
                               ((,class (:foreground ,magenta))))
                             `(font-lock-builtin-face
@@ -82,7 +84,7 @@
                               ((,class (:foreground ,blue :bold t))))
                             `(org-headline-done
                               ((,class (:foreground unspecified))))
-                            `(org-level-1 ((,class (:foreground ,blue))))
+                            `(org-level-1 ((,class (:foreground ,blue :slant italic))))
                             `(org-level-2 ((,class (:foreground ,violet))))
                             `(org-level-3 ((,class (:foreground ,green))))
                             `(org-level-4 ((,class (:foreground ,yellow))))
