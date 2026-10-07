@@ -298,6 +298,55 @@
 # set recolor-keephue             true      # keep original color
 
 ###############################################################################
+# OKTwilight
+#
+# Base16 Twilight, but modified through OKLCH colorspace
+# Concept taken from https://meat.io/oksolar
+#
+###############################################################################
+
+set notification-error-bg       "#323537" # base01
+set notification-error-fg       "#cf6a4c" # red
+set notification-warning-bg     "#323537" # base01
+set notification-warning-fg     "#b2883a" # orange
+set notification-bg             "#282828" # base00
+set notification-fg             "#8b9965" # green
+
+set completion-bg               "#323537" # base01
+set completion-fg               "#878787" # fg
+set completion-group-bg         "#282828" # base00
+set completion-group-fg         "#5f5a60" # gray
+set completion-highlight-bg     "#9b859d" # magenta
+set completion-highlight-fg     "#dedede" # white
+
+# Define the color in index mode
+set index-bg                    "#323537" # base01
+set index-fg                    "#878787" # fg
+set index-active-bg             "#7587a6" # blue
+set index-active-fg             "#dedede" # white
+
+set inputbar-bg                 "#323537" # base01
+set inputbar-fg                 "#878787" # fg
+
+set statusbar-bg                "#282828" # base00
+set statusbar-fg                "#878787" # fg
+
+set highlight-color             "#9d923c" # yellow
+set highlight-active-color      "#9b859d" # magenta
+
+set default-bg                  "#282828" # bg
+set default-fg                  "#878787" # fg
+set render-loading              true
+set render-loading-bg           "#282828" # bg
+set render-loading-fg           "#878787" # fg
+
+# Recolor book content's color
+set recolor-lightcolor          "#282828" # bg
+set recolor-darkcolor           "#878787" # fg
+set recolor                     "true"
+set recolor-keephue             true      # keep original color
+
+###############################################################################
 # Onedark
 #
 # Derived from the base16 framework for emacs - https://github.com/tinted-theming/base16-emacs
@@ -398,46 +447,46 @@
 # by chrispwd
 ###############################################################################
 
-set notification-error-bg       "#24272b"  # base00
-set notification-error-fg       "#cf6a4c"  # red
-set notification-warning-bg     "#24272b"  # base00
-set notification-warning-fg     "#a38f2d"  # yellow
-set notification-bg             "#303338"  # base01:bg
-set notification-fg             "#8f9d6a"  # green
+# set notification-error-bg       "#24272b"  # base00
+# set notification-error-fg       "#cf6a4c"  # red
+# set notification-warning-bg     "#24272b"  # base00
+# set notification-warning-fg     "#a38f2d"  # yellow
+# set notification-bg             "#303338"  # base01:bg
+# set notification-fg             "#8f9d6a"  # green
 
-set completion-bg               "#3e4044"  # base02
-set completion-fg               "#8f8f8f"  # base05:fg
-set completion-group-bg         "#24272b"  # base00
-set completion-group-fg         "#636363"  # base03
-set completion-highlight-bg     "#9fb3c7"  # cyan
-set completion-highlight-fg     "#3e4044"  # base02
+# set completion-bg               "#3e4044"  # base02
+# set completion-fg               "#8f8f8f"  # base05:fg
+# set completion-group-bg         "#24272b"  # base00
+# set completion-group-fg         "#636363"  # base03
+# set completion-highlight-bg     "#9fb3c7"  # cyan
+# set completion-highlight-fg     "#3e4044"  # base02
 
-# Define the color in index mode
-set index-bg                    "#3e4044"  # base02
-set index-fg                    "#8f8f8f"  # base05:fg
-set index-active-bg             "#7587a6"  # blue
-set index-active-fg             "#3e4044"  # base02
+# # Define the color in index mode
+# set index-bg                    "#3e4044"  # base02
+# set index-fg                    "#8f8f8f"  # base05:fg
+# set index-active-bg             "#7587a6"  # blue
+# set index-active-fg             "#3e4044"  # base02
 
-set inputbar-bg                 "#303338"  # base01:bg
-set inputbar-fg                 "#8f8f8f"  # base05:fg
+# set inputbar-bg                 "#303338"  # base01:bg
+# set inputbar-fg                 "#8f8f8f"  # base05:fg
 
-set statusbar-bg                "#3e4044"  # base02
-set statusbar-fg                "#8f8f8f"  # base05:fg
+# set statusbar-bg                "#3e4044"  # base02
+# set statusbar-fg                "#8f8f8f"  # base05:fg
 
-set highlight-color             "rgba(163,143,45,0.5)"  # yellow
-set highlight-active-color      "rgba(205,168,105,0.5)" # orange
+# set highlight-color             "rgba(163,143,45,0.5)"  # yellow
+# set highlight-active-color      "rgba(205,168,105,0.5)" # orange
 
-set default-bg                  "#303338"  # base01:bg
-set default-fg                  "#8f8f8f"  # base05:fg
-set render-loading              true
-set render-loading-bg           "#303338"  # base01:bg
-set render-loading-fg           "#8f8f8f"  # base05:fg
+# set default-bg                  "#303338"  # base01:bg
+# set default-fg                  "#8f8f8f"  # base05:fg
+# set render-loading              true
+# set render-loading-bg           "#303338"  # base01:bg
+# set render-loading-fg           "#8f8f8f"  # base05:fg
 
-# Recolor book content's color
-set recolor-lightcolor          "#303338"  # base01:bg
-set recolor-darkcolor           "#8f8f8f"  # base05:fg
-set recolor                     "true"
-set recolor-keephue             "true"     # keep original color
+# # Recolor book content's color
+# set recolor-lightcolor          "#303338"  # base01:bg
+# set recolor-darkcolor           "#8f8f8f"  # base05:fg
+# set recolor                     "true"
+# set recolor-keephue             "true"     # keep original color
 
 ###############################################################################
 # Tomorrow-night
