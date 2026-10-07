@@ -7,11 +7,12 @@
     ];
 
     home.packages = with pkgs; [
+      azure-cli
+      k9s
+      mysql84
       php85Packages.composer
       phpactor
       pre-commit
-      k9s
-      mysql84
     ];
 
   };
