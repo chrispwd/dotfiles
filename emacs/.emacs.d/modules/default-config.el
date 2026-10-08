@@ -989,7 +989,7 @@ and restart Flymake to apply the changes."
   :defer t
   :config
   (add-to-list 'treesit-language-source-alist
-             '(php "https://github.com/tree-sitter/tree-sitter-php" "master" "php/src")))
+             '(php "https://github.com/tree-sitter/tree-sitter-php" "v0.23.11" "php/src")))
 
 ;;; JAVA-TS-MODE
 (use-package java-ts-mode
