@@ -1,7 +1,7 @@
 
-font-family = "JetBrainsMono Nerd Font Mono"
-font-size = 13
+font-family = "Iosevka Nerd Font"
+font-size = 14
 
-theme = cpl
+theme = oktwilight
 
-window-decoration = auto
+window-decoration = none

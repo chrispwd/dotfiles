@@ -72,7 +72,7 @@
                               ((,class (:foreground ,base0 :background ,base02))))
                             `(org-headline-done
                               ((,class (:foreground unspecified))))
-                            `(org-level-1 ((,class (:foreground ,green))))
+                            `(org-level-1 ((,class (:foreground ,green :slant italic))))
                             `(org-level-2 ((,class (:foreground ,yellow))))
                             `(org-level-3 ((,class (:foreground ,blue))))
                             `(org-level-4 ((,class (:foreground ,violet))))
