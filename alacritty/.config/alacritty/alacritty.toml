@@ -12,7 +12,7 @@ TERM = "xterm-256color"
 WINIT_X11_SCALE_FACTOR = "1.0"
 
 [font]
-size = 14.0
+size = 13.0
 
 [font.bold]
 family = "Iosevka Nerd Font"
@@ -31,11 +31,16 @@ family = "Iosevka Nerd Font"
 style = "Regular"
 
 [keyboard]
-bindings = [{ key = "V", mods = "Shift|Control", action = "Paste" },]
+bindings = [
+  { key = "V", mods = "Shift|Control", action = "Paste" },
+  { key = "+", mods = "Super|Shift", action = "IncreaseFontSize" },
+  { key = "-", mods = "Super", action = "DecreaseFontSize" },
+  { key = "=", mods = "Super", action = "ResetFontSize" },
+]
 
 [general]
 live_config_reload = true
 import = [
-  "~/.config/alacritty/themes/oktwilight.toml",
+  "~/.config/alacritty/themes/oksolar.toml",
   "~/.config/alacritty/emacs/alacritty-for-term-keys.toml",
 ]
