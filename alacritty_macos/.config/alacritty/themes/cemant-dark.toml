@@ -1,0 +1,26 @@
+# darker grey cemant variant, adapted from https://github.com/blobject/cemant
+[colors.primary]
+background = "#787878"
+foreground = "#000000"
+
+# Normal colors
+[colors.normal]
+black =   "#16161d"
+red =     "#872425"
+green =   "#2c4d04"
+yellow =  "#674a0f"
+blue =    "#04468c"
+magenta = "#7d2b79"
+cyan =    "#005142"
+white =   "#92959d"
+
+# Bright colors
+[colors.bright]
+black =   "#575a61"
+red =     "#872425"
+green =   "#2c4d04"
+yellow =  "#674a0f"
+blue =    "#04468c"
+magenta = "#7d2b79"
+cyan =    "#005142"
+white =   "#d5d5d5"
