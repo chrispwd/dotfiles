@@ -64,6 +64,7 @@
                             `(org-link
                               ((,class (:foreground ,cyan :underline t))))
                             `(org-done ((,class (:foreground ,base01 :bold t))))
+                            `(org-quote ((,class (:foreground ,base0 :slant italic))))
                             `(org-verbatim
                               ((,class (:foreground ,blue :background ,base02))))
                             `(org-code

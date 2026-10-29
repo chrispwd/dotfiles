@@ -17,87 +17,107 @@
    org-startup-folded nil
 
    ;; Edit settings
-   org-auto-align-tags nil
-   org-tags-column 0
    org-catch-invisible-edits 'show-and-error
    ;; org-special-ctrl-a/e t
    org-insert-heading-respect-content t
-   org-indent-mode t
 
    ;; Org styling, hide markup etc.
-   org-hide-emphasis-markers t
+   org-indent-mode t
+   org-auto-align-tags t
+   org-tags-column -70
+   org-hide-emphasis-markers nil
    org-pretty-entities t
    org-fontify-quote-and-verse-blocks t
    org-use-sub-superscripts '{}
 
    ;; Agenda Config
    org-agenda-files
-   '("~/Notes/denote/20250201T192254--todos__gtd_meta_work.org"
-	 "~/Notes/denote/20250811T093919--inbox__home_meta_workflow.org")
+   '("~/Notes/denote/20250201T192254--todos__work.org"
+	 "~/Notes/denote/20250811T093919--inbox__home.org")
    org-archive-location "~/Notes/denote/20220823T213739--completed-tasks__meta.org::"
-   org-scheduled-past-days 0
+   org-scheduled-past-days 14
    org-agenda-entry-text-maxlines 50
+   org-log-done 'time
+   org-log-into-drawer t
+   org-tag-alist '((:startgroup . nil) ;; urgency type
+                   ("today"     . ?t)
+                   ("tomorrow"  . ?m)
+                   ("blocked"   . ?b)
+                   (:endgroup   . nil)
+                   (:startgroup . nil) ;; category type
+                   ("school"    . ?s)
+                   ("chores"    . ?c)
+                   ("project"   . ?p)
+                   ("family"    . ?f)
+                   (:endgroup   . nil)
+                   (:startgroup . nil) ;; work/home type
+                   ("work"      . ?w)
+                   ("home"      . ?h)
+                   (:endgroup   . nil)
+                   ("next"      . ?n) ;; other types
+                   ("zengine"   . ?z)
+                   ("infra"     . ?i))
    org-todo-keywords '((sequence
-                        "TODO(t)" "IN PROGRESS(i)" "BACKLOG(b)" "WAITING(w)" "REMINDER(r)" "RECURRING(c)" "|" "DONE(d)" "CXLD(x)"))
+                        "TODO(t)" "|" "DONE(d!)" "CXLD(x!)"))
    org-agenda-custom-commands
    '(("w" "Work Todos" ;; agenda with only work items
-	  ((agenda "" ((org-agenda-ndays 8)
-				   (org-deadline-warning-days 7)))
-	   (todo "IN PROGRESS"
-			 ((org-agenda-overriding-header "In Progress")
-              (org-agenda-sorting-strategy '(priority-down))))
-	   (todo "TODO"
-			 ((org-agenda-overriding-header "Todos")
-              (org-agenda-sorting-strategy '(priority-down))))
-	   (todo "WAITING"
-			 ((org-agenda-overriding-header "Waiting")
-              (org-agenda-sorting-strategy '(priority-down))))
-       (todo "REMINDER"
-			 ((org-agenda-overriding-header "Reminders")
-              (org-agenda-sorting-strategy '(priority-down))))
-       (todo "BACKLOG"
-			 ((org-agenda-overriding-header "Backlog")
-              (org-agenda-sorting-strategy '(priority-down)))))
-	  ((org-agenda-tag-filter-preset '("+work"))))
+	    ((agenda "" ((org-agenda-ndays 8)
+				           (org-deadline-warning-days 7)))
+	     (tags-todo "today"
+			            ((org-agenda-overriding-header "Today:")
+                   (org-agenda-sorting-strategy '(priority-down))))
+	     (tags-todo "tomorrow"
+			            ((org-agenda-overriding-header "Tomorrow:")
+                   (org-agenda-sorting-strategy '(priority-down))
+                   (org-agenda-skip-function '(org-agenda-skip-entry-if 'scheduled))))
+	     (tags-todo "blocked"
+			            ((org-agenda-overriding-header "Blocked:")
+                   (org-agenda-sorting-strategy '(priority-down))
+                   (org-agenda-skip-function '(org-agenda-skip-entry-if 'scheduled))))
+       (tags-todo "-today-tomorrow-blocked"
+			            ((org-agenda-overriding-header "Backlog:")
+                   (org-agenda-sorting-strategy '(priority-down))
+                   (org-agenda-skip-function '(org-agenda-skip-entry-if 'scheduled)))))
+	    ((org-agenda-tag-filter-preset '("+work"))))
 
-	 ("h" "Home Todos" ;; agenda with only Home items
-	  ((agenda "" ((org-agenda-ndays 8)
-				   (org-deadline-warning-days 7)))
-	   (todo "IN PROGRESS"
-			 ((org-agenda-overriding-header "In Progress")
-              (org-agenda-sorting-strategy '(priority-down))))
-	   (todo "TODO"
-			 ((org-agenda-overriding-header "Todos")
-              (org-agenda-sorting-strategy '(priority-down))))
-	   (todo "WAITING"
-			 ((org-agenda-overriding-header "Waiting")
-              (org-agenda-sorting-strategy '(priority-down))))
-       (todo "REMINDER"
-			 ((org-agenda-overriding-header "Reminders")
-              (org-agenda-sorting-strategy '(priority-down))))
-       (todo "BACKLOG"
-			 ((org-agenda-overriding-header "Backlog")
-              (org-agenda-sorting-strategy '(priority-down)))))
-	  ((org-agenda-tag-filter-preset '("+home"))))
+	   ("h" "Home Todos" ;; agenda with only Home items
+	    ((agenda "" ((org-agenda-ndays 8)
+				           (org-deadline-warning-days 7)))
+	     (tags-todo "today"
+			            ((org-agenda-overriding-header "Today:")
+                   (org-agenda-sorting-strategy '(priority-down))))
+	     (tags-todo "tomorrow"
+			            ((org-agenda-overriding-header "Tomorrow:")
+                   (org-agenda-sorting-strategy '(priority-down))
+                   (org-agenda-skip-function '(org-agenda-skip-entry-if 'scheduled))))
+	     (tags-todo "blocked"
+			            ((org-agenda-overriding-header "Blocked:")
+                   (org-agenda-sorting-strategy '(priority-down))
+                   (org-agenda-skip-function '(org-agenda-skip-entry-if 'scheduled))))
+       (tags-todo "-today-tomorrow-blocked"
+			            ((org-agenda-overriding-header "Backlog:")
+                   (org-agenda-sorting-strategy '(priority-down))
+                   (org-agenda-skip-function '(org-agenda-skip-entry-if 'scheduled)))))
+	    ((org-agenda-tag-filter-preset '("+home"))))
 
      ("a" "All Todos" ;; agenda with all items
-	  ((agenda "" ((org-agenda-ndays 8)
-				   (org-deadline-warning-days 7)))
-	   (todo "IN PROGRESS"
-			 ((org-agenda-overriding-header "In Progress")
-              (org-agenda-sorting-strategy '(priority-down))))
-	   (todo "TODO"
-			 ((org-agenda-overriding-header "Todos")
-              (org-agenda-sorting-strategy '(priority-down))))
-	   (todo "WAITING"
-			 ((org-agenda-overriding-header "Waiting")
-              (org-agenda-sorting-strategy '(priority-down))))
-       (todo "REMINDER"
-			 ((org-agenda-overriding-header "Reminders")
-              (org-agenda-sorting-strategy '(priority-down))))
-       (todo "BACKLOG"
-			 ((org-agenda-overriding-header "Backlog")
-              (org-agenda-sorting-strategy '(priority-down)))))))
+	    ((agenda "" ((org-agenda-ndays 8)
+				           (org-deadline-warning-days 7)))
+	     (tags-todo "today"
+			            ((org-agenda-overriding-header "Today:")
+                   (org-agenda-sorting-strategy '(priority-down))))
+	     (tags-todo "tomorrow"
+			            ((org-agenda-overriding-header "Tomorrow:")
+                   (org-agenda-sorting-strategy '(priority-down))
+                   (org-agenda-skip-function '(org-agenda-skip-entry-if 'scheduled))))
+	     (tags-todo "blocked"
+			            ((org-agenda-overriding-header "Blocked:")
+                   (org-agenda-sorting-strategy '(priority-down))
+                   (org-agenda-skip-function '(org-agenda-skip-entry-if 'scheduled))))
+       (tags-todo "-today-tomorrow-blocked"
+			            ((org-agenda-overriding-header "Backlog:")
+                   (org-agenda-sorting-strategy '(priority-down))
+                   (org-agenda-skip-function '(org-agenda-skip-entry-if 'scheduled)))))))
 	 
    ;; Agenda styling
    ;; org-agenda-tags-column 0
@@ -106,12 +126,12 @@
    org-agenda-time-grid
    '((daily today require-timed)
      (800 1000 1200 1400 1600 1800 2000)
-     " ┄┄┄┄┄ " "┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄")
+     " ┄┄┄ " "┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄")
    org-agenda-current-time-string
    "───────────────>"
-  org-agenda-deadline-leaders (quote ("Today: " "in%2d: " "over +%d!:"))
-  org-agenda-scheduled-leaders (quote ("" "S%3d: "))
-  org-agenda-prefix-format " %?-32b %?3e %?-12t% s")
+  org-agenda-deadline-leaders (quote ("Today:" "in -%d:" "over +%2d!:"))
+  org-agenda-scheduled-leaders (quote ("" "over +%d:"))
+  org-agenda-prefix-format " %-10:T%-32b %3e %?-10t%?-10 s")
   
   ;; Ellipsis styling
   (setq org-ellipsis "...")
