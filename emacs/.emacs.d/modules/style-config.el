@@ -107,7 +107,7 @@
   (setq doom-modeline-height 15)
   (setq doom-modeline-bar-width 6)
   (setq doom-modeline-minor-modes t)
-  (setq doom-modeline-buffer-file-name-style 'truncate-except-project)
+  (setq doom-modeline-buffer-file-name-style 'truncate-upto-project)
   :config
   (setq column-number-mode t
 		line-number-mode t))
