@@ -1,4 +1,4 @@
-#include "Xresources.d/themes/oktwilight"
+#include "Xresources.d/themes/ok-material-vivid"
 
 Xft.antialias: true
 Xft.hinting: true
