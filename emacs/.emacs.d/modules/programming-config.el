@@ -62,5 +62,10 @@
   :hook
   ((python-mode yaml-ts-mode go-ts-mode toml-ts-mode js-ts-mode typescript-ts-mode tsx-ts-mode php-ts-mode c-ts-mode c++-ts-mode) . indent-bars-mode))
 
+(use-package trust-manager
+  :ensure t
+  :config
+  (trust-manager-mode))
+
 (provide 'programming-config)
 ;;; coding.el ends here

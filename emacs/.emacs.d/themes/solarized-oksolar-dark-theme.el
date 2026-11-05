@@ -30,7 +30,7 @@
                             `(hl-line ((,class (:background ,base02 :extend t))))
                             `(region
                               ((,class
-                                (:foreground ,base2 :background ,base00 :extend
+                                (:foreground ,base03 :background ,base0 :extend
                                              t))))
                             `(font-lock-keyword-face
                               ((,class (:foreground ,green))))
@@ -45,17 +45,19 @@
                             `(font-lock-variable-call-face
                               ((,class (:foreground ,base0))))
                             `(font-lock-constant-face
-                              ((,class (:foreground ,cyan))))
+                              ((,class (:foreground ,violet))))
+                            `(font-lock-type-face
+                              ((,class (:foreground ,base00))))
                             `(font-lock-string-face
                               ((,class (:foreground ,cyan))))
                             `(font-lock-escape-face
                               ((,class (:foreground ,yellow))))
                             `(font-lock-operator-face
-                              ((,class (:foreground ,violet))))
+                              ((,class (:foreground ,green))))
                             `(font-lock-number-face
                               ((,class (:foreground ,base0))))
                             `(font-lock-preprocessor-face
-                              ((,class (:foreground ,violet))))
+                              ((,class (:foreground ,yellow))))
                             `(denote-faces-link
                               ((,class (:foreground ,blue :underline t))))
                             `(denote-faces-date ((,class (:foreground ,blue))))
@@ -81,6 +83,9 @@
                             `(org-level-6 ((,class (:foreground ,magenta))))
                             `(org-level-7 ((,class (:foreground ,orange))))
                             `(org-level-8 ((,class (:foreground ,red))))
+                            `(eglot-highlight-symbol-face ((,class (:foreground ,base3 :background unspecified))))
+                            `(eglot-parameter-hint-face ((,class (:foreground ,base01))))
+                            `(doom-modeline-project-parent-dir ((,class (:foreground ,base01 :weight bold))))
                             `(vertico-current
                               ((,class (:background ,base02 :underline t)))))))
 (provide-theme 'solarized-oksolar-dark)
