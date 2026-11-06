@@ -932,7 +932,7 @@ and restart Flymake to apply the changes."
 ;;  As I first proposed here:
 ;;  https://lists.gnu.org/archive/html/emacs-devel/2025-02/msg00810.html
 (use-package markdown-ts-mode
-  :ensure nil
+  :ensure t
   :mode "\\.md\\'"
   :defer t
   :config

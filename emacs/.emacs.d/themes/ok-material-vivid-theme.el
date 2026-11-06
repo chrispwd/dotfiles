@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 (require 'solarized)
 (deftheme ok-material-vivid
   "The ok-material-vivid colour theme of Solarized colour theme flavor.")
@@ -95,6 +96,10 @@
                             `(orderless-match-face-1 ((,class (:foreground ,blue))))
                             `(orderless-match-face-2 ((,class (:foreground ,violet))))
                             `(orderless-match-face-3 ((,class (:foreground ,green))))
+                            `(avy-lead-face ((,class (:foreground ,base03 :background ,yellow))))
+                            `(avy-lead-face-0 ((,class (:foreground ,base03 :background ,blue))))
+                            `(avy-lead-face-1 ((,class (:foreground ,base03 :background ,violet))))
+                            `(avy-lead-face-2 ((,class (:foreground ,base03 :background ,green))))
                             `(eglot-highlight-symbol-face ((,class (:foreground ,base3 :background unspecified))))
                             `(eglot-parameter-hint-face ((,class (:foreground ,base01))))
                             `(doom-modeline-project-parent-dir ((,class (:foreground ,base01 :weight bold))))
@@ -135,3 +140,4 @@
                               ((,class (:background ,base02 :underline t)))))))
 (provide-theme 'ok-material-vivid)
 (provide 'ok-material-vivid-theme)
+;;; ok-material-vivid-theme.el ends here
