@@ -51,6 +51,16 @@
   (add-to-list 'treesit-language-source-alist
                '(nix "https://github.com/nix-community/tree-sitter-nix" "master" "src")))
 
+(use-package terraform-ts-mode
+  :ensure t
+  :defer 't
+  :vc (:url "https://codeberg.org/ccbash-oss/terraform-ts-mode"
+       :rev :newest)
+  :mode "\\.tf\\'"
+  :config
+  (add-to-list 'treesit-language-source-alist
+               '(terraform "https://github.com/tree-sitter-grammars/tree-sitter-hcl" "master" "src")))
+
 (use-package indent-bars
   :ensure t
   :custom

@@ -763,7 +763,8 @@
     (add-to-list 'eglot-server-programs '((ruby-mode . ("ruby-lsp"))
                                           (ruby-ts-mode . ("ruby-lsp"))
                                           (php-ts-mode . ("phpactor"))
-                                          (php-mode . ("phpactor")))))
+                                          (php-mode . ("phpactor"))
+                                          (terraform-ts-mode . ("terraform-ls")))))
 
   :bind (:map
          eglot-mode-map
