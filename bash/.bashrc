@@ -130,12 +130,12 @@ _ps1() {
     
     if [[ -n "$B" ]]; then
       if [[ "$(is_git_dirty)" == "yes" ]]; then
-        B="(${y}$B*${x}) "
+        B=" ${rr}$B*${x}"
       else
-        B="(${y}$B${x}) "
+        B=" ${y}$B${x}"
       fi
     fi
-    PS1="${stat}${g}\u${x} ${b}\w${x}${B}\n${bold}\\$ ${x}"
+    PS1="${stat}${m}\u${x} ${b}\w${x}${B}\n──> "
     # PS1+="\n\\$ "
     
 }
