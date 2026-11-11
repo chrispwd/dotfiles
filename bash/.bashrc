@@ -111,7 +111,6 @@ _ps1() {
     local bold_b='\[\e[34;1m\]'
     local bold_l='\[\e[37;1m\]'
     local bold_ll='\[\e[97;1m\]'
-    local clear='\[\e[0m\]'
 
     B=$(git branch >/dev/null 2>&1 && git branch | grep '\*' | cut -c 3-)
 
@@ -130,12 +129,12 @@ _ps1() {
     
     if [[ -n "$B" ]]; then
       if [[ "$(is_git_dirty)" == "yes" ]]; then
-        B=" ${rr}$B*${x}"
+        B=" (${y}$B*${x})"
       else
-        B=" ${y}$B${x}"
+        B=" (${y}$B${x})"
       fi
     fi
-    PS1="${stat}${m}\u${x} ${b}\w${x}${B}\n──> "
+    PS1="${g}\u${x}@${m}\h${x}:${b}\w${x}${B}\n${stat}${bold}\$${x} "
     # PS1+="\n\\$ "
     
 }
