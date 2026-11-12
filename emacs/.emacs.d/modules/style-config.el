@@ -9,7 +9,7 @@
   :ensure t
   :config
   (setq solarized-use-less-bold t)
-  (load-theme 'ok-material-vivid t))
+  (load-theme 'solarized-penumbra-dark t))
   
 
 (when (memq window-system '(x))
