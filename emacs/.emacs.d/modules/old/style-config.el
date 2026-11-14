@@ -3527,4 +3527,139 @@
        ))
     ;; prevents theme file overwrite
     );; nil)
+  
   (load-theme 'solarized-oksolar-dark t))
+
+(solarized-create-theme-file-with-palette 'dark 'solarized-penumbra-dark
+  '("#202225" "#8B8B8B"
+    "#95891E" "#B3753F" "#BA616B" "#9B68A1" "#7076AE" "#0081B3" "#078986" "#519158"))
+
+'((custom-theme-set-faces theme-name
+                            `(default
+                              ((,class
+                                (:foreground ,base0 :background ,base02))))
+                            `(highlight ((,class (:background ,base00))))
+                            ;; `(hl-line ((,class (:background ,base03 :extend t))))
+                            `(line-number
+                              ((,class
+                                (:background ,base02 :foreground ,base01))))
+                            `(line-number-current-line
+                              ((,class
+                                (:background ,base02 :foreground ,base1 :bold t))))
+                            `(mode-line
+                              ((,class
+                                (:background ,base03 :underline nil))))
+                            `(mode-line-inactive
+                              ((,class
+                                (:background ,base03 :underline nil))))
+                            `(region
+                              ((,class (:foreground ,base02
+                                                    :background ,blue
+                                                    :extend t))))
+                            `(tab-bar-tab
+                              ((,class
+                                (:foreground ,base2 :background ,base02))))
+                            `(tab-bar-tab-inactive
+                              ((,class
+                                (:foreground ,base01 :background ,base03))))
+                            `(vertical-border
+                              ((,class (:foreground ,base03))))
+                            `(fill-column-indicator
+                              ((,class (:foreground ,base01))))
+                            `(font-lock-keyword-face
+                              ((,class (:foreground ,violet))))
+                            `(font-lock-comment-face
+                              ((,class (:foreground ,base01 :slant italic))))
+                            `(font-lock-function-name-face
+                              ((,class (:foreground ,blue))))
+                            `(font-lock-function-call-face
+                              ((,class (:foreground ,blue))))
+                            `(font-lock-variable-name-face
+                              ((,class (:foreground ,base0))))
+                            `(font-lock-variable-call-face
+                              ((,class (:foreground ,base0))))
+                            `(font-lock-type-face ((,class (:foreground ,red))))
+                            `(font-lock-constant-face
+                              ((,class (:foreground ,orange))))
+                            `(font-lock-string-face
+                              ((,class (:foreground ,green))))
+                            `(font-lock-escape-face
+                              ((,class (:foreground ,orange))))
+                            `(font-lock-operator-face
+                              ((,class (:foreground ,cyan))))
+                            `(font-lock-number-face
+                              ((,class (:foreground ,yellow))))
+                            `(font-lock-preprocessor-face
+                              ((,class (:foreground ,magenta))))
+                            `(denote-faces-link
+                              ((,class (:foreground ,blue :underline t))))
+                            `(denote-faces-date ((,class (:foreground ,blue))))
+                            `(denote-faces-keywords
+                              ((,class (:foreground ,violet))))
+                            `(org-link
+                              ((,class (:foreground ,green :underline t))))
+                            `(org-done ((,class (:foreground ,base01 :bold t))))
+                            `(org-agenda-date
+                              ((,class
+                                (:foreground ,base01 :background unspecified))))
+                            `(org-agenda-date-today
+                              ((,class (:foreground ,base1
+                                                    :background unspecified
+                                                    :bold t
+                                                    :inverse nil))))
+                            `(org-todo ((,class (:foreground ,yellow :bold t))))
+                            `(org-priority
+                              ((,class (:foreground ,red :bold t))))
+                            `(org-block
+                              ((,class (:background ,base03 :extend t))))
+                            `(org-hide ((,class (:foreground ,base02))))
+                            `(org-verbatim
+                              ((,class (:foreground ,blue
+                                                    :background ,base02))))
+                            `(org-code
+                              ((,class
+                                (:foreground ,magenta :background ,base02))))
+                            `(org-quote
+                              ((,class (:foreground ,base0 :slant italic))))
+                            `(org-checkbox
+                              ((,class
+                                (:foreground ,base0 :background ,base03))))
+                            `(org-headline-done
+                              ((,class (:foreground unspecified))))
+                            `(org-document-title
+                              ((,class (:foreground ,cyan :bold t))))
+                            `(org-level-1 ((,class (:foreground ,blue))))
+                            `(org-level-2 ((,class (:foreground ,violet))))
+                            `(org-level-3 ((,class (:foreground ,green))))
+                            `(org-level-4 ((,class (:foreground ,cyan))))
+                            `(org-level-5 ((,class (:foreground ,magenta))))
+                            `(org-level-6 ((,class (:foreground ,yellow))))
+                            `(org-level-7 ((,class (:foreground ,orange))))
+                            `(org-level-8 ((,class (:foreground ,red))))
+                            `(vertico-current
+                              ((,class (:background ,base03 :underline t))))
+                            `(orderless-match-face-0
+                              ((,class (:foreground ,magenta))))
+                            `(orderless-match-face-1
+                              ((,class (:foreground ,blue))))
+                            `(orderless-match-face-2
+                              ((,class (:foreground ,yellow))))
+                            `(orderless-match-face-3
+                              ((,class (:foreground ,green))))
+                            `(avy-lead-face
+                              ((,class (:foreground ,magenta
+                                                    :background ,base03
+                                                    :bold t))))
+                            `(avy-lead-face-0
+                              ((,class (:foreground ,blue
+                                                    :background ,base03
+                                                    :bold t))))
+                            `(avy-lead-face-1
+                              ((,class (:foreground ,yellow
+                                                    :background ,base03
+                                                    :bold t))))
+                            `(avy-lead-face-2
+                              ((,class (:foreground ,green
+                                                    :background ,base03
+                                                    :bold t))))
+))

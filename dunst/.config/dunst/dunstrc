@@ -56,7 +56,7 @@
     frame_width = 1
 
     # Defines color of the frame around the notification window.
-    frame_color = "#abb2bf"
+    frame_color = "#8B8B8B"
 
     # Define a color for the separator.
     # possible values are:
@@ -318,10 +318,10 @@
     # background = "#1d1f21"
     # foreground = "#848785"
     # frame_color = "#848785"
-    # OKTwilight
-    background = "#1e1e1e"
-    foreground = "#7b797c"
-    frame_color = "#5f5a60"
+    # # OKTwilight
+    # background = "#1e1e1e"
+    # foreground = "#7b797c"
+    # frame_color = "#5f5a60"
     # # OK-Railscasts
     # background = "#2b2b2b"
     # foreground = "#817c78"
@@ -358,10 +358,10 @@
     # background = "#000000"
     # foreground = "#777777"
     # frame_color = "#777777"
-    # Penumbra dark
-    # background = "#24272b"
-    # foreground = "#8f8f8f"
-    # frame_color = "#636363"
+    # # Penumbra dark
+    background = "#202225"
+    foreground = "#5E6063"
+    frame_color = "#5E6063"
     # gruvbox-material dark soft
     # background = "#32302f"
     # foreground = "#7c6f64"
@@ -416,9 +416,9 @@
     # foreground = "#9ea19e"
     # frame_color = "#9ea19e"
     # OKTwilight
-    background = "#1e1e1e"
-    foreground = "#878787"
-    frame_color = "#878787"    
+    # background = "#1e1e1e"
+    # foreground = "#878787"
+    # frame_color = "#878787"    
     # # OK-Railscasts
     # background = "#2b2b2b"
     # foreground = "#938e8a"
@@ -439,10 +439,10 @@
     # background = "#282828"
     # foreground = "#b2b2b2"
     # frame_color = "#5fafd7"
-    # Penumbra dark
-    # background = "#24272b"
-    # foreground = "#8f8f8f"
-    # frame_color = "#8f8f8f"
+    # # Penumbra dark
+    background = "#202225"
+    foreground = "#B4B1AD"
+    frame_color = "#8B8B8B"
     # gruvbox-material dark soft
     # background = "#32302f"
     # foreground = "#a89984"
@@ -493,9 +493,9 @@
     # foreground = "#ababab"
     # frame_color = "#ababab"
     # OKTwilight
-    background = "#1e1e1e"
-    foreground = "#dedede"
-    frame_color = "#cf6a4c"
+    # background = "#1e1e1e"
+    # foreground = "#dedede"
+    # frame_color = "#cf6a4c"
     # # OK-Railscasts
     # background = "#2b2b2b"
     # foreground = "#e06252"
@@ -520,10 +520,10 @@
     # background = "#944649"
     # foreground = "#ababab"
     # frame_color = "#ababab"
-    # Penumbra dark
-    # background = "#ca736c"
-    # foreground = "#fff7ed"
-    # frame_color = "#fff7ed"
+    # # Penumbra dark
+    background = "#3D2F32"
+    foreground = "#EFE8DD"
+    frame_color = "#EFE8DD"
     # gruvbox-material dark soft
     # background = "#ea6962"
     # foreground = "#fbf1c7"

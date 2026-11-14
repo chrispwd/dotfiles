@@ -2,28 +2,28 @@
 (deftheme solarized-penumbra-dark
   "The solarized-penumbra-dark colour theme of Solarized colour theme flavor.")
 (solarized-with-color-variables 'dark 'solarized-penumbra-dark
-  '((base03 . "#24272b") (base02 . "#303338") (base01 . "#636363")
-    (base00 . "#7a7a7a") (base0 . "#8f8f8f") (base1 . "#bebebe")
-    (base2 . "#f2e6d4") (base3 . "#fff7ed") (yellow . "#a38f2d")
-    (orange . "#ba823a") (red . "#ca736c") (magenta . "#bd72a8")
-    (violet . "#9471cc") (blue . "#5794d0") (cyan . "#00a2af")
-    (green . "#47a477") (yellow-d . "#3d3a2e") (yellow-l . "#eee1c6")
-    (orange-d . "#41382f") (orange-l . "#f4dfc8") (red-d . "#433637")
-    (red-l . "#f7dcd2") (magenta-d . "#403642") (magenta-l . "#f3dcdf")
-    (violet-d . "#393548") (violet-l . "#ebdbe7") (blue-d . "#303b48")
-    (blue-l . "#e1e2e8") (cyan-d . "#2a3d43") (cyan-l . "#d9e6e0")
-    (green-d . "#2d3e39") (green-l . "#dce7d4") (yellow-1bg . "#37352d")
-    (orange-1bg . "#3a332e") (red-1bg . "#3c3234") (magenta-1bg . "#39323c")
-    (blue-1bg . "#2d3641") (cyan-1bg . "#28383d") (green-1bg . "#2b3836")
-    (violet-1bg . "#343240") (yellow-1fg . "#c1ad67") (orange-1fg . "#d2a46e")
-    (red-1fg . "#dd9a91") (magenta-1fg . "#d29abc") (violet-1fg . "#b698d7")
-    (blue-1fg . "#91b0d9") (cyan-1fg . "#74bbc1") (green-1fg . "#83bd99")
-    (yellow-2bg . "#564e30") (orange-2bg . "#5e4933") (red-2bg . "#634544")
-    (magenta-2bg . "#5d445a") (violet-2bg . "#4f4467") (blue-2bg . "#3b5068")
-    (cyan-2bg . "#2c555c") (green-2bg . "#355648") (yellow-2fg . "#cfbc83")
-    (orange-2fg . "#ddb589") (red-2fg . "#e5aea4") (magenta-2fg . "#dcadc7")
-    (violet-2fg . "#c6acdc") (blue-2fg . "#aabfde") (cyan-2fg . "#95c8cb")
-    (green-2fg . "#9ecaaa"))
+  '((base03 . "#202225") (base02 . "#2C2E31") (base01 . "#5E6063")
+    (base00 . "#7a7a7a") (base0 . "#8B8B8B") (base1 . "#B4B1AD")
+    (base2 . "#DFD9D0") (base3 . "#EFE8DD") (yellow . "#95891E")
+    (orange . "#B3753F") (red . "#BA616B") (magenta . "#9B68A1")
+    (violet . "#7076AE") (blue . "#0081B3") (cyan . "#078986")
+    (green . "#519158") (yellow-d . "#373427") (yellow-l . "#908a77")
+    (orange-d . "#3c312b") (orange-l . "#96877c") (red-d . "#3d2f32")
+    (red-l . "#968484") (magenta-d . "#362f3b") (magenta-l . "#8f8490")
+    (violet-d . "#2f313e") (violet-l . "#878792") (blue-d . "#26333e")
+    (blue-l . "#7d8993") (cyan-d . "#243537") (cyan-l . "#7b8b8a")
+    (green-d . "#2a362f") (green-l . "#818d81") (yellow-1bg . "#313027")
+    (orange-1bg . "#352d29") (red-1bg . "#362b2f") (magenta-1bg . "#312c36")
+    (blue-1bg . "#252f38") (cyan-1bg . "#233032") (green-1bg . "#28312c")
+    (violet-1bg . "#2b2d37") (yellow-1fg . "#958945") (orange-1fg . "#aa7c56")
+    (red-1fg . "#ae6f74") (magenta-1fg . "#97739b") (violet-1fg . "#7a7ca4")
+    (blue-1fg . "#4d84a7") (cyan-1fg . "#488a87") (green-1fg . "#659067")
+    (yellow-2bg . "#4e4828") (orange-2bg . "#594130") (red-2bg . "#5b3b40")
+    (magenta-2bg . "#4e3d53") (violet-2bg . "#3f4258") (blue-2bg . "#28465a")
+    (cyan-2bg . "#264949") (green-2bg . "#354c39") (yellow-2fg . "#948a54")
+    (orange-2fg . "#a57f62") (red-2fg . "#a87679") (magenta-2fg . "#957897")
+    (violet-2fg . "#7e7f9e") (blue-2fg . "#5e85a1") (cyan-2fg . "#5a8b88")
+    (green-2fg . "#6e8f6f"))
   '((custom-theme-set-faces theme-name
                             `(default
                               ((,class
@@ -43,8 +43,8 @@
                               ((,class
                                 (:background ,base03 :underline nil))))
                             `(region
-                              ((,class (:foreground ,base02
-                                                    :background ,blue
+                              ((,class (:foreground ,base1
+                                                    :background ,base01
                                                     :extend t))))
                             `(tab-bar-tab
                               ((,class
@@ -57,7 +57,7 @@
                             `(fill-column-indicator
                               ((,class (:foreground ,base01))))
                             `(font-lock-keyword-face
-                              ((,class (:foreground ,violet))))
+                              ((,class (:foreground ,magenta))))
                             `(font-lock-comment-face
                               ((,class (:foreground ,base01 :slant italic))))
                             `(font-lock-function-name-face
@@ -80,32 +80,7 @@
                             `(font-lock-number-face
                               ((,class (:foreground ,yellow))))
                             `(font-lock-preprocessor-face
-                              ((,class (:foreground ,magenta))))
-                            ;; `(font-lock-keyword-face
-                            ;;   ((,class (:foreground ,magenta))))
-                            ;; `(font-lock-comment-face
-                            ;;   ((,class (:foreground ,base01 :slant italic))))
-                            ;; `(font-lock-function-name-face
-                            ;;   ((,class (:foreground ,blue))))
-                            ;; `(font-lock-function-call-face
-                            ;;   ((,class (:foreground ,blue))))
-                            ;; `(font-lock-variable-name-face
-                            ;;   ((,class (:foreground ,base0))))
-                            ;; `(font-lock-variable-call-face
-                            ;;   ((,class (:foreground ,base0))))
-                            ;; `(font-lock-type-face ((,class (:foreground ,red))))
-                            ;; `(font-lock-constant-face
-                            ;;   ((,class (:foreground ,orange))))
-                            ;; `(font-lock-string-face
-                            ;;   ((,class (:foreground ,green))))
-                            ;; `(font-lock-escape-face
-                            ;;   ((,class (:foreground ,orange))))
-                            ;; `(font-lock-operator-face
-                            ;;   ((,class (:foreground ,cyan))))
-                            ;; `(font-lock-number-face
-                            ;;   ((,class (:foreground ,yellow))))
-                            ;; `(font-lock-preprocessor-face
-                            ;;   ((,class (:foreground ,violet))))
+                              ((,class (:foreground ,violet))))
                             `(denote-faces-link
                               ((,class (:foreground ,blue :underline t))))
                             `(denote-faces-date ((,class (:foreground ,blue))))
@@ -151,6 +126,51 @@
                             `(org-level-6 ((,class (:foreground ,yellow))))
                             `(org-level-7 ((,class (:foreground ,orange))))
                             `(org-level-8 ((,class (:foreground ,red))))
+                            `(flymake-errline
+                              ((((supports :underline (:style line)))
+                                (:underline (:style line :color ,red)
+                                            :inherit unspecified
+                                            :foreground unspecified
+                                            :background unspecified))
+                               ;; (,class (:foreground ,red :weight bold :underline t))))
+                               (,class (:foreground ,red :underline t))))
+                            `(flymake-warnline
+                              ((((supports :underline (:style line)))
+                                (:underline (:style line :color ,orange)
+                                            :inherit unspecified
+                                            :foreground unspecified
+                                            :background unspecified))
+                               ;; (,class (:foreground ,orange :weight bold :underline t))))
+                               (,class (:foreground ,orange :underline t))))
+                            `(flymake-infoline
+                              ((((supports :underline (:style line)))
+                                (:underline (:style line :color ,green)
+                                            :inherit unspecified
+                                            :foreground unspecified
+                                            :background unspecified))
+                               ;; (,class (:foreground ,green :weight bold :underline t))))
+                               (,class (:foreground ,green :underline t))))
+                            `(flymake-error
+                              ((((supports :underline (:style line)))
+                                (:underline (:style line :color ,red)
+                                            :inherit unspecified
+                                            :foreground unspecified
+                                            :background unspecified))
+                               (,class (:foreground ,red :underline t))))
+                            `(flymake-warning
+                              ((((supports :underline (:style line)))
+                                (:underline (:style line :color ,orange)
+                                            :inherit unspecified
+                                            :foreground unspecified
+                                            :background unspecified))
+                               (t (:foreground ,orange :underline t))))
+                            `(flymake-note
+                              ((((supports :underline (:style line)))
+                                (:underline (:style line :color ,green)
+                                            :inherit unspecified
+                                            :foreground unspecified
+                                            :background unspecified))
+                               (,class (:foreground ,green :underline t))))
                             `(vertico-current
                               ((,class (:background ,base03 :underline t))))
                             `(orderless-match-face-0
@@ -177,6 +197,9 @@
                               ((,class (:foreground ,green
                                                     :background ,base03
                                                     :bold t))))
-)))
+                            `(eglot-highlight-symbol-face
+                              ((,class (:background ,blue-d
+                                                    :bold t)))))))
 (provide-theme 'solarized-penumbra-dark)
 (provide 'solarized-penumbra-dark-theme)
+;;; solarized-penumbra-dark-theme.el ends here
